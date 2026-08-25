@@ -2,510 +2,185 @@
 
 [mask time=10]
 [mask_off time=10]
-*base0
-
-[bg  time="0"  method="crossfade"  storage="school.png"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
+[cm  ]
+[bg  time="1000"  method="crossfade"  storage="tennis_school_sunset.png"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-#
-――三日後。[p]
-
-#
-二度目のレッスンの日。[r]学校の前で待っていると、見覚えのある白い帽子が校門から出てきた。[p]
 #エリオット
-リョーマ！[p]
-#リョーマ
-……今日はいる[p]
+よし、今日はここまで[p]
+#少年
+コーチ、また来週！[p]
 #エリオット
-いる？[p]
-#リョーマ
-この前、ちょっと早かったから[p]
-#エリオット
-もしかして待ってた？[p]
-#リョーマ
-待ってない[p]
-
+ああ。宿題忘れるなよ[p]
 #
-即答だった。[p]
+少年を見送り、ラケットを片付ける。[p]
 #
-リョーマはそのまま俺の横を通り過ぎる。[p]
-#リョーマ
-早く行こ[p]
-
+スマートフォンが鳴った。[p]
 #
-車へ向かう途中、リョーマがふと足を止めた。[p]
-
+画面に表示された名前は――[p]
 #
-視線の先には、自動販売機がある。[p]
-#エリオット
-喉乾いた？[p]
-#リョーマ
-別に[p]
-#エリオット
-飲みたいなら買ってく？[p]
-#リョーマ
-レッスン前だからいい[p]
-#エリオット
-へえ[p]
-#リョーマ
-なに[p]
-#エリオット
-ちゃんと考えてるんだなと思って[p]
-#リョーマ
-当たり前じゃん[p]
-
-#
-そう言いながらも、視線がもう一度自動販売機へ向かう。[p]
-
+『NANJIRO ECHIZEN』[p]
 [_tb_end_text]
-
-[glink  color="black"  storage="day2.ks"  size="20"  text="何が飲みたかった？"  target="*choice1-1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="炭酸は身体に悪いぞ"  target="*choice1-2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="じゃあ行こうか"  target="*choice1-3"  width="350"  autopos="true"  ]
-[s  ]
-*choice1-1
 
 [tb_start_text mode=1 ]
 #エリオット
-何が飲みたかった？[p]
-#リョーマ
-……ファンタ[p]
+……南次郎さん？[p]
+
+#南次郎
+よう。お前、まだガキにテニス教えてんだって？[p]
+
 #エリオット
-ファンタ？[p]
-#リョーマ
-グレープ[p]
+ええ。ロースクールの学費もありますから[p]
+
+#南次郎
+じゃ、ちょうどいい。ひとつ頼まれてくれ[p]
+
 #エリオット
-好きなの？[p]
-#リョーマ
-まあね[p]
+？[p]
 
-#
-そう答えて、さっさと歩き出す。[p]
-ファンタグレープ。[r]どうやら覚えておいて損はなさそうだ。[p]
+#南次郎
+俺が留守にする間、うちのチビのコーチやってくんね？[p]
 
-#
-【好感度 ＋1】[p]
-[_tb_end_text]
-
-[tb_eval  exp="f.love_point+=1"  name="love_point"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
-[jump  storage="day2.ks"  target="*base"  ]
-*choice1-2
-
-[tb_start_text mode=1 ]
 #エリオット
-炭酸は身体に悪いぞ[p]
-#リョーマ
-……[p]
+息子さんの？[p]
+
+#南次郎
+おう。九歳。期間は四週間[p]
+
 #エリオット
-スポーツするなら水かスポーツドリンクのほうが――[p]
-#リョーマ
-飲むなんて言ってないじゃん[p]
+……どうして俺に？[p]
+
+#南次郎
+倫子の推薦。お前なら安心だってよ[p]
+
 #エリオット
-それはそうだけど[p]
-#リョーマ
-行こ[p]
+倫子さんが……[p]
 
 #
-余計なお世話だったらしい。[p]
+四週間。[p]
+それくらいなら――。[p]
 
-#
-【好感度 －1】[p]
-[_tb_end_text]
-
-[tb_eval  exp="f.love_point-=1"  name="love_point"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
-[jump  storage="day2.ks"  target="*base"  ]
-*choice1-3
-
-[tb_start_text mode=1 ]
-#エリオット
-じゃあ行こうか[p]
-#リョーマ
-うん[p]
-
-#
-そのまま車へ向かう。[p]
-
-#
-結局、何を見ていたのかは分からなかった。[p]
-
-#
-【好感度 ±0】[p]
-[_tb_end_text]
-
-[tb_eval  exp="f.love_point+=0"  name="love_point"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
-[jump  storage="day2.ks"  target="*base"  ]
-*base
-
-[bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
-[tb_start_text mode=1 ]
-#
-――テニスクラブ。[p]
-
-#
-今日は前回指摘したところを確認することから始めた。[p]
-#エリオット
-バック、見せて[p]
-#リョーマ
-うん[p]
-
-#
-ボールを出す。[p]
-
-#
-一球。[p]
-二球。[p]
-三球。[p]
-#エリオット
-……[p]
-
-#
-前回より打点が前になっている。[p]
-#エリオット
-直してきた？[p]
-#リョーマ
-言われたから[p]
-#エリオット
-三日で？[p]
-#リョーマ
-三日もあったじゃん[p]
-
-#
-当然のことのように言う。[p]
-
-#
-やっぱり、この子は少し変わっている。[r]もちろん、いい意味で。[p]
-#エリオット
-じゃあ今日は、その先やろうか[p]
-#リョーマ
-その先？[p]
-#エリオット
-打てるようになったなら、次はどこに打つか[p]
-
-#
-コートの反対側を指す。[p]
-#エリオット
-俺を動かしてみて[p]
-#リョーマ
-……[p]
-
-#
-琥珀色の目が、少しだけ楽しそうに細くなる。[p]
-#リョーマ
-いいよ[p]
-
-#
-ラリーを始める。[p]
-
-#
-右。[p]
-左。[p]
-また右。[p]
-
-#
-昨日より明らかに、俺の位置を見ている。[p]
-
-#
-そして数球目。[p]
-
-#
-予想していた方向とは逆へ、ボールが飛んだ。[p]
-#エリオット
-……！[p]
-#リョーマ
-へへ[p]
-
-#
-初めて見る顔だった。[p]
-
-#
-得意げに笑うと、九歳らしく見える。[p]
-
-[_tb_end_text]
-
-[glink  color="black"  storage="day2.ks"  size="20"  text="でもまだ読めるな"  target="*choice2_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="もう一回やってみろ"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="でもまだ読めるな"  target="*choice2_3"  width="350"  autopos="true"  ]
-[s  ]
-*choice2_1
-
-[tb_start_text mode=1 ]
-#エリオット
-今のは上手かった[p]
-#リョーマ
-でしょ[p]
-
-#
-今度は否定しない。[p]
-#エリオット
-でも次は取るよ[p]
-#リョーマ
-じゃあ、もっと取れないとこ打つ[p]
-
-#
-すぐに構え直す。[p]
-
-#
-褒められることより、次の一本のほうが大事らしい。[p]
-
-#
-【好感度 ＋1】[p]
-[_tb_end_text]
-
-[tb_eval  exp="f.love_point+=2"  name="love_point"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
-[jump  storage="day2.ks"  target="*base2"  ]
-*choice2_2
-
-[tb_start_text mode=1 ]
-#エリオット
-もう一回やってみろ[p]
-#リョーマ
-言われなくても[p]
-
-#
-すぐに次のボールを要求してくる。[p]
-
-#
-さっきと同じコース――と思わせて、今度は逆。[p]
-#エリオット
-……なるほど[p]
-#リョーマ
-どう？[p]
-#エリオット
-悪くない[p]
-#リョーマ
-悪くない、ね[p]
-
-#
-少し不満そうだ。[r]けれど、楽しそうでもある。[p]
-
-#
-【好感度 ＋1】[p]
-[_tb_end_text]
-
-[tb_eval  exp="f.love_point+=1"  name="love_point"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
-[jump  storage="day2.ks"  target="*base2"  ]
-*choice2_3
-
-[tb_start_text mode=1 ]
-#エリオット
-でも、まだ読めるな[p]
-#リョーマ
-……[p]
-#エリオット
-打つ前に目が動いてる[p]
-#リョーマ
-……じゃあ、次は見ない[p]
-
-#
-むっとした顔で構え直す。[p]
-
-#
-どうやら火をつけてしまったらしい。[p]
-
-#
-【好感度 ±0】[p]
-[_tb_end_text]
-
-[tb_eval  exp="f.love_point-=2"  name="love_point"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
-[jump  storage="day2.ks"  target="*base2"  ]
-*base2
-
-[bg  time="1000"  method="crossfade"  storage="_car_twilight.png"  ]
-[tb_start_text mode=1 ]
-#
-
-――レッスン終了後。[p]
-
-#
-
-クラブを出るころには、すっかり日が暮れていた。[p]
-
-#
-
-車へ戻る途中、自動販売機の前で足を止める。[p]
-#エリオット
-リョーマ[p]
-#リョーマ
-なに[p]
-#エリオット
-飲み物買ってくるよ[r]もちろんリョーマの分も[p]
-#リョーマ
-……じゃあ、お願い[p]
-
-#
-
-さて――。[p]
-
-[_tb_end_text]
-
-[glink  color="black"  storage="day2.ks"  size="20"  text="ファンタグレープ"  target="*choice3_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="スポーツドリンク"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="缶コーヒー"  target="*choice3_3"  width="350"  autopos="true"  ]
-[s  ]
-*choice3_1
-
-[tb_start_text mode=1 ]
-#
-
-自動販売機から紫色の缶を取り出す。[p]
-
-#
-
-車に戻り、助手席のリョーマへ差し出した。[p]
-#エリオット
-はい[p]
-#リョーマ
-……ファンタ[p]
-#エリオット
-グレープ好きなんだろ？[p]
-#リョーマ
-……[p]
-
-#
-
-リョーマは缶と俺の顔を交互に見る。[p]
-#リョーマ
-覚えてたんだ[p]
-#エリオット
-朝聞いたばっかりだからね[p]
-#リョーマ
-……ふーん[p]
-
-#
-
-興味なさそうに答えながら、さっそくプルタブを開けている。[p]
-
-#
-
-一口飲んで。[p]
-
-#
-
-ほんの少し、口元が緩んだ。[p]
-#リョーマ
-ありがと[p]
-#エリオット
-どういたしまして[p]
-
-#
-
-どうやら正解だったらしい。[p]
-
-#
-
-【好感度 ＋2】[p]
-[_tb_end_text]
-
-[tb_eval  exp="f.love_point+=1"  name="love_point"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
-[jump  storage="day2.ks"  target="*base3"  ]
-*choice3_2
-
-[tb_start_text mode=1 ]
-#
-
-スポーツドリンクを一本買って車へ戻る。[p]
-#エリオット
-はい[p]
-#リョーマ
-ありがと[p]
-
-#
-
-受け取って、すぐに蓋を開ける。[p]
-
-#
-
-レッスン後なら、これが無難だろう。[p]
-
-#
-
-ただ、特別嬉しそうというわけでもない。[p]
-
-#
-
-【好感度 ±0】[p]
-[_tb_end_text]
-
-[tb_eval  exp="f.love_point+=2"  name="love_point"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
-[jump  storage="day2.ks"  target="*base3"  ]
-*choice3_3
-
-[tb_start_text mode=1 ]
-#
-自分の分と一緒に、アイスコーヒーの缶を２本買う。[p]
-#エリオット
-はい[p]
-
-#リョーマ
-……コーヒー[p]
-#エリオット
-ごめん、嫌いだった？[p]
-#リョーマ
-別に。飲めるし[p]
-
-#
-そう言って受け取る。[p]
-
-#
-
-一口だけ啜ると、しぶい顔になっている。[r][p]
-子ども扱いは嫌いでも、どうやらコーヒーは苦手なようだ。[p]
-
-
-#
-【好感度 -2】[p]
-[_tb_end_text]
-
-[tb_eval  exp="f.love_point-=1"  name="love_point"  cmd="-="  op="t"  val="2"  val_2="undefined"  ]
-[jump  storage="day2.ks"  target="*base3"  ]
-*base3
-
-[bg  time="1000"  method="crossfade"  storage="home_night.png"  ]
-[tb_start_text mode=1 ]
-#
-
-――帰りの車内。[p]
-
-#
-
-助手席で飲み物を飲みながら、リョーマは窓の外を眺めている。[p]
-
-#
-
-前回より、車の中の沈黙が気にならなくなった。[p]
-#リョーマ
-ねえ[p]
-#エリオット
-ん？[p]
-#リョーマ
-次も、今日の続きやる？[p]
-#エリオット
-やりたい？[p]
-#リョーマ
-……[p]
-
-#
-
-少し考えてから、こちらを見る。[p]
-#リョーマ
-やる[p]
-#エリオット
-じゃあ決まり[p]
-
-#
-
-信号が青に変わる。[p]
-
-#
-
-まだ二日目。[p]
-
-#
-
-それでも昨日よりほんの少しだけ、この子との距離が縮まったような気がした。[p]
 
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
-[jump  storage="day3.ks"  target=""  ]
+[bg  time="1000"  method="crossfade"  storage="home_day.png"  ]
+[mask_off  time="1000"  effect="fadeOut"  ]
+[tb_start_text mode=1 ]
+――数日後。[p]
+
+#南次郎
+リョーマ。こいつが今日からお前のコーチ[p]
+
+#リョーマ
+…………[p]
+
+#エリオット
+エリオットだ。よろしく[p]
+
+#
+南次郎の隣に立っていたのは、思っていたよりも小柄な少年だった。[r][p]
+同じ年頃の子供たちより、頭ひとつ――とまではいかないが、少し小さい。[p]
+#
+けれど、真っ先に目を引いたのはその大きな瞳だった。[r]茶色とも、金色ともつかない、明るい琥珀色。[p]
+#
+少年はその目で、俺を値踏みするようにじっと見上げている。[r]上目遣いのせいもあって、ほとんど睨まれているようだった。[p]
+#
+――ずいぶん意志の強そうな子だ。[p]
+
+#リョーマ
+……俺、コーチなんていらないんだけど[p]
+
+#南次郎
+俺がスペイン行ってる間だけだ[r]一人じゃまともな練習になんねーだろ[p]
+
+#リョーマ
+じゃあ親父が行くのやめればいいじゃん[p]
+
+#南次郎
+そう拗ねんなって[r]一ヶ月くらい、お前だっていい子で待ってられんだろ？[p]
+
+#リョーマ
+……別に拗ねてない[p]
+
+#南次郎
+ハイハイ[p]
+
+#リョーマ
+……[p]
+
+#
+リョーマの眉間に皺が寄る。[r]どうやら子供扱いされるのが、相当気に入らないらしい。[p]
+
+#南次郎
+んで、エリオット[r]話した通り、こいつの練習見てもらうのは週２回な[p]
+#エリオット
+ええ[p]
+#南次郎
+学校終わったら迎えに行って、そのままクラブ連れてってやってくれ[r]終わったら家まで送り届けりゃいい[p]
+#エリオット
+分かりました[p]
+#リョーマ
+一人で行けるけど[p]
+#南次郎
+ダーメ[r]お前まだ九歳だろ[p]
+#リョーマ
+……子供扱いすんなよ[p]
+#南次郎
+子供だろーが[p]
+#リョーマ
+…………[p]
+
+#
+また露骨に機嫌が悪くなった。[r][p]
+どうやら地雷を踏むのは、そう難しくないらしい。[p]
+#南次郎
+ま、細けえことは明日からでいいだろ[r]今日は顔合わせだけな[p]
+#エリオット
+分かりました[p]
+#南次郎
+リョーマ。明日からちゃんと言うこと聞けよ[p]
+#リョーマ
+それはこの人がちゃんと強かったらね[p]
+
+#エリオット
+……[p]
+#南次郎
+ハハッ！　だとよ[p]
+#
+なるほど。[r]九歳の子供にしては、ずいぶんな言い草だ。[r]けれど、不思議と腹は立たなかった。[p]
+むしろ――少しだけ興味が湧いた。[p]
+#エリオット
+じゃあ、明日確かめてみる？[p]
+#リョーマ
+……[p]
+
+#
+琥珀色の目が、わずかに見開かれる。[r][p]
+それから、ほんの少しだけ口元が上がった。[p]
+#リョーマ
+いいよ[p]
+#エリオット
+決まりだな[p]
+#南次郎
+おーおー。仲良くやれそうじゃねえか[p]
+#リョーマ
+別に[p]
+#
+そう言って、リョーマはさっさと家の中に入っていった。[p]
+
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+四週間。[p]
+その間だけ、あの子のテニスを見る。[p]
+
+
+小さな背中を見送りながら、俺は明日の予定を頭の中で組み直す。[p]
+
+
+それが、このときの俺にとってのすべてだった。[p]
+[_tb_end_text]
+
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
+[jump  storage="day1.ks"  target=""  ]
