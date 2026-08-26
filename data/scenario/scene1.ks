@@ -4,6 +4,14 @@
 [bg  time="1000"  method="crossfade"  storage="tennis_school_sunset.png"  ]
 [debug_init]
 
+
+; ===== 新規ゲーム初期化 =====
+
+
+[eval exp="f.love_point = 0"]
+
+[love value="0"]
+
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #エリオット
