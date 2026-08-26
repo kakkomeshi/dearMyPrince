@@ -8,3 +8,10 @@ body {
   user-select: none;
   touch-action: manipulation;
 }
+#tyrano_base,
+#tyrano_base * {
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    -webkit-user-drag: none !important;
+}
