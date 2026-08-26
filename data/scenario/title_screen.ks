@@ -4,6 +4,10 @@
 [loadcss file="./data/others/css/custom.css"]
 [_tb_end_tyrano_code]
 
+; ===== 新規ゲーム初期化 =====
+[eval exp="f.love_point = 0"]
+[love value="0"]
+
 
 ;==============================
 ; タイトル画面
