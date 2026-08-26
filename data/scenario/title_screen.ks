@@ -1,54 +1,59 @@
+[_tb_system_call storage=system/_title_screen.ks]
+
+[tb_start_tyrano_code]
+[loadcss file="./data/others/css/custom.css"]
+[_tb_end_tyrano_code]
+
 
 ;==============================
 ; タイトル画面
 ;==============================
 
+
 [hidemenubutton]
 
 [tb_clear_images]
 
-[tb_keyconfig flag=0]
+[tb_keyconfig  flag="0"  ]
+
+;標準のメッセージレイヤを非表示
 
 
-	;標準のメッセージレイヤを非表示
-	[tb_hide_message_window]
+[tb_hide_message_window  ]
 
-	;タイトル表示
-	[bg storage ="title.jpg"]
-
-	*title
-
-	
-
-	;タイトル各種ボタン
-	[glink color="black" text="はじめから" x=600 y=370 size=24 target="*start"]
-	[glink color="black" text="つづきから" x=600 y=470 size=24 target="*load"]
-
-	
-
-	[s]
-
-	;-------ボタンが押されたときの処理
-
-	*start
-
-	
-	[showmenubutton]
-	
-
-	[cm]
-	[tb_keyconfig flag=1]
-
-	@jump storage="scene1.ks"
-	[s]
-
-	;--------ロードが押された時の処理
-	*load
-
-	[cm]
-	[showload]
-	[jump target=*title]
-
-	[s]
+;タイトル表示
 
 
+[bg  storage="title.jpg"  ]
+*title
+
+
+;タイトル各種ボタン
+
+
+[glink  color="black"  text="はじめから"  x="600"  y="370"  size="24"  target="*start"  ]
+[glink  color="black"  text="つづきから"  x="600"  y="470"  size="24"  target="*load"  ]
+[s  ]
+
+;-------ボタンが押されたときの処理
+
+
+*start
+
+[showmenubutton]
+
+[cm  ]
+[tb_keyconfig  flag="1"  ]
+[jump  storage="scene1.ks"  target=""  ]
+[s  ]
+
+;--------ロードが押された時の処理
+
+
+*load
+
+[cm  ]
+[showload]
+
+[jump  target="*title"  storage=""  ]
+[s  ]
