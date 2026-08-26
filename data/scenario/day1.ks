@@ -3,7 +3,7 @@
 [bg  time="0"  method="crossfade"  storage="school.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #
 ――翌日。[p]
 
@@ -38,6 +38,13 @@
 
 #
 指さされた先には、確かに俺の車がある。[p]
+#
+2001年式のスバル・アウトバック。[r]
+ダークグリーンとゴールドのツートンカラーが気に入って、ロースクールに入る前に中古で買ったものだ。[p]
+#
+高級車ではないけれど、丈夫で荷物もよく載る。[r]
+後ろにはいつもラケットやボールカゴを積んでいるから、コーチの仕事にも都合がいい。[p]
+
 #エリオット
 よく分かったな[p]
 #リョーマ
@@ -53,7 +60,7 @@
 [s  ]
 *choice1
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 ちゃんと覚えてたんだな[p]
 #リョーマ
@@ -66,11 +73,11 @@
 【好感度 ＋1】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=1"  name="love_point"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[love value="1"]
 [jump  storage="day1.ks"  target="*base"  ]
 *choice2
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 勝手に先に行くなよ[p]
 #リョーマ
@@ -83,11 +90,11 @@
 【好感度 －1】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point-=1"  name="love_point"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
+[love value="-1"]
 [jump  storage="day1.ks"  target="*base"  ]
 *choice3
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 賢いな[p]
 #リョーマ
@@ -105,12 +112,12 @@
 【好感度 ±0】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=0"  name="love_point"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
+[love value="0"]
 [jump  storage="day1.ks"  target="*base"  ]
 *base
 
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #
 ――テニスクラブ。[p]
 
@@ -166,7 +173,7 @@
 [s  ]
 *choice2_1
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 じゃあ、少しだけ本気でいく[p]
 #リョーマ
@@ -200,11 +207,11 @@
 【好感度 ＋2】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=2"  name="love_point"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
+[love value="2"]
 [jump  storage="day1.ks"  target="*base2"  ]
 *choice2_2
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 その前に、バックのフォームを少し直そう[p]
 #リョーマ
@@ -239,11 +246,11 @@
 【好感度 ＋1】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=1"  name="love_point"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[love value="1"]
 [jump  storage="day1.ks"  target="*base2"  ]
 *choice2_3
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 九歳相手に本気は出せないよ[p]
 #リョーマ
@@ -272,12 +279,12 @@
 【好感度 －2】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point-=2"  name="love_point"  cmd="-="  op="t"  val="2"  val_2="undefined"  ]
+[love value="-2"]
 [jump  storage="day1.ks"  target="*base2"  ]
 *base2
 
 [bg  time="1000"  method="crossfade"  storage="_car_twilight.png"  ]
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #
 
 ――レッスン終了後。[p]
@@ -309,13 +316,13 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day1.ks"  size="20"  text="テニス、好きなんだな"  target="*choice3_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day1.ks"  size="20"  text="南次郎さんに勝ちたい？"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day1.ks"  size="20"  text="今日は疲れただろ。寝ててもいいよ"  target="*choice3_3"  width="350"  autopos="true"  ]
+[glink  color="black"  storage="day1.ks"  size="20"  text="テニス、好きなんだな"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="day1.ks"  size="20"  text="南次郎さんに勝ちたい？"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="day1.ks"  size="20"  text="今日は疲れただろ。寝ててもいいよ"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 テニス、好きなんだな[p]
 #リョーマ
@@ -350,11 +357,11 @@
 【好感度 ＋1】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=1"  name="love_point"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[love value="1"]
 [jump  storage="day1.ks"  target="*base3"  ]
 *choice3_2
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 南次郎さんに勝ちたい？[p]
 
@@ -389,11 +396,14 @@
 【好感度 ＋2】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=2"  name="love_point"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
+
+
+[love value="2"]
+
 [jump  storage="day1.ks"  target="*base3"  ]
 *choice3_3
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 今日は疲れただろ[r]家に着くまで寝ててもいいよ[p]
 #リョーマ
@@ -418,12 +428,12 @@
 【好感度 －1】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point-=1"  name="love_point"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
+[love value="-1"]
 [jump  storage="day1.ks"  target="*base3"  ]
 *base3
 
 [bg  time="1000"  method="crossfade"  storage="home_night.png"  ]
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #
 
 車を越前家の前に停める。[p]
@@ -478,7 +488,7 @@
 
 #
 
-ただひとつ分かったのは――[r][p]
+ただひとつ分かったのは――[r]
 あの小さな身体の中には、俺が思っていた以上に大きな負けん気が詰まっているらしい、ということだった。[p]
 
 [_tb_end_text]

@@ -5,29 +5,33 @@
 [bg  time="0"  method="crossfade"  storage="school.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #
 ――三日後。[p]
 
 #
-二度目のレッスンの日。[r]学校の前で待っていると、見覚えのある白い帽子が校門から出てきた。[p]
-#エリオット
-リョーマ！[p]
-#リョーマ
-……今日はいる[p]
-#エリオット
-いる？[p]
-#リョーマ
-この前、ちょっと早かったから[p]
-#エリオット
-もしかして待ってた？[p]
-#リョーマ
-待ってない[p]
-
+二度目のレッスンの日。[r]
+いつものように、約束の十五分前には学校へ着いた。[p]
 #
-即答だった。[p]
+人を待たせるのが好きじゃない。[r]
+それに、九歳の子供を校門の前で一人待たせるわけにもいかない。[p]
 #
-リョーマはそのまま俺の横を通り過ぎる。[p]
+しばらくすると、見覚えのある白い帽子が校門から出てきた。[p]
+#エリオット
+リョーマ！
+#
+こちらに気づいたリョーマが、まっすぐ車へ向かってくる。[p]
+#リョーマ
+……来てたんだ[p]
+#エリオット
+もちろん。[r]
+約束しただろ？[p]
+#リョーマ
+ふーん[p]
+#
+それだけ言うと、リョーマはもう俺には構わず、駐車場へ向かって歩き出した。[p]
+#
+昨日一度乗っただけなのに、俺の車の場所もしっかり覚えているらしい。[p]
 #リョーマ
 早く行こ[p]
 
@@ -47,7 +51,7 @@
 #エリオット
 へえ[p]
 #リョーマ
-なに[p]
+なに？[p]
 #エリオット
 ちゃんと考えてるんだなと思って[p]
 #リョーマ
@@ -58,13 +62,13 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day2.ks"  size="20"  text="何が飲みたかった？"  target="*choice1-1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="炭酸は身体に悪いぞ"  target="*choice1-2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="じゃあ行こうか"  target="*choice1-3"  width="350"  autopos="true"  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="何が飲みたかった？"  target="*choice1-1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="炭酸は身体に悪いぞ"  target="*choice1-2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="じゃあ行こうか"  target="*choice1-3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1-1
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 何が飲みたかった？[p]
 #リョーマ
@@ -86,11 +90,12 @@
 【好感度 ＋1】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=1"  name="love_point"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[love value="1"]
+
 [jump  storage="day2.ks"  target="*base"  ]
 *choice1-2
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 炭酸は身体に悪いぞ[p]
 #リョーマ
@@ -111,11 +116,12 @@
 【好感度 －1】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point-=1"  name="love_point"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
+[love value="-1"]
+
 [jump  storage="day2.ks"  target="*base"  ]
 *choice1-3
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 じゃあ行こうか[p]
 #リョーマ
@@ -131,19 +137,20 @@
 【好感度 ±0】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=0"  name="love_point"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
+[love value="0"]
+
 [jump  storage="day2.ks"  target="*base"  ]
 *base
 
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #
 ――テニスクラブ。[p]
 
 #
 今日は前回指摘したところを確認することから始めた。[p]
 #エリオット
-バック、見せて[p]
+まずはバックから見せて[p]
 #リョーマ
 うん[p]
 
@@ -221,13 +228,13 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day2.ks"  size="20"  text="今のは上手かった"  target="*choice2_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="もう一回やってみろ"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="でもまだ読めるな"  target="*choice2_3"  width="350"  autopos="true"  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="今のは上手かった"  target="*choice2_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="もう一回やってみろ"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="でもまだ読めるな"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 今のは上手かった[p]
 #リョーマ
@@ -250,11 +257,12 @@
 【好感度 ＋1】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=2"  name="love_point"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[love value="1"]
+
 [jump  storage="day2.ks"  target="*base2"  ]
 *choice2_2
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 もう一回やってみろ[p]
 #リョーマ
@@ -281,11 +289,12 @@
 【好感度 ＋1】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=1"  name="love_point"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[love value="1"]
+
 [jump  storage="day2.ks"  target="*base2"  ]
 *choice2_3
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #エリオット
 でも、まだ読めるな[p]
 #リョーマ
@@ -305,12 +314,13 @@
 【好感度 ±0】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point-=2"  name="love_point"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
+[love value="0"]
+
 [jump  storage="day2.ks"  target="*base2"  ]
 *base2
 
 [bg  time="1000"  method="crossfade"  storage="_car_twilight.png"  ]
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #
 
 ――レッスン終了後。[p]
@@ -337,13 +347,13 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day2.ks"  size="20"  text="ファンタグレープ"  target="*choice3_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="スポーツドリンク"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="缶コーヒー"  target="*choice3_3"  width="350"  autopos="true"  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="ファンタグレープ"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="スポーツドリンク"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="缶コーヒー"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #
 
 自動販売機から紫色の缶を取り出す。[p]
@@ -395,11 +405,12 @@
 【好感度 ＋2】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=1"  name="love_point"  cmd="+="  op="t"  val="2"  val_2="undefined"  ]
+[love value="2"]
+
 [jump  storage="day2.ks"  target="*base3"  ]
 *choice3_2
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #
 
 スポーツドリンクを一本買って車へ戻る。[p]
@@ -425,11 +436,12 @@
 【好感度 ±0】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point+=2"  name="love_point"  cmd="+="  op="t"  val="0"  val_2="undefined"  ]
+[love value="0"]
+
 [jump  storage="day2.ks"  target="*base3"  ]
 *choice3_3
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #
 自分の分と一緒に、アイスコーヒーの缶を２本買う。[p]
 #エリオット
@@ -447,7 +459,7 @@
 
 #
 
-一口だけ啜ると、しぶい顔になっている。[r][p]
+一口だけ啜ると、しぶい顔になっている。[r]
 子ども扱いは嫌いでも、どうやらコーヒーは苦手なようだ。[p]
 
 
@@ -455,12 +467,13 @@
 【好感度 -2】[p]
 [_tb_end_text]
 
-[tb_eval  exp="f.love_point-=1"  name="love_point"  cmd="-="  op="t"  val="2"  val_2="undefined"  ]
+[love value="-2"]
+
 [jump  storage="day2.ks"  target="*base3"  ]
 *base3
 
 [bg  time="1000"  method="crossfade"  storage="home_night.png"  ]
-[tb_start_text mode=1 ]
+[tb_start_text mode=4 ]
 #
 
 ――帰りの車内。[p]

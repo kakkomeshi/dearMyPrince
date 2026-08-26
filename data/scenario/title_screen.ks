@@ -31,8 +31,9 @@
 ;タイトル各種ボタン
 
 
-[glink  color="black"  text="はじめから"  x="600"  y="370"  size="24"  target="*start"  ]
-[glink  color="black"  text="つづきから"  x="600"  y="470"  size="24"  target="*load"  ]
+[glink  color="black"  text="はじめから"  x="600"  y="370"  size="24"  target="*start"  autopos="true"  ]
+[glink  color="black"  text="つづきから"  x="600"  y="470"  size="24"  target="*load"  autopos="true"  ]
+[glink  color="black"  text="エンディングリスト"  x="600"  y="570"  size="24"  target=""  storage="ending_list.ks"  autopos="true"  ]
 [s  ]
 
 ;-------ボタンが押されたときの処理

@@ -180,6 +180,9 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
 
 [endmacro]
 
+[call storage="macro.ks"]
+[debug_init]
+
 [return]
 
 
