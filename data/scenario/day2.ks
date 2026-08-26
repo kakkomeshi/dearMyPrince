@@ -62,11 +62,11 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day2.ks"  size="20"  text="何が飲みたかった？"  target="*choice1-1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="炭酸は身体に悪いぞ"  target="*choice1-2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="じゃあ行こうか"  target="*choice1-3"  width="max"  autopos="true"  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="何が飲みたかった？"  target="*choice1_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="炭酸は身体に悪いぞ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="じゃあ行こうか"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
-*choice1-1
+*choice1_1
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -93,7 +93,7 @@
 [love value="1"]
 
 [jump  storage="day2.ks"  target="*base"  ]
-*choice1-2
+*choice1_2
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -119,7 +119,7 @@
 [love value="-1"]
 
 [jump  storage="day2.ks"  target="*base"  ]
-*choice1-3
+*choice1_3
 
 [tb_start_text mode=4 ]
 #エリオット

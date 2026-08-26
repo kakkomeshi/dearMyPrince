@@ -1,9 +1,129 @@
-[_tb_system_call storage=system/_preview.ks ]
+[_tb_system_call storage=system/_part1_final.ks]
 
-[mask time=10]
-[bg  time="10"  method="crossfade"  storage="home_twilight.png"  ]
-[tb_show_message_window] 
-[mask_off time=10]
+*top
+
+[bg  time="1000"  method="crossfade"  storage="home_twilight.png"  ]
+[mask_off  time="1000"  effect="fadeOut"  ]
+[tb_show_message_window  ]
+[tb_start_text mode=4 ]
+#
+――翌日。[p]
+#
+南次郎さんがスペインから戻ってきた。[p]
+#
+俺が越前家を訪れたのは、夕方のことだった。[r]
+預かっていた荷物を返して、最後に挨拶をするためだ。[p]
+#南次郎
+よー。悪かったな、長いこと任せちまって[p]
+#エリオット
+いえ。[r]
+俺も楽しかったですよ[p]
+#南次郎
+で、どうだった？[r]
+うちのチビ助は[p]
+#エリオット
+……面白い子ですね[p]
+#南次郎
+面白い？[p]
+#エリオット
+負けず嫌いで、生意気で。[r]
+そのくせ、テニスのことになると驚くくらい素直だ[p]
+#南次郎
+ハハッ、違いねえ[p]
+#エリオット
+それに――[p]
+#
+この一ヶ月を思い返す。[p]
+#
+学校へ迎えに行って、テニスをして、家まで送る。[r]
+最初は、それだけの仕事だった。[p]
+#エリオット
+でも、いい選手になると思います。[p]
+#南次郎
+……へえ[p]
+#エリオット
+いや。[r]
+もう、十分いい選手ですね[p]
+#
+南次郎さんが少しだけ目を細めた。[p]
+#南次郎
+ま、明日からは俺が見るからよ。[r]
+ありがとな[p]
+#エリオット
+……はい[p]
+#
+分かっていたことだ。[p]
+#
+南次郎さんが帰ってくるまでの一ヶ月。[r]
+最初から、そういう約束だった。[p]
+#
+――これで、俺の役目は終わりだ。[p]
+#
+南次郎さんからもらったスペイン土産を後部座席に乗せ、運転席へ回ろうとした、そのとき。[p]
+[_tb_end_text]
+
+[if exp="f.love_point >= 6"]
+
+[jump  target="*love_high"  storage=""  ]
+[elsif exp="f.love_point >= 0"]
+
+[jump  target="*love_middle"  storage=""  ]
+[else]
+
+[jump  target="*love_low"  storage=""  ]
+[endif]
+
+*love_high
+
+
+; 好感度が高
+
+
+[tb_start_text mode=4 ]
+#
+越前家の玄関が勢いよく開いた。[p]
+#
+振り返ると、リョーマがこちらへ走ってくる。[p]
+#リョーマ
+……コーチ[p]
+#エリオット
+リョーマ？[p]
+#
+俺の前まで来たところで、リョーマは足を止めた。[r]
+走ってきたせいか、少しだけ息が上がっている。[p]
+#エリオット
+どうした？[p]
+#リョーマ
+……もう行っちゃうの[p]
+#エリオット
+うん。[r]
+南次郎さんも帰ってきたしね[p]
+#リョーマ
+…………[p]
+#
+リョーマは何も言わない。[r]
+ただ、いつものように助手席へ乗ることもなく、車の横に立っている。[p]
+#エリオット
+一ヶ月、あっという間だったな[p]
+#リョーマ
+……うん[p]
+#エリオット
+じゃあ、リョーマ。[r]
+元気でな[p]
+#
+そう言って車のドアに手をかける。[p]
+#リョーマ
+……待って[p]
+……俺[p]
+#リョーマ
+親父が戻ってきても、アンタのコーチがいい[p]
+#エリオット
+俺が？[p]
+#リョーマ
+うん。[r]
+……ダメ？[p]
+[_tb_end_text]
+
 [glink  color="black"  storage="part1_final.ks"  size="20"  text="もちろん、これからも君のコーチだ"  target="*choice1_1"  width="max"  autopos="true"  ]
 [glink  color="black"  storage="part1_final.ks"  size="20"  text="南次郎さんと相談してみよう"  target="*choice1_2"  width="max"  autopos="true"  ]
 [glink  color="black"  storage="part1_final.ks"  size="20"  text="今月だけの約束だった"  target="*choice1_3"  width="max"  autopos="true"  ]

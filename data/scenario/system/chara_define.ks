@@ -6,5 +6,5 @@
 
 ;=========変数宣言部分 
 [iscript] 
-f['love_point']=0; 
+f['love_point']=10; 
 [endscript] 

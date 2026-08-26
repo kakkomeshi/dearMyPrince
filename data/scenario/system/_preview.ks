@@ -1,6 +1,2 @@
-[eval exp="f._system_preview_ks='day3.ks'"] 
-[preload  storage="./data/bgimage/school.png"  ]
-[preload  storage="./data/bgimage/tennis_school_day.png"  ]
-[preload  storage="./data/bgimage/_car_twilight.png"  ]
-[preload  storage="./data/bgimage/home_night.png"  ]
+[eval exp="f._system_preview_ks='part1_final.ks'"] 
 [return] 

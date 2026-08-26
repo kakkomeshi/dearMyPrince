@@ -525,5 +525,4 @@
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
-[s  ]
-[jump  storage=""  target=""  ]
+[jump  storage="part1_final.ks"  target=""  cond=""  ]
