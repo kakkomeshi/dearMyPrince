@@ -1,7 +1,5 @@
-[_tb_system_call storage=system/_preview.ks ]
+[_tb_system_call storage=system/_part2_prolog.ks]
 
-[mask time=10]
-[mask_off time=10]
 [cm  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
 [debug_init]

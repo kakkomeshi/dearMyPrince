@@ -180,9 +180,6 @@ NORMAL END 〜またね、コーチ〜[p]
 
 [tb_start_text mode=4 ]
 #
-運転席のドアを開ける。[p]
-#
-#
 結局、リョーマが外へ出てくることはなかった。[p]
 #
 まあ、そんなものか。[r]
@@ -388,7 +385,7 @@ NORMAL END 〜契約終了〜[p]
 [eval exp="sf.ed01_low = true"]
 
 [jump  storage="title_screen.ks"  target=""  ]
-[jump  target="*love_low"  storage="part1_end_contract_low.ks"  ]
+
 *nanjiro_kyoka
 
 [tb_start_text mode=4 ]
@@ -438,5 +435,5 @@ NORMAL END 〜契約終了〜[p]
 ; 第２部へ
 
 
-[jump  storage="part1_end_contract_high.ks"  target="*base"  ]
+[jump  storage="part2_prolog.ks"  ]
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
