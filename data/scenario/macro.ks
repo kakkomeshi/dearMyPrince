@@ -30,10 +30,10 @@ if (typeof TYRANO.kag.stat.f.love_point === "undefined") {
 
 
 if ($("#debug_love").length === 0) {
-    $("body").append(
+    $("#tyrano_base").append(
         '<div id="debug_love" style="' +
-        'position:fixed;' +
-        'top:10px;' +
+        'position:absolute;' +
+        'top:20px;' +
         'left:820px;' +
         'z-index:999999;' +
         'background:rgba(0,0,0,0.7);' +
