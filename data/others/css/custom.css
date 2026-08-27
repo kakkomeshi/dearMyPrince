@@ -1,20 +1,48 @@
 html,
 body {
-  margin: 0;
-  /* overflow: hidden; */
-  overscroll-behavior: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
+    margin: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
-/* #tyrano_base,
-#tyrano_base * {
-    -webkit-touch-callout: none !important;
-    -webkit-user-select: none !important;
-    user-select: none !important;
-    -webkit-user-drag: none !important;
+
+#tyrano_base {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
-.message_outer {
-    background-color: red !important;
-} */
+
+img {
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+/* ========================================
+   セーブ・ロード画面 960×640用補正
+======================================== */
+
+.area_save_list {
+    width: 900px !important;
+    height: 450px !important;
+    margin: 30px auto 0 !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+.save_list {
+    width: 850px !important;
+    margin: 0 auto !important;
+}
+
+.save_list_item {
+    width: 850px !important;
+}
+
+.save_list_item_thumb {
+    width: 190px !important;
+}
+
+.save_list_item_area {
+    width: 660px !important;
+}
