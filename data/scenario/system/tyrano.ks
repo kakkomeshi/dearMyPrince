@@ -180,8 +180,8 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
 
 [endmacro]
 
+; マクロを読み込む
 [call storage="macro.ks"]
-[debug_init]
 
 [return]
 

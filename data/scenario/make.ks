@@ -6,4 +6,9 @@
 ;
 ;
 ;return 必須
+
+[call storage="macro.ks"]
+; 好感度表示
+[debug_init]
+
 [return]

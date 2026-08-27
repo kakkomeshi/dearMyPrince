@@ -2,6 +2,8 @@
 
 [cm  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
+
+; 好感度表示
 [debug_init]
 
 [tb_show_message_window  ]

@@ -4,15 +4,12 @@
 [loadcss file="./data/others/css/custom.css"]
 [_tb_end_tyrano_code]
 
-; ===== 新規ゲーム初期化 =====
-[eval exp="f.love_point = 0"]
-[love value="0"]
-
-
 ;==============================
 ; タイトル画面
 ;==============================
 
+; 好感度表示を非表示にする
+[debug_hide]
 
 [hidemenubutton]
 
@@ -48,6 +45,8 @@
 [showmenubutton]
 
 [cm  ]
+;NEW GAME用の初期化処理
+[call storage="new_game_init.ks"]
 [tb_keyconfig  flag="1"  ]
 [jump  storage="scene1.ks"  target=""  ]
 [s  ]

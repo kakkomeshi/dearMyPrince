@@ -1,5 +1,6 @@
 [_tb_system_call storage=system/_part1_final.ks]
-
+; 好感度表示
+[debug_init]
 *top
 
 [bg  time="1000"  method="crossfade"  storage="home_twilight.png"  ]
@@ -121,7 +122,7 @@
 俺が？[p]
 #リョーマ
 うん。[r]
-……ダメ？[p]
+……ダメ？
 [_tb_end_text]
 
 [glink  color="black"  storage="part1_final.ks"  size="20"  text="もちろん、これからも君のコーチだ"  target="*choice1_1"  width="max"  autopos="true"  ]
@@ -385,7 +386,6 @@ NORMAL END 〜契約終了〜[p]
 [eval exp="sf.ed01_low = true"]
 
 [jump  storage="title_screen.ks"  target=""  ]
-
 *nanjiro_kyoka
 
 [tb_start_text mode=4 ]
@@ -435,5 +435,5 @@ NORMAL END 〜契約終了〜[p]
 ; 第２部へ
 
 
-[jump  storage="part2_prolog.ks"  ]
+[jump  storage="part2_prolog.ks"  target=""  ]
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]

@@ -45,6 +45,23 @@ if ($("#debug_love").length === 0) {
     );
 }
 
+$("#debug_love").text(
+    "好感度：" + TYRANO.kag.stat.f.love_point
+);
+
+[endscript]
+
+[endmacro]
+
+
+; =========================
+; デバッグ好感度表示を削除
+; =========================
+
+[macro name="debug_hide"]
+
+[iscript]
+$("#debug_love").remove();
 [endscript]
 
 [endmacro]

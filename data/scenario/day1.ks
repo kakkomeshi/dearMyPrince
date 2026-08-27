@@ -1,5 +1,6 @@
 [_tb_system_call storage=system/_day1.ks]
-
+; 好感度表示
+[debug_init]
 [bg  time="0"  method="crossfade"  storage="school.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
