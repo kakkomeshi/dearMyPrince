@@ -96,7 +96,7 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 リョーマ。こいつが明日からお前の練習見てくれるコーチ[p]
 [_tb_end_text]
 
-[chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/リョーマ立ち絵_真顔.png"  width="974"  height="1364"  left="49"  top="-104"  reflect="false"  ]
+[chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao.png"  width="974"  height="1364"  left="27"  top="-104"  reflect="false"  ]
 [tb_start_text mode=4 ]
 #リョーマ
 …………[p]
@@ -115,7 +115,7 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 ――ずいぶん意志の強そうな子だ。[p]
 [_tb_end_text]
 
-[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/リョーマ立ち絵_ジト目.png"  ]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome.png"  ]
 [tb_start_text mode=4 ]
 #リョーマ
 ……俺、コーチなんていらないんだけど[p]
@@ -139,7 +139,7 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 ……[p]
 [_tb_end_text]
 
-[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/リョーマ立ち絵_不機嫌.png"  ]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
 [tb_start_text mode=4 ]
 #
 リョーマの眉間に皺が寄る。[r]どうやら子供扱いされるのが、相当気に入らないらしい。[p]
@@ -196,13 +196,13 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 琥珀色の目が、わずかに見開かれる。[p]
 [_tb_end_text]
 
-[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/リョーマ立ち絵_驚き.png"  ]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_odoroki.png"  ]
 [tb_start_text mode=4 ]
 #
 それから、ほんの少しだけ口元が上がった。[p]
 [_tb_end_text]
 
-[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/リョーマ立ち絵_得意顔.png"  ]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tokuige.png"  ]
 [tb_start_text mode=4 ]
 #リョーマ
 いいよ[p]
