@@ -191,18 +191,21 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 [tb_start_text mode=4 ]
 #リョーマ
 ……[p]
+[_tb_end_text]
 
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_odoroki.png"  ]
+[wait  time="1500"  ]
+[tb_start_text mode=4 ]
 #
 琥珀色の目が、わずかに見開かれる。[p]
 [_tb_end_text]
 
-[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_odoroki.png"  ]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tokuige.png"  ]
 [tb_start_text mode=4 ]
 #
 それから、ほんの少しだけ口元が上がった。[p]
 [_tb_end_text]
 
-[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tokuige.png"  ]
 [tb_start_text mode=4 ]
 #リョーマ
 いいよ[p]
