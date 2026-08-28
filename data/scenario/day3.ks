@@ -1,8 +1,14 @@
 [_tb_system_call storage=system/_day3.ks]
+
+
 ; 好感度表示
+
+
 [debug_init]
+
 *base0
 
+[playbgm  volume="100"  time="1000"  loop="true"  storage="Sunny_Afternoon_Driveway.mp3"  ]
 [bg  time="0"  method="crossfade"  storage="school.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
@@ -145,6 +151,7 @@
 [jump  storage="day3.ks"  target="*base"  ]
 *base
 
+[playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
 [tb_start_text mode=4 ]
 #
@@ -378,6 +385,7 @@
 [jump  storage="day3.ks"  target="*base2"  ]
 *base2
 
+[playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="_car_twilight.png"  ]
 [tb_start_text mode=4 ]
 #
@@ -526,4 +534,5 @@
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  fadein="true"  ]
 [jump  storage="part1_final.ks"  target=""  cond=""  ]

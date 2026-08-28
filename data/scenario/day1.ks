@@ -1,6 +1,12 @@
 [_tb_system_call storage=system/_day1.ks]
+
+
 ; 好感度表示
+
+
 [debug_init]
+
+[playbgm  volume="100"  time="1000"  loop="true"  storage="Sunny_Afternoon_Driveway.mp3"  fadein="true"  ]
 [bg  time="0"  method="crossfade"  storage="school.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
@@ -75,6 +81,7 @@
 [_tb_end_text]
 
 [love value="1"]
+
 [jump  storage="day1.ks"  target="*base"  ]
 *choice2
 
@@ -92,6 +99,7 @@
 [_tb_end_text]
 
 [love value="-1"]
+
 [jump  storage="day1.ks"  target="*base"  ]
 *choice3
 
@@ -114,9 +122,11 @@
 [_tb_end_text]
 
 [love value="0"]
+
 [jump  storage="day1.ks"  target="*base"  ]
 *base
 
+[playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
 [tb_start_text mode=4 ]
 #
@@ -209,6 +219,7 @@
 [_tb_end_text]
 
 [love value="2"]
+
 [jump  storage="day1.ks"  target="*base2"  ]
 *choice2_2
 
@@ -248,6 +259,7 @@
 [_tb_end_text]
 
 [love value="1"]
+
 [jump  storage="day1.ks"  target="*base2"  ]
 *choice2_3
 
@@ -281,9 +293,11 @@
 [_tb_end_text]
 
 [love value="-2"]
+
 [jump  storage="day1.ks"  target="*base2"  ]
 *base2
 
+[playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="_car_twilight.png"  ]
 [tb_start_text mode=4 ]
 #
@@ -359,6 +373,7 @@
 [_tb_end_text]
 
 [love value="1"]
+
 [jump  storage="day1.ks"  target="*base3"  ]
 *choice3_2
 
@@ -397,8 +412,6 @@
 【好感度 ＋2】[p]
 [_tb_end_text]
 
-
-
 [love value="2"]
 
 [jump  storage="day1.ks"  target="*base3"  ]
@@ -430,6 +443,7 @@
 [_tb_end_text]
 
 [love value="-1"]
+
 [jump  storage="day1.ks"  target="*base3"  ]
 *base3
 
@@ -495,4 +509,5 @@
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
+[stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="day2.ks"  target=""  ]

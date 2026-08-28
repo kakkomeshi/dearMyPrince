@@ -1,9 +1,12 @@
 [_tb_system_call storage=system/_scene1.ks]
 
 [cm  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_sunset.png"  ]
 
 ; 好感度表示
+
+
 [debug_init]
 
 [tb_show_message_window  ]
@@ -205,4 +208,5 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
+[stopse  time="1000"  buf="0"  fadeout="true"  ]
 [jump  storage="day1.ks"  target=""  ]
