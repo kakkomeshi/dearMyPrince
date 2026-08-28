@@ -94,7 +94,10 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 
 #南次郎
 リョーマ。こいつが明日からお前の練習見てくれるコーチ[p]
+[_tb_end_text]
 
+[chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/リョーマ立ち絵_真顔.png"  width="948"  height="1334"  left="17"  top="-51"  reflect="false"  ]
+[tb_start_text mode=4 ]
 #リョーマ
 …………[p]
 
@@ -110,7 +113,10 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 少年はその目で、俺を値踏みするようにじっと見上げている。[r]上目遣いのせいもあって、ほとんど睨まれているようだった。[p]
 #
 ――ずいぶん意志の強そうな子だ。[p]
+[_tb_end_text]
 
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/リョーマ立ち絵_ジト目.png"  ]
+[tb_start_text mode=4 ]
 #リョーマ
 ……俺、コーチなんていらないんだけど[p]
 
@@ -131,7 +137,10 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 
 #リョーマ
 ……[p]
+[_tb_end_text]
 
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/リョーマ立ち絵_不機嫌.png"  ]
+[tb_start_text mode=4 ]
 #
 リョーマの眉間に皺が寄る。[r]どうやら子供扱いされるのが、相当気に入らないらしい。[p]
 
@@ -177,12 +186,24 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 むしろ――少しだけ興味が湧いた。[p]
 #エリオット
 じゃあ、明日確かめてみるかい？[p]
+[_tb_end_text]
+
+[tb_start_text mode=4 ]
 #リョーマ
 ……[p]
 
 #
-琥珀色の目が、わずかに見開かれる。[r]
+琥珀色の目が、わずかに見開かれる。[p]
+[_tb_end_text]
+
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/リョーマ立ち絵_驚き.png"  ]
+[tb_start_text mode=4 ]
+#
 それから、ほんの少しだけ口元が上がった。[p]
+[_tb_end_text]
+
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/リョーマ立ち絵_得意顔.png"  ]
+[tb_start_text mode=4 ]
 #リョーマ
 いいよ[p]
 #エリオット
@@ -196,6 +217,7 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 
 [_tb_end_text]
 
+[chara_hide  name="リョーマ"  time="1000"  wait="true"  pos_mode="true"  ]
 [tb_start_text mode=4 ]
 四週間。[p]
 その間だけ、あの子のテニスを見る。[p]
