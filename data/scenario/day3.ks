@@ -534,5 +534,5 @@
 [_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
-[playbgm  volume="100"  time="1000"  loop="true"  fadein="true"  ]
+[stopse  time="1000"  buf="0"  fadeout="true"  ]
 [jump  storage="part1_final.ks"  target=""  cond=""  ]
