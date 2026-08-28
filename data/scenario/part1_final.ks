@@ -182,6 +182,7 @@ NORMAL END 〜またね、コーチ〜[p]
 
 [eval exp="sf.ed02_goodbye = true"]
 
+[stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="title_screen.ks"  target=""  ]
 *love_low
 
@@ -239,6 +240,7 @@ NORMAL END 〜契約終了〜[p]
 
 [eval exp="sf.ed01_low = true"]
 
+[stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="title_screen.ks"  target=""  ]
 [jump  target="*love_low"  storage="part1_end_contract_low.ks"  ]
 *choice1_1
@@ -391,6 +393,7 @@ NORMAL END 〜契約終了〜[p]
 
 [eval exp="sf.ed01_low = true"]
 
+[stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="title_screen.ks"  target=""  ]
 *nanjiro_kyoka
 
@@ -441,6 +444,6 @@ NORMAL END 〜契約終了〜[p]
 ; 第２部へ
 
 
+[stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="part2_prolog.ks"  target=""  ]
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
-[stopbgm  time="1000"  ]
