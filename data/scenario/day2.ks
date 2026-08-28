@@ -19,7 +19,7 @@
 #
 しばらくすると、見覚えのある白い帽子が校門から出てきた。[p]
 #エリオット
-リョーマ！
+リョーマ！[p]
 #
 こちらに気づいたリョーマが、まっすぐ車へ向かってくる。[p]
 #リョーマ
@@ -230,7 +230,7 @@
 [_tb_end_text]
 
 [glink  color="black"  storage="day2.ks"  size="20"  text="今のは上手かった"  target="*choice2_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="もう一回やってみろ"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="day2.ks"  size="20"  text="もう一回やってみて"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
 [glink  color="black"  storage="day2.ks"  size="20"  text="でもまだ読めるな"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
@@ -242,11 +242,11 @@
 でしょ[p]
 
 #
-今度は否定しない。[p]
+素直に感心した。[p]
 #エリオット
 でも次は取るよ[p]
 #リョーマ
-じゃあ、もっと取れないとこ打つ[p]
+じゃあ、もっと取れないとこ打つから[p]
 
 #
 すぐに構え直す。[p]
@@ -265,7 +265,7 @@
 
 [tb_start_text mode=4 ]
 #エリオット
-もう一回やってみろ[p]
+今の、もう一回やってみて[p]
 #リョーマ
 言われなくても[p]
 
