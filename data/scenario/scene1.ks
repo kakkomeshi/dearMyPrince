@@ -96,7 +96,7 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 リョーマ。こいつが明日からお前の練習見てくれるコーチ[p]
 [_tb_end_text]
 
-[chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/リョーマ立ち絵_真顔.png"  width="948"  height="1334"  left="17"  top="-51"  reflect="false"  ]
+[chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/リョーマ立ち絵_真顔.png"  width="974"  height="1364"  left="49"  top="-104"  reflect="false"  ]
 [tb_start_text mode=4 ]
 #リョーマ
 …………[p]
