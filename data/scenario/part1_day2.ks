@@ -74,7 +74,11 @@
 [glink  color="black"  storage="part1_day2.ks"  size="20"  text="じゃあ行こうか"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1_1
-
+;------------------------------
+;「何が飲みたかった？」
+;好感度+1
+;------------------------------
+[love value="1"]
 [tb_start_text mode=4 ]
 #エリオット
 何が飲みたかった？[p]
@@ -93,15 +97,16 @@
 そう答えて、さっさと歩き出す。[p]
 ファンタグレープ。[r]どうやら覚えておいて損はなさそうだ。[p]
 
-#
-【好感度 ＋1】[p]
 [_tb_end_text]
 
-[love value="1"]
 
 [jump  storage="part1_day2.ks"  target="*base"  ]
 *choice1_2
-
+;------------------------------
+;「炭酸は身体に悪いぞ」
+;好感度-1
+;------------------------------
+[love value="-1"]
 [tb_start_text mode=4 ]
 #エリオット
 炭酸は身体に悪いぞ[p]
@@ -119,15 +124,16 @@
 #
 余計なお世話だったらしい。[p]
 
-#
-【好感度 －1】[p]
 [_tb_end_text]
 
-[love value="-1"]
 
 [jump  storage="part1_day2.ks"  target="*base"  ]
 *choice1_3
-
+;------------------------------
+;「じゃあ行こうか」
+;好感度±0
+;------------------------------
+[love value="0"]
 [tb_start_text mode=4 ]
 #エリオット
 じゃあ行こうか[p]
@@ -140,11 +146,8 @@
 #
 結局、何を見ていたのかは分からなかった。[p]
 
-#
-【好感度 ±0】[p]
 [_tb_end_text]
 
-[love value="0"]
 
 [jump  storage="part1_day2.ks"  target="*base"  ]
 *base
@@ -241,7 +244,11 @@
 [glink  color="black"  storage="part1_day2.ks"  size="20"  text="でもまだ読めるな"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
-
+;------------------------------
+;「今のは上手かった」
+;好感度+1
+;------------------------------
+[love value="1"]
 [tb_start_text mode=4 ]
 #エリオット
 今のは上手かった[p]
@@ -262,14 +269,16 @@
 褒められることより、次の一本のほうが大事らしい。[p]
 
 #
-【好感度 ＋1】[p]
 [_tb_end_text]
 
-[love value="1"]
 
 [jump  storage="part1_day2.ks"  target="*base2"  ]
 *choice2_2
-
+;------------------------------
+;「もう一回やってみて」
+;好感度+1
+;------------------------------
+[love value="1"]
 [tb_start_text mode=4 ]
 #エリオット
 今の、もう一回やってみて[p]
@@ -293,15 +302,16 @@
 #
 少し不満そうだ。[r]けれど、楽しそうでもある。[p]
 
-#
-【好感度 ＋1】[p]
 [_tb_end_text]
 
-[love value="1"]
 
 [jump  storage="part1_day2.ks"  target="*base2"  ]
 *choice2_3
-
+;------------------------------
+;「でもまだ読めるな」
+;好感度
+;------------------------------
+[love value="0"ｓ]
 [tb_start_text mode=4 ]
 #エリオット
 でも、まだ読めるな[p]
@@ -318,11 +328,8 @@
 #
 どうやら火をつけてしまったらしい。[p]
 
-#
-【好感度 ±0】[p]
 [_tb_end_text]
 
-[love value="0"]
 
 [jump  storage="part1_day2.ks"  target="*base2"  ]
 *base2
@@ -361,7 +368,11 @@
 [glink  color="black"  storage="part1_day2.ks"  size="20"  text="缶コーヒー"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
-
+;------------------------------
+;「ファンタグレープ」
+;好感度+2
+;------------------------------
+[love value="2"]
 [tb_start_text mode=4 ]
 #
 
@@ -409,16 +420,16 @@
 
 どうやら正解だったらしい。[p]
 
-#
-
-【好感度 ＋2】[p]
 [_tb_end_text]
 
-[love value="2"]
 
 [jump  storage="part1_day2.ks"  target="*base3"  ]
 *choice3_2
-
+;------------------------------
+;「スポーツドリンク」
+;好感度±0
+;------------------------------
+[love value="0"]
 [tb_start_text mode=4 ]
 #
 
@@ -429,27 +440,20 @@
 ありがと[p]
 
 #
-
 受け取って、すぐに蓋を開ける。[p]
-
-#
-
 レッスン後なら、これが無難だろう。[p]
-
-#
-
 ただ、特別嬉しそうというわけでもない。[p]
 
-#
-
-【好感度 ±0】[p]
 [_tb_end_text]
 
-[love value="0"]
 
 [jump  storage="part1_day2.ks"  target="*base3"  ]
 *choice3_3
-
+;------------------------------
+;「缶コーヒー」
+;好感度-1
+;------------------------------
+[love value="-1"]
 [tb_start_text mode=4 ]
 #
 自分の分と一緒に、アイスコーヒーの缶を２本買う。[p]
@@ -471,12 +475,8 @@
 一口だけ啜ると、しぶい顔になっている。[r]
 子ども扱いは嫌いでも、どうやらコーヒーは苦手なようだ。[p]
 
-
-#
-【好感度 -2】[p]
 [_tb_end_text]
 
-[love value="-2"]
 
 [jump  storage="part1_day2.ks"  target="*base3"  ]
 *base3

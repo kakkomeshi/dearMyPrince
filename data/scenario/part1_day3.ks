@@ -62,12 +62,16 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="それは腹が立つな"  target="*choice1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="九歳なら仕方ないよ"  target="*choice2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="帰ってきたらもう一度聞いてみたら？"  target="*choice3"  width="max"  autopos="true"  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="それは腹が立つな"  target="*choice1_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="九歳なら仕方ないよ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="帰ってきたらもう一度聞いてみたら？"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
-*choice1
-
+*choice1_1
+;------------------------------
+;「それは腹が立つな」
+;好感度+2
+;------------------------------
+[love value="2"]
 [tb_start_text mode=4 ]
 #エリオット
 それは腹が立つな[p]
@@ -94,22 +98,23 @@
 #
 短く答えて、リョーマはまた窓の外を向いた。[r]
 けれど、さっきより少しだけ機嫌が直ったように見えた。[p]
-
-【好感度 ＋2】[p]
 [_tb_end_text]
 
-[love value="2"]
 
 [jump  storage="part1_day3.ks"  target="*base"  ]
-*choice2
-
+*choice1_2
+;------------------------------
+;「九歳なら仕方ないよ」
+;好感度+1
+;------------------------------
+[love value="-2"]
 [tb_start_text mode=4 ]
 #エリオット
 まあ、九歳なら仕方ないんじゃない？[p]
 #リョーマ
 ……[p]
 
-
+#
 まずい。[p]
 言い終わってから気づいた。[p]
 #リョーマ
@@ -118,17 +123,19 @@
 いや、そういう意味じゃ[p]
 #リョーマ
 もういい[p]
-
+#
 窓の外を向いてしまった。[p]
 
-【好感度 －2】[p]
 [_tb_end_text]
 
-[love value="-2"]
 
 [jump  storage="part1_day3.ks"  target="*base"  ]
-*choice3
-
+*choice1_3
+;------------------------------
+;「帰ってきたらもう一度聞いてみたら？」
+;好感度±0
+;------------------------------
+[love value="0"]
 [tb_start_text mode=4 ]
 #エリオット
 帰ってきたら、もう一度聞いてみたら？[p]
@@ -143,10 +150,8 @@
 納得はしていないようだ。[p]
 それでも、少し考えるように窓の外を見る。[p]
 
-【好感度 ±0】[p]
 [_tb_end_text]
 
-[love value="0"]
 
 [jump  storage="part1_day3.ks"  target="*base"  ]
 *base
@@ -284,7 +289,11 @@
 [glink  color="black"  storage="part1_day3.ks"  size="20"  text="お兄さんも待ってるかもな"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
-
+;------------------------------
+;「きっと会えるよ」
+;好感度+2
+;------------------------------
+[love value="2"]
 [tb_start_text mode=4 ]
 #エリオット
 きっと会えるよ[p]
@@ -308,15 +317,16 @@
 #リョーマ
 へへっ 親父が母さんにいつも言われてるんだ[p]
 
-#
-【好感度 ＋2】[p]
 [_tb_end_text]
 
-[love value="2"]
 
 [jump  storage="part1_day3.ks"  target="*base2"  ]
 *choice2_2
-
+;------------------------------
+;「世界の頂点か」
+;好感度+2
+;------------------------------
+[love value="2"]
 [tb_start_text mode=4 ]
 #エリオット
 世界の頂点、かぁ……[p]
@@ -341,15 +351,16 @@
 #リョーマ
 望むところ[p]
 
-#
-【好感度 ＋2】[p]
 [_tb_end_text]
 
-[love value="2"]
 
 [jump  storage="part1_day3.ks"  target="*base2"  ]
 *choice2_3
-
+;------------------------------
+;「お兄さんも待ってるかもな」
+;好感度+1
+;------------------------------
+[love value="1"]
 [tb_start_text mode=4 ]
 #エリオット
 お兄さんも、どこかで待ってるかもな[p]
@@ -376,11 +387,8 @@
 #
 待っているつもりなんて、最初からないらしい。[p]
 
-#
-【好感度 ＋1】[p]
 [_tb_end_text]
 
-[love value="1"]
 
 [jump  storage="part1_day3.ks"  target="*base2"  ]
 *base2
@@ -418,8 +426,12 @@
 [glink  color="black"  storage="part1_day3.ks"  size="20"  text="大人にも事情があるんだよ"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
-
-
+;------------------------------
+;「俺はそうは思わない」
+;好感度+2
+;------------------------------
+[love value="2"]
+[tb_start_text mode=4 ]
 #エリオット
 俺はそうは思わない[p]
 #リョーマ
@@ -440,23 +452,18 @@
 ……そっか[p]
 #
 それだけ言って、また窓の外を見る。[p]
-
-
-[r]
-
-
 けれど、その横顔は少しだけ満足そうだった。[p]
-【好感度 ＋2】[p]
 
-
-[tb_start_text mode=undefined ]
 [_tb_end_text]
 
-[love value="2"]
 
 [jump  storage="part1_day3.ks"  target="*base3"  ]
 *choice3_2
-
+;------------------------------
+;「内容によるかな」
+;好感度+1
+;------------------------------
+[love value="1"]
 [tb_start_text mode=4 ]
 #エリオット
 内容によるかな[p]
@@ -475,14 +482,16 @@
 完全には納得していないようだ。[p]
 それでも、否定はしなかった。[p]
 
-【好感度 ＋1】[p]
 [_tb_end_text]
 
-[love value="1"]
 
 [jump  storage="part1_day3.ks"  target="*base3"  ]
 *choice3_3
-
+;------------------------------
+;「大人にも事情があるんだよ」
+;好感度-2
+;------------------------------
+[love value="-2"]
 [tb_start_text mode=4 ]
 #エリオット
 大人にも事情があるんだよ[p]
@@ -500,10 +509,8 @@
 #
 またやってしまった。[p]
 
-【好感度 －2】[p]
 [_tb_end_text]
 
-[love value="-2"]
 
 [jump  storage="part1_day3.ks"  target="*base3"  ]
 *base3

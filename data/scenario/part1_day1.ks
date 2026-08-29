@@ -1,4 +1,4 @@
-[_tb_system_call storage=system/_day1.ks]
+[_tb_system_call storage=system/_part1_day1.ks]
 
 
 ; 好感度表示
@@ -50,7 +50,7 @@
 ダークグリーンとゴールドのツートンカラーが気に入って、ロースクールに入る前に中古で買ったものだ。[p]
 #
 高級車ではないけれど、丈夫で荷物もよく載る。[r]
-後ろにはいつもラケットやボールカゴを積んでいるから、コーチの仕事にも都合がいい。[p]
+後ろにはラケットやボールカゴも積めるから、コーチの仕事にも都合がいい。[p]
 
 #エリオット
 よく分かったな[p]
@@ -61,11 +61,19 @@
 よく見ているらしい。[p]
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="ちゃんと覚えてたんだな"  target="*choice1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="勝手に先に行くなよ"  target="*choice2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="賢いな"  target="*choice3"  width="350"  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="ちゃんと覚えてたんだな"  target="*choice1_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="勝手に先に行くなよ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="賢いな"  target="*choice1_3"  width="350"  autopos="true"  ]
 [s  ]
-*choice1
+*choice1_1
+
+
+;------------------------------
+;「ちゃんと覚えてたんだな」
+;好感度＋1
+;------------------------------
+【好感度 ＋1】[p]
+
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -76,14 +84,21 @@
 #
 少しだけ得意そうに見える。[p]
 
-#
-【好感度 ＋1】[p]
 [_tb_end_text]
 
 [love value="1"]
 
 [jump  storage="part1_day1.ks"  target="*base"  ]
-*choice2
+*choice1_2
+
+
+;------------------------------
+;「勝手に先に行くなよ」
+;好感度-1
+;------------------------------
+
+
+[love value="-1"]
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -94,14 +109,19 @@
 #
 また機嫌を損ねたらしい。[p]
 
-#
-【好感度 －1】[p]
 [_tb_end_text]
 
-[love value="-1"]
-
 [jump  storage="part1_day1.ks"  target="*base"  ]
-*choice3
+*choice1_3
+
+
+;------------------------------
+;「賢いな」
+;好感度±0
+;------------------------------
+
+
+[love value="0"]
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -114,14 +134,9 @@
 そういう言い方、子供みたいだからやめて[p]
 
 #
-
 どうやら褒め方にも注文があるらしい。[p]
 
-#
-【好感度 ±0】[p]
 [_tb_end_text]
-
-[love value="0"]
 
 [jump  storage="part1_day1.ks"  target="*base"  ]
 *base
@@ -178,11 +193,20 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="じゃあ少しだけ本気でいく"  target="*choice2_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="まずフォームを直そう"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="九歳相手に本気は出せない"  target="*choice2_3"  width="350"  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="じゃあ少しだけ本気でいく"  target="*choice1_2_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="まずフォームを直そう"  target="*choice1_2_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="九歳相手に本気は出せない"  target="*choice1_2_3"  width="350"  autopos="true"  ]
 [s  ]
-*choice2_1
+*choice1_2_1
+
+
+;------------------------------
+;「じゃあ少しだけ本気でいく」
+;好感度+2
+;------------------------------
+
+
+[love value="2"]
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -195,15 +219,10 @@
 ……言ったね[p]
 
 #
-
 さっきまでより明らかに楽しそうな顔をした。[p]
-
-#
-
 次の球を強めに打ち込む。[p]
 
 #
-
 リョーマは一歩踏み込み――きれいに打ち返した。[p]
 #エリオット
 ……！[p]
@@ -211,17 +230,20 @@
 まだまだだね[p]
 
 #
-
 思わず笑ってしまった。[p]
-
-#
-【好感度 ＋2】[p]
 [_tb_end_text]
 
-[love value="2"]
-
 [jump  storage="part1_day1.ks"  target="*base2"  ]
-*choice2_2
+*choice1_2_2
+
+
+;------------------------------
+;「まずフォームを直そう」
+;好感度+1
+;------------------------------
+
+
+[love value="1"]
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -240,28 +262,29 @@
 そう。そこ[p]
 
 #
-
 もう一球。[p]
 
 #
-
 今度はさっきより鋭い球が返ってくる。[p]
 #リョーマ
 ……ほんとだ[p]
 
 #
-
 小さく呟いて、もう一度ラケットを構えた。[p]
 
-#
-
-【好感度 ＋1】[p]
 [_tb_end_text]
 
-[love value="1"]
-
 [jump  storage="part1_day1.ks"  target="*base2"  ]
-*choice2_3
+*choice1_2_3
+
+
+;------------------------------
+;「九歳相手に本気は出せないよ」
+;好感度-2
+;------------------------------
+
+
+[love value="-2"]
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -280,19 +303,12 @@
 親父と一緒じゃん[p]
 
 #
-
 明らかに打球が荒くなる。[p]
 
 #
-
 どうやら、言ってはいけないことを言ったらしい。[p]
 
-#
-
-【好感度 －2】[p]
 [_tb_end_text]
-
-[love value="-2"]
 
 [jump  storage="part1_day1.ks"  target="*base2"  ]
 *base2
@@ -331,11 +347,20 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="テニス、好きなんだな"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="南次郎さんに勝ちたい？"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="今日は疲れただろ。寝ててもいいよ"  target="*choice3_3"  width="max"  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="テニス、好きなんだな"  target="*choice1_3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="南次郎さんに勝ちたい？"  target="*choice1_3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="今日は疲れただろ。寝ててもいいよ"  target="*choice1_3_3"  width="max"  autopos="true"  ]
 [s  ]
-*choice3_1
+*choice1_3_1
+
+
+;------------------------------
+;「テニス、好きなんだな」
+;好感度+1
+;------------------------------
+
+
+[love value="1"]
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -348,11 +373,9 @@
 普通[p]
 
 #
-
 そう言いながら、まだ指は動いている。[p]
 
 #
-
 説得力がない。[p]
 #エリオット
 そっか[p]
@@ -364,18 +387,21 @@
 ……[p]
 
 #
-
 少しだけ睨まれた。[p]
 
-#
-
-【好感度 ＋1】[p]
 [_tb_end_text]
 
-[love value="1"]
-
 [jump  storage="part1_day1.ks"  target="*base3"  ]
-*choice3_2
+*choice1_3_2
+
+
+;------------------------------
+;「南次郎さんに勝ちたい？」
+;好感度+2
+;------------------------------
+
+
+[love value="2"]
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -392,30 +418,31 @@
 いつかじゃない[p]
 
 #
-
 窓の外を向いたまま、リョーマは言う。[p]
 #リョーマ
 絶対、勝つ[p]
 
 #
-
 昨日見たのと同じ、強い目だった。[p]
 #エリオット
 ……そうか[p]
 
 #
-
 その答えは、嫌いじゃない。[p]
 
-#
-
-【好感度 ＋2】[p]
 [_tb_end_text]
 
-[love value="2"]
-
 [jump  storage="part1_day1.ks"  target="*base3"  ]
-*choice3_3
+*choice1_3_3
+
+
+;------------------------------
+;「今日は疲れただろ。寝ててもいいよ」
+;好感度-1
+;------------------------------
+
+
+[love value="-1"]
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -437,12 +464,7 @@
 
 どうやら俺まで同じ地雷を踏んだらしい。[p]
 
-#
-
-【好感度 －1】[p]
 [_tb_end_text]
-
-[love value="-1"]
 
 [jump  storage="part1_day1.ks"  target="*base3"  ]
 *base3
