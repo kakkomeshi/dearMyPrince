@@ -234,4 +234,4 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
-[jump  storage="day1.ks"  target=""  ]
+[jump  storage="part1_day1.ks"  target=""  ]

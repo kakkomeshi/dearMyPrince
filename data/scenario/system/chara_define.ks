@@ -1,6 +1,6 @@
 ;=========キャラクター事前定義情報 
 ;リョーマ
-[chara_new  name="リョーマ"  jname="リョーマ"  storage="chara/1/ryoma_magao.png"  ]
+[chara_new  name="リョーマ"  jname="リョーマ"  storage="chara/1/ryoma_egao.png"  ]
 ;エリオット
 ;南次郎
 ;メレディス

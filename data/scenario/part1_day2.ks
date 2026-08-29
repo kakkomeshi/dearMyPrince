@@ -1,4 +1,4 @@
-[_tb_system_call storage=system/_day2.ks]
+[_tb_system_call storage=system/_part1_day2.ks]
 
 
 ; 好感度表示
@@ -69,9 +69,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day2.ks"  size="20"  text="何が飲みたかった？"  target="*choice1_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="炭酸は身体に悪いぞ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="じゃあ行こうか"  target="*choice1_3"  width="max"  autopos="true"  ]
+[glink  color="black"  storage="part1_day2.ks"  size="20"  text="何が飲みたかった？"  target="*choice1_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day2.ks"  size="20"  text="炭酸は身体に悪いぞ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day2.ks"  size="20"  text="じゃあ行こうか"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1_1
 
@@ -99,7 +99,7 @@
 
 [love value="1"]
 
-[jump  storage="day2.ks"  target="*base"  ]
+[jump  storage="part1_day2.ks"  target="*base"  ]
 *choice1_2
 
 [tb_start_text mode=4 ]
@@ -125,7 +125,7 @@
 
 [love value="-1"]
 
-[jump  storage="day2.ks"  target="*base"  ]
+[jump  storage="part1_day2.ks"  target="*base"  ]
 *choice1_3
 
 [tb_start_text mode=4 ]
@@ -146,7 +146,7 @@
 
 [love value="0"]
 
-[jump  storage="day2.ks"  target="*base"  ]
+[jump  storage="part1_day2.ks"  target="*base"  ]
 *base
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  fadein="true"  ]
@@ -236,9 +236,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day2.ks"  size="20"  text="今のは上手かった"  target="*choice2_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="もう一回やってみて"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="でもまだ読めるな"  target="*choice2_3"  width="max"  autopos="true"  ]
+[glink  color="black"  storage="part1_day2.ks"  size="20"  text="今のは上手かった"  target="*choice2_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day2.ks"  size="20"  text="もう一回やってみて"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day2.ks"  size="20"  text="でもまだ読めるな"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
 
@@ -267,7 +267,7 @@
 
 [love value="1"]
 
-[jump  storage="day2.ks"  target="*base2"  ]
+[jump  storage="part1_day2.ks"  target="*base2"  ]
 *choice2_2
 
 [tb_start_text mode=4 ]
@@ -299,7 +299,7 @@
 
 [love value="1"]
 
-[jump  storage="day2.ks"  target="*base2"  ]
+[jump  storage="part1_day2.ks"  target="*base2"  ]
 *choice2_3
 
 [tb_start_text mode=4 ]
@@ -324,7 +324,7 @@
 
 [love value="0"]
 
-[jump  storage="day2.ks"  target="*base2"  ]
+[jump  storage="part1_day2.ks"  target="*base2"  ]
 *base2
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
@@ -356,9 +356,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day2.ks"  size="20"  text="ファンタグレープ"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="スポーツドリンク"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day2.ks"  size="20"  text="缶コーヒー"  target="*choice3_3"  width="max"  autopos="true"  ]
+[glink  color="black"  storage="part1_day2.ks"  size="20"  text="ファンタグレープ"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day2.ks"  size="20"  text="スポーツドリンク"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day2.ks"  size="20"  text="缶コーヒー"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
 
@@ -416,7 +416,7 @@
 
 [love value="2"]
 
-[jump  storage="day2.ks"  target="*base3"  ]
+[jump  storage="part1_day2.ks"  target="*base3"  ]
 *choice3_2
 
 [tb_start_text mode=4 ]
@@ -447,7 +447,7 @@
 
 [love value="0"]
 
-[jump  storage="day2.ks"  target="*base3"  ]
+[jump  storage="part1_day2.ks"  target="*base3"  ]
 *choice3_3
 
 [tb_start_text mode=4 ]
@@ -478,7 +478,7 @@
 
 [love value="-2"]
 
-[jump  storage="day2.ks"  target="*base3"  ]
+[jump  storage="part1_day2.ks"  target="*base3"  ]
 *base3
 
 [bg  time="1000"  method="crossfade"  storage="home_night.png"  ]
@@ -529,4 +529,4 @@
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
-[jump  storage="day3.ks"  target=""  ]
+[jump  storage="part1_day3.ks"  target=""  ]

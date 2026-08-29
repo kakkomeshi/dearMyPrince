@@ -61,9 +61,9 @@
 よく見ているらしい。[p]
 [_tb_end_text]
 
-[glink  color="black"  storage="day1.ks"  size="20"  text="ちゃんと覚えてたんだな"  target="*choice1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day1.ks"  size="20"  text="勝手に先に行くなよ"  target="*choice2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day1.ks"  size="20"  text="賢いな"  target="*choice3"  width="350"  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="ちゃんと覚えてたんだな"  target="*choice1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="勝手に先に行くなよ"  target="*choice2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="賢いな"  target="*choice3"  width="350"  autopos="true"  ]
 [s  ]
 *choice1
 
@@ -82,7 +82,7 @@
 
 [love value="1"]
 
-[jump  storage="day1.ks"  target="*base"  ]
+[jump  storage="part1_day1.ks"  target="*base"  ]
 *choice2
 
 [tb_start_text mode=4 ]
@@ -100,7 +100,7 @@
 
 [love value="-1"]
 
-[jump  storage="day1.ks"  target="*base"  ]
+[jump  storage="part1_day1.ks"  target="*base"  ]
 *choice3
 
 [tb_start_text mode=4 ]
@@ -123,7 +123,7 @@
 
 [love value="0"]
 
-[jump  storage="day1.ks"  target="*base"  ]
+[jump  storage="part1_day1.ks"  target="*base"  ]
 *base
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  fadein="true"  ]
@@ -178,9 +178,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day1.ks"  size="20"  text="じゃあ少しだけ本気でいく"  target="*choice2_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day1.ks"  size="20"  text="まずフォームを直そう"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day1.ks"  size="20"  text="九歳相手に本気は出せない"  target="*choice2_3"  width="350"  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="じゃあ少しだけ本気でいく"  target="*choice2_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="まずフォームを直そう"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="九歳相手に本気は出せない"  target="*choice2_3"  width="350"  autopos="true"  ]
 [s  ]
 *choice2_1
 
@@ -220,7 +220,7 @@
 
 [love value="2"]
 
-[jump  storage="day1.ks"  target="*base2"  ]
+[jump  storage="part1_day1.ks"  target="*base2"  ]
 *choice2_2
 
 [tb_start_text mode=4 ]
@@ -260,7 +260,7 @@
 
 [love value="1"]
 
-[jump  storage="day1.ks"  target="*base2"  ]
+[jump  storage="part1_day1.ks"  target="*base2"  ]
 *choice2_3
 
 [tb_start_text mode=4 ]
@@ -294,7 +294,7 @@
 
 [love value="-2"]
 
-[jump  storage="day1.ks"  target="*base2"  ]
+[jump  storage="part1_day1.ks"  target="*base2"  ]
 *base2
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
@@ -331,9 +331,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day1.ks"  size="20"  text="テニス、好きなんだな"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day1.ks"  size="20"  text="南次郎さんに勝ちたい？"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day1.ks"  size="20"  text="今日は疲れただろ。寝ててもいいよ"  target="*choice3_3"  width="max"  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="テニス、好きなんだな"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="南次郎さんに勝ちたい？"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day1.ks"  size="20"  text="今日は疲れただろ。寝ててもいいよ"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
 
@@ -374,7 +374,7 @@
 
 [love value="1"]
 
-[jump  storage="day1.ks"  target="*base3"  ]
+[jump  storage="part1_day1.ks"  target="*base3"  ]
 *choice3_2
 
 [tb_start_text mode=4 ]
@@ -414,7 +414,7 @@
 
 [love value="2"]
 
-[jump  storage="day1.ks"  target="*base3"  ]
+[jump  storage="part1_day1.ks"  target="*base3"  ]
 *choice3_3
 
 [tb_start_text mode=4 ]
@@ -444,7 +444,7 @@
 
 [love value="-1"]
 
-[jump  storage="day1.ks"  target="*base3"  ]
+[jump  storage="part1_day1.ks"  target="*base3"  ]
 *base3
 
 [bg  time="1000"  method="crossfade"  storage="home_night.png"  ]
@@ -510,4 +510,4 @@
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="day2.ks"  target=""  ]
+[jump  storage="part1_day2.ks"  target=""  ]

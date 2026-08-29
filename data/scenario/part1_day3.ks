@@ -1,4 +1,4 @@
-[_tb_system_call storage=system/_day3.ks]
+[_tb_system_call storage=system/_part1_day3.ks]
 
 
 ; 好感度表示
@@ -62,9 +62,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day3.ks"  size="20"  text="それは腹が立つな"  target="*choice1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day3.ks"  size="20"  text="九歳なら仕方ないよ"  target="*choice2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day3.ks"  size="20"  text="帰ってきたらもう一度聞いてみたら？"  target="*choice3"  width="max"  autopos="true"  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="それは腹が立つな"  target="*choice1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="九歳なら仕方ないよ"  target="*choice2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="帰ってきたらもう一度聞いてみたら？"  target="*choice3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1
 
@@ -100,7 +100,7 @@
 
 [love value="2"]
 
-[jump  storage="day3.ks"  target="*base"  ]
+[jump  storage="part1_day3.ks"  target="*base"  ]
 *choice2
 
 [tb_start_text mode=4 ]
@@ -126,7 +126,7 @@
 
 [love value="-2"]
 
-[jump  storage="day3.ks"  target="*base"  ]
+[jump  storage="part1_day3.ks"  target="*base"  ]
 *choice3
 
 [tb_start_text mode=4 ]
@@ -148,7 +148,7 @@
 
 [love value="0"]
 
-[jump  storage="day3.ks"  target="*base"  ]
+[jump  storage="part1_day3.ks"  target="*base"  ]
 *base
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  ]
@@ -279,9 +279,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day3.ks"  size="20"  text="きっと会えるよ"  target="*choice2_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day3.ks"  size="20"  text="世界の頂点か"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day3.ks"  size="20"  text="お兄さんも待ってるかもな"  target="*choice2_3"  width="max"  autopos="true"  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="きっと会えるよ"  target="*choice2_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="世界の頂点か"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="お兄さんも待ってるかもな"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
 
@@ -314,7 +314,7 @@
 
 [love value="2"]
 
-[jump  storage="day3.ks"  target="*base2"  ]
+[jump  storage="part1_day3.ks"  target="*base2"  ]
 *choice2_2
 
 [tb_start_text mode=4 ]
@@ -347,7 +347,7 @@
 
 [love value="2"]
 
-[jump  storage="day3.ks"  target="*base2"  ]
+[jump  storage="part1_day3.ks"  target="*base2"  ]
 *choice2_3
 
 [tb_start_text mode=4 ]
@@ -382,7 +382,7 @@
 
 [love value="1"]
 
-[jump  storage="day3.ks"  target="*base2"  ]
+[jump  storage="part1_day3.ks"  target="*base2"  ]
 *base2
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  ]
@@ -413,9 +413,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="day3.ks"  size="20"  text="俺はそうは思わない"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="day3.ks"  size="20"  text="内容によるかな"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="day3.ks"  size="20"  text="大人にも事情があるんだよ"  target="*choice3_3"  width="max"  autopos="true"  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="俺はそうは思わない"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="内容によるかな"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="black"  storage="part1_day3.ks"  size="20"  text="大人にも事情があるんだよ"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
 
@@ -454,7 +454,7 @@
 
 [love value="2"]
 
-[jump  storage="day3.ks"  target="*base3"  ]
+[jump  storage="part1_day3.ks"  target="*base3"  ]
 *choice3_2
 
 [tb_start_text mode=4 ]
@@ -480,7 +480,7 @@
 
 [love value="1"]
 
-[jump  storage="day3.ks"  target="*base3"  ]
+[jump  storage="part1_day3.ks"  target="*base3"  ]
 *choice3_3
 
 [tb_start_text mode=4 ]
@@ -505,7 +505,7 @@
 
 [love value="-2"]
 
-[jump  storage="day3.ks"  target="*base3"  ]
+[jump  storage="part1_day3.ks"  target="*base3"  ]
 *base3
 
 [bg  time="1000"  method="crossfade"  storage="home_night.png"  ]
@@ -535,4 +535,4 @@
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
-[jump  storage="part1_final.ks"  target=""  cond=""  ]
+[jump  storage="part1_day4.ks"  target=""  cond=""  ]

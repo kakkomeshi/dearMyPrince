@@ -1,3 +1,7 @@
 [preload  storage="./data/bgimage/tennis_school_sunset.png"  ]
 [preload  storage="./data/bgimage/home_day.png"  ]
+[preload  storage="./data/fgimage/chara/1/ryoma_jitome.png"  ]
+[preload  storage="./data/fgimage/chara/1/ryoma_fukigen.png"  ]
+[preload  storage="./data/fgimage/chara/1/ryoma_odoroki.png"  ]
+[preload  storage="./data/fgimage/chara/1/ryoma_tokuige.png"  ]
 [return]
