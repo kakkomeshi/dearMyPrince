@@ -72,8 +72,8 @@
 ;「ちゃんと覚えてたんだな」
 ;好感度＋1
 ;------------------------------
-【好感度 ＋1】[p]
 
+[love value="1"]
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -86,7 +86,6 @@
 
 [_tb_end_text]
 
-[love value="1"]
 
 [jump  storage="part1_day1.ks"  target="*base"  ]
 *choice1_2
