@@ -69,7 +69,7 @@
 南次郎さんからもらったスペイン土産を後部座席に乗せ、運転席へ回ろうとした、そのとき。[p]
 [_tb_end_text]
 
-[if exp="f.love_point >= 6"]
+[if exp="f.love_point >= 12"]
 
 [jump  target="*love_high"  storage=""  ]
 [elsif exp="f.love_point >= 0"]
