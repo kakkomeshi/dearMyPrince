@@ -88,33 +88,40 @@ $('input[name="f.love_point"]').attr({
 *jump_day1
 [clear_date_jump]
 [showmenubutton]
+[tb_keyconfig  flag="1"  ]
+
 
 [jump  storage="part1_day1.ks"  target=""  ]
 *jump_day2
 
 [clear_date_jump]
 [showmenubutton]
+[tb_keyconfig  flag="1"  ]
 
 [jump  storage="part1_day2.ks"  target=""  ]
 *jump_day3
 
 [clear_date_jump]
 [showmenubutton]
+[tb_keyconfig  flag="1"  ]
 
 [jump  storage="part1_day3.ks"  target=""  ]
 *jump_day4
 
 [clear_date_jump]
 [showmenubutton]
+[tb_keyconfig  flag="1"  ]
 
 [jump  storage="part1_day4.ks"  target=""  ]
 *jump_day5
 
 [clear_date_jump]
 [showmenubutton]
+[tb_keyconfig  flag="1"  ]
 [jump  storage="part1_day5.ks"  target=""  ]
 *jump_final
 
 [clear_date_jump]
 [showmenubutton]
+[tb_keyconfig  flag="1"  ]
 [jump  storage="part1_final.ks"  target=""  ]
