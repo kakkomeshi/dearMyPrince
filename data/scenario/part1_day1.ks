@@ -1,6 +1,14 @@
 [_tb_system_call storage=system/_part1_day1.ks]
 
 
+; --- ここで左上にDAY8の日付画像を表示 ---
+; [free name="date_img" layer="fix"]
+; [image storage="default/day1_icon.png" layer="fix" page="fore" x="20" y="20" name="date_img" width="150"]
+; ------------------------------------
+; 迎えのアイコン------------------------
+; [free name="action_img" layer="fix"]
+; [image storage="default/pickup_icon.png" layer="fix" page="fore" x="46" y="120" name="action_img" width="100"]
+; ------------------------------------
 ; 好感度表示
 
 
@@ -61,9 +69,9 @@
 よく見ているらしい。[p]
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="ちゃんと覚えてたんだな"  target="*choice1_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="勝手に先に行くなよ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="賢いな"  target="*choice1_3"  width="350"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="ちゃんと覚えてたんだな"  target="*choice1_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="勝手に先に行くなよ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="賢いな"  target="*choice1_3"  width="350"  autopos="true"  ]
 [s  ]
 *choice1_1
 
@@ -72,6 +80,7 @@
 ;「ちゃんと覚えてたんだな」
 ;好感度＋1
 ;------------------------------
+
 
 [love value="1"]
 
@@ -85,7 +94,6 @@
 少しだけ得意そうに見える。[p]
 
 [_tb_end_text]
-
 
 [jump  storage="part1_day1.ks"  target="*base"  ]
 *choice1_2
@@ -140,6 +148,18 @@
 [jump  storage="part1_day1.ks"  target="*base"  ]
 *base
 
+
+; レッスンのアイコン-------------
+
+
+; [free name="action_img" layer="fix"]
+
+; [image storage="default/lesson_icon.png" layer="fix" page="fore" x="46" y="120" name="action_img" width="100"]
+
+
+;------------------------------
+
+
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
 [tb_start_text mode=4 ]
@@ -192,9 +212,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="じゃあ少しだけ本気でいく"  target="*choice1_2_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="まずフォームを直そう"  target="*choice1_2_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="九歳相手に本気は出せない"  target="*choice1_2_3"  width="350"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="じゃあ少しだけ本気でいく"  target="*choice1_2_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="まずフォームを直そう"  target="*choice1_2_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="九歳相手に本気は出せない"  target="*choice1_2_3"  width="350"  autopos="true"  ]
 [s  ]
 *choice1_2_1
 
@@ -312,11 +332,22 @@
 [jump  storage="part1_day1.ks"  target="*base2"  ]
 *base2
 
+
+; 送りのアイコン-----------------
+
+
+; [free name="action_img" layer="fix"]
+
+; [image storage="default/dropoff_icon.png" layer="fix" page="fore" x="46" y="120" name="action_img" width="100"]
+
+
+;------------------------------
+
+
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="_car_twilight.png"  ]
 [tb_start_text mode=4 ]
 #
-
 ――レッスン終了後。[p]
 
 #
@@ -346,9 +377,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="テニス、好きなんだな"  target="*choice1_3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="南次郎さんに勝ちたい？"  target="*choice1_3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day1.ks"  size="20"  text="今日は疲れただろ。寝ててもいいよ"  target="*choice1_3_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="テニス、好きなんだな"  target="*choice1_3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="南次郎さんに勝ちたい？"  target="*choice1_3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="今日は疲れただろ。寝ててもいいよ"  target="*choice1_3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1_3_1
 

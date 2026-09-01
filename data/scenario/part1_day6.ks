@@ -103,9 +103,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day6.ks"  size="20"  text="いつもの席に座る？"  target="*choice1_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day6.ks"  size="20"  text="今日は後ろでもいい？"  target="*choice1_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day6.ks"  size="20"  text="今日は後ろで我慢して"  target="*choice1_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="いつもの席に座る？"  target="*choice1_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="今日は後ろでもいい？"  target="*choice1_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="今日は後ろで我慢して"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1_1
 
@@ -398,9 +398,9 @@
 けれど今日は、俺の返事を待っていた。
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day6.ks"  size="20"  text="ジェシカとの約束があるから"  target="*choice2_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day6.ks"  size="20"  text="もう少しだけ付き合う"  target="*choice2_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day6.ks"  size="20"  text="今日はリョーマに付き合うよ"  target="*choice2_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="ジェシカとの約束があるから"  target="*choice2_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="もう少しだけ付き合う"  target="*choice2_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="今日はリョーマに付き合うよ"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
 
@@ -585,9 +585,9 @@
 そう言いながら、リョーマはこちらを見ずに返事を待っている。
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day6.ks"  size="20"  text="九歳とは思えないくらい強くて、負けず嫌いな子だって"  target="*choice3_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day6.ks"  size="20"  text="憧れの南次郎さんの息子を教えてるって"  target="*choice3_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day6.ks"  size="20"  text="今まで教えた中で、一番特別な教え子だって"  target="*choice3_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="九歳とは思えないくらい強くて、負けず嫌いな子だって"  target="*choice3_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="憧れの南次郎さんの息子を教えてるって"  target="*choice3_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="今まで教えた中で、一番特別な教え子だって"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
 

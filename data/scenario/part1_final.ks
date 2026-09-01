@@ -1,13 +1,15 @@
 [_tb_system_call storage=system/_part1_final.ks]
 
-
 ; 好感度表示
-
 
 [debug_init]
 
 *top
 
+; --- ここで左上にDAY8の日付画像を表示 ---
+; [free name="date_img" layer="fix"] 
+; [image storage="default/dayfinal_icon.png" layer="fix" page="fore" x="20" y="20" name="date_img" width="150"]
+; ------------------------------------
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="home_twilight.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
@@ -131,9 +133,9 @@
 ……ダメ？
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_final.ks"  size="20"  text="もちろん、これからも君のコーチだ"  target="*choice1_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_final.ks"  size="20"  text="南次郎さんと相談してみよう"  target="*choice1_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_final.ks"  size="20"  text="今月だけの約束だった"  target="*choice1_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_final.ks"  size="20"  text="もちろん、これからも君のコーチだ"  target="*choice1_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_final.ks"  size="20"  text="南次郎さんと相談してみよう"  target="*choice1_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_final.ks"  size="20"  text="今月だけの約束だった"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
 *love_middle
 

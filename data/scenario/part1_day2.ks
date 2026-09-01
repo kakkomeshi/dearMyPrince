@@ -69,9 +69,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day2.ks"  size="20"  text="何が飲みたかった？"  target="*choice1_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day2.ks"  size="20"  text="炭酸は身体に悪いぞ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day2.ks"  size="20"  text="じゃあ行こうか"  target="*choice1_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="何が飲みたかった？"  target="*choice1_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="炭酸は身体に悪いぞ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="じゃあ行こうか"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1_1
 ;------------------------------
@@ -239,9 +239,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day2.ks"  size="20"  text="今のは上手かった"  target="*choice2_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day2.ks"  size="20"  text="もう一回やってみて"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day2.ks"  size="20"  text="でもまだ読めるな"  target="*choice2_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="今のは上手かった"  target="*choice2_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="もう一回やってみて"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="でもまだ読めるな"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
 ;------------------------------
@@ -363,9 +363,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day2.ks"  size="20"  text="ファンタグレープ"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day2.ks"  size="20"  text="スポーツドリンク"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day2.ks"  size="20"  text="缶コーヒー"  target="*choice3_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="ファンタグレープ"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="スポーツドリンク"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="缶コーヒー"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
 ;------------------------------

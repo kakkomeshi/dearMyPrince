@@ -132,9 +132,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day4.ks"  size="20"  text="分かった。本気でやろう"  target="*choice1_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day4.ks"  size="20"  text="どうして急に？"  target="*choice1_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day4.ks"  size="20"  text="九歳の子に本気は出せない"  target="*choice1_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day4.ks"  size="20"  text="分かった。本気でやろう"  target="*choice1_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day4.ks"  size="20"  text="どうして急に？"  target="*choice1_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day4.ks"  size="20"  text="九歳の子に本気は出せない"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1_1
 
@@ -940,9 +940,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day4.ks"  size="20"  text="何も言わず、視線を外す"  target="*choice2_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day4.ks"  size="20"  text="悔しかったな"  target="*choice2_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day4.ks"  size="20"  text="負けることも練習のうちだ"  target="*choice2_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day4.ks"  size="20"  text="何も言わず、視線を外す"  target="*choice2_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day4.ks"  size="20"  text="悔しかったな"  target="*choice2_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day4.ks"  size="20"  text="負けることも練習のうちだ"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
 
@@ -1258,9 +1258,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day4.ks"  size="20"  text="二人だけの秘密だ"  target="*choice3_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day4.ks"  size="20"  text="泣くのは悪いことじゃない"  target="*choice3_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day4.ks"  size="20"  text="コーチとして報告しないとな"  target="*choice3_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day4.ks"  size="20"  text="二人だけの秘密だ"  target="*choice3_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day4.ks"  size="20"  text="泣くのは悪いことじゃない"  target="*choice3_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day4.ks"  size="20"  text="コーチとして報告しないとな"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
 

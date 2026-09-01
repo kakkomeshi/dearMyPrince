@@ -162,9 +162,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day5.ks"  size="20"  text="負けても、また泣かないでくれよ"  target="*choice1_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day5.ks"  size="20"  text="どこまで勝ち上がれるか、楽しみだ"  target="*choice1_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day5.ks"  size="20"  text="優勝を狙ってみる？"  target="*choice1_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day5.ks"  size="20"  text="負けても、また泣かないでくれよ"  target="*choice1_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day5.ks"  size="20"  text="どこまで勝ち上がれるか、楽しみだ"  target="*choice1_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day5.ks"  size="20"  text="優勝を狙ってみる？"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1_1
 
@@ -590,9 +590,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day5.ks"  size="20"  text="優勝するって信じてたよ"  target="*choice2_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day5.ks"  size="20"  text="いい試合だった"  target="*choice2_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day5.ks"  size="20"  text="ダニエルも惜しかったな"  target="*choice2_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day5.ks"  size="20"  text="優勝するって信じてたよ"  target="*choice2_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day5.ks"  size="20"  text="いい試合だった"  target="*choice2_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day5.ks"  size="20"  text="ダニエルも惜しかったな"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
 
@@ -809,9 +809,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day5.ks"  size="20"  text="一球も見逃してないよ"  target="*choice3_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day5.ks"  size="20"  text="三試合とも見てたよ"  target="*choice3_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day5.ks"  size="20"  text="ほかの生徒も見ないといけないから"  target="*choice3_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day5.ks"  size="20"  text="一球も見逃してないよ"  target="*choice3_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day5.ks"  size="20"  text="三試合とも見てたよ"  target="*choice3_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day5.ks"  size="20"  text="ほかの生徒も見ないといけないから"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
 

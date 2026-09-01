@@ -62,9 +62,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="それは腹が立つな"  target="*choice1_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="九歳なら仕方ないよ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="帰ってきたらもう一度聞いてみたら？"  target="*choice1_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="それは腹が立つな"  target="*choice1_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="九歳なら仕方ないよ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="帰ってきたらもう一度聞いてみたら？"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1_1
 ;------------------------------
@@ -284,9 +284,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="きっと会えるよ"  target="*choice2_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="世界の頂点か"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="お兄さんも待ってるかもな"  target="*choice2_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="きっと会えるよ"  target="*choice2_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="世界の頂点か"  target="*choice2_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="お兄さんも待ってるかもな"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
 ;------------------------------
@@ -421,9 +421,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="俺はそうは思わない"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="内容によるかな"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="black"  storage="part1_day3.ks"  size="20"  text="大人にも事情があるんだよ"  target="*choice3_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="俺はそうは思わない"  target="*choice3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="内容によるかな"  target="*choice3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
+[glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="大人にも事情があるんだよ"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
 ;------------------------------

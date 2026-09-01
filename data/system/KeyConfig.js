@@ -421,19 +421,19 @@ window.__tyrano_key_config = {
     // スマホ・タブレットのジェスチャー操作
     gesture: {
 
-        "swipe_up_1": "backlog",
-        "swipe_down_1": "load",
-        "swipe_left_1": "auto",
-        "swipe_right_1": "menu",
-        "hold": "holdskip",
+        // "swipe_up_1": "backlog",
+        // "swipe_down_1": "load",
+        // "swipe_left_1": "auto",
+        // "swipe_right_1": "menu",
+        // "hold": "holdskip",
 
         // 画面右端のダブルタップ・トリプルタップ
-        "mash_right_2": "auto",
-        "mash_right_3": "skip",
+        // "mash_right_2": "auto",
+        // "mash_right_3": "skip",
 
         // 画面左端のダブルタップ・トリプルタップ
-        "mash_left_2": "",
-        "mash_left_3": "",
+        // "mash_left_2": "",
+        // "mash_left_3": "",
 
 
     },

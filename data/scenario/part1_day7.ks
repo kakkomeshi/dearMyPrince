@@ -115,9 +115,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day7.ks"  size="20"  text="十五分遅れただけで、大げさだな"  target="*choice1_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day7.ks"  size="20"  text="次からは気をつけるよ"  target="*choice1_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day7.ks"  size="20"  text="何も言わずにいなくなったりしないよ"  target="*choice1_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="十五分遅れただけで、大げさだな"  target="*choice1_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="次からは気をつけるよ"  target="*choice1_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="何も言わずにいなくなったりしないよ"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1_1
 
@@ -282,9 +282,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day7.ks"  size="20"  text="もうリョーマのショットだね"  target="*choice2_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day7.ks"  size="20"  text="俺の真似をするには、まだ早かったかな"  target="*choice2_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day7.ks"  size="20"  text="踏み込みのタイミングがよかったよ"  target="*choice2_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="もうリョーマのショットだね"  target="*choice2_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="俺の真似をするには、まだ早かったかな"  target="*choice2_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="踏み込みのタイミングがよかったよ"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
 
@@ -489,9 +489,9 @@
 
 [_tb_end_text]
 
-[glink  color="black"  storage="part1_day7.ks"  size="20"  text="ガソリンを入れに行こうか"  target="*choice3_1"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day7.ks"  size="20"  text="もう少しドライブしようか"  target="*choice3_2"  width="max"  autopos="true"  ]
-[glink  color="black"  storage="part1_day7.ks"  size="20"  text="このまま家に向かう"  target="*choice3_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="ガソリンを入れに行こうか"  target="*choice3_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="もう少しドライブしようか"  target="*choice3_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="このまま家に向かう"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice3_1
 

@@ -4,9 +4,11 @@
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_sunset.png"  ]
 
+; ; --- ここで左上にDAY8の日付画像を表示 ---
+; [free name="date_img" layer="fix"] 
+; [image storage="default/day0_icon.png" layer="fix" page="fore" x="20" y="20" name="date_img" width="100"]
+; ; ------------------------------------
 ; 好感度表示
-
-
 [debug_init]
 
 [tb_show_message_window  ]
