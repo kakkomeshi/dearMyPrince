@@ -147,7 +147,7 @@ inputmode: "numeric"
 [clear_date_jump]
 [showmenubutton]
 [tb_keyconfig  flag="1"  ]
-[jump  storage="part1_day6.ks"  target=""  ]
+[jump  storage="part1_day7.ks"  target=""  ]
 
 
 *jump_day8
@@ -155,7 +155,7 @@ inputmode: "numeric"
 [clear_date_jump]
 [showmenubutton]
 [tb_keyconfig  flag="1"  ]
-[jump  storage="part1_day6.ks"  target=""  ]
+[jump  storage="part1_day8.ks"  target=""  ]
 
 
 *jump_final

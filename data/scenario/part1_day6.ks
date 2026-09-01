@@ -747,4 +747,4 @@
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
-[jump  storage="part1_final.ks"  target=""  cond=""  ]
+[jump  storage="part1_day7.ks"  target=""  cond=""  ]
