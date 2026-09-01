@@ -4,7 +4,7 @@
 
 
 		
-			[position page=fore frame="メッセージ欄.png" margint=45 marginl=10 marginr=20 marginb=10 vertical=false opacity="255" ]
+			[position page=fore frame="message_box.png" margint=45 marginl=10 marginr=20 marginb=10 vertical=false opacity="255" ]
 		
 
 		[ptext name="chara_name_area" layer="message0" color=0xFFFFFF size=26 x=95 y=411 bold="bold" edge="undefined" shadow="undefined"]
@@ -21,19 +21,19 @@
 		
 
             
-            [button role="auto" graphic="アセット_7.png" x="810" y="410" width="90" height="30" visible="false" ]
+            [button role="auto" graphic="auto_icon.png" x="810" y="410" width="90" height="30" visible="false" ]
             
 
         
 
             
-            [button role="skip" graphic="SKIP.png" x="710" y="410" width="90" height="30" visible="false" ]
+            [button role="skip" graphic="skip_icon.png" x="710" y="410" width="90" height="30" visible="false" ]
             
 
         
 
             
-            [button role="backlog" graphic="アセット_5.png" x="610" y="410" width="90" height="30" visible="false" ]
+            [button role="backlog" graphic="log_icon.png" x="610" y="410" width="90" height="30" visible="false" ]
             
 
         
