@@ -71,22 +71,29 @@
 南次郎さんからもらったスペイン土産を後部座席に乗せ、運転席へ回ろうとした、そのとき。[p]
 [_tb_end_text]
 
-[if exp="f.love_point >= 12"]
+;----------------------------------------------
+; 分岐判定
+;----------------------------------------------
+; 1. 好感度が高く、かつ周囲信頼度が低い場合 -> 執着・警戒分岐へ
+; [if exp="f.love >= 12 && f.trust < 0"]
+;     [jump target="*love_high_trust_low" storage=""]
 
-[jump  target="*love_high"  storage=""  ]
-[elsif exp="f.love_point >= 0"]
+; 2. 好感度が高い場合 -> 高ルートへ
+[if exp="f.love >= 12"]
+    [jump target="*love_high" storage=""]
 
-[jump  target="*love_middle"  storage=""  ]
+; 3. 好感度が普通（中くらい）の場合
+[elsif exp="f.love >= 0"]
+    [jump target="*love_middle" storage=""]
+
+; 4. 好感度がマイナス（嫌われた状態）の場合
 [else]
-
-[jump  target="*love_low"  storage=""  ]
+    [jump target="*love_minus" storage=""]
 [endif]
 
+
 *love_high
-
-
-; 好感度が高
-
+; 好感度が高（通常）
 
 [tb_start_text mode=4 ]
 #
@@ -122,8 +129,7 @@
 #
 そう言って車のドアに手をかける。[p]
 #リョーマ
-……待って[p]
-……俺[p]
+……待って、……俺[p]
 #リョーマ
 ……親父が戻ってきても、アンタのコーチがいい[p]
 #エリオット
@@ -137,7 +143,90 @@
 [glink  color="customized_button"  storage="part1_final.ks"  size="20"  text="南次郎さんと相談してみよう"  target="*choice1_2"  width="max"  autopos="true"  ]
 [glink  color="customized_button"  storage="part1_final.ks"  size="20"  text="今月だけの約束だった"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
+
+*love_high_trust_low
+; 好感度高 ＆ 周囲信頼度低（倫子の観察眼・過剰な庇い・永劫の絶縁）
+
+[tb_start_text mode=4 ]
+#倫子
+……エリオット。[r]
+1ヶ月、お疲れ様。……だけど、ちょっと話があるの[p]
+
+#
+静かだが、どこか冷ややかなトーン。[r]
+その横からリョーマが飛び出そうとするが、後ろに立つ南次郎さんがその肩を掴んで引き止めた。[p]
+
+#リョーマ
+……離してよ、親父！ 俺、コーチと――[p]
+
+#南次郎
+おい、チビ助。少し黙ってろ[p]
+
+#倫子
+エリオット。あなたはロースクールで法律を学んでる優秀な子だからと思って、信頼してリョーマを任せていたの。[r]
+……だけど、この1ヶ月、連絡の遅れや無断での連れ回しが何度あったか、分かってる？[p]
+
+#エリオット
+倫子さん、それは……[p]
+
+#倫子
+最初のうちは『熱心だから』と思って目を瞑っていたわ。[r]
+だけど、あの子に親への誤魔化しを覚えさせたり、秘密を作るような真似を重ねられては……もう黙っていられないの[p]
+
+#
+小さなルーズさや、子供目線に寄り添いすぎた軽率な行動。[r]
+この1ヶ月間で少しずつ積み重なった不信感が、最後の最後で決定的になってしまったのだ。[p]
+
+#リョーマ
+違う！ 俺が頼んだんだ！[r]
+コーチは悪くない！ 俺が行きたいっていったんだよ！！[p]
+
+#
+リョーマが必死に俺の前に立ちふさがり、大人たちを睨みつける。[r]
+なりふり構わず俺を庇おうとするその姿は、痛々しいほどだった。[p]
+
+#リョーマ
+だからコーチを責めるなよ！[r]
+俺のコーチは……エリオットなんだから！！[p]
+
+#
+だが、その必死の庇い立てこそが、大人たちに『あの子を歪ませた』と確信させてしまった。[p]
+
+#南次郎
+……まあそういうわけだ、エリオット。[r]
+ま、お前が法学生だってことと、知り合いのよしみで通報までは勘弁してやるが……もううちのガキには関わらねえでくれや[p]
+
+#
+南次郎さんが低い声で告げ、嫌がるリョーマの腕を引いて家の中へと連れ戻す。[p]
+
+#リョーマ
+やだ！ 離してよ！ コーチ！ コーチ！！[p]
+
+#
+バタン、と容赦なく重いドアが閉ざされた。[r]
+ドアの向こうから、俺の名を呼ぶ叫び声がかすかに漏れ聞こえる。[p]
+
+#
+法を学ぶ身でありながら、誠実さを欠いた行動を重ねた代償。[r]
+顔見知りであったはずの越前家からの信頼は完全に失墜し、俺はあの子の周囲から排除された。[p]
+
+#
+これからあの子がどんな選手になり、どんな未来を歩もうと……[r]
+俺がそのコートの傍らに立つことも、その人生に関わることも、二度と叶わない。[p]
+
+#
+取り返しのつかない静寂の中、俺は二度と跨げない敷居を前に、ただ立ち尽くすことしかできなかった。[p]
+
+SECRET END 〜二人だけの秘密〜[p]
+[_tb_end_text]
+
+[eval exp="sf.ed04_cage = true"]
+[stopbgm time="1000" fadeout="true"]
+[jump storage="title_screen.ks" target=""]
+
+
 *love_middle
+; NORMAL END 〜またね、コーチ〜
 
 [tb_start_text mode=4 ]
 #
@@ -178,15 +267,15 @@
 NORMAL END 〜またね、コーチ〜[p]
 [_tb_end_text]
 
-
-; NORMAL END 〜またね、コーチ〜を見た
-
-
+; NORMAL END 〜またね、コーチ〜フラグ保存
 [eval exp="sf.ed02_goodbye = true"]
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="title_screen.ks"  target=""  ]
-*love_low
+
+
+*love_minus
+; 【追加分岐】好感度マイナス（打ち解けられなかった場合）
 
 [tb_start_text mode=4 ]
 #
@@ -215,6 +304,7 @@ NORMAL END 〜またね、コーチ〜[p]
 元気でな[p]
 #リョーマ
 うん[p]
+#
 それきり、会話は続かなかった。[p]
 #
 最初の日と同じ、大きな琥珀色の目が俺を見る。[r]
@@ -233,18 +323,17 @@ NORMAL END 〜またね、コーチ〜[p]
 予定通り役目を終えて、俺も元の生活に戻る。[p]
 #
 ただ、それだけのことだ。[p]
-NORMAL END 〜契約終了〜[p]
+
+NORMAL END 〜コーチ、チェンジで〜[p]
 [_tb_end_text]
 
-
-; NORMAL END 〜契約終了〜を見た
-
-
+; NORMAL END 〜コーチ、チェンジで〜フラグ保存
 [eval exp="sf.ed01_low = true"]
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="title_screen.ks"  target=""  ]
-[jump  target="*love_low"  storage="part1_end_contract_low.ks"  ]
+
+
 *choice1_1
 
 [tb_start_text mode=4 ]
@@ -291,16 +380,20 @@ NORMAL END 〜契約終了〜[p]
 ……そういう問題かな[p]
 #
 思わず笑ってしまう。[p]
-; 【好感度 ＋3】[p]
 [_tb_end_text]
 
-[love value="3"]
+[eval exp="f.love = f.love + 3"]
+
+; ★ここで周囲信頼度（f.trust）を判定！
+; 信頼度がマイナス（低）の場合は秘密エンドへ強制分岐
+[if exp="f.trust < 0"]
+    [jump storage="part1_final.ks" target="*love_high_trust_low"]
+[endif]
+
+; 信頼度に問題がなければ南次郎許可取りへ
+[jump storage="part1_final.ks" target="*nanjiro_kyoka"]
 
 
-; 南次郎許可取りへ
-
-
-[jump  storage="part1_final.ks"  target="*nanjiro_kyoka"  ]
 *choice1_2
 
 [tb_start_text mode=4 ]
@@ -327,17 +420,21 @@ NORMAL END 〜契約終了〜[p]
 ……ふーん[p]
 #
 ようやく表情が緩んだ。[p]
-
-; 【好感度 ±2】[p]
 [_tb_end_text]
 
-[love value="2"]
+[eval exp="f.love = f.love + 2"]
+
+; ★ここで周囲信頼度（f.trust）を判定！
+; 信頼度がマイナス（低）の場合は秘密エンドへ強制分岐
+[if exp="f.trust < 0"]
+    [jump storage="part1_final.ks" target="*love_high_trust_low"]
+[endif]
+
+; 信頼度に問題がなければ南次郎許可取りへ
+[jump storage="part1_final.ks" target="*nanjiro_kyoka"]
 
 
-; 南次郎許可取りへ
 
-
-[jump  storage="part1_final.ks"  target="*nanjiro_kyoka"  ]
 *choice1_3
 
 [tb_start_text mode=4 ]
@@ -386,19 +483,19 @@ NORMAL END 〜契約終了〜[p]
 だから、これでいい。[p]
 #
 これでよかったはずだ。[p]
+
 NORMAL END 〜契約終了〜[p]
 [_tb_end_text]
 
-
-; NORMAL END 〜契約終了〜を見た
-
-
+; NORMAL END 〜契約終了〜フラグ保存
 [eval exp="sf.ed01_low = true"]
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="title_screen.ks"  target=""  ]
-*nanjiro_kyoka
 
+
+*nanjiro_kyoka
+; 南次郎に許可を取る
 [tb_start_text mode=4 ]
 #
 ――話を聞いた南次郎さんは、少し意外そうな顔をした。[p]
@@ -410,11 +507,26 @@ NORMAL END 〜契約終了〜[p]
 #南次郎
 いや？[r]
 ずいぶん懐いたもんだと思ってよ[p]
+#倫子
+ふふ、ほんとね。[r]
+リョーマが自分から『この人がいい』なんて言うの、初めて見たかもしれないわ[p]
+
+#
+奥からお茶を持って現れた倫子さんが、嬉しそうに目を細める。[r]
+そして、後輩である俺の方へやさしく視線を向けた。[p]
+
+#倫子
+エリオット、あなたさえ良ければお願いできるかしら？[r]
+あの子、この1ヶ月本当に楽しそうだったから……学業と両立できる範囲で構わないし[p]
+
 #リョーマ
-そんなんじゃないし[p]
+……そんなんじゃないし。[r]
+ただ、アンタの指導が一番やりやすいだけ[p]
+
 #南次郎
-ま、俺は構わねえよ。[r]
-エリオット、これからも頼むわ[p]
+はいはい、素直じゃねえのは誰に似たんだか。[r]
+ま、俺は構わねえよ。エリオット、これからも頼むわ[p]
+
 #エリオット
 分かりました[p]
 #
@@ -437,14 +549,12 @@ NORMAL END 〜契約終了〜[p]
 #リョーマ
 ……うん！[p]
 #
-#
 リョーマの顔が、ぱっと綻んだ。[r]
 この一ヶ月で何度か見た、年相応の笑顔だった。[p]
 [_tb_end_text]
 
-
-; 第２部へ
-
+; 第２部へ進む（TRUE END）
+[eval exp="sf.ed00_continue = true"]
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="part2_prolog.ks"  target=""  ]
