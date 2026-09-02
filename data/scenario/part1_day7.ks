@@ -489,7 +489,7 @@
 
 [_tb_end_text]
 
-[glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="ガソリンを入れに行こうか"  target="*choice3_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="ガソリンを入れ忘れてた"  target="*choice3_1"  width="max"  autopos="true"  ]
 [glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="もう少しドライブしようか"  target="*choice3_2"  width="max"  autopos="true"  ]
 [glink  color="customized_button"  storage="part1_day7.ks"  size="20"  text="このまま家に向かう"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
@@ -497,7 +497,7 @@
 
 [tb_start_text mode=4 ]
 ;------------------------------
-;「ガソリンを入れに行こうか」
+;「ガソリンを入れ忘れてた」
 ;好感度+1
 ;------------------------------
 [love value="1"]
