@@ -311,4 +311,4 @@
 ; DAY8終了（明日、南次郎帰宅の最終挨拶編へ）
 
 
-[jump  storage="part1_day9.ks"  target="*base0"  ]
+[jump  storage="part1_final.ks"  target=""  ]
