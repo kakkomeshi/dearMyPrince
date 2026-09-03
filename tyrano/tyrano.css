@@ -1128,3 +1128,8 @@ img#remodal-cancel {
     pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
     opacity: 1;
 }
+
+/* message_innerの上の余白を強制的に修正する */
+.message_inner p {
+    padding-top: 3px !important;
+}
