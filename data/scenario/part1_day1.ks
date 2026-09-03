@@ -104,8 +104,8 @@
 ;好感度-1
 ;------------------------------
 
-
 [love value="-1"]
+[minus_count]
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -304,6 +304,7 @@
 
 
 [love value="-2"]
+[minus_count]
 
 [tb_start_text mode=4 ]
 #エリオット
@@ -473,6 +474,7 @@
 
 
 [love value="-1"]
+[minus_count]
 
 [tb_start_text mode=4 ]
 #エリオット

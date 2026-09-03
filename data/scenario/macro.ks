@@ -5,11 +5,11 @@
 
 [macro name="love"]
 
-[eval exp="f.love_point = Number(f.love_point) + Number(mp.value)"]
+[eval exp="f.love = Number(f.love) + Number(mp.value)"]
 
 [iscript]
 $("#debug_love").text(
-"好感度：" + TYRANO.kag.stat.f.love_point
+"好感度：" + TYRANO.kag.stat.f.love
 );
 [endscript]
 
@@ -24,8 +24,8 @@ $("#debug_love").text(
 [macro name="debug_init"]
 
 [iscript]
-if (typeof TYRANO.kag.stat.f.love_point === "undefined") {
-TYRANO.kag.stat.f.love_point = 0;
+if (typeof TYRANO.kag.stat.f.love === "undefined") {
+TYRANO.kag.stat.f.love = 0;
 }
 if ($("#debug_love").length === 0) {
 $("#tyrano_base").append(
@@ -39,11 +39,11 @@ $("#tyrano_base").append(
 'padding:6px 10px;' +
 'font-size:18px;' +
 'pointer-events:none;' +
-'">好感度：' + TYRANO.kag.stat.f.love_point + '</div>'
+'">好感度：' + TYRANO.kag.stat.f.love + '</div>'
 );
 }
 $("#debug_love").text(
-"好感度：" + TYRANO.kag.stat.f.love_point
+"好感度：" + TYRANO.kag.stat.f.love
 );
 [endscript]
 
@@ -94,3 +94,23 @@ $(".bgm_mute_button").attr(
 
 [endmacro]
 
+; =========================
+; 周囲信頼度の計算
+; =========================
+[macro name="trust"]
+[eval exp="f.trust = Number(f.trust) + Number(mp.value)"]
+[endmacro]
+
+; =========================
+; リョーマ依存度の計算
+; =========================
+[macro name="ryoma_dep"]
+[eval exp="f.ryoma_dep = Number(f.ryoma_dep) + Number(mp.value)"]
+[endmacro]
+
+; =========================
+; マイナス選択肢のカウント
+; =========================
+[macro name="minus_count"]
+[eval exp="f.minus_count += 1"]
+[endmacro]
