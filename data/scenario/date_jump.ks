@@ -41,17 +41,17 @@
 [layopt layer="1" visible="true"]
 
 [iscript]
-$(document).off("input.loveDebug", 'input[name="f.love_point"]').on("input.loveDebug", 'input[name="f.love_point"]', function () {
+$(document).off("input.loveDebug", 'input[name="f.love"]').on("input.loveDebug", 'input[name="f.love"]', function () {
 var value = Number(this.value) || 0;
-TYRANO.kag.evalScript("f.love_point = " + value);
+TYRANO.kag.evalScript("f.love = " + value);
 });
 [endscript]
 
 [ptext layer="1" page="fore" name="date_jump_title" text="PART 1  日付ジャンプ" x="0" y="105" width="960" align="center" size="36" color="0xffffff" bold="true"]
 
-[edit  name="f.love_point"  initial="0"  left="800"  top="115"  width="80"  height="30"  size="20"  color="0x000000"  maxchars="3"  ]
+[edit  name="f.love"  initial="0"  left="800"  top="115"  width="80"  height="30"  size="20"  color="0x000000"  maxchars="3"  ]
 [iscript]
-$('input[name="f.love_point"]').attr({
+$('input[name="f.love"]').attr({
 type: "number",
 step: "1",
 inputmode: "numeric"
