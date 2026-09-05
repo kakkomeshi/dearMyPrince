@@ -10,6 +10,8 @@
 [debug_init]
 
 [tb_show_message_window  ]
+; ★暗転（mask）をここで解除してタイトル画面をフェードイン表示させる
+[mask_off time="1000"]
 [tb_start_text mode=4 ]
 #
 ――こうして、エリオットは引き続きリョーマのコーチを務めることになった。[p]

@@ -323,17 +323,12 @@
 #
 これでよかったはずだ。[p]
 
-NORMAL END 〜契約終了〜[p]
+NORMAL END 〜契約終了〜
 [_tb_end_text]
 
+[eval exp="sf.ed01_low = true"]
 
-; NORMAL END 〜契約終了〜 フラグ保存
-
-
-[eval exp="sf.ed04_endOfContract = true"]
-
-[stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="title_screen.ks"  target=""  ]
+[ed_finish]
 
 ; =========================================================
 ; ed05_dependent: SECRET END 〜二人だけの秘密〜
@@ -436,8 +431,7 @@ SECRET END 〜二人だけの秘密だよ〜[p]
 
 [eval exp="sf.ed05_dependent = true"]
 
-[stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="title_screen.ks"  target=""  ]
+[ed_finish]
 
 ; =========================================================
 ; ed01_continue: TRUE END ～これからも君のコーチだ～
@@ -502,6 +496,7 @@ SECRET END 〜二人だけの秘密だよ〜[p]
 #
 リョーマの顔が、ぱっと綻んだ。[r]
 この一ヶ月で何度か見た、年相応の笑顔だった。[p]
+TRUE END ～これからも君のコーチだ～
 [_tb_end_text]
 
 
@@ -510,9 +505,19 @@ SECRET END 〜二人だけの秘密だよ〜[p]
 
 [eval exp="sf.ed01_continue = true"]
 
-[stopbgm  time="1000"  fadeout="true"  ]
+; BGMを2秒かけてフェードアウト
+[stopbgm time="2000" fadeout="true"]
+
+; メッセージとウィンドウを残したまま2.5秒間じっくり見せる
+[wait time="2500"]
+
+; 1秒かけて黒く暗転（フェードアウト）
+[mask time="1000" color="0x000000"]
+
+; 画面クリア処理
+[cm]
+[clearfix]
 [jump  storage="part2_prolog.ks"  target=""  ]
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 
 ; =========================================================
 ; ed02_goodbye: NORMAL END 〜またね、コーチ〜
@@ -558,7 +563,7 @@ SECRET END 〜二人だけの秘密だよ〜[p]
 そのとき、この小さな選手がどれだけ強くなっているのか。[r]
 少しだけ楽しみだった。[p]
 
-NORMAL END 〜またね、コーチ〜[p]
+NORMAL END 〜またね、コーチ〜
 [_tb_end_text]
 
 
@@ -567,8 +572,7 @@ NORMAL END 〜またね、コーチ〜[p]
 
 [eval exp="sf.ed02_goodbye = true"]
 
-[stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="title_screen.ks"  target=""  ]
+[ed_finish]
 
 ; =========================================================
 ; ed03_change: BITTER END 〜コーチ、チェンジで〜
@@ -589,10 +593,9 @@ NORMAL END 〜またね、コーチ〜[p]
 #
 バックミラー越しに越前家の屋根を一度だけ見上げ、俺は一度も振り返ることなく車を出した。[p]
 
-BITTER END 〜コーチ、チェンジで〜[p]
+BITTER END 〜コーチ、チェンジで〜
 [_tb_end_text]
 
 [eval exp="sf.ed03_change = true"]
 
-[stopbgm  time="1000"  fadeout="true"  ]
-[jump  storage="title_screen.ks"  target=""  ]
+[ed_finish]

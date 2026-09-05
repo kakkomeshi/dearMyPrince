@@ -114,3 +114,24 @@ $(".bgm_mute_button").attr(
 [macro name="minus_count"]
 [eval exp="f.minus_count += 1"]
 [endmacro]
+
+; ============================================================
+; エンディング演出共通マクロ (ed_finish)
+; ============================================================
+[macro name="ed_finish"]
+; BGMを2秒かけてフェードアウト
+[stopbgm time="2000" fadeout="true"]
+
+; メッセージとウィンドウを残したまま2.5秒間じっくり見せる
+[wait time="2500"]
+
+; 1秒かけて黒く暗転（フェードアウト）
+[mask time="1000" color="0x000000"]
+
+; 画面クリア処理
+[cm]
+[clearfix]
+
+; タイトル画面へ遷移
+[jump storage="title_screen.ks" target=""]
+[endmacro]

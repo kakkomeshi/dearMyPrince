@@ -30,6 +30,8 @@
 [bg  storage="title.jpg"  ]
 *title
 
+; ★暗転（mask）をここで解除してタイトル画面をフェードイン表示させる
+[mask_off time="1000"]
 
 ;タイトル各種ボタン
 
