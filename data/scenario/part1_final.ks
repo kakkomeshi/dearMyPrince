@@ -74,20 +74,20 @@
 ; 最終日 分岐判定ロジック
 ;----------------------------------------------
 ; 1. 拒絶・冷遇判定（優先度高）
-; 禁忌肢選択、マイナス5回以上、または好感度マイナス -> ed02_minusへ
+; 禁忌肢選択、マイナス5回以上、または好感度マイナス -> ed03_changeへ
 
 
-[jump  storage="part1_final.ks"  target="*ed02_minus"  cond="f.love_taboo_flag==true||f.minus_count>=5||f.love<0"  ]
+[jump  storage="part1_final.ks"  target="*ed03_change"  cond="f.love_taboo_flag==true||f.minus_count>=5||f.love<0"  ]
 
 ; 2. リョーマからのすがりつきイベント発生判定（好感度10以上）
 
 
 [jump  storage="part1_final.ks"  target="*ryoma_plea_scene"  cond="f.love>=10"  ]
 
-; 3. 上記以外（好感度普通：0〜9） -> ed01_goodbyeへ
+; 3. 上記以外（好感度普通：0〜9） -> ed02_goodbyeへ
 
 
-[jump  storage="part1_final.ks"  target="*ed01_goodbye"  ]
+[jump  storage="part1_final.ks"  target="*ed02_goodbye"  ]
 
 ; =========================================================
 ; 高好感度ルート：リョーマからのすがりつき
@@ -206,7 +206,7 @@
 
 
 ; ★周囲信頼度（f.trust）または禁忌フラグの判定
-; 条件A: 信頼度がマイナス、または禁忌フラグが立っている場合 -> ed04_dependent（SECRET BAD）へ
+; 条件A: 信頼度がマイナス、または禁忌フラグが立っている場合 -> ed05_dependent（SECRET BAD）へ
 
 
 [jump  storage="part1_final.ks"  target="*love_high_trust_low"  cond="f.trust<0||f.trust_taboo_flag==true"  ]
@@ -259,7 +259,7 @@
 
 
 ; ★周囲信頼度（f.trust）または禁忌フラグの判定
-; 条件A: 信頼度がマイナス、または禁忌フラグが立っている場合 -> ed04_dependent（SECRET BAD）へ
+; 条件A: 信頼度がマイナス、または禁忌フラグが立っている場合 -> ed05_dependent（SECRET BAD）へ
 
 
 [jump  storage="part1_final.ks"  target="*love_high_trust_low"  cond="f.trust<0||f.trust_taboo_flag==true"  ]
@@ -330,13 +330,13 @@ NORMAL END 〜契約終了〜[p]
 ; NORMAL END 〜契約終了〜 フラグ保存
 
 
-[eval exp="sf.ed01_low = true"]
+[eval exp="sf.ed04_endOfContract = true"]
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="title_screen.ks"  target=""  ]
 
 ; =========================================================
-; ed04_dependent: SECRET END 〜二人だけの秘密だよ〜
+; ed05_dependent: SECRET END 〜二人だけの秘密〜
 ; (継続希望を選んだ直後、家に入って親の不信感が爆発する)
 ; =========================================================
 
@@ -434,13 +434,13 @@ NORMAL END 〜契約終了〜[p]
 SECRET END 〜二人だけの秘密だよ〜[p]
 [_tb_end_text]
 
-[eval exp="sf.ed04_cage = true"]
+[eval exp="sf.ed05_dependent = true"]
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="title_screen.ks"  target=""  ]
 
 ; =========================================================
-; ed00_continue: TRUE END ～これからも君のコーチだ～
+; ed01_continue: TRUE END ～これからも君のコーチだ～
 ; (信頼度に問題なく、南次郎から正式許可をもらって第2部へ)
 ; =========================================================
 
@@ -508,19 +508,19 @@ SECRET END 〜二人だけの秘密だよ〜[p]
 ; 第２部へ進む（TRUE END）
 
 
-[eval exp="sf.ed00_continue = true"]
+[eval exp="sf.ed01_continue = true"]
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="part2_prolog.ks"  target=""  ]
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 
 ; =========================================================
-; ed01_goodbye: NORMAL END 〜またね、コーチ〜
+; ed02_goodbye: NORMAL END 〜またね、コーチ〜
 ; (好感度普通：すがりつかれず爽やかに見送られる)
 ; =========================================================
 
 
-*ed01_goodbye
+*ed02_goodbye
 
 [tb_start_text mode=4 ]
 #
@@ -571,12 +571,12 @@ NORMAL END 〜またね、コーチ〜[p]
 [jump  storage="title_screen.ks"  target=""  ]
 
 ; =========================================================
-; ed02_minus: BITTER END 〜コーチ、チェンジで〜
+; ed03_change: BITTER END 〜コーチ、チェンジで〜
 ; (拒絶・冷遇選択が多く、不信感を抱かれたまま終了)
 ; =========================================================
 
 
-*ed02_minus
+*ed03_change
 
 [tb_start_text mode=4 ]
 #
@@ -592,7 +592,7 @@ NORMAL END 〜またね、コーチ〜[p]
 BITTER END 〜コーチ、チェンジで〜[p]
 [_tb_end_text]
 
-[eval exp="sf.ed02_minus = true"]
+[eval exp="sf.ed03_change = true"]
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="title_screen.ks"  target=""  ]
