@@ -4,27 +4,31 @@
 ; 1. デバッグパラメータ適用用共通マクロ
 ; ============================================================
 [macro name="apply_debug_params"]
-; 画面上の全UI・HTML要素を消去
+; 1. HTMLコンテナの一括削除
 [clear_date_jump]
-[showmenubutton]
-[tb_keyconfig flag="1"]
 
-; 全変数の初期化（new_game_init.ks）を実行
+; 2. 画面表示の完全リセット
+[cm]
+
+; 3. 変数とシステム状態の初期化（★真っ先に呼ぶ）
 [call storage="new_game_init.ks" target="*new_game"]
 
-; リアルタイム保持しておいた tf 変数から f 変数へ一括反映
+; 4. リアルタイム保持しておいた tf 変数から f 変数へ一括反映
 [iscript]
 f.love = tf.temp_love;
 f.trust = tf.temp_trust;
 f.minus_count = tf.temp_minus_count;
 f.trust_taboo_flag = tf.temp_trust_taboo;
 f.love_taboo_flag = tf.temp_love_taboo;
-
-console.log("=== DEBUG APPLY COMPLETE ===");
-console.log("f.love:", f.love, "f.trust:", f.trust, "f.minus:", f.minus_count);
-console.log("f.trust_taboo_flag:", f.trust_taboo_flag, "f.love_taboo_flag:", f.love_taboo_flag);
 [endscript]
-; 好感度表示欄更新
+
+; 5. メッセージウィンドウの再生成（本文・クリック判定復元）
+[tb_show_message_window]
+
+; 6. 【最重要】初期化が終わった後に、メニューボタン（SKIP/AUTO等）とキーコンフィグを表示・復元
+[showmenubutton]
+[tb_keyconfig flag="1"]
+[start_keyconfig]
 [debug_init]
 [endmacro]
 
