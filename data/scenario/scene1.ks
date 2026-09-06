@@ -188,27 +188,18 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 むしろ――少しだけ興味が湧いた。[p]
 #エリオット
 じゃあ、明日確かめてみるかい？[p]
-[_tb_end_text]
-
-[tb_start_text mode=4 ]
-#リョーマ
-……[p]
-[_tb_end_text]
 
 [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_odoroki.png"  ]
+#リョーマ
+……[p]
+
 [wait  time="1500"  ]
-[tb_start_text mode=4 ]
-#
 琥珀色の目が、わずかに見開かれる。[p]
-[_tb_end_text]
 
 [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tokuige.png"  ]
-[tb_start_text mode=4 ]
 #
 それから、ほんの少しだけ口元が上がった。[p]
-[_tb_end_text]
 
-[tb_start_text mode=4 ]
 #リョーマ
 いいよ[p]
 #エリオット
@@ -224,7 +215,8 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 
 [chara_hide  name="リョーマ"  time="1000"  wait="true"  pos_mode="true"  ]
 [tb_start_text mode=4 ]
-四週間。[p]
+週に二回のレッスンを四週間。[r]
+つまり、八日間。[p]
 その間だけ、あの子のテニスを見る。[p]
 
 

@@ -1,4 +1,6 @@
 ;プラグイン。テーマ読み込み
+;ルビ表示
+[plugin name=custom_ruby]
 
 ; 名前の表示サイズ変更
 [free name="chara_name_area" layer="message0"]

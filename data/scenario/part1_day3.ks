@@ -398,7 +398,7 @@
 [bg  time="1000"  method="crossfade"  storage="_car_twilight.png"  ]
 [tb_start_text mode=4 ]
 #
-――帰り道。[p]
+――帰りの車内。[p]
 今日は珍しく、リョーマのほうから話すことが多かった。[r]
 南次郎さんのこと。[r]
 そして、今はここにいない兄のこと。[p]

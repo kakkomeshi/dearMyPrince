@@ -20,7 +20,7 @@
 [tb_show_message_window  ]
 [tb_start_text mode=4 ]
 #
-――翌日。[p]
+――一日目。[p]
 
 #
 約束の時間より少し早く学校の前に着いた。[r]校門から出てくる子供たちを眺めながら、昨日会ったばかりの少年を探す。[p]
@@ -349,7 +349,7 @@
 [bg  time="1000"  method="crossfade"  storage="_car_twilight.png"  ]
 [tb_start_text mode=4 ]
 #
-――レッスン終了後。[p]
+――帰りの車内。[p]
 
 #
 
