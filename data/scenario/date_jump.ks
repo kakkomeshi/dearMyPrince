@@ -4,13 +4,14 @@
 ; 1. デバッグパラメータ適用用共通マクロ
 ; ============================================================
 [macro name="apply_debug_params"]
+
 ; 1. HTMLコンテナの一括削除
 [clear_date_jump]
 
 ; 2. 画面表示の完全リセット
 [cm]
 
-; 3. 変数とシステム状態の初期化（★真っ先に呼ぶ）
+; 3. 変数とシステム状態の初期化
 [call storage="new_game_init.ks" target="*new_game"]
 
 ; 4. リアルタイム保持しておいた tf 変数から f 変数へ一括反映
@@ -22,29 +23,37 @@ f.trust_taboo_flag = tf.temp_trust_taboo;
 f.love_taboo_flag = tf.temp_love_taboo;
 [endscript]
 
-; 5. メッセージウィンドウの再生成（本文・クリック判定復元）
+; 5. メッセージウィンドウの再生成
 [tb_show_message_window]
 
-; 6. 【最重要】初期化が終わった後に、メニューボタン（SKIP/AUTO等）とキーコンフィグを表示・復元
+; 6. メニューボタンとキーコンフィグを表示・復元
 [showmenubutton]
+[showmenu]
 [tb_keyconfig flag="1"]
 [start_keyconfig]
 [debug_init]
+
 [endmacro]
+
 
 [macro name="clear_date_jump"]
+
 [iscript]
-// HTMLコンテナごと一括削除
 $('#date_jump_wrapper').remove();
 [endscript]
+
 [endmacro]
 
+
 [cm]
+
 
 ; ============================================================
 ; 2. 全UIを一括構築するHTML / CSS
 ; ============================================================
+
 [html]
+
 <div id="date_jump_wrapper" style="
   position: absolute;
   top: 0;
@@ -58,12 +67,14 @@ $('#date_jump_wrapper').remove();
   z-index: 9999;
   user-select: none;
 ">
+
   <!-- 画面タイトル -->
   <div style="text-align: center; color: #ffffff; font-size: 26px; font-weight: bold; margin-bottom: 15px; letter-spacing: 1px;">
     PART 1 日付＆パラメータ設定ジャンプ
   </div>
 
-  <!-- 上部：手動パラメータ入力用 パネル（座布団） -->
+
+  <!-- 上部：手動パラメータ入力用 パネル -->
   <div style="
     width: 900px;
     margin: 0 auto 20px auto;
@@ -74,7 +85,8 @@ $('#date_jump_wrapper').remove();
     box-sizing: border-box;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   ">
-    <!-- 1行目：数値入力フォーム（3等分配置） -->
+
+    <!-- 数値入力 -->
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; color: #ffffff; font-size: 16px;">
       <div style="display: flex; align-items: center; gap: 8px; flex: 1; justify-content: center;">
         <label for="tf_love_input">好感度(love):</label>
@@ -101,7 +113,8 @@ $('#date_jump_wrapper').remove();
     </div>
   </div>
 
-  <!-- 下部：DAY選択ボタン グリッドレイアウト -->
+
+  <!-- DAY選択ボタン -->
   <div style="
     width: 900px;
     margin: 0 auto;
@@ -109,17 +122,23 @@ $('#date_jump_wrapper').remove();
     grid-template-columns: repeat(2, 1fr);
     gap: 12px 30px;
   ">
-    <button class="debug_jump_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*jump_day1'});">DAY 1</button>
-    <button class="debug_jump_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*jump_day5'});">DAY 5</button>
-    <button class="debug_jump_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*jump_day2'});">DAY 2</button>
-    <button class="debug_jump_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*jump_day6'});">DAY 6</button>
-    <button class="debug_jump_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*jump_day3'});">DAY 3</button>
-    <button class="debug_jump_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*jump_day7'});">DAY 7</button>
-    <button class="debug_jump_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*jump_day4'});">DAY 4</button>
-    <button class="debug_jump_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*jump_day8'});">DAY 8</button>
+
+    <button class="debug_jump_btn" onclick="debugJump('*jump_day1');">DAY 1</button>
+    <button class="debug_jump_btn" onclick="debugJump('*jump_day5');">DAY 5</button>
+
+    <button class="debug_jump_btn" onclick="debugJump('*jump_day2');">DAY 2</button>
+    <button class="debug_jump_btn" onclick="debugJump('*jump_day6');">DAY 6</button>
+
+    <button class="debug_jump_btn" onclick="debugJump('*jump_day3');">DAY 3</button>
+    <button class="debug_jump_btn" onclick="debugJump('*jump_day7');">DAY 7</button>
+
+    <button class="debug_jump_btn" onclick="debugJump('*jump_day4');">DAY 4</button>
+    <button class="debug_jump_btn" onclick="debugJump('*jump_day8');">DAY 8</button>
+
   </div>
 
-  <!-- PART 1 FINAL ボタン（中央大きめ） -->
+
+  <!-- PART 1 FINAL -->
   <div style="text-align: center; margin-top: 15px;">
     <button class="debug_jump_btn" style="width: 435px; background: linear-gradient(135deg, #2C3E50, #4CA1AF); border-color: #64B5F6;" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*jump_final'});">
       PART 1 FINAL
@@ -131,11 +150,14 @@ $('#date_jump_wrapper').remove();
     <button class="debug_back_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*back'});">
       BACK
     </button>
+
   </div>
+
 </div>
 
+
 <style>
-/* ボタン共通スタイリング */
+
 .debug_jump_btn {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid #D4C291;
@@ -148,11 +170,13 @@ $('#date_jump_wrapper').remove();
   transition: all 0.2s ease;
   letter-spacing: 1px;
 }
+
 .debug_jump_btn:hover {
   background: rgba(212, 194, 145, 0.3);
   border-color: #ffffff;
   transform: translateY(-2px);
 }
+
 .debug_back_btn {
   background: rgba(0, 0, 0, 0.5);
   border: 1px solid #D4C291;
@@ -165,6 +189,7 @@ $('#date_jump_wrapper').remove();
   transition: all 0.2s ease;
   letter-spacing: 1px;
 }
+
 .debug_back_btn:hover {
   background: rgba(212, 194, 145, 0.3);
   border-color: #ffffff;
@@ -172,62 +197,124 @@ $('#date_jump_wrapper').remove();
 }
 
 </style>
+
 [endhtml]
 
+
 ; ============================================================
-; 3. リアルタイム値同期処理 (JavaScript)
+; 3. リアルタイム値同期処理
 ; ============================================================
+
 [iscript]
-// 初期値の明示的設定
+
+; ------------------------------------------------------------
+; 初期値
+; ------------------------------------------------------------
+
 tf.temp_love = 0;
 tf.temp_trust = 0;
 tf.temp_minus_count = 0;
 tf.temp_trust_taboo = false;
 tf.temp_love_taboo = false;
 
-// ★【重要】入力欄が直接入力できるようにキー入力＆フォーカスをティラノから解放する処理
+
+; ------------------------------------------------------------
+; 入力欄のキーボード干渉対策
+; ★ここだけ元コードから変更
+; ------------------------------------------------------------
+
 setTimeout(function(){
-    // 1. input 要素の z-index を引き上げ、キー入力をティラノに吸われないように無効化・開拓する
     $('#tf_love_input, #tf_trust_input, #tf_minus_input').css({
         'pointer-events': 'auto',
         'position': 'relative',
         'z-index': '9999999'
-    }).off('keydown keypress keyup').on('keydown keypress keyup', function(e) {
-        // キー入力をティラノスクリプト本体のキーコンフィグに伝破（伝播）させず、フォーム専用にする
-        e.stopPropagation();
     });
+
+    $('#tf_love_input, #tf_trust_input, #tf_minus_input')
+        .off('keydown.debugInput')
+        .on('keydown.debugInput', function(e) {
+            e.stopPropagation();
+        });
+
+    // ★チェックボックスのクリックをティラノへ伝えない
+    $('#trust_taboo_check, #love_taboo_check')
+        .off('click.debugCheckbox')
+        .on('click.debugCheckbox', function(e) {
+            e.stopPropagation();
+        });
+
 }, 100);
 
-// テキスト入力欄のリアルタイムバインド
+
+; ------------------------------------------------------------
+; 数値入力のリアルタイム同期
+; ------------------------------------------------------------
+
 $(document).off("input.debug_val").on("input.debug_val", '#tf_love_input', function() {
     tf.temp_love = Number($(this).val()) || 0;
 });
+
 $(document).off("input.debug_val_t").on("input.debug_val_t", '#tf_trust_input', function() {
     tf.temp_trust = Number($(this).val()) || 0;
 });
+
 $(document).off("input.debug_val_m").on("input.debug_val_m", '#tf_minus_input', function() {
     tf.temp_minus_count = Number($(this).val()) || 0;
 });
 
-// チェックボックスのリアルタイムバインド
+; ------------------------------------------------------------
+; チェックボックスのリアルタイム同期
+; ------------------------------------------------------------
+
 $(document).off("change.debug_check_t").on("change.debug_check_t", '#trust_taboo_check', function() {
     tf.temp_trust_taboo = $(this).is(':checked');
 });
+
 $(document).off("change.debug_check_l").on("change.debug_check_l", '#love_taboo_check', function() {
     tf.temp_love_taboo = $(this).is(':checked');
 });
+
+
+; ------------------------------------------------------------
+; ★ジャンプ共通処理
+; ------------------------------------------------------------
+
+window.debugJump = function(target) {
+
+    // 入力欄・チェックボックスからフォーカスを外す
+    if (document.activeElement) {
+        document.activeElement.blur();
+    }
+
+    // ティラノへジャンプ
+    TYRANO.kag.ftag.startTag('jump', {
+        target: target
+    });
+
+};
+
 [endscript]
 
+
 [s]
 
-*back
-[cm]
-[clear_date_jump]
-[jump storage="title_screen.ks" target="*title"]
-[s]
 
 ; ============================================================
-; 4. 各DAYジャンプ処理（代入・初期化は共通マクロにおまかせ）
+; 4. BACK
+; ============================================================
+
+*back
+
+[cm]
+[clear_date_jump]
+
+[jump storage="title_screen.ks" target="*title"]
+
+[s]
+
+
+; ============================================================
+; 5. 各DAYジャンプ処理
 ; ============================================================
 
 *jump_day1
