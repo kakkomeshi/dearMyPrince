@@ -123,31 +123,31 @@ $('#date_jump_wrapper').remove();
     gap: 12px 30px;
   ">
 
-    <button class="debug_jump_btn" onclick="debugJump('*jump_day1');">DAY 1</button>
-    <button class="debug_jump_btn" onclick="debugJump('*jump_day5');">DAY 5</button>
+    <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day1');">DAY 1</button>
+    <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day5');">DAY 5</button>
 
-    <button class="debug_jump_btn" onclick="debugJump('*jump_day2');">DAY 2</button>
-    <button class="debug_jump_btn" onclick="debugJump('*jump_day6');">DAY 6</button>
+    <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day2');">DAY 2</button>
+    <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day6');">DAY 6</button>
 
-    <button class="debug_jump_btn" onclick="debugJump('*jump_day3');">DAY 3</button>
-    <button class="debug_jump_btn" onclick="debugJump('*jump_day7');">DAY 7</button>
+    <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day3');">DAY 3</button>
+    <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day7');">DAY 7</button>
 
-    <button class="debug_jump_btn" onclick="debugJump('*jump_day4');">DAY 4</button>
-    <button class="debug_jump_btn" onclick="debugJump('*jump_day8');">DAY 8</button>
+    <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day4');">DAY 4</button>
+    <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day8');">DAY 8</button>
 
   </div>
 
 
   <!-- PART 1 FINAL -->
   <div style="text-align: center; margin-top: 15px;">
-    <button class="debug_jump_btn" style="width: 435px; background: linear-gradient(135deg, #2C3E50, #4CA1AF); border-color: #64B5F6;" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*jump_final'});">
+    <button class="debug_jump_btn" style="width: 435px; background: linear-gradient(135deg, #2C3E50, #4CA1AF); border-color: #64B5F6;" onclick="debugJump(event, '*jump_final')">
       PART 1 FINAL
     </button>
   </div>
 
   <!-- 戻るボタン -->
   <div style="text-align: center; margin-top: 15px;">
-    <button class="debug_back_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*back'});">
+    <button class="debug_back_btn" onclick="debugJump(event, '*back')">
       BACK
     </button>
 
@@ -279,7 +279,12 @@ $(document).off("change.debug_check_l").on("change.debug_check_l", '#love_taboo_
 ; ★ジャンプ共通処理
 ; ------------------------------------------------------------
 
-window.debugJump = function(target) {
+window.debugJump = function(e, target) {
+
+    // ★クリックイベントをティラノ側へ伝えない
+    if (e) {
+        e.stopPropagation();
+    }
 
     // 入力欄・チェックボックスからフォーカスを外す
     if (document.activeElement) {

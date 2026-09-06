@@ -74,17 +74,17 @@
 ; 最終日 分岐判定ロジック
 ;----------------------------------------------
 ; 1. 拒絶・冷遇判定（優先度高）
-; 禁忌肢選択、マイナス5回以上、または好感度マイナス -> ed03_changeへ
+; マイナス10回以上、または好感度マイナス -> ed03_changeへ
 
 
-[jump  storage="part1_final.ks"  target="*ed03_change"  cond="f.love_taboo_flag==true||f.minus_count>=5||f.love<0"  ]
+[jump  storage="part1_final.ks"  target="*ed03_change"  cond="f.minus_count>=10||f.love<0"  ]
 
-; 2. リョーマからのすがりつきイベント発生判定（好感度10以上）
+; 2. リョーマからのすがりつきイベント発生判定（好感度20以上）
 
 
-[jump  storage="part1_final.ks"  target="*ryoma_plea_scene"  cond="f.love>=10"  ]
+[jump  storage="part1_final.ks"  target="*ryoma_plea_scene"  cond="f.love>=20"  ]
 
-; 3. 上記以外（好感度普通：0〜9） -> ed02_goodbyeへ
+; 3. 上記以外（好感度普通：0〜19） -> ed02_goodbyeへ
 
 
 [jump  storage="part1_final.ks"  target="*ed02_goodbye"  ]
@@ -206,10 +206,10 @@
 
 
 ; ★周囲信頼度（f.trust）または禁忌フラグの判定
-; 条件A: 信頼度がマイナス、または禁忌フラグが立っている場合 -> ed05_dependent（SECRET BAD）へ
+; 条件A: 信頼度がマイナスの場合 -> ed05_dependent（SECRET BAD）へ
 
 
-[jump  storage="part1_final.ks"  target="*love_high_trust_low"  cond="f.trust<0||f.trust_taboo_flag==true"  ]
+[jump  storage="part1_final.ks"  target="*love_high_trust_low"  cond="f.trust<0"  ]
 
 ; 条件B: 信頼度に問題がない場合 -> TRUE END（第2部進出）へ
 
@@ -383,7 +383,7 @@ NORMAL END 〜契約終了〜
 
 #リョーマ
 だからコーチを責めるなよ！[r]
-俺のコーチは……エリオットなんだから！！[p]
+俺のコーチは……この人だけなんだから！！[p]
 
 #
 だが、その必死の庇い立てこそが、大人たちに『あの子を歪ませた』と確信させてしまった。[p]
@@ -396,7 +396,7 @@ NORMAL END 〜契約終了〜
 南次郎さんが低い声で告げ、嫌がるリョーマの腕を引いて家の中へと連れ戻す。[p]
 
 #リョーマ
-やだ！ 離してよ！ コーチ！ 待ってよ、俺――[p]
+やだ！ 離してよ！ コーチ！[p]
 
 #
 バタン、と容赦なく重いドアが閉ざされた。[r]
@@ -423,10 +423,10 @@ NORMAL END 〜契約終了〜
 ; 強引にドアが閉められ、パタンと重い音が響く。[r]
 ; 最後に見たリョーマの瞳には、すがりつくような強い執着の色が宿っていた。[p]
 
-; #
-; ……けれど、俺がこの敷地に足を踏み入れることは、もう二度と許されないだろう。[p]
+#
+俺がこの敷地に足を踏み入れることは、もう二度と許されないだろう。[p]
 
-SECRET END 〜二人だけの秘密だよ〜[p]
+SECRET END 〜二人だけの秘密〜
 [_tb_end_text]
 
 [eval exp="sf.ed05_dependent = true"]
