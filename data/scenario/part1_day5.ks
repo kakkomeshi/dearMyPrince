@@ -291,7 +291,7 @@
 *base
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  ]
-[bg  time="1000"  method="crossfade"  storage="tennnis_school_parking_day.png"  ]
+[bg  time="1000"  method="crossfade"  storage="tennis_school_parking_day.png"  ]
 [tb_start_text mode=4 ]
 #
 ――テニスクラブ。[p]
