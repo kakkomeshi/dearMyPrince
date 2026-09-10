@@ -337,7 +337,7 @@
 *base2
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
-[bg  time="1000"  method="crossfade"  storage="_car_twilight.png"  ]
+[bg  time="1000"  method="crossfade"  storage="car_twilight.png"  ]
 [tb_start_text mode=4 ]
 #
 

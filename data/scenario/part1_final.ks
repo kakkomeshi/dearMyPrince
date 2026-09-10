@@ -326,7 +326,7 @@
 NORMAL END 〜契約終了〜
 [_tb_end_text]
 
-[eval exp="sf.ed01_low = true"]
+[eval exp="sf.ed04_endOfContract = true"]
 
 [ed_finish]
 
