@@ -2,7 +2,7 @@
 
 [cm  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Paper_Maps_at_Midnight.mp3"  fadein="true"  ]
-[bg  time="1000"  method="crossfade"  storage="car_night.png"  ]
+[bg  time="1000"  method="crossfade"  storage="university_cafeteria.png"  ]
 
 ; 好感度表示
 

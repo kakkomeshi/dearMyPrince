@@ -2,7 +2,7 @@
 
 [cm  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Snowfall_on_the_Balcony.mp3"  fadein="true"  ]
-[bg  time="1000"  method="crossfade"  storage="car_night.png"  ]
+[bg  time="1000"  method="crossfade"  storage="car_illumination_road.png"  ]
 
 ; 好感度表示
 
@@ -30,6 +30,7 @@
 #
 あらかじめ「誕生日のお祝い」として大人の筋を通し、正式に遅くなる許可を得ていたのだ。[p]
 
+[bg  time="1000"  method="crossfade"  storage="car_illumination_park.png"  ]
 #
 街を見下ろす高台のパーキングへ車を滑り込ませ、エンジンを切る。[r]
 眼下には、まるで宝石箱をひっくり返したようなクリスマスツリーと街のイルミネーションが広がっていた。[p]
