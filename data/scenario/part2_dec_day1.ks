@@ -67,6 +67,7 @@
 #リョーマ
 ……ホットチョコレートは飲みたい。[p]
 
+[bg  time="1000"  method="crossfade"  storage="chiristmas_market.png"  ]
 #
 広場の駐車場に車を停めると、眩いばかりの電飾と、ホットワインや焼き菓子の甘い香りが車内まで漂ってきた。[p]
 

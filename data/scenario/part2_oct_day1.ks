@@ -2,7 +2,7 @@
 
 [cm  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Sunny_Afternoon_Driveway.mp3"  fadein="true"  ]
-[bg  time="1000"  method="crossfade"  storage="car_night.png"  ]
+[bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
 
 ; 好感度表示
 

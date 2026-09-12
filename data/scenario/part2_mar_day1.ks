@@ -1,7 +1,7 @@
 [_tb_system_call storage=system/_part2_mar_day1.ks]
 
 [cm  ]
-[playbgm  volume="100"  time="1000"  loop="true"  storage="Sunny_Afternoon_Driveway.mp3"  fadein="true"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="Paper_Maps_at_Midnight.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="car_night.png"  ]
 
 ; 好感度表示
