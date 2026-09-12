@@ -181,13 +181,13 @@
     background: #D4C291;
     border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.1s ease, background-color 0.1s ease;
+    transition: trantform 0.1s ease, background-color 0.1s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   }
 
   input.my_slider::-webkit-slider-thumb:hover {
     background: #ffffff;
-    transform: scale(1.2);
+    trantform: scale(1.2);
   }
 
   /* ミュート切り替えボタン */
@@ -252,7 +252,7 @@ letter-spacing: 1px;
 .ed_back_btn:hover {
 background: rgba(212, 194, 145, 0.3);
 border-color: #ffffff;
-transform: translateY(-2px);
+trantform: translateY(-2px);
 }
 </style>
 [endhtml]
@@ -261,17 +261,6 @@ transform: translateY(-2px);
 ; JavaScript 制御処理（ミュート・速度プレビュー・閉じ方）
 ; ============================================================
 [iscript]
-
-window.setSkipMode = function(mode) {
-    $('.config_choice_btn').removeClass('active');
-    if (mode === 'reads') {
-        $('.button_skip_read').addClass('active');
-        if (TYRANO && TYRANO.kag) TYRANO.kag.stat.skip_mode = "reads";
-    } else {
-        $('.button_skip_all').addClass('active');
-        if (TYRANO && TYRANO.kag) TYRANO.kag.stat.skip_mode = "all";
-    }
-};
 
 // テキスト表示速度確認欄のタイピングアニメーション
 function runConfigPreview(speed) {
@@ -290,33 +279,40 @@ function runConfigPreview(speed) {
     }, Math.max(5, 100 - Number(speed)));
 }
 
-// 1. 起動時（画面表示時）にシステム変数（sf）から設定を読み込み、スライダーやボタンに反映する
-if (typeof sf.config_bgm_muted === 'undefined') sf.config_bgm_muted = false;
-if (typeof sf.config_se_muted === 'undefined') sf.config_se_muted = false;
-if (typeof sf.config_bgm_vol === 'undefined') sf.config_bgm_vol = 100;
-if (typeof sf.config_se_vol === 'undefined') sf.config_se_vol = 100;
-if (typeof sf.config_bgm_before_mute === 'undefined') sf.config_bgm_before_mute = 100;
-if (typeof sf.config_se_before_mute === 'undefined') sf.config_se_before_mute = 100;
-if (typeof sf.config_ch_speed === 'undefined') sf.config_ch_speed = 30;
-if (typeof sf.config_auto_speed === 'undefined') sf.config_auto_speed = 2000;
-if (typeof sf.config_skip_mode === 'undefined') sf.config_skip_mode = "reads";
+// 1. 起動時（画面表示時）にシステム変数（tf）から設定を読み込み、スライダーやボタンに反映する
+if (typeof tf.config_bgm_muted === 'undefined') tf.config_bgm_muted = false;
+if (typeof tf.config_se_muted === 'undefined') tf.config_se_muted = false;
+if (typeof tf.config_bgm_before_mute === 'undefined') tf.config_bgm_before_mute = 100;
+if (typeof tf.config_se_before_mute === 'undefined') tf.config_se_before_mute = 100;
 
 // 画面上の要素に反映
-$('.slider_bgm').val(sf.config_bgm_vol);
-$('#val_bgm').text(sf.config_bgm_vol);
+tf.current_bgm_vol=parseInt(TG.config.defaultBgmVolume);
+tf.current_se_vol=parseInt(TG.config.defaultSeVolume);
 
-$('.slider_se').val(sf.config_se_vol);
-$('#val_se').text(sf.config_se_vol);
+tf.current_ch_speed=parseInt(TG.config.chSpeed);
+tf.current_auto_speed=parseInt(TG.config.autoSpeed);
 
-$('.slider_ch_speed').val(sf.config_ch_speed);
-$('#val_ch').text(sf.config_ch_speed);
+tf.text_skip ="reads";
 
-$('.slider_auto_speed').val(sf.config_auto_speed);
-$('#val_auto').text((sf.config_auto_speed / 1000).toFixed(1) + '秒');
+if(TG.config.unReadTextSkip != "true"){
+	tf.text_skip ="all";
+} 
+
+$('.slider_bgm').val(tf.current_bgm_vol);
+$('#val_bgm').text(tf.current_bgm_vol);
+
+$('.slider_se').val(tf.current_se_vol);
+$('#val_se').text(tf.current_se_vol);
+
+$('.slider_ch_speed').val(tf.current_ch_speed);
+$('#val_ch').text(tf.current_ch_speed);
+
+$('.slider_auto_speed').val(tf.current_auto_speed);
+$('#val_auto').text((tf.current_auto_speed / 1000).toFixed(1) + '秒');
 
 // スキップ設定ボタンの見た目反映
 $('.config_choice_btn').removeClass('active');
-if (sf.config_skip_mode === 'reads') {
+if (tf.text_skip === 'reads') {
     $('.button_skip_read').addClass('active');
     if (TYRANO && TYRANO.kag) TYRANO.kag.stat.skip_mode = "reads";
 } else {
@@ -325,7 +321,7 @@ if (sf.config_skip_mode === 'reads') {
 }
 
 // BGMミュート状態を復元
-if (sf.config_bgm_muted) {
+if (tf.config_bgm_muted) {
     $('.slider_bgm').val(0);
     $('#val_bgm').text(0);
     $('#btn_mute_bgm').text('🔇 OFF');
@@ -339,18 +335,18 @@ if (sf.config_bgm_muted) {
 window.toggleAudioMute = function(type) {
     if (type === 'bgm') {
         // 現在ミュート中なら元の音量へ戻す
-        if (sf.config_bgm_muted) {
-            sf.config_bgm_vol = sf.config_bgm_before_mute;
-            sf.config_bgm_muted = false;
+        if (tf.config_bgm_muted) {
+            tf.current_bgm_vol = tf.config_bgm_before_mute;
+            tf.config_bgm_muted = false;
 
-            $('.slider_bgm').val(sf.config_bgm_vol);
-            $('#val_bgm').text(sf.config_bgm_vol);
+            $('.slider_bgm').val(tf.current_bgm_vol);
+            $('#val_bgm').text(tf.current_bgm_vol);
             $('#btn_mute_bgm').text('🔊 ON').removeClass('muted');
         } else {
             // ミュート前の音量を保存して0にする
-            sf.config_bgm_before_mute = sf.config_bgm_vol;
-            sf.config_bgm_vol = 0;
-            sf.config_bgm_muted = true;
+            tf.config_bgm_before_mute = tf.current_bgm_vol;
+            tf.current_bgm_vol = 0;
+            tf.config_bgm_muted = true;
 
             $('.slider_bgm').val(0);
             $('#val_bgm').text(0);
@@ -359,18 +355,18 @@ window.toggleAudioMute = function(type) {
 
     } else if (type === 'se') {
         // 現在ミュート中なら元の音量へ戻す
-        if (sf.config_se_muted) {
-            sf.config_se_vol = sf.config_se_before_mute;
-            sf.config_se_muted = false;
+        if (tf.config_se_muted) {
+            tf.current_se_vol = tf.config_se_before_mute;
+            tf.config_se_muted = false;
 
-            $('.slider_se').val(sf.config_se_vol);
-            $('#val_se').text(sf.config_se_vol);
+            $('.slider_se').val(tf.current_se_vol);
+            $('#val_se').text(tf.current_se_vol);
             $('#btn_mute_se').text('🔊 ON').removeClass('muted');
         } else {
             // ミュート前の音量を保存して0にする
-            sf.config_se_before_mute = sf.config_se_vol;
-            sf.config_se_vol = 0;
-            sf.config_se_muted = true;
+            tf.config_se_before_mute = tf.current_se_vol;
+            tf.current_se_vol = 0;
+            tf.config_se_muted = true;
 
             $('.slider_se').val(0);
             $('#val_se').text(0);
@@ -385,24 +381,24 @@ $('.slider_bgm').on('input', function() {
     var val = Number($(this).val());
 
     // 0にした場合は、0になる前の音量を保存
-    if (val === 0 && !sf.config_bgm_muted) {
-        sf.config_bgm_before_mute = sf.config_bgm_vol;
+    if (val === 0 && !tf.config_bgm_muted) {
+        tf.config_bgm_before_mute = tf.current_bgm_vol;
     }
 
-    sf.config_bgm_vol = val;
+    tf.current_bgm_vol = val;
     $('#val_bgm').text(val);
 
     // 音量0 → ミュート
     if (val === 0) {
-        sf.config_bgm_muted = true;
+        tf.config_bgm_muted = true;
         $('#btn_mute_bgm').text('🔇 OFF').addClass('muted');
 
     // 0より上 → ミュート解除
-    } else if (sf.config_bgm_muted) {
-        sf.config_bgm_muted = false;
+    } else if (tf.config_bgm_muted) {
+        tf.config_bgm_muted = false;
         $('#btn_mute_bgm').text('🔊 ON').removeClass('muted');
     }
-
+	TYRANO.kag.ftag.startTag("bgmopt", { volume: tf.current_bgm_vol });
     TYRANO.kag.saveSystemVariable();
 });
 
@@ -411,23 +407,24 @@ $('.slider_se').off('input.config').on('input.config', function() {
     var val = Number($(this).val());
 
     // 0にした場合は、0になる前の音量を保存
-    if (val === 0 && !sf.config_se_muted) {
-        sf.config_se_before_mute = sf.config_se_vol;
+    if (val === 0 && !tf.config_se_muted) {
+        tf.config_se_before_mute = tf.current_se_vol;
     }
 
-    sf.config_se_vol = val;
+    tf.current_se_vol = val;
     $('#val_se').text(val);
 
     // 音量0 → ミュート
     if (val === 0) {
-        sf.config_se_muted = true;
+        tf.config_se_muted = true;
         $('#btn_mute_se').text('🔇 OFF').addClass('muted');
 
     // 0より上 → ミュート解除
-    } else if (sf.config_se_muted) {
-        sf.config_se_muted = false;
+    } else if (tf.config_se_muted) {
+        tf.config_se_muted = false;
         $('#btn_mute_se').text('🔊 ON').removeClass('muted');
     }
+	TYRANO.kag.ftag.startTag("seopt", { volume: tf.current_se_vol });
     TYRANO.kag.saveSystemVariable();
 });
 
@@ -439,7 +436,8 @@ $('.slider_ch_speed').off('input.config').on('input.config', function() {
     $('#val_ch').text(val);
 
     // 設定を保存
-    sf.config_ch_speed = val;
+    tf.current_ch_speed = val;
+	TYRANO.kag.ftag.startTag("configdelay", { speed: tf.current_ch_speed });
     TYRANO.kag.saveSystemVariable();
 });
 
@@ -451,35 +449,22 @@ $('.slider_auto_speed').off('input.config').on('input.config', function() {
     $('#val_auto').text((val / 1000).toFixed(1) + '秒');
 
     // 設定を保存
-    sf.config_auto_speed = val;
+    tf.current_auto_speed = val;
+	TYRANO.kag.ftag.startTag("autoconfig", { speed: tf.current_auto_speed });
     TYRANO.kag.saveSystemVariable();
 });
 
 
 // スキップモード
 window.setSkipMode = function(mode) {
-
     $('.config_choice_btn').removeClass('active');
-
     if (mode === 'reads') {
         $('.button_skip_read').addClass('active');
-
-        sf.config_skip_mode = "reads";
-
-        if (TYRANO && TYRANO.kag) {
-            TYRANO.kag.stat.skip_mode = "reads";
-        }
-
+		TYRANO.kag.ftag.startTag("skipstart", { type: "reads" });
     } else {
         $('.button_skip_all').addClass('active');
-
-        sf.config_skip_mode = "all";
-
-        if (TYRANO && TYRANO.kag) {
-            TYRANO.kag.stat.skip_mode = "all";
-        }
+		TYRANO.kag.ftag.startTag("skipstart", { type: "all" });
     }
-
     TYRANO.kag.saveSystemVariable();
 };
 
