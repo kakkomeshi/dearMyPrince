@@ -1,0 +1,39 @@
+.selectboxui select {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+}
+.selectboxui select:focus {
+    outline: none;
+}
+.selectboxui option{
+    outline: none;
+}
+
+.selectboxui option{
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+div.selectboxui::after{
+    position: absolute;
+    content: "";
+    background-image: var(--thumb-content);
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    left: var(--thumb-left);
+    top: var(--thumb-top);
+    z-index: 99999999;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+
+input[type=color].colortipui{
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+}
