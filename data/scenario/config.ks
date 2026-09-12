@@ -1,167 +1,488 @@
-; ティラノスクリプト標準テーマプラグイン
-
-;=========================================
-; コンフィグ モード　画面作成
-;=========================================
-
-;	メッセージレイヤ０を不可視に
-	[layopt layer=message0 visible=false]
-;	fixボタン消し
-	[clearfix]
-	
-;ゲーム中に効果が設定されている場合は無効
-[free_layermode time=0 ]
-[reset_camera time=0]
-	
-;　イメージ消去
-
-[iscript]
-$(".layer_camera").empty();
-$("#bgmovie").remove();
-	
-[endscript]
-
-;	メニューボタン非表示
-	[hidemenubutton]
-
-[iscript]
-
-	tf.current_bgm_vol=parseInt(TG.config.defaultBgmVolume);
-	tf.current_se_vol=parseInt(TG.config.defaultSeVolume);
-	
-	tf.current_ch_speed=parseInt(TG.config.chSpeed);
-	tf.current_auto_speed=parseInt(TG.config.autoSpeed);
-	
-	tf.text_skip ="ON";
-	
-	if(TG.config.unReadTextSkip != "true"){
-		tf.text_skip ="OFF";
-	} 
-
-[endscript]
-
-;	レイヤ1を可視に
-	[layopt layer=1 visible=true]
+[_tb_system_call storage=system/_config.ks]
 
 [cm]
+[clearfix]
+[hidemenubutton]
+[tb_hide_message_window]
 
-;	コンフィグ用の背景を読み込んでトランジション
-	[bg storage="../../tyrano/images/system/bg_config.jpg" time=100]
+; ============================================================
+; CONFIG画面全体のHTML / CSS 構築（全機能・確認欄完備）
+; ============================================================
+[html]
+<div id="config_screen_wrapper" style="
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 960px;
+  height: 640px;
+  background-color: rgba(15, 18, 25, 0.88);
+  font-family: sans-serif;
+  box-sizing: border-box;
+  padding: 25px 50px;
+  z-index: 9999;
+  user-select: none;
+">
+  
+  <div style="clear: both;"></div>
 
-;	画面右上の「Back」ボタン
-	[button graphic="config/c_btn_back.png" fix=true enterimg="config/c_btn_back2.png" target="*backtitle" x=840 y=20]
+  <!-- メインタイトル -->
+  <div style="
+    text-align: center;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  ">
+    CONFIG
+  </div>
 
-[jump target="*config_page"]
+  <!-- コンフィグ全体を囲むメインパネル（座布団） -->
+  <div class="area_config_box" style="
+    width: 860px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: rgba(31, 35, 45, 0.90);
+    border: 1.5px solid #D4C291;
+    border-radius: 8px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  ">
+  
+    <!-- 1. BGM音量 ＆ ミュート -->
+    <div class="config_item_row">
+      <span class="config_label">BGM 音量</span>
+      <div class="config_control_area">
+        <input type="range" class="slider_bgm my_slider" min="0" max="100" value="100">
+        <span class="config_value_text" id="val_bgm">100</span>
+        <button class="config_mute_btn" id="btn_mute_bgm" onclick="toggleAudioMute('bgm')">🔊 ON</button>
+      </div>
+    </div>
 
-*config_page
+    <!-- 2. SE音量 ＆ ミュート -->
+    <div class="config_item_row">
+      <span class="config_label">効果音 (SE) 音量</span>
+      <div class="config_control_area">
+        <input type="range" class="slider_se my_slider" min="0" max="100" value="100">
+        <span class="config_value_text" id="val_se">100</span>
+        <button class="config_mute_btn" id="btn_mute_se" onclick="toggleAudioMute('se')">🔊 ON</button>
+      </div>
+    </div>
 
-;かなり横長なスクリプトになってしまったのでマクロにしたほうがスッキリします
-;c_btn.png は 4×4px の完全透明な画像です。width.heightを使って拡大しています
-;一部のスマホブラウザでは音量変更に対応していないのでご留意ください
+    <!-- 3. テキスト表示速度 -->
+    <div class="config_item_row">
+      <span class="config_label">テキスト表示速度</span>
+      <div class="config_control_area">
+        <input type="range" class="slider_ch_speed my_slider" min="1" max="100" value="30">
+        <span class="config_value_text" id="val_ch">30</span>
+      </div>
+    </div>
 
-;------------------------------------------------------------------------------------------------------
-;▼BGM音量
-;------------------------------------------------------------------------------------------------------
-;BGM音量-1０
-[button name="bgmvol,bgmvol_10"  fix="true" target="*vol_bgm_change" graphic="config/c_btn.png" width=35 height=35 x=300 y=170 exp="tf.current_bgm_vol=10"]
-;BGM音量-20
-[button name="bgmvol,bgmvol_20"  fix="true" target="*vol_bgm_change" graphic="config/c_btn.png" width=35 height=35 x=340 y=170 exp="tf.current_bgm_vol=20"]
-;BGM音量-30
-[button name="bgmvol,bgmvol_30"  fix="true" target="*vol_bgm_change" graphic="config/c_btn.png" width=35 height=35 x=380 y=170 exp="tf.current_bgm_vol=30"]
-;BGM音量-40
-[button name="bgmvol,bgmvol_40"  fix="true" target="*vol_bgm_change" graphic="config/c_btn.png" width=35 height=35 x=420 y=170 exp="tf.current_bgm_vol=40"]
-;BGM音量-50
-[button name="bgmvol,bgmvol_50"  fix="true" target="*vol_bgm_change" graphic="config/c_btn.png" width=35 height=35 x=460 y=170 exp="tf.current_bgm_vol=50"]
-;BGM音量-60
-[button name="bgmvol,bgmvol_60"  fix="true" target="*vol_bgm_change" graphic="config/c_btn.png" width=35 height=35 x=500 y=170 exp="tf.current_bgm_vol=60"]
-;BGM音量-70
-[button name="bgmvol,bgmvol_70"  fix="true" target="*vol_bgm_change" graphic="config/c_btn.png" width=35 height=35 x=540 y=170 exp="tf.current_bgm_vol=70"]
-;BGM音量-80
-[button name="bgmvol,bgmvol_80"  fix="true" target="*vol_bgm_change" graphic="config/c_btn.png" width=35 height=35 x=580 y=170 exp="tf.current_bgm_vol=80"]
-;BGM音量-90
-[button name="bgmvol,bgmvol_90"  fix="true" target="*vol_bgm_change" graphic="config/c_btn.png" width=35 height=35 x=620 y=170 exp="tf.current_bgm_vol=90"]
-;BGM音量-100
-[button name="bgmvol,bgmvol_100" fix="true" target="*vol_bgm_change" graphic="config/c_btn.png" width=35 height=35 x=660 y=170 exp="tf.current_bgm_vol=100"]
+    <!-- 4. オートモードテキスト表示速度 -->
+    <div class="config_item_row">
+      <span class="config_label">オートモード速度</span>
+      <div class="config_control_area">
+        <input type="range" class="slider_auto_speed my_slider" min="100" max="5000" step="100" value="2000">
+        <span class="config_value_text" id="val_auto">2.0秒</span>
+      </div>
+    </div>
 
-;BGM音量-ミュート（音量=0）
-[button name="bgmvol,bgmvol_0"    fix="true" target="*vol_bgm_change" graphic="config/c_btn.png" width=35 height=35 x=780 y=170 exp="tf.current_bgm_vol=0"]
+    <!-- 5. スキップ設定 -->
+    <div class="config_item_row">
+      <span class="config_label">スキップ設定</span>
+      <div class="config_control_area" style="gap: 15px; justify-content: flex-start;">
+        <button class="config_choice_btn button_skip_read active" data-skip="reads" onclick="setSkipMode('reads')">既読のみ</button>
+        <button class="config_choice_btn button_skip_all" data-skip="all" onclick="setSkipMode('all')">すべて</button>
+      </div>
+    </div>
 
+    <!-- 6. テキスト表示速度確認欄 -->
+    <div style="padding-top: 20px; display: flex; flex-direction: column; gap: 5px;">
+      <span style="color: #D4C291; font-size: 12px; font-weight: bold;">【テキスト表示速度確認欄】</span>
+      <div id="config_preview_text" style="
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(212, 194, 145, 0.3);
+        border-radius: 4px;
+        padding: 6px 12px;
+        color: #ffffff;
+        font-size: 14px;
+        height: 28px;
+        line-height: 28px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      ">スライダーを動かすとテキストの表示スピードを確認できます。</div>
+    </div>
 
-;------------------------------------------------------------------------------------------------------
-;▼SE音量
-;------------------------------------------------------------------------------------------------------
-[button name="sevol,sevol_10"   fix="true" target="*vol_se_change" graphic="config/c_btn.png" width=35 height=35 x=300 y=220 exp="tf.current_se_vol=10"]
-[button name="sevol,sevol_20"   fix="true" target="*vol_se_change" graphic="config/c_btn.png" width=35 height=35 x=340 y=220 exp="tf.current_se_vol=20"]
-[button name="sevol,sevol_30"   fix="true" target="*vol_se_change" graphic="config/c_btn.png" width=35 height=35 x=380 y=220 exp="tf.current_se_vol=30"]
-[button name="sevol,sevol_40"   fix="true" target="*vol_se_change" graphic="config/c_btn.png" width=35 height=35 x=420 y=220 exp="tf.current_se_vol=40"]
-[button name="sevol,sevol_50"   fix="true" target="*vol_se_change" graphic="config/c_btn.png" width=35 height=35 x=460 y=220 exp="tf.current_se_vol=50"]
-[button name="sevol,sevol_60"   fix="true" target="*vol_se_change" graphic="config/c_btn.png" width=35 height=35 x=500 y=220 exp="tf.current_se_vol=60"]
-[button name="sevol,sevol_70"   fix="true" target="*vol_se_change" graphic="config/c_btn.png" width=35 height=35 x=540 y=220 exp="tf.current_se_vol=70"]
-[button name="sevol,sevol_80"   fix="true" target="*vol_se_change" graphic="config/c_btn.png" width=35 height=35 x=580 y=220 exp="tf.current_se_vol=80"]
-[button name="sevol,sevol_90"   fix="true" target="*vol_se_change" graphic="config/c_btn.png" width=35 height=35 x=620 y=220 exp="tf.current_se_vol=90"]
-[button name="sevol,sevol_100" fix="true" target="*vol_se_change" graphic="config/c_btn.png" width=35 height=35 x=660 y=220 exp="tf.current_se_vol=100"]
+  </div>
 
-;SEミュート
-[button name="sevol,sevol_0"     fix="true" target="*vol_se_change" graphic="config/c_btn.png" width=35 height=35 x=780 y=220 exp="tf.current_se_vol=0"]
+    <!-- BACKボタン -->
+    <div style="padding-top:20px; text-align: center;">
+      <button class="ed_back_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*backtitle'});">
+        BACK
+      </button>
+    </div>
+</div>
 
-;------------------------------------------------------------------------------------------------------
-;▼テキスト速度
-;------------------------------------------------------------------------------------------------------
-[button name="ch,ch_100" fix="true" target="*ch_speed_change" exp="tf.set_ch_speed=100" graphic="config/c_btn.png" width=35 height=35 x=300 y=290]
-[button name="ch,ch_80" fix="true" target="*ch_speed_change" exp="tf.set_ch_speed=80"    graphic="config/c_btn.png" width=35 height=35 x=340 y=290]
-[button name="ch,ch_50" fix="true" target="*ch_speed_change" exp="tf.set_ch_speed=50"    graphic="config/c_btn.png" width=35 height=35 x=380 y=290]
-[button name="ch,ch_40" fix="true" target="*ch_speed_change" exp="tf.set_ch_speed=40"    graphic="config/c_btn.png" width=35 height=35 x=420 y=290]
-[button name="ch,ch_30" fix="true" target="*ch_speed_change" exp="tf.set_ch_speed=30"    graphic="config/c_btn.png" width=35 height=35 x=460 y=290]
-[button name="ch,ch_25" fix="true" target="*ch_speed_change" exp="tf.set_ch_speed=25"    graphic="config/c_btn.png" width=35 height=35 x=500 y=290]
-[button name="ch,ch_20" fix="true" target="*ch_speed_change" exp="tf.set_ch_speed=20"    graphic="config/c_btn.png" width=35 height=35 x=540 y=290]
-[button name="ch,ch_11" fix="true" target="*ch_speed_change" exp="tf.set_ch_speed=11"    graphic="config/c_btn.png" width=35 height=35 x=580 y=290]
-[button name="ch,ch_8" fix="true" target="*ch_speed_change" exp="tf.set_ch_speed=8"       graphic="config/c_btn.png" width=35 height=35 x=620 y=290]
-[button name="ch,ch_5" fix="true" target="*ch_speed_change" exp="tf.set_ch_speed=5"       graphic="config/c_btn.png" width=35 height=35 x=660 y=290]
+<!-- スタイル＆テーマカラー調整 -->
+<style>
+  .config_item_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(212, 194, 145, 0.15);
+	padding: 20px 0 20px 0;
+  }
 
-;------------------------------------------------------------------------------------------------------
-;▼オート速度
-;------------------------------------------------------------------------------------------------------
-[button fix="true" name="auto,auto_5000" target="*auto_speed_change" exp="tf.set_auto_speed=5000;tf.text_auto=0" graphic="config/c_btn.png" width=35 height=35 x=300 y=340]
-[button fix="true" name="auto,auto_4500" target="*auto_speed_change" exp="tf.set_auto_speed=4500;tf.text_auto=1" graphic="config/c_btn.png" width=35 height=35 x=340 y=340]
-[button fix="true" name="auto,auto_4000" target="*auto_speed_change" exp="tf.set_auto_speed=4000;tf.text_auto=2" graphic="config/c_btn.png" width=35 height=35 x=380 y=340]
-[button fix="true" name="auto,auto_3500" target="*auto_speed_change" exp="tf.set_auto_speed=3500;tf.text_auto=3" graphic="config/c_btn.png" width=35 height=35 x=420 y=340]
-[button fix="true" name="auto,auto_3000" target="*auto_speed_change" exp="tf.set_auto_speed=3000;tf.text_auto=4" graphic="config/c_btn.png" width=35 height=35 x=460 y=340]
-[button fix="true" name="auto,auto_2500" target="*auto_speed_change" exp="tf.set_auto_speed=2500;tf.text_auto=5" graphic="config/c_btn.png" width=35 height=35 x=500 y=340]
-[button fix="true" name="auto,auto_2000" target="*auto_speed_change" exp="tf.set_auto_speed=2000;tf.text_auto=6" graphic="config/c_btn.png" width=35 height=35 x=540 y=340]
-[button fix="true" name="auto,auto_1300" target="*auto_speed_change" exp="tf.set_auto_speed=1300;tf.text_auto=7" graphic="config/c_btn.png" width=35 height=35 x=580 y=340]
-[button fix="true" name="auto,auto_800"   target="*auto_speed_change" exp="tf.set_auto_speed=800;tf.text_auto=8"  graphic="config/c_btn.png" width=35 height=35 x=620 y=340]
-[button fix="true" name="auto,auto_500"   target="*auto_speed_change" exp="tf.set_auto_speed=500;tf.text_auto=9"  graphic="config/c_btn.png" width=35 height=35 x=660 y=340]
+  .config_label {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 160px;
+  }
 
-;------------------------------------------------------------------------------------------------------
-;▼未読スキップ
-;------------------------------------------------------------------------------------------------------
-; 未読スキップ-OFF
-[button name="unread_off" fix="true" target="*skip_off" graphic="config/c_btn.png" width=125 height=35  x=300 y=420]
-; 未読スキップ-ON
-[button name="unread_on" fix="true" target="*skip_on" graphic="config/c_btn.png" width=125 height=35 x=435 y=420]
+  .config_control_area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    justify-content: flex-start;
+  }
 
-;------------------------------------------------------------------------------------------------------
-;▼コンフィグ起動時の画面更新
-;------------------------------------------------------------------------------------------------------
-; BGM音量・SE音量・テキスト速度・オート速度・未読スキップの順
-; $(セレクタ).attr("src","画像ファイルの場所");
+  .config_value_text {
+    color: #D4C291;
+    font-size: 15px;
+    font-family: monospace;
+    min-width: 35px;
+    text-align: left;
+  }
 
-;※画像差し替え版を使用するときは c_set.gif を c_set.png に書き換えてね
+  /* ゴールド仕様のスライダー */
+  input.my_slider {
+    -webkit-appearance: none;
+    width: 500px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+    outline: none;
+	position: static;
+  }
 
+  input.my_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #D4C291;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  }
+
+  input.my_slider::-webkit-slider-thumb:hover {
+    background: #ffffff;
+    transform: scale(1.2);
+  }
+
+  /* ミュート切り替えボタン */
+  .config_mute_btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #D4C291;
+    color: #ffffff;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 75px;
+	margin-left: auto;
+  }
+  .config_mute_btn.muted {
+    background: rgba(229, 115, 115, 0.3);
+    border-color: #E57373;
+    color: #ffcccc;
+  }
+
+  /* スキップ切替ボタン等共通選択ボタン */
+  .config_choice_btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 194, 145, 0.4);
+    color: #cccccc;
+    padding: 5px 18px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .config_choice_btn:hover {
+    border-color: #D4C291;
+    color: #ffffff;
+    background: rgba(212, 194, 145, 0.15);
+  }
+
+  .config_choice_btn.active {
+    background: rgba(212, 194, 145, 0.3);
+    border-color: #D4C291;
+    color: #ffffff;
+    box-shadow: 0 0 8px rgba(212, 194, 145, 0.3);
+  }
+
+  /* 戻るボタン専用スタイル */
+.ed_back_btn {
+background: rgba(0, 0, 0, 0.5);
+border: 1px solid #D4C291;
+color: #ffffff;
+padding: 6px 30px;
+font-size: 15px;
+font-weight: bold;
+border-radius: 4px;
+cursor: pointer;
+transition: all 0.2s ease;
+letter-spacing: 1px;
+}
+.ed_back_btn:hover {
+background: rgba(212, 194, 145, 0.3);
+border-color: #ffffff;
+transform: translateY(-2px);
+}
+</style>
+[endhtml]
+
+; ============================================================
+; JavaScript 制御処理（ミュート・速度プレビュー・閉じ方）
+; ============================================================
 [iscript]
-	$(".bgmvol_"+tf.current_bgm_vol).attr("src","data/image/config/c_set.png");
 
-	$(".sevol_"+tf.current_se_vol).attr("src","data/image/config/c_set.png");
+window.setSkipMode = function(mode) {
+    $('.config_choice_btn').removeClass('active');
+    if (mode === 'reads') {
+        $('.button_skip_read').addClass('active');
+        if (TYRANO && TYRANO.kag) TYRANO.kag.stat.skip_mode = "reads";
+    } else {
+        $('.button_skip_all').addClass('active');
+        if (TYRANO && TYRANO.kag) TYRANO.kag.stat.skip_mode = "all";
+    }
+};
 
-	$(".ch_"+tf.current_ch_speed).attr("src","data/image/config/c_set.png");
+// テキスト表示速度確認欄のタイピングアニメーション
+function runConfigPreview(speed) {
+    var text = "スライダーを動かすとテキストの表示スピードを確認できます。";
+    var $preview = $('#config_preview_text');
+    $preview.text("");
+    var i = 0;
+    if (window.configPreviewTimer) clearInterval(window.configPreviewTimer);
+    window.configPreviewTimer = setInterval(function() {
+        if (i < text.length) {
+            $preview.text($preview.text() + text[i]);
+            i++;
+        } else {
+            clearInterval(window.configPreviewTimer);
+        }
+    }, Math.max(5, 100 - Number(speed)));
+}
 
-	$(".auto_"+tf.current_auto_speed).attr("src","data/image/config/c_set.png");
+// 1. 起動時（画面表示時）にシステム変数（sf）から設定を読み込み、スライダーやボタンに反映する
+if (typeof sf.config_bgm_muted === 'undefined') sf.config_bgm_muted = false;
+if (typeof sf.config_se_muted === 'undefined') sf.config_se_muted = false;
+if (typeof sf.config_bgm_vol === 'undefined') sf.config_bgm_vol = 100;
+if (typeof sf.config_se_vol === 'undefined') sf.config_se_vol = 100;
+if (typeof sf.config_bgm_before_mute === 'undefined') sf.config_bgm_before_mute = 100;
+if (typeof sf.config_se_before_mute === 'undefined') sf.config_se_before_mute = 100;
+if (typeof sf.config_ch_speed === 'undefined') sf.config_ch_speed = 30;
+if (typeof sf.config_auto_speed === 'undefined') sf.config_auto_speed = 2000;
+if (typeof sf.config_skip_mode === 'undefined') sf.config_skip_mode = "reads";
 
-	if(tf.text_skip == 'OFF'){
-		$(".unread_off").attr("src","data/image/config/c_uts_off.png");
-		}else{
-			$(".unread_on").attr("src","data/image/config/c_uts_on.png");
-			}
+// 画面上の要素に反映
+$('.slider_bgm').val(sf.config_bgm_vol);
+$('#val_bgm').text(sf.config_bgm_vol);
+
+$('.slider_se').val(sf.config_se_vol);
+$('#val_se').text(sf.config_se_vol);
+
+$('.slider_ch_speed').val(sf.config_ch_speed);
+$('#val_ch').text(sf.config_ch_speed);
+
+$('.slider_auto_speed').val(sf.config_auto_speed);
+$('#val_auto').text((sf.config_auto_speed / 1000).toFixed(1) + '秒');
+
+// スキップ設定ボタンの見た目反映
+$('.config_choice_btn').removeClass('active');
+if (sf.config_skip_mode === 'reads') {
+    $('.button_skip_read').addClass('active');
+    if (TYRANO && TYRANO.kag) TYRANO.kag.stat.skip_mode = "reads";
+} else {
+    $('.button_skip_all').addClass('active');
+    if (TYRANO && TYRANO.kag) TYRANO.kag.stat.skip_mode = "all";
+}
+
+// BGMミュート状態を復元
+if (sf.config_bgm_muted) {
+    $('.slider_bgm').val(0);
+    $('#val_bgm').text(0);
+    $('#btn_mute_bgm').text('🔇 OFF');
+} else {
+    $('#btn_mute_bgm').text('🔊 ON');
+}
+
+// 2. スライダーやボタンが操作されたときにシステム変数へ保存する処理
+
+//ミュートボタンの処理
+window.toggleAudioMute = function(type) {
+    if (type === 'bgm') {
+        // 現在ミュート中なら元の音量へ戻す
+        if (sf.config_bgm_muted) {
+            sf.config_bgm_vol = sf.config_bgm_before_mute;
+            sf.config_bgm_muted = false;
+
+            $('.slider_bgm').val(sf.config_bgm_vol);
+            $('#val_bgm').text(sf.config_bgm_vol);
+            $('#btn_mute_bgm').text('🔊 ON').removeClass('muted');
+        } else {
+            // ミュート前の音量を保存して0にする
+            sf.config_bgm_before_mute = sf.config_bgm_vol;
+            sf.config_bgm_vol = 0;
+            sf.config_bgm_muted = true;
+
+            $('.slider_bgm').val(0);
+            $('#val_bgm').text(0);
+            $('#btn_mute_bgm').text('🔇 OFF').addClass('muted');
+        }
+
+    } else if (type === 'se') {
+        // 現在ミュート中なら元の音量へ戻す
+        if (sf.config_se_muted) {
+            sf.config_se_vol = sf.config_se_before_mute;
+            sf.config_se_muted = false;
+
+            $('.slider_se').val(sf.config_se_vol);
+            $('#val_se').text(sf.config_se_vol);
+            $('#btn_mute_se').text('🔊 ON').removeClass('muted');
+        } else {
+            // ミュート前の音量を保存して0にする
+            sf.config_se_before_mute = sf.config_se_vol;
+            sf.config_se_vol = 0;
+            sf.config_se_muted = true;
+
+            $('.slider_se').val(0);
+            $('#val_se').text(0);
+            $('#btn_mute_se').text('🔇 OFF').addClass('muted');
+        }
+    }
+        TYRANO.kag.saveSystemVariable();
+};
+
+// BGM音量スライダー
+$('.slider_bgm').on('input', function() {
+    var val = Number($(this).val());
+
+    // 0にした場合は、0になる前の音量を保存
+    if (val === 0 && !sf.config_bgm_muted) {
+        sf.config_bgm_before_mute = sf.config_bgm_vol;
+    }
+
+    sf.config_bgm_vol = val;
+    $('#val_bgm').text(val);
+
+    // 音量0 → ミュート
+    if (val === 0) {
+        sf.config_bgm_muted = true;
+        $('#btn_mute_bgm').text('🔇 OFF').addClass('muted');
+
+    // 0より上 → ミュート解除
+    } else if (sf.config_bgm_muted) {
+        sf.config_bgm_muted = false;
+        $('#btn_mute_bgm').text('🔊 ON').removeClass('muted');
+    }
+
+    TYRANO.kag.saveSystemVariable();
+});
+
+// SE音量スライダー
+$('.slider_se').off('input.config').on('input.config', function() {
+    var val = Number($(this).val());
+
+    // 0にした場合は、0になる前の音量を保存
+    if (val === 0 && !sf.config_se_muted) {
+        sf.config_se_before_mute = sf.config_se_vol;
+    }
+
+    sf.config_se_vol = val;
+    $('#val_se').text(val);
+
+    // 音量0 → ミュート
+    if (val === 0) {
+        sf.config_se_muted = true;
+        $('#btn_mute_se').text('🔇 OFF').addClass('muted');
+
+    // 0より上 → ミュート解除
+    } else if (sf.config_se_muted) {
+        sf.config_se_muted = false;
+        $('#btn_mute_se').text('🔊 ON').removeClass('muted');
+    }
+    TYRANO.kag.saveSystemVariable();
+});
+
+
+// テキスト表示速度
+$('.slider_ch_speed').off('input.config').on('input.config', function() {
+    var val = Number($(this).val());
+
+    $('#val_ch').text(val);
+
+    // 設定を保存
+    sf.config_ch_speed = val;
+    TYRANO.kag.saveSystemVariable();
+});
+
+
+// オート速度
+$('.slider_auto_speed').off('input.config').on('input.config', function() {
+    var val = Number($(this).val());
+
+    $('#val_auto').text((val / 1000).toFixed(1) + '秒');
+
+    // 設定を保存
+    sf.config_auto_speed = val;
+    TYRANO.kag.saveSystemVariable();
+});
+
+
+// スキップモード
+window.setSkipMode = function(mode) {
+
+    $('.config_choice_btn').removeClass('active');
+
+    if (mode === 'reads') {
+        $('.button_skip_read').addClass('active');
+
+        sf.config_skip_mode = "reads";
+
+        if (TYRANO && TYRANO.kag) {
+            TYRANO.kag.stat.skip_mode = "reads";
+        }
+
+    } else {
+        $('.button_skip_all').addClass('active');
+
+        sf.config_skip_mode = "all";
+
+        if (TYRANO && TYRANO.kag) {
+            TYRANO.kag.stat.skip_mode = "all";
+        }
+    }
+
+    TYRANO.kag.saveSystemVariable();
+};
+
 [endscript]
 
 [s]
@@ -187,93 +508,3 @@ tf.flag_back=$(".message1_fore").css("display");
 [endif]
 
 [return]
-
-
-;===================================================
-
-;★ボタンクリック時の処理
-
-;===================================================
-;--------------------------------------------------------------------------------
-;▼BGM音量
-;--------------------------------------------------------------------------------
-*vol_bgm_change
-[iscript]
-	$(".bgmvol").attr("src","data/image/config/c_btn.png");
-	$(".bgmvol_"+tf.current_bgm_vol).attr("src","data/image/config/c_set.png");
-[endscript]
-[bgmopt volume="&tf.current_bgm_vol"]
-[return]
-
-;--------------------------------------------------------------------------------
-;▼SE音量
-;--------------------------------------------------------------------------------
-*vol_se_change
-[iscript]
-	$(".sevol").attr("src","data/image/config/c_btn.png");
-	$(".sevol_"+tf.current_se_vol).attr("src","data/image/config/c_set.png");
-[endscript]
-[seopt volume="&tf.current_se_vol"]
-[return]
-
-;---------------------------------------------------------------------------------
-;▼テキスト速度
-;--------------------------------------------------------------------------------
-*ch_speed_change
-[iscript]
-	$(".ch").attr("src","data/image/config/c_btn.png");
-	$(".ch_"+tf.set_ch_speed).attr("src","data/image/config/c_set.png");
-[endscript]
-[configdelay speed="&tf.set_ch_speed"]
-
-;	テキスト速度サンプル
-	[position layer=message1 left=40 top=490 width=880 height=110 page=fore visible=true opacity=0]
-	[layopt layer=message1 visible=true]
-	[current layer=message1]
-	[font color="0x454D51"]
-	このスピードで表示されます
-
-		[iscript]
-		tf.system.backlog.pop(); // 上の「このスピードで表示されます」のテキストを履歴から削除
-		[endscript]
-
-	[wait time=2000]
-	[er]
-	[layopt layer=message1 visible=false]
-	[return]
-
-;--------------------------------------------------------------------------------
-;▼オート速度
-;--------------------------------------------------------------------------------
-*auto_speed_change
-[iscript]
-	$(".auto").attr("src","data/image/config/c_btn.png");
-	$(".auto_"+tf.set_auto_speed).attr("src","data/image/config/c_set.png");
-[endscript]
-[autoconfig speed="&tf.set_auto_speed"]
-[return]
-
-;--------------------------------------------------------------------------------
-;▼スキップ処理-OFF
-;--------------------------------------------------------------------------------
-*skip_off
-[iscript]
-	$(".unread_off").attr("src","data/image/config/c_uts_off.png");
-	$(".unread_on").attr("src","data/image/config/c_btn.png");
-	tf.text_skip="OFF";
-[endscript]
-[config_record_label skip=false]
-[return]
-
-;--------------------------------------------------------------------------------
-;▼スキップ処理-ON
-;--------------------------------------------------------------------------------
-*skip_on
-[iscript]
-	$(".unread_off").attr("src","data/image/config/c_btn.png");
-	$(".unread_on").attr("src","data/image/config/c_uts_on.png");
-	tf.text_skip="ON";
-[endscript]
-[config_record_label skip=true]
-[return]
-
