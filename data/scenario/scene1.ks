@@ -8,8 +8,6 @@
 ; [free name="date_img" layer="fix"] 
 ; [image storage="default/day0_icon.png" layer="fix" page="fore" x="20" y="20" name="date_img" width="100"]
 ; ; ------------------------------------
-; 好感度表示
-[debug_init]
 
 [tb_show_message_window  ]
 [tb_start_text mode=4 ]
