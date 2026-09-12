@@ -1,11 +1,5 @@
 [_tb_system_call storage=system/_part1_day8.ks]
 
-
-; 好感度表示
-
-
-[debug_init]
-
 *base0
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Sunny_Afternoon_Driveway.mp3"  ]

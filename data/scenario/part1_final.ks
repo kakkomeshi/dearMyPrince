@@ -1,11 +1,5 @@
 [_tb_system_call storage=system/_part1_final.ks]
 
-
-; 好感度表示
-
-
-[debug_init]
-
 *top
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  ]

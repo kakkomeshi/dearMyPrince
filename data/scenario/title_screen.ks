@@ -195,7 +195,8 @@ window.titleJump = function(targetLabel) {
 ;------- コンフィグ
 *config
 [cm]
-[jump storage="config.ks" target=""]
+[sleepgame storage="config.ks"]
+[jump storage="title_screen.ks" target="*title"]
 [s]
 
 ;------- 日付ジャンプ（デバッグモード）
