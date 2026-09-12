@@ -78,8 +78,8 @@
     <div class="config_item_row">
       <span class="config_label">テキスト表示速度</span>
       <div class="config_control_area">
-        <input type="range" class="slider_ch_speed my_slider" min="1" max="100" value="30">
-        <span class="config_value_text" id="val_ch">30</span>
+		<input type="range" class="slider_ch_speed my_slider" min="1" max="3" step="1" value="2">
+        <span class="config_value_text" id="val_ch">普通</span>
       </div>
     </div>
 
@@ -87,8 +87,9 @@
     <div class="config_item_row">
       <span class="config_label">オートモード速度</span>
       <div class="config_control_area">
-        <input type="range" class="slider_auto_speed my_slider" min="100" max="5000" step="100" value="2000">
-        <span class="config_value_text" id="val_auto">2.0秒</span>
+        <!-- <input type="range" class="slider_auto_speed my_slider" min="0" max="5000" step="100" value="2000"> -->
+		<input type="range" class="slider_auto_speed my_slider" min="1" max="3" step="1" value="2">
+        <span class="config_value_text" id="val_auto">普通</span>
       </div>
     </div>
 
@@ -288,27 +289,47 @@ if (typeof tf.config_se_before_mute === 'undefined') tf.config_se_before_mute = 
 // 画面上の要素に反映
 tf.current_bgm_vol=parseInt(TG.config.defaultBgmVolume);
 tf.current_se_vol=parseInt(TG.config.defaultSeVolume);
-
-tf.current_ch_speed=parseInt(TG.config.chSpeed);
-tf.current_auto_speed=parseInt(TG.config.autoSpeed);
-
+var rawChSpeed   = parseInt(TG.config.chSpeed); 
+var rawAutoSpeed = parseInt(TG.config.autoSpeed);
 tf.text_skip ="reads";
-
 if(TG.config.unReadTextSkip != "true"){
 	tf.text_skip ="all";
 } 
 
+// BGM音量の表示復元
 $('.slider_bgm').val(tf.current_bgm_vol);
 $('#val_bgm').text(tf.current_bgm_vol);
 
+// SE音量の表示復元
 $('.slider_se').val(tf.current_se_vol);
 $('#val_se').text(tf.current_se_vol);
 
+// メッセージ速度の表示復元
+if (rawChSpeed > 50) {
+    tf.current_ch_speed = 1; // 遅い（80msなど）
+    $('#val_ch').text('遅い');
+} else if (rawChSpeed <= 5) {
+    tf.current_ch_speed = 3; // 早い
+    $('#val_ch').text('早い');
+} else {
+    tf.current_ch_speed = 2; // 普通
+    $('#val_ch').text('普通');
+}
 $('.slider_ch_speed').val(tf.current_ch_speed);
-$('#val_ch').text(tf.current_ch_speed);
 
+// オート速度の表示復元
+if (rawAutoSpeed > 3500) {
+    tf.current_auto_speed = 1; // 遅い（4500msなど）
+    $('#val_auto').text('遅い');
+} else if (rawAutoSpeed > 1000) {
+    tf.current_auto_speed = 2; // 普通（2500msなど）
+    $('#val_auto').text('普通');
+} else {
+    tf.current_auto_speed = 3; // 早い（800msなど）
+    $('#val_auto').text('早い');
+}
 $('.slider_auto_speed').val(tf.current_auto_speed);
-$('#val_auto').text((tf.current_auto_speed / 1000).toFixed(1) + '秒');
+
 
 // スキップ設定ボタンの見た目反映
 $('.config_choice_btn').removeClass('active');
@@ -430,27 +451,69 @@ $('.slider_se').off('input.config').on('input.config', function() {
 
 
 // テキスト表示速度
+// テキスト表示速度（1=遅い、2=普通、3=早い）
 $('.slider_ch_speed').off('input.config').on('input.config', function() {
-    var val = Number($(this).val());
-	runConfigPreview(val);
-    $('#val_ch').text(val);
+     // 💡 1.5 や 2.3 のような中間の数字を、四捨五入して「完全に1, 2, 3のどれか」に強制変換する
+    var val = Math.round(Number($(this).val())); 
+    
+    // 💡 スライダー自体の見た目の位置も、強制的に 1, 2, 3 のジャストの位置に書き換える
+    $(this).val(val);
 
-    // 設定を保存
+    var msSpeed = 30;
+    var displayText = "普通";
+
+    if (val === 1) {
+        msSpeed = 80;
+        displayText = "遅い";
+    } else if (val === 2) {
+        msSpeed = 30;
+        displayText = "普通";
+    } else if (val === 3) {
+        msSpeed = 1;
+        displayText = "早い";
+    }
+
+    runConfigPreview(msSpeed);
+    $('#val_ch').text(displayText);
+
     tf.current_ch_speed = val;
-	TYRANO.kag.ftag.startTag("configdelay", { speed: tf.current_ch_speed });
+    TYRANO.kag.ftag.startTag("configdelay", { speed: msSpeed });
     TYRANO.kag.saveSystemVariable();
 });
 
-
 // オート速度
 $('.slider_auto_speed').off('input.config').on('input.config', function() {
-    var val = Number($(this).val());
+   // 💡 中間の数字を四捨五入して、完全に「1, 2, 3」のどれかに強制変換
+    var val = Math.round(Number($(this).val())); 
+    
+    // 💡 スライダーのつまみの位置も、ジャストの位置（1, 2, 3）に瞬間移動させる
+    $(this).val(val);
 
-    $('#val_auto').text((val / 1000).toFixed(1) + '秒');
+    var autoIntervalTime = 2500; // ティラノに渡す実際のミリ秒（デフォルトは普通）
+    var displayText = "普通";
 
-    // 設定を保存
+    // 💡 3段階の値を、実際のミリ秒と表示文字に変換
+    if (val === 1) {
+        autoIntervalTime = 4500; // 遅い（4.5秒待つ）
+        displayText = "遅い";
+    } else if (val === 2) {
+        autoIntervalTime = 2500; // 普通（2.5秒待つ）
+        displayText = "普通";
+    } else if (val === 3) {
+        autoIntervalTime = 100;  // 早い（0.1秒待つ）
+        displayText = "早い";
+    }
+
+    // 画面のテキストを「遅い・普通・早い」に書き換え
+    $('#val_auto').text(displayText);
+
+    // 一時変数には、スライダーの見た目の値（1〜3）を保存
     tf.current_auto_speed = val;
-	TYRANO.kag.ftag.startTag("autoconfig", { speed: tf.current_auto_speed });
+
+    // 実際のゲームのオート速度に変更（変換後のミリ秒を渡す）
+    TYRANO.kag.ftag.startTag("autoconfig", { speed: autoIntervalTime });
+    
+    // 設定を保存
     TYRANO.kag.saveSystemVariable();
 });
 
