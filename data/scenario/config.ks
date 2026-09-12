@@ -276,7 +276,7 @@ function runConfigPreview(speed) {
         } else {
             clearInterval(window.configPreviewTimer);
         }
-    }, Math.max(5, 100 - Number(speed)));
+    }, Math.max(1,Number(speed)));
 }
 
 // 1. 起動時（画面表示時）にシステム変数（tf）から設定を読み込み、スライダーやボタンに反映する
@@ -432,7 +432,7 @@ $('.slider_se').off('input.config').on('input.config', function() {
 // テキスト表示速度
 $('.slider_ch_speed').off('input.config').on('input.config', function() {
     var val = Number($(this).val());
-
+	runConfigPreview(val);
     $('#val_ch').text(val);
 
     // 設定を保存
