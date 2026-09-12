@@ -1,7 +1,7 @@
 [_tb_system_call storage=system/_part2_nov_day3.ks]
 
 [cm  ]
-[playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="Paper_Maps_at_Midnight.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="car_day.png"  ]
 
 ; 好感度表示
