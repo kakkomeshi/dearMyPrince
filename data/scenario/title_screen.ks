@@ -211,7 +211,7 @@ if (isSmartphone || isMobileWidth) {
     f.is_mobile = false;
 }
 [endscript ]
-[sleepgame storage="mobile_congfig.ks" cond="f.is_mobile==true" ]
+[sleepgame storage="config_mobile.ks" cond="f.is_mobile==true" ]
 [sleepgame storage="config.ks" cond="f.is_mobile==false" ]
 
 [jump storage="title_screen.ks" target="*title"]
