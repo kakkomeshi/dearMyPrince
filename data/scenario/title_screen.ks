@@ -195,7 +195,25 @@ window.titleJump = function(targetLabel) {
 ;------- コンフィグ
 *config
 [cm]
-[sleepgame storage="config.ks"]
+
+[iscript]
+// 1. ユーザーエージェントでスマホ（iPhone / Android）を判定する方法
+var isSmartphone = /iPhone|Android.+Mobile|iPad|Android/i.test(navigator.userAgent);
+
+// 2. 画面の横幅（例: 768px以下）で判定する方法（タブレットやウィンドウサイズ変更にも対応）
+var isMobileWidth = window.innerWidth <= 768;
+
+if (isSmartphone || isMobileWidth) {
+  // スマホ・タブレットの場合の処理
+    f.is_mobile = true;
+} else {
+  // PCの場合の処理
+    f.is_mobile = false;
+}
+[endscript ]
+[sleepgame storage="mobile_congfig.ks" cond="f.is_mobile==true" ]
+[sleepgame storage="config.ks" cond="f.is_mobile==false" ]
+
 [jump storage="title_screen.ks" target="*title"]
 [s]
 

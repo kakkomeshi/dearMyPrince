@@ -128,12 +128,12 @@
 ; パラメータ変化
 ; 不審感・周囲信頼度の低下
 [eval exp="f.trust -= 3"]
-; 好感度上昇 
-[eval exp="f.love += 2"] 
+; 好感度上昇
+[eval exp="f.love += 2"]
 ; 依存度大幅上昇（密約・アクセサリー共有）
-[eval exp="f.ryoma_dep += 3"] 
+[eval exp="f.ryoma_dep += 3"]
 ; 主人公執着度上昇
-[eval exp="f.elliott_obs += 2"] 
+[eval exp="f.elliott_obs += 2"]
 
 [jump target="*scene10_end"]
 
