@@ -17,6 +17,11 @@ img {
     -webkit-touch-callout: none;
 }
 
+/* message_innerの上の余白を強制的に修正する */
+.message_inner p {
+    padding-top: 3px !important;
+}
+
 /* ========================================
    セーブ・ロード画面 960×640用補正
 ======================================== */
