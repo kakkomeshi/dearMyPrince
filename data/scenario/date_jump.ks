@@ -247,11 +247,18 @@ $('#date_jump_wrapper').remove();
 
 
   <!-- 戻るボタン -->
-  <div style="text-align: center; margin-top: 10px;">
+  <div style="text-align: center;">
     <button class="debug_back_btn" onclick="debugJump(event, '*back')">
       BACK
     </button>
-  </div>
+
+   <!-- 仮置き -->
+    <div style="text-align: center; margin-top: 15px;">
+      <button class="debug_clear_storage_btn" onclick="clearStorageDebug();">
+        🗑️ ストレージ全削除 (ローカル初期化)
+      </button>
+    </div>
+</div>
 
 </div>
 
@@ -372,6 +379,29 @@ $('#date_jump_wrapper').remove();
   padding: 8px 10px;
   text-align: left;
   padding-left: 12px;
+}
+
+/* ストレージ削除ボタン専用スタイル */
+.debug_clear_storage_btn {
+  width: 435px;
+  background: linear-gradient(135deg, #7B1FA2, #E53935); /* 警告感のある赤パープルグラデーション */
+  border: 1px solid #FF8A80;
+  color: #ffffff;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.debug_clear_storage_btn:hover {
+  background: linear-gradient(135deg, #8E24AA, #FF5252);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 82, 82, 0.4);
 }
 </style>
 
@@ -507,6 +537,33 @@ window.debugJump = function(e, target) {
         target: target
     });
 
+};
+
+
+// ストレージ全削除処理（スマホ・PC両対応）
+window.clearStorageDebug = function() {
+    if (confirm("スマホ/ブラウザに保存されているセーブデータやシステム変数をすべて削除して初期化しますか？")) {
+        // 1. ローカルストレージを完全消去
+        window.localStorage.clear();
+        
+        // 2. メモリ上の sf (システム変数) や f (ゲーム変数) をクリア
+        if (typeof sf !== 'undefined') {
+            for (var key in sf) { delete sf[key]; }
+        }
+        if (typeof f !== 'undefined') {
+            for (var key in f) { delete f[key]; }
+        }
+
+        // 3. ティラノ側のシステム変数を保存更新[cite: 1]
+        if (typeof TG !== 'undefined' && TG.saveSystemVariable) {
+            TG.saveSystemVariable();
+        }
+
+        alert("ストレージを完全に削除しました。ページを再読み込みします。");
+        
+        // ページを再読み込みして完全にクリーンな初期状態にする[cite: 1]
+        location.reload();
+    }
 };
 
 [endscript]
