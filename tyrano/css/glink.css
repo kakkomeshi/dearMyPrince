@@ -11216,13 +11216,14 @@
   opacity: 0;
 }
 
+/* 自分で追加したCSS */
 .customized_button {
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
-  font-size: 15px !important;
+  font-size: 18px !important;
   padding: 0.8em 2.5em;
 	margin: 0;
 	border:  solid 1px;
@@ -11236,6 +11237,8 @@
 
   /* 【重要】◆を右端に固定するための基準点にする */
 	position: relative;
+
+  margin: 10px 0px !important;
 }
 
 .customized_button:hover {
