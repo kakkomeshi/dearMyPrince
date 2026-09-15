@@ -9,7 +9,7 @@
 ; [free name="action_img" layer="fix"]
 ; [image storage="default/pickup_icon.png" layer="fix" page="fore" x="46" y="120" name="action_img" width="100"]
 ; ------------------------------------
-
+[eval exp="f.chapterTitle = '第一部：DAY1'"]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Sunny_Afternoon_Driveway.mp3"  fadein="true"  ]
 [bg  time="0"  method="crossfade"  storage="school.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
