@@ -38,7 +38,7 @@
 ;configThumbnail=true
 ;configThumbnailQuality=middle
 ;configThumbnailScale=0.3
-;configSaveSlotNum=5
+;configSaveSlotNum=18
 ;configSaveDateFormat=yyyy/M/d h:mm:ss
 ;configSaveOverwrite=false
 ;maxBackLogNum=50

@@ -1,0 +1,74 @@
+<div class="save" id="save_screen_wrapper">
+  <!-- 画面タイトル -->
+  <div class="save_title_header">SAVE DATA</div>
+
+  <!-- セーブスロット表示パネル（ゴールド枠容器） -->
+  <div id="save_slot_container" class="area_save_list">
+    <ul class="save_list">
+      {{for array_save}}
+        <li class="save_display_area save_list_item save_slot_card" id="list_{{:num}}" data-num="{{:num}}" data-page="{{:page}}" data-umu="{{:save_date}}">
+          <div class="slot_inner_content">
+            <!-- ヘッダー（SLOT番号 、章タイトル、 日付） -->
+            <div class="slot_header">
+              <span class="save_list_item_num" data-num="{{:num}}">SLOT {{:num+1}}</span>
+                {{if save_date != ""}}
+                <span class="save_list_item_data">{{:data_text}}</span>
+                {{else}}
+                <span class="save_empty_text">NO DATA</span>
+                {{/if}}
+              <span class="save_list_item_date">{{:save_date}}</span>
+            </div>
+            <div class ="slot_body">
+              <!-- サムネイル -->
+              <span class="save_list_item_thumb">
+                {{if img_data != ""}}
+                <img src="{{:img_data}}" data-thumb="true">
+                {{else}}
+                <img src="" data-thumb="false">
+                {{/if}}
+              </span>
+              <!-- テキスト -->
+              <span class="save_list_item_text_original">{{:title}}</span>
+            </div>
+          </div>
+
+          <!-- 機能ボタン類（削除・保護） -->
+          <div class="slot_action_area">
+            {{if save_date != ""}}
+              {{if lock == true}}
+                <img class="save_list_item_lock" src="" data-src="" data-src-u="" data-num="{{:num}}" data-lock="true" />
+                <img class="save_list_item_delete" src="" data-src="" data-src-u="" data-num="{{:num}}" data-delete="false" />
+              {{else}}
+                <img class="save_list_item_lock" src="" data-num="{{:num}}" data-lock="false" />
+                <img class="save_list_item_delete" src="" data-num="{{:num}}" data-delete="true"/>
+              {{/if}}
+            {{/if}}
+          </div>
+        </li>
+      {{/for}}
+    </ul>
+  </div>
+
+  <!-- 下部操作エリア（ページ送り ＆ 戻るボタン） -->
+  <div class="save_bottom_area">
+  <!-- ページ送りコントロール (◀  1/3  ▶) -->
+    <div class="pager_area">
+      <!-- 前へボタン（◀） -->
+      <button class="page_nav_btn page" data-action="prev">◀</button>
+      <!-- ページ番号表示 (例: 1 / 3) -->
+      <span class="pager_num_display">
+        <span class="custom_now_page">1</span> / <span class="custom_max_page">3</span>
+      </span>
+      <!-- 次へボタン（▶） -->
+      <button class="page_nav_btn page" data-action="next">▶</button>
+    </div>
+
+    <!-- CLOSE（戻る）ボタン -->
+    <div class="menu_close" style="padding-top:20px; text-align: center;">
+      <button class="back_btn">CLOSE</button>
+      <img class="menu_close_image" src="" style="display:none;" />
+    </div>
+  </div>
+
+  <div class="menu_mask"></div>
+</div>

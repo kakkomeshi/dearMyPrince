@@ -53,21 +53,11 @@
     align-items: center;
     width: 800px;
     margin: 15px auto 0 auto;
+    flex-direction: column;
   ">
-    <!-- 左側ダミー要素（ページ送りUIを中央に寄せるためのレイアウト調整用） -->
-    <!-- <div style="width: 120px;"></div> -->
 
     <!-- ページ送りコントロール (◀  1/3  ▶) -->
-    <div style="
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      background: rgba(31, 35, 45, 0.85);
-      border: 1px solid #D4C291;
-      padding: 4px 18px;
-      border-radius: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-    ">
+    <div class="pager_area">
       <button class="page_nav_btn" onclick="changeEdPage(-1)">◀</button>
       <span id="ed_page_num" style="color: #ffffff; font-weight: bold; font-size: 15px; min-width: 50px; text-align: center;">1 / 3</span>
       <button class="page_nav_btn" onclick="changeEdPage(1)">▶</button>
@@ -76,53 +66,12 @@
   </div>
   <!-- BACKボタン -->
   <div style="padding-top:20px; text-align: center;">
-    <button class="ed_back_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*back'});">
+    <button class="back_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*back'});">
       BACK
     </button>
   </div>
 </div>
 
-<style>
-/* ページ送り矢印ボタン */
-.page_nav_btn {
-  background: transparent;
-  border: none;
-  color: #D4C291;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 2px 8px;
-  transition: all 0.2s ease;
-  outline: none;
-}
-.page_nav_btn:hover {
-  color: #ffffff;
-  transform: scale(1.25);
-}
-.page_nav_btn:disabled {
-  color: #444444;
-  cursor: default;
-  transform: none;
-}
-
-/* 戻るボタン専用スタイル */
-.ed_back_btn {
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid #D4C291;
-  color: #ffffff;
-  padding: 6px 30px;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  letter-spacing: 1px;
-}
-.ed_back_btn:hover {
-  background: rgba(212, 194, 145, 0.3);
-  border-color: #ffffff;
-  transform: translateY(-2px);
-}
-</style>
 [endhtml]
 
 ; ============================================================

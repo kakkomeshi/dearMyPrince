@@ -119,9 +119,13 @@ window.menuAction = function(actionType) {
     // $('#menu_screen_wrapper').remove();
     
     if (actionType === 'save') {
-        TYRANO.kag.ftag.startTag("showsave", {});
+        TYRANO.kag.ftag.startTag("showsave", {}); 
+        TYRANO.kag.ftag.startTag("awakegame", {});
+        TYRANO.kag.ftag.startTag("s", {});
     } else if (actionType === 'load') {
-        TYRANO.kag.ftag.startTag("showload", {});
+        TYRANO.kag.ftag.startTag("showload", {}); 
+        TYRANO.kag.ftag.startTag("awakegame", {});
+        TYRANO.kag.ftag.startTag("s", {});
     } else if (actionType === 'config') {
       var isSmartphone = /iPhone|Android.+Mobile|iPad|Android/i.test(navigator.userAgent);
       // 2. 画面の横幅（例: 768px以下）で判定する方法（タブレットやウィンドウサイズ変更にも対応）
@@ -146,6 +150,7 @@ window.menuAction = function(actionType) {
         TYRANO.kag.ftag.startTag('clearfix', {});
         TYRANO.kag.ftag.startTag('breakgame', {});
 
+        // 4. タイトル画面へジャンプする
         TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*title" });
       }
     }

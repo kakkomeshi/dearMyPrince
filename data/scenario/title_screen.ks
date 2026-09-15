@@ -171,7 +171,7 @@ window.titleJump = function(targetLabel) {
 ;------- はじめから
 *start
 [cm]
-[showmenubutton]
+; [showmenubutton]
 
 ; NEW GAME用の初期化処理
 [call storage="new_game_init.ks" target="*new_game"]
@@ -183,6 +183,8 @@ window.titleJump = function(targetLabel) {
 *load
 [cm]
 [showload]
+[awakegame ]
+; [jump storage="load.ks" target=""]
 [jump storage="" target="*title"]
 [s]
 
