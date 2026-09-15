@@ -59,7 +59,7 @@
     <!-- ページ送りコントロール (◀  1/3  ▶) -->
     <div class="pager_area">
       <button class="page_nav_btn" onclick="changeEdPage(-1)">◀</button>
-      <span id="ed_page_num" style="color: #ffffff; font-weight: bold; font-size: 15px; min-width: 50px; text-align: center;">1 / 3</span>
+      <span id="pager_num_display" >1 / 3</span>
       <button class="page_nav_btn" onclick="changeEdPage(1)">▶</button>
     </div>
 
