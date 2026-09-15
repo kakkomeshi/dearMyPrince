@@ -38,5 +38,7 @@
 ; デバッグ好感度表示開始
 [debug_init]
 
+; menuボタン表示
+[button fix="true" name="btn_menu" graphic="button/menu_icon.png" width="100px" height="100px" x="20" y="20" storage="menu.ks" role="sleepgame"]
 
 [return]

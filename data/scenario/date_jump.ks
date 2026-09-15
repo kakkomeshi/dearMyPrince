@@ -27,7 +27,7 @@ f.love_taboo_flag = tf.temp_love_taboo;
 [tb_show_message_window]
 
 ; 6. メニューボタンとキーコンフィグを表示・復元
-[showmenubutton]
+; [showmenubutton]
 [showmenu]
 [tb_keyconfig flag="1"]
 [start_keyconfig]
