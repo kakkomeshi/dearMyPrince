@@ -13,6 +13,7 @@
 
 ; 3. 変数とシステム状態の初期化
 [call storage="new_game_init.ks" target="*new_game"]
+[call storage="make.ks"]
 
 ; 4. リアルタイム保持しておいた tf 変数から f 変数へ一括反映
 [iscript]
@@ -27,11 +28,8 @@ f.love_taboo_flag = tf.temp_love_taboo;
 [tb_show_message_window]
 
 ; 6. メニューボタンとキーコンフィグを表示・復元
-; [showmenubutton]
-[showmenu]
 [tb_keyconfig flag="1"]
 [start_keyconfig]
-[debug_init]
 
 [endmacro]
 

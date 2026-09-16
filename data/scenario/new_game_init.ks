@@ -1,6 +1,6 @@
-; ===== 新規ゲーム初期化 =====
+; ===== 新規ゲーム初期化(はじめからのときと、日付ジャンプのときのみ呼びだすこと。ロード時は呼び出さない) =====
 ; ===================================
-; 変数一括初期化処理（first.ks / make.ks）
+; 変数一括初期化処理
 ; ===================================
 
 *new_game
@@ -33,11 +33,5 @@
   f.ryoga_hint_count = 0; // リョーガ関連の隠しポイントカウント
   f.cat_hint_count = 0; // カルピン関連の隠しポイントカウント
 [endscript]
-
-; デバッグ好感度表示開始
-[debug_init]
-
-; menuボタン表示
-[button fix="true" name="btn_menu" graphic="button/menu_icon.png" width="100px" height="100px" x="20" y="20" storage="menu.ks" role="sleepgame"]
 
 [return]

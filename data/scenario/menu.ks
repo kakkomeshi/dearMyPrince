@@ -119,13 +119,19 @@ window.menuAction = function(actionType) {
     // $('#menu_screen_wrapper').remove();
     
     if (actionType === 'save') {
-        TYRANO.kag.ftag.startTag("showsave", {}); 
+        $('#menu_screen_wrapper').remove();
         TYRANO.kag.ftag.startTag("awakegame", {});
-        TYRANO.kag.ftag.startTag("s", {});
+        setTimeout(function() {
+            TYRANO.kag.ftag.startTag("showsave", {});
+            TYRANO.kag.ftag.startTag("s", {});
+        }, 50);
     } else if (actionType === 'load') {
-        TYRANO.kag.ftag.startTag("showload", {}); 
+        $('#menu_screen_wrapper').remove();
         TYRANO.kag.ftag.startTag("awakegame", {});
-        TYRANO.kag.ftag.startTag("s", {});
+        setTimeout(function() {
+            TYRANO.kag.ftag.startTag("showload", {});
+            TYRANO.kag.ftag.startTag("s", {});
+        }, 50);
     } else if (actionType === 'config') {
       var isSmartphone = /iPhone|Android.+Mobile|iPad|Android/i.test(navigator.userAgent);
       // 2. 画面の横幅（例: 768px以下）で判定する方法（タブレットやウィンドウサイズ変更にも対応）

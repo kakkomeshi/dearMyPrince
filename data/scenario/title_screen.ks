@@ -168,10 +168,9 @@ window.titleJump = function(targetLabel) {
 ;------- はじめから
 *start
 [cm]
-; [showmenubutton]
-
 ; NEW GAME用の初期化処理
 [call storage="new_game_init.ks" target="*new_game"]
+[call storage="make.ks"]
 [tb_keyconfig flag="1"]
 [jump storage="scene1.ks" target=""]
 [s]
