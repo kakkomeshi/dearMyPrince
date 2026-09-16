@@ -1,8 +1,10 @@
 
 
 ;メニューボタン非表示
-;[hidemenubutton]
+[hidemenubutton]
 
+;初期化処理
+[call storage="init.ks"]
 
 ;ゲームに必要なライブラリ読み込み
 [call storage="system/tyrano.ks"]
@@ -23,15 +25,9 @@
 [call storage="system/plugin_third.ks"]
 
 ;タイトルの設定
-;[title name="now loading"]
+[title name="DearMyPrince"]
 
 ;タイトル画面表示
 [jump storage="title_screen.ks"]
-
-;--------------------------
-
-[s]
-
-
 
 

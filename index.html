@@ -120,7 +120,53 @@
             <button data-remodal-action="confirm" id="remodal-confirm" class="remodal-confirm">OK</button>
         </div>
         
-        
+        <!-- index.html の </body> 直前、または preload エリアに追加 -->
+        <div id="loading_spinner">
+        <div class="spinner"></div>
+        <p class="loading_text">LOADING...</p>
+        </div>
+
+        <style>
+        /* ローディング画面の固定配置 */
+        #loading_spinner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0f1219; /* 全体デザインと統一したダークネイビー */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999999;
+        }
+
+        /* くるくる回る円形スピナー */
+        .spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(212, 194, 145, 0.2); /* ゴールドの薄枠 */
+        border-top: 4px solid #D4C291;              /* アクセントゴールド */
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        }
+
+        /* テキスト装飾 */
+        .loading_text {
+        color: #D4C291;
+        font-family: sans-serif;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-top: 15px;
+        }
+
+        /* 回転アニメーション */
+        @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+        </style>
         
         
     </body>

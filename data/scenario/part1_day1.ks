@@ -1,14 +1,5 @@
 [_tb_system_call storage=system/_part1_day1.ks]
 
-
-; --- ここで左上にDAY8の日付画像を表示 ---
-; [free name="date_img" layer="fix"]
-; [image storage="default/day1_icon.png" layer="fix" page="fore" x="20" y="20" name="date_img" width="150"]
-; ------------------------------------
-; 迎えのアイコン------------------------
-; [free name="action_img" layer="fix"]
-; [image storage="default/pickup_icon.png" layer="fix" page="fore" x="46" y="120" name="action_img" width="100"]
-; ------------------------------------
 [eval exp="f.chapterTitle = '第一部：DAY1'"]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Sunny_Afternoon_Driveway.mp3"  fadein="true"  ]
 [bg  time="0"  method="crossfade"  storage="school.png"  ]
@@ -143,18 +134,6 @@
 
 [jump  storage="part1_day1.ks"  target="*base"  ]
 *base
-
-
-; レッスンのアイコン-------------
-
-
-; [free name="action_img" layer="fix"]
-
-; [image storage="default/lesson_icon.png" layer="fix" page="fore" x="46" y="120" name="action_img" width="100"]
-
-
-;------------------------------
-
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]

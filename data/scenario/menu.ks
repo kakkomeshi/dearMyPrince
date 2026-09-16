@@ -138,7 +138,6 @@ window.menuAction = function(actionType) {
         // PCの場合の処理
           TYRANO.kag.ftag.startTag("jump", { storage: "config.ks" });
       }
-        // TYRANO.kag.ftag.startTag("showconfig", {});
     } else if (actionType === 'title') {
        var result = confirm("タイトル画面に戻ります。よろしいですか？\n（保存していないデータは消去されます）");
       if (result === true) {
