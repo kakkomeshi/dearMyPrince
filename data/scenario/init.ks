@@ -6,12 +6,4 @@
 ; cssファイルの読み込み
 [loadcss file="./data/others/css/custom.css"]
 
-
-; 画面の初期化処理が終わったらローディングスピナーを消す処理
-[iscript]
-$('#loading_spinner').fadeOut(500, function(){
-    $(this).remove();
-});
-[endscript]
-
 [return]
