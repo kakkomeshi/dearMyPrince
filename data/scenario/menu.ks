@@ -122,15 +122,19 @@ window.menuAction = function(actionType) {
         $('#menu_screen_wrapper').remove();
         TYRANO.kag.ftag.startTag("awakegame", {});
         setTimeout(function() {
-            TYRANO.kag.ftag.startTag("showsave", {});
-            TYRANO.kag.ftag.startTag("s", {});
+            TYRANO.kag.ftag.startTag("showsave", {}, function() {
+                // CLOSE後のnextOrderを1回だけ止める
+                TYRANO.kag.tmp.cut_nextorder = null;
+            });
         }, 50);
     } else if (actionType === 'load') {
         $('#menu_screen_wrapper').remove();
         TYRANO.kag.ftag.startTag("awakegame", {});
         setTimeout(function() {
-            TYRANO.kag.ftag.startTag("showload", {});
-            TYRANO.kag.ftag.startTag("s", {});
+            TYRANO.kag.ftag.startTag("showload", {}, function() {
+                // CLOSE後のnextOrderを1回だけ止める
+                TYRANO.kag.tmp.cut_nextorder = null;
+            });
         }, 50);
     } else if (actionType === 'config') {
       var isSmartphone = /iPhone|Android.+Mobile|iPad|Android/i.test(navigator.userAgent);
