@@ -489,19 +489,8 @@ window.setSkipMode = function(mode) {
 ; タイトルに戻る
 ;--------------------------------------------------------------------------------
 *backtitle
-
-[iscript]
-tf.flag_back=$(".message1_fore").css("display");
-[endscript]
-
-[if exp="tf.flag_back=='none'"]
-
-[cm]
-[layopt layer=message1 visible=false]
+; Config用のレイヤーのみ消去
 [freeimage layer=1]
-[clearfix]
 [awakegame]
-
-[endif]
 
 [return]

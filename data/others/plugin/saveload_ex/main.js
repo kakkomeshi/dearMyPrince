@@ -639,7 +639,7 @@
      * @param {*} cb
      * @param {*} that
      */
-    var preloadImgCallback = function (j_menu, cb, that) {
+   var preloadImgCallback = function (j_menu, cb, that) {
         var img_storage = []
         j_menu.find("img").each(function () {
             if ($(this).attr("src") != "") {

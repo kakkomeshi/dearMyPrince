@@ -1,12 +1,17 @@
 [_tb_system_call storage=system/_title_screen.ks]
 
-[tb_start_tyrano_code]
-[loadcss file="./data/others/css/custom.css"]
-[_tb_end_tyrano_code]
-
+*title
 ;==============================
 ; 初期化・演出準備
 ;==============================
+[cm]
+[clearfix]                                   
+[eval exp="sf.menu_button_created = false"]
+
+; --- 音声の停止処理を追加 ---
+[stopbgm]
+[stopse]
+
 [debug_hide]
 [hidemenubutton]
 [tb_clear_images]
@@ -15,8 +20,6 @@
 
 ; 背景画像の指定（新背景画像）
 [bg storage="tennis_school_sunset.png" time="1000" method="crossfade"]
-
-*title
 
 ; ★暗転（mask）をここで解除してタイトル画面をフェードイン表示させる
 [mask_off time="1000"]

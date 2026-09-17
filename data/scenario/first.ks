@@ -1,7 +1,7 @@
 
 
 ;メニューボタン非表示
-[hidemenubutton]
+; [hidemenubutton]
 
 ;初期化処理
 [call storage="init.ks"]
@@ -23,11 +23,11 @@
 ;プラグインの設定
 [call storage="system/plugin.ks"]
 [call storage="system/plugin_third.ks"]
+[loadjs storage="js/override.js" ]
 
 ;タイトルの設定
 [title name="DearMyPrince"]
 
 ;タイトル画面表示
 [jump storage="title_screen.ks"]
-
 

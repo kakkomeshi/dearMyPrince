@@ -540,7 +540,8 @@ window.debugJump = function(e, target) {
 
 // ストレージ全削除処理（スマホ・PC両対応）
 window.clearStorageDebug = function() {
-    if (confirm("スマホ/ブラウザに保存されているセーブデータやシステム変数をすべて削除して初期化しますか？")) {
+    openConfirm("スマホ/ブラウザに保存されているセーブデータやシステム変数をすべて削除して初期化しますか？",
+				function () {
         // 1. ローカルストレージを完全消去
         window.localStorage.clear();
         
@@ -557,11 +558,11 @@ window.clearStorageDebug = function() {
             TG.saveSystemVariable();
         }
 
-        alert("ストレージを完全に削除しました。ページを再読み込みします。");
-        
-        // ページを再読み込みして完全にクリーンな初期状態にする[cite: 1]
-        location.reload();
-    }
+        openAlert("ストレージを完全に削除しました。ページを再読み込みします。",
+				function () {
+          location.reload();
+          });
+				});
 };
 
 [endscript]

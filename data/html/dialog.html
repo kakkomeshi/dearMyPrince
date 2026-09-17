@@ -1,0 +1,67 @@
+<div id="custom_dialog_wrapper" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 18, 25, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  user-select: none;
+  font-family: sans-serif;
+">
+    <!-- ダイアログパネル（ENDING LISTと同背景＆ゴールド枠） -->
+    <div style="
+    width: 520px;
+    background-color: rgba(31, 35, 45, 0.96);
+    border: 1.5px solid #D4C291;
+    border-radius: 8px;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+    text-align: center;
+  ">
+        <!-- ダイアログヘッダー -->
+        <div class="dialog_header_title" style="
+        color: #D4C291;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(212, 194, 145, 0.2);
+        padding-bottom: 8px;
+        ">
+            CONFIRMATION
+        </div>
+
+        <!-- メッセージ本文 (JS側からテキスト挿入) -->
+        <div id="dialog_text_area" style="
+        color: #FFFFFF;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+        word-break: break-all;
+        white-space: pre-wrap;
+        "></div>
+
+        <!-- ボタンエリア -->
+        <div style="
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        ">
+            <!-- 「はい」ボタン -->
+            <button id="dialog_btn_yes" class="dialog_btn dialog_yes">
+                は い
+            </button>
+
+            <!-- 「いいえ」ボタン -->
+            <button id="dialog_btn_no" class="dialog_btn dialog_no">
+                いいえ
+            </button>
+        </div>
+    </div>
+</div>

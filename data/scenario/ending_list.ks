@@ -127,10 +127,6 @@ window.renderEdPage = function(page) {
         var titleColor = isUnlocked ? "#FFFFFF" : "#888888";
         var statusColor = isUnlocked ? "#81C784" : "#555555";
 
-        // if (isUnlocked && ed.type === "SECRET") statusColor = "#E57373";
-        // if (isUnlocked && ed.type === "TRUE") statusColor = "#64B5F6";
-        // if (isUnlocked && ed.type === "BAD") statusColor = "#BA68C8";
-
         htmlContent += `
             <div style="
                 display: flex;

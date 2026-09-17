@@ -1,52 +1,69 @@
-<div>
-    <div class="display_menu block_menu" align="center">
-    
-    	<div class="menu_item " style="position:absolute;right:0px">
-    	<a href="javascript:void(0)"><img class="menu_close" src="tyrano/images/system/menu_button_close.png"  /></a>
-    	</div>
-    	
-    	<div style='clear:both'></div>
-    	
-    	<div style="margin-top:100px">
-    		<div class="menu_item ">
-    		<a href="javascript:void(0)"><img class="menu_save" src="tyrano/images/system/menu_button_save.png" /></a>
-    		</div>
-    	
-    		<div class="menu_item">
-    		<a href="javascript:void(0)"><img class="menu_load" src="tyrano/images/system/menu_button_load.png" /></a>
-    		</div>
-    	
-    		<div class="menu_item">
-    		<a href="javascript:void(0)"><img class="menu_window_close" src="tyrano/images/system/menu_message_close.png" /></a>
-    		</div>
-    	
-    		<div class="menu_item">
-    		<a href="javascript:void(0)"><img class="menu_skip" src="tyrano/images/system/menu_button_skip.png" /></a>
-    		</div>
-    	
-    		<div class="menu_item">
-    		<a href="javascript:void(0)"><img class="menu_back_title" src="tyrano/images/system/menu_button_title.png" /></a>
-    		</div>
-    	</div>
-    
-    </div>
-    
-    <img class="img_label img_label_menu block_menu" src='tyrano/images/system/label_menu.png' style='left:0;top:0;width:200px;position:absolute;'>
-    <img class="img_bg_base" src='tyrano/images/system/bg_base.png' style='z-index:-1;left:0;top:0;width:100%;height:100%;position:absolute;'>
-    <script class="block_menu">
-    	
-    	var tmp_src = "";
-    	
-    	$(".menu_item").hover(function(){
-    		tmp_src = $(this).find("img").attr("src");
-    		var img_src = tmp_src.replace(".gif","2.gif").replace(".png","2.png");
-    		$(this).find("img").attr("src",img_src);
-    	},
-    	function(){
-    		
-    		//もとにもどす
-    		$(this).find("img").attr("src",tmp_src);
-    	});
-    	
-    </script>
+<div id="menu_screen_wrapper">
+
+	<!-- ヘッダー（タイトル ＆ CLOSEボタン） -->
+	<div class="menu_header">
+		<p class="menu_title">MENU</p>
+
+		<div class='menu_item'>
+			<a href="javascript:void(0)" onclick="closeMenuScreen();">
+				<img class="menu_close" src='data/image/close_icon.png' onmouseover="this.style.transform='scale(1.1)'"
+					onmouseout="this.style.transform='scale(1.0)'">
+			</a>
+		</div>
+	</div>
+
+	<!-- <div style="clear:both"></div> -->
+
+	<!-- メニュー全体を囲むメインパネル（座布団） -->
+	<div class="area_menu_box">
+
+		<!-- メニュー項目ボタン群 -->
+		<button class="menu_save menu_action_btn">SAVE</button>
+		<button class="menu_load menu_action_btn">LOAD</button>
+		<button class="my_menu_config menu_action_btn">CONFIG</button>
+		<button class="my_menu_back_title menu_action_btn">タイトルに戻る</button>
+		<button class="menu_window_close menu_action_btn back_game">ゲームに戻る</button>
+
+	</div>
+
 </div>
+
+
+<script>
+	$(function () {
+		// ① コンフィグボタンを押した時
+		$(".my_menu_config").off("click").on("click", function (e) {
+			e.stopPropagation(); // 既存のイベントキャンセル
+
+			var isSmartphone = /iPhone|Android.+Mobile|iPad|Android/i.test(navigator.userAgent);
+			// 2. 画面の横幅（例: 768px以下）で判定する方法（タブレットやウィンドウサイズ変更にも対応）
+			var isMobileWidth = window.innerWidth <= 768;
+
+			// ▼【追加】メニュー画面（層）を消去・非表示にする処理
+			let menul = $(".layer.layer_menu");
+			$(".display_menu.menu").removeClass("menu");
+			$(menul).empty().hide();
+
+			if (isSmartphone || isMobileWidth) {
+				TYRANO.kag.ftag.startTag("sleepgame", { storage: "config_mobile.ks", next: false });
+			} else {
+				TYRANO.kag.ftag.startTag("sleepgame", { storage: "config.ks", next: false });
+			}
+		});
+
+		// ② タイトルへ戻るボタンを押した時
+		$(".my_menu_back_title").off("click").on("click", function (e) {
+			e.stopPropagation();
+
+			openConfirm("タイトル画面に戻ります。よろしいですか？\n（保存していないデータは消去されます）",
+				function () {
+					// メニュー画面の要素を片付ける
+					$(".layer_menu").empty().hide();
+					$(".display_menu").removeClass("menu");
+
+					// タイトル画面へジャンプ
+					TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks" });
+				});
+		});
+	});
+</script>

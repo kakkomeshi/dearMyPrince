@@ -1,0 +1,52 @@
+/* ダイアログ全体のボタン共通スタイル */
+.dialog_btn {
+    min-width: 130px;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* 「はい」ボタン (ゴールド調メイン) */
+.dialog_btn.dialog_yes {
+    background: linear-gradient(135deg, #d4c291 0%, #b39f6d 100%);
+    color: #1a1d24;
+    border: 1px solid #d4c291;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dialog_btn.dialog_yes:hover {
+    background: linear-gradient(135deg, #e5d5a7 0%, #c4b07e 100%);
+    box-shadow: 0 4px 12px rgba(212, 194, 145, 0.4);
+    transform: translateY(-2px);
+}
+
+.dialog_btn.dialog_yes:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* 「いいえ」ボタン (シックなダーク調サブ) */
+.dialog_btn.dialog_no {
+    background: rgba(255, 255, 255, 0.05);
+    color: #d4c291;
+    border: 1px solid rgba(212, 194, 145, 0.5);
+}
+
+.dialog_btn.dialog_no:hover {
+    background: rgba(212, 194, 145, 0.15);
+    border-color: #d4c291;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.dialog_btn.dialog_no:active {
+    transform: translateY(0);
+    background: rgba(212, 194, 145, 0.05);
+}
