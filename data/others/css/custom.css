@@ -4,6 +4,14 @@ body {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     user-select: none;
+    font-family: 'CormorantGaramond-VariableFont_wght', 'NotoSansJP-VariableFont_wght' !important;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
 }
 
 #tyrano_base {

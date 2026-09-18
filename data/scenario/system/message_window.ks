@@ -50,7 +50,7 @@
 		[position layer="message1" page=fore margint=5 marginl=10 marginr=10 marginb=10 vertical=false opacity="255" radius="0" color="0x000000" ]
 
 		;glink_configの設定
-		[glink_config auto_place_force="false" width="max" height="default" show_time="1000" select_time="1000" reject_time="1000"]
+		[glink_config auto_place_force="false" dy="25" horizontal="" width="max" height="default" show_time="1000" select_time="1000" reject_time="1000"]
 
 		
 		[glink_config show_time="0" select_time="0" reject_time="0" ]

@@ -15,24 +15,45 @@
 [endmacro]
 
 ; =========================
-; デバッグ好感度表示
+; 章・日付設定用マクロ定義
 ; =========================
-
-
-[macro name="love"]
-
-[eval exp="f.love = Number(f.love) + Number(mp.value)"]
-
+[macro name="set_chapter"]
 [iscript]
-$("#debug_love").text(
-"好感度：" + TYRANO.kag.stat.f.love
-);
-// ヘッダーのメーターを更新
+// マクロの引数 id (例: id="part1_day0") からデータを取得
+var id = mp.id;
+var data = window.CHAPTER_DATA ? window.CHAPTER_DATA[id] : null;
+
+if (data) {
+    // 1. セーブデータ用変数に格納
+    f.chapterTitle = data.saveTitle;
+    
+    // 2. ヘッダー表示用変数に格納
+    f.headerDay = data.headerDay;
+    f.headerSubTitle = data.subTitle;
+}
+// ヘッダーの表示を更新
 updateTopHeader();
 [endscript]
-
-
 [endmacro]
+
+
+; =========================
+; デバッグ好感度表示
+; =========================
+; [macro name="love"]
+
+; [eval exp="f.love = Number(f.love) + Number(mp.value)"]
+
+; [iscript]
+; $("#debug_love").text(
+; "好感度：" + TYRANO.kag.stat.f.love
+; );
+; // ヘッダーのメーターを更新
+; updateTopHeader();
+; [endscript]
+
+
+; [endmacro]
 
 
 ; =========================
@@ -153,4 +174,49 @@ $(".bgm_mute_button").attr(
 
 ; タイトル画面へ遷移
 [jump storage="title_screen.ks" target=""]
+[endmacro]
+
+; =========================
+; 好感度増減 ＆ 演出連動マクロ
+; 使い方: [love value="1"] や [love value="-1"]
+; =========================
+[macro name="love"]
+
+; 1. 変数の更新（加算値を取得して f.love を計算）
+[eval exp="tf.change = Number(mp.value || 0)"]
+[eval exp="f.love = Number(f.love || 0) + tf.change"]
+
+[iscript]
+
+// ヘッダーバーのゲージ＆テキスト更新
+if (typeof updateTopHeader === "function") {
+    updateTopHeader();
+}
+
+// 2. メーターの演出アニメーション発火
+var change = tf.change;
+var $target = $('#header_meter_fill, #header_meter_icon'); // アニメーションさせる対象
+
+if ($target.length > 0 && change !== 0) {
+    // 既存のアニメーションクラスを一度取り除く
+    $target.removeClass('meter_anim_up meter_anim_down');
+    
+    // 再描画（リフロー）を挟んでからアニメーションクラスを付与
+    void $target[0].offsetWidth; 
+
+    if (change > 0) {
+        // 上昇時：ポッっと膨らんで光る
+        $target.addClass('meter_anim_up');
+    } else if (change < 0) {
+        // 下降時：ガタガタ揺れて暗くなる
+        $target.addClass('meter_anim_down');
+    }
+
+    // アニメーション完了後にクラスを自動削除
+    setTimeout(function(){
+        $target.removeClass('meter_anim_up meter_anim_down');
+    }, 700);
+}
+[endscript]
+
 [endmacro]

@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 44px;
+    height: 80px;
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -14,15 +14,61 @@
     box-sizing: border-box;
     user-select: none;
     transition: all 0.5s ease;
+    font-family: 'CormorantGaramond-VariableFont_wght', 'NotoSansJP-VariableFont_wght';
 }
 
+.header_info_area {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#header_date {
+    display: flex;
+    align-items: center;
+}
+
+#header_date_text {
+    letter-spacing: 1px;
+    border: 1px solid rgba(212, 194, 145, 0.8);
+    padding: 11px 20px;
+    font-size: 25px;
+}
+
+#header_date::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 47px;
+    background-color: rgba(212, 194, 145, 0.4);
+    margin: 0px 30px;
+    vertical-align: middle;
+}
+
+#header_status_text{
+    align-items: center;
+    gap: 12px;
+    font-weight: normal ;
+    align-items: center;
+    font-size: 16px;
+
+
+}
 .header_merter_wrap {
-    width: 90px;
-    height: 7px;
+    width: 160px;
+    height: 28px;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 4px;
     overflow: hidden;
     border: 1px solid rgba(212, 194, 145, 0.3);
+}
+
+#header_meter_label {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #D4C291;
 }
 
 #header_meter_fill {
@@ -37,8 +83,8 @@
     border: 1px solid #D4C291;
     border-radius: 4px;
     color: #F4E2C1;
-    padding: 4px 12px;
-    font-size: 11px;
+    padding: 12px 12px;
+    font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
     cursor: pointer;
@@ -62,14 +108,15 @@
 /* --- 第一部：健全・ネイビー×ゴールド --- */
 #top_header_bar.part1_header {
     background: linear-gradient(180deg, rgba(15, 18, 25, 0.90) 0%, rgba(15, 18, 25, 0.70) 80%, rgba(15, 18, 25, 0) 100%);
-    border-bottom: 1px solid rgba(212, 194, 145, 0.35);
+    background: linear-gradient(180deg, rgba(15, 18, 25, 0.90) 0%, rgba(15, 18, 25, 0.70) 68%, rgba(15, 18, 25, 0) 100%);
+    /* border-bottom: 1px solid rgba(212, 194, 145, 0.35); */
     color: #F4E2C1;
 }
 
 /* --- 第二部：スモーキー＆ドライブ依存 --- */
 #top_header_bar.part2_header {
-    background: linear-gradient(180deg, rgba(45, 20, 25, 0.92) 0%, rgba(30, 12, 15, 0.70) 80%, rgba(30, 12, 15, 0) 100%);
-    border-bottom: 1px solid rgba(211, 144, 151, 0.4);
+    background: linear-gradient(180deg, rgba(45, 20, 25, 0.92) 0%, rgba(30, 12, 15, 0.70) 68%, rgba(30, 12, 15, 0) 100%);
+    /* border-bottom: 1px solid rgba(211, 144, 151, 0.4); */
     color: #FFFFFF;
 }
 
@@ -84,8 +131,8 @@
 
 /* --- 第三部：逃亡編・狂気と心中 --- */
 #top_header_bar.part3_header {
-    background: linear-gradient(180deg, rgba(15, 10, 12, 0.95) 0%, rgba(15, 10, 12, 0.75) 80%, rgba(15, 10, 12, 0) 100%);
-    border-bottom: 1px solid rgba(100, 45, 50, 0.6);
+    background: linear-gradient(180deg, rgba(15, 10, 12, 0.95) 0%, rgba(15, 10, 12, 0.75) 68%, rgba(15, 10, 12, 0) 100%);
+    /* border-bottom: 1px solid rgba(100, 45, 50, 0.6); */
     color: #FF4D4D;
 }
 
@@ -97,4 +144,39 @@
 #top_header_bar.part3_header #header_menu_btn {
     border-color: #642D32;
     color: #FF4D4D;
+}
+
+/* ============================================================
+   好感度メーター演出用アニメーション
+   ============================================================ */
+
+/* --- 上昇時：ドカンと大きく光って跳ねる (UP) --- */
+@keyframes meter_pop_up {
+  0% { transform: scale(1); filter: drop-shadow(0 0 0px transparent); }
+  25% { 
+    transform: scale(1.35); /* より大きく膨らませる */
+    filter: drop-shadow(0 0 15px #FFE57F) brightness(2.0); /* 強烈なゴールド発光 */
+  }
+  50% { transform: scale(0.95); } /* 反動で少し縮む */
+  75% { transform: scale(1.05); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 0px transparent); }
+}
+
+.meter_anim_up {
+  animation: meter_pop_up 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* --- 下降時：赤く激しくフラッシュしてシェイク (DOWN) --- */
+@keyframes meter_shake_down {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-8px) scale(1.1); filter: drop-shadow(0 0 12px #FF4D4D) brightness(1.2) hue-rotate(-50deg); } /* 赤くフラッシュ */
+  30% { transform: translateX(8px); }
+  45% { transform: translateX(-6px); }
+  60% { transform: translateX(6px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); filter: none; }
+}
+
+.meter_anim_down {
+  animation: meter_shake_down 2.5s ease-in-out;
 }

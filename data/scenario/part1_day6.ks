@@ -1,7 +1,7 @@
 [_tb_system_call storage=system/_part1_day6.ks]
 
 *base0
-[eval exp="f.chapterTitle = '第一部：DAY6'"]
+[set_chapter id="part1_day6"]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Sunny_Afternoon_Driveway.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="school.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]

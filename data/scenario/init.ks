@@ -13,5 +13,6 @@
 ; jsファイルの読み込み
 [loadjs storage="js/dialog.js" ]
 [loadjs storage="js/header.js" ]
+[loadjs storage="chapter_data.js"]
 
 [return]

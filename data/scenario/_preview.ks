@@ -56,7 +56,7 @@
 
 [call  storage="new_game_init.ks"  target=""  ]
 [tb_keyconfig  flag="1"  ]
-[jump  storage="scene1.ks"  target=""  ]
+[jump  storage="part1_day0.ks"  target=""  ]
 [s  ]
 
 ;--------ロードが押された時の処理
