@@ -592,35 +592,35 @@ window.clearStorageDebug = function() {
 ; --- 第一部 ---
 *jump_day1
 [apply_debug_params]
-[jump storage="part1_day1.ks" target=""]
+[jump storage="part1_day1.ks" ]
 
 *jump_day2
 [apply_debug_params]
-[jump storage="part1_day2.ks" target=""]
+[jump storage="part1_day2.ks" ]
 
 *jump_day3
 [apply_debug_params]
-[jump storage="part1_day3.ks" target=""]
+[jump storage="part1_day3.ks" ]
 
 *jump_day4
 [apply_debug_params]
-[jump storage="part1_day4.ks" target=""]
+[jump storage="part1_day4.ks" ]
 
 *jump_day5
 [apply_debug_params]
-[jump storage="part1_day5.ks" target=""]
+[jump storage="part1_day5.ks" ]
 
 *jump_day6
 [apply_debug_params]
-[jump storage="part1_day6.ks" target=""]
+[jump storage="part1_day6.ks" ]
 
 *jump_day7
 [apply_debug_params]
-[jump storage="part1_day7.ks" target=""]
+[jump storage="part1_day7.ks" ]
 
 *jump_day8
 [apply_debug_params]
-[jump storage="part1_day8.ks" target=""]
+[jump storage="part1_day8.ks" ]
 
 *jump_final
 [apply_debug_params]
@@ -630,71 +630,71 @@ window.clearStorageDebug = function() {
 ; --- 第二部 ---
 *jump_part2_oct_1
 [apply_debug_params]
-[jump storage="part2_oct_day1.ks" target=""]
+[jump storage="part2_oct_day1.ks" ]
 
 *jump_part2_oct_day2
 [apply_debug_params]
-[jump storage="part2_oct_day2.ks" target=""]
+[jump storage="part2_oct_day2.ks" ]
 
 *jump_part2_oct_day3
 [apply_debug_params]
-[jump storage="part2_oct_day3.ks" target=""]
+[jump storage="part2_oct_day3.ks" ]
 
 *jump_part2_nov_day1
 [apply_debug_params]
-[jump storage="part2_nov_day1.ks" target=""]
+[jump storage="part2_nov_day1.ks" ]
 
 *jump_part2_nov_day2
 [apply_debug_params]
-[jump storage="part2_nov_day2.ks" target=""]
+[jump storage="part2_nov_day2.ks" ]
 
 *jump_part2_nov_day3
 [apply_debug_params]
-[jump storage="part2_nov_day3.ks" target=""]
+[jump storage="part2_nov_day3.ks" ]
 
 *jump_part2_dec_day1
 [apply_debug_params]
-[jump storage="part2_dec_day1.ks" target=""]
+[jump storage="part2_dec_day1.ks" ]
 
 *jump_part2_dec_day2
 [apply_debug_params]
-[jump storage="part2_dec_day2.ks" target=""]
+[jump storage="part2_dec_day2.ks" ]
 
 *jump_part2_dec_day3
 [apply_debug_params]
-[jump storage="part2_dec_day3.ks" target=""]
+[jump storage="part2_dec_day3.ks" ]
 
 *jump_part2_jan_day1
 [apply_debug_params]
-[jump storage="part2_jan_day1.ks" target=""]
+[jump storage="part2_jan_day1.ks" ]
 
 *jump_part2_jan_day2
 [apply_debug_params]
-[jump storage="part2_jan_day2.ks" target=""]
+[jump storage="part2_jan_day2.ks" ]
 
 *jump_part2_feb_day1
 [apply_debug_params]
-[jump storage="part2_feb_day1.ks" target=""]
+[jump storage="part2_feb_day1.ks" ]
 
 *jump_part2_mar_day1
 [apply_debug_params]
-[jump storage="part2_mar_day1.ks" target=""]
+[jump storage="part2_mar_day1.ks" ]
 
 ; *jump_part2_jan_day1
 ; [apply_debug_params]
-; [jump storage="part2_feb_day2.ks" target=""]
+; [jump storage="part2_feb_day2.ks" ]
 
 
 
 *jump_part2_mar_day2
 [apply_debug_params]
-[jump storage="part2_mar_day2.ks" target=""]
+[jump storage="part2_mar_day2.ks" ]
 
 
 ; --- 第三部 ---
 *jump_part3_1
 [apply_debug_params]
-[jump storage="part3_escape_01.ks" target="*start"]
+[jump storage="part3_escape_01.ks" ]
 
 *jump_part3_2
 [apply_debug_params]

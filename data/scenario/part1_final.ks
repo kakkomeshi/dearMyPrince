@@ -512,7 +512,7 @@ TRUE END ～これからも君のコーチだ～
 ; 画面クリア処理
 [cm]
 [clearfix]
-[jump  storage="part2_prolog.ks"  target=""  ]
+[jump  storage="part2_oct_day1.ks"  target=""  ]
 
 ; =========================================================
 ; ed02_goodbye: NORMAL END 〜またね、コーチ〜

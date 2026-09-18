@@ -1,13 +1,12 @@
 [_tb_system_call storage=system/_part2_dec_day2.ks]
 
-[cm  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Last_Light_on_the_Coast.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage=" car_night.png"  ]
 
 ; 好感度表示
 
 
-[debug_init]
+
 
 [tb_show_message_window  ]
 [mask_off  time="1000"  ]
@@ -67,7 +66,8 @@
 
 #リョーマ
 ; ……ねえ。[r]
-……彼女にするみたいなこと……俺にもしてよ[p]
+; ……彼女にするみたいなこと……俺にもしてよ[p]
+
 
 #
 『彼女』という存在への対抗心と、幼い独占欲が交ざり合った、あまりにもストレートなおねだり。[p]
@@ -86,7 +86,8 @@
 触れた部分から、リョーマの小さな息遣いと高い体温がダイレクトに伝わってくる。[p]
 
 #リョーマ
-……なにそれ。……アンタ、いつも子ども扱いばっかり……っ[p]
+……なにそれ。[r]
+……アンタ、いつも子ども扱いばっかり……っ[p]
 
 #エリオット
 ……子ども扱いなら、わざわざ君だけにこんなこと、すると思う？[p]

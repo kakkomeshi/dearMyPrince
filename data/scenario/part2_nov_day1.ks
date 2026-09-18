@@ -1,13 +1,12 @@
 [_tb_system_call storage=system/_part2_nov_day1.ks]
 
-[cm  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_sunset.png"  ]
 
 ; 好感度表示
 
 
-[debug_init]
+
 
 [tb_show_message_window  ]
 [mask_off  time="1000"  ]

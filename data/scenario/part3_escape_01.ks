@@ -1,13 +1,7 @@
-[_tb_system_call storage=system/_part2_prolog.ks]
+[_tb_system_call storage=system/_part3_escape_01.ks]
 
-[cm  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Paper_Maps_at_Midnight.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="market_night.png"  ]
-
-; 好感度表示
-
-
-[debug_init]
 
 [tb_show_message_window  ]
 

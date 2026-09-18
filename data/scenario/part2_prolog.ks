@@ -1,13 +1,12 @@
 [_tb_system_call storage=system/_part2_prolog.ks]
 
-[cm  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Sunny_Afternoon_Driveway.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
 
 ; 好感度表示
 
 
-[debug_init]
+
 
 [tb_show_message_window  ]
 

@@ -1,13 +1,12 @@
 [_tb_system_call storage=system/_part2_mar_day2.ks]
 
-[cm  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="rain_03.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="car_night.png"  ]
 
 ; 好感度表示
 
 
-[debug_init]
+
 
 [tb_show_message_window  ]
 [mask_off  time="1000"  ]
@@ -115,7 +114,7 @@
 [mask time="2000" color="0x000000"]
 
 ; 第三部（逃亡編）開幕画面へジャンプ
-[jump storage="part3_escape.ks" target="*start"]
+[jump storage="part3_escape_01.ks" ]
 
 
 *choice_escape_no

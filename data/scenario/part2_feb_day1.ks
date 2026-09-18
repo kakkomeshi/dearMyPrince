@@ -1,13 +1,12 @@
 [_tb_system_call storage=system/_part2_feb_day1.ks]
 
-[cm  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Paper_Maps_at_Midnight.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="car_night.png"  ]
 
 ; 好感度表示
 
 
-[debug_init]
+
 
 [tb_show_message_window  ]
 [mask_off  time="1000"  ]
