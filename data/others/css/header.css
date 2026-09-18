@@ -93,7 +93,12 @@
     gap: 5px;
     transition: all 0.2s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
 
+/* ボタンの中にある子要素（spanなど）の当たり判定を完全に消す */
+#header_menu_btn * {
+    pointer-events: none !important;
 }
 
 /* --- MENUボタン ホバー・アクティブ演出 --- */

@@ -1,3 +1,14 @@
+/* ボタンやクリック可能な要素にだけピンポイントで指定 */
+img,
+button,
+a,
+.button_menu,
+.menu_close,
+.glink {
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
 html,
 body {
     margin: 0;
