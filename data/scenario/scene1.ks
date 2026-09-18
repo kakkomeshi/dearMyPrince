@@ -1,6 +1,5 @@
 [_tb_system_call storage=system/_scene1.ks]
 
-[cm  ]
 [eval exp="f.chapterTitle = '第一部：DAY0'"]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_sunset.png"  ]
