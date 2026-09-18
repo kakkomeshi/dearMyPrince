@@ -7,11 +7,19 @@
 ;awakegameの時も呼び出されてるらしい
 ;return 必須
 
-; 好感度表示
-[debug_init]
 
-; menuボタン表示
-[showmenubutton]
+
+; ; ヘッダーを表示
+[iscript]
+// タイトルからコンフィグを表示した場合はタイトルに戻ったときにヘッダーを表示しないようにする
+if (TYRANO.kag.variable.sf.from_title_config) {
+    TYRANO.kag.variable.sf.from_title_config = false;
+} else {
+    if (window.showTopHeader) {
+        window.showTopHeader();
+    }
+}
+[endscript]
 
 ; ----------------------------------------------------
 ; ロード直後にシステムボタンを復活させる

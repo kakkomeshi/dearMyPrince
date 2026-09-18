@@ -5,8 +5,12 @@
 ; 初期化・演出準備
 ;==============================
 [cm]
-[clearfix]                                   
-[eval exp="sf.menu_button_created = false"]
+[clearfix]                 
+[iscript]
+if (window.hideTopHeader) {
+    window.hideTopHeader();
+}
+[endscript]                  
 
 ; --- 音声の停止処理を追加 ---
 [stopbgm]
@@ -182,8 +186,8 @@ window.titleJump = function(targetLabel) {
 [cm]
 ; NEW GAME用の初期化処理
 [call storage="new_game_init.ks" target="*new_game"]
-[call storage="make.ks"]
 [tb_keyconfig flag="1"]
+[call storage="make.ks"]
 [jump storage="scene1.ks" target=""]
 [s]
 
@@ -220,6 +224,8 @@ if (isSmartphone || isMobileWidth) {
   // PCの場合の処理
     f.is_mobile = false;
 }
+// タイトルから来たフラグをtrueに
+TYRANO.kag.variable.sf.from_title_config = true;
 [endscript ]
 [sleepgame storage="config_mobile.ks" cond="f.is_mobile==true" ]
 [sleepgame storage="config.ks" cond="f.is_mobile==false" ]

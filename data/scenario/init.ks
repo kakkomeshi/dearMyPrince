@@ -3,12 +3,15 @@
 ; 自作マクロの読み込み
 [call storage="macro.ks"]
 
+
 ; cssファイルの読み込み
 [loadcss file="./data/others/css/custom.css"]
 [loadcss file="./data/others/css/menu.css"]
 [loadcss file="./data/others/css/dialog.css"]
+[loadcss file="./data/others/css/header.css"]
 
 ; jsファイルの読み込み
 [loadjs storage="js/dialog.js" ]
+[loadjs storage="js/header.js" ]
 
 [return]

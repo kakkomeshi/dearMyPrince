@@ -43,7 +43,9 @@
 			let menul = $(".layer.layer_menu");
 			$(".display_menu.menu").removeClass("menu");
 			$(menul).empty().hide();
-
+			// ヘッダーがコンフィグより前に来ちゃうのでヘッダーは消しちゃう
+			hideTopHeader();
+			TYRANO.kag.variable.sf.from_title_config = false;
 			if (isSmartphone || isMobileWidth) {
 				TYRANO.kag.ftag.startTag("sleepgame", { storage: "config_mobile.ks", next: false });
 			} else {

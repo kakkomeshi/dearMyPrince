@@ -1,0 +1,39 @@
+<div id="top_header_bar" class="part1_header">
+
+    <!-- 1. 左側：日付 ＆ 状況 -->
+    <div style="display: flex; align-items: center; gap: 12px; font-weight: bold; font-size: 13px;">
+        <span id="header_date" style="display: flex; align-items: center; gap: 5px;">
+            <span style="color: #D4C291;">📅</span>
+            <span id="header_date_text" style="letter-spacing: 1px;">9月15日 (火)</span>
+        </span>
+
+        <span style="color: rgba(212, 194, 145, 0.3);">|</span>
+
+        <span id="header_status" style="display: flex; align-items: center; gap: 5px;">
+            <span id="header_status_icon">☀️</span>
+            <span id="header_status_text">放課後 ・ テニスコート</span>
+        </span>
+    </div>
+
+    <!-- 2. 右側：好感度メーター ＆ MENUボタン -->
+    <div style="display: flex; align-items: center; gap: 20px;">
+
+        <!-- メーターエリア -->
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span id="header_meter_icon" style="font-size: 14px;">🎾</span>
+            <span id="header_meter_label"
+                style="font-size: 11px; font-weight: bold; letter-spacing: 1px; color: #D4C291;">好感度</span>
+
+            <div class="header_merter_wrap">
+                <div id="header_meter_fill"></div>
+            </div>
+        </div>
+
+        <!-- MENUボタン（クリック可能） -->
+        <button id="header_menu_btn" type="button">
+            <span>☰</span>
+            <span>MENU</span>
+        </button>
+    </div>
+
+</div>
