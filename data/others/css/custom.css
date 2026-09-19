@@ -1,4 +1,5 @@
 /* ボタンやクリック可能な要素にだけピンポイントで指定 */
+span,
 img,
 button,
 a,
@@ -120,6 +121,32 @@ img {
     color: #444444;
     cursor: default;
     transform: none;
+}
+
+/* 左向きのシャープな三角形（CSS作成） */
+.arrow_left {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    /* 上下左右のボーダー幅でサイズ調整 */
+    border-width: 7px 13px 7px 0;
+    /* 右側のボーダー色＝矢印の色（#D4C291など） */
+    border-color: transparent #D4C291 transparent transparent;
+    vertical-align: middle;
+}
+
+/* 右向きのシャープな三角形（CSS作成） */
+.arrow_right {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    /* 上下左右のボーダー幅でサイズ調整（上 右 下 左） */
+    border-width: 7px 0 7px 13px;
+    /* 左側のボーダー色＝矢印の色（#D4C291など） */
+    border-color: transparent transparent transparent #D4C291;
+    vertical-align: middle;
 }
 
 /* 戻るボタン共通CSS */
