@@ -41,18 +41,19 @@ window.hideTopHeader = function () {
 }
 
 // --- MENUボタン押下時のイベント ---
-$(document).off('click.headerMenu', '#header_menu_btn')
-    .on('click.headerMenu', '#header_menu_btn', function (e) {
+$(document).off('click.headerMenu touchstart.headerMenu', '#header_menu_btn')
+    .on('click.headerMenu touchstart.headerMenu', '#header_menu_btn', function (e) {
+
+        // ⚡ スマホの「0.3秒遅延」と「擬似ホバー」を完全に無効化する
+        e.preventDefault();
 
         // ティラノスクリプトのメニューを開く
         if (TYRANO && TYRANO.kag && TYRANO.kag.ftag) {
             TYRANO.kag.menu.showMenu({
                 currentTarget: $(e.currentTarget)
             });
-
         }
     });
-
 // --- リアルタイムメーター更新 ---
 window.headerUiTimer = function () {
     var fill = $("#header_meter_fill");
