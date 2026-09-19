@@ -97,12 +97,15 @@
 }
 
 /* --- MENUボタン ホバー・アクティブ演出 --- */
+/* 💻 PCなどのマウス操作ができるデバイスだけホバー効果を適用する */
+@media (hover: hover) {
 #header_menu_btn:hover {
     background: rgba(212, 194, 145, 0.3) !important;
     border-color: #FFFFFF !important;
     color: #FFFFFF !important;
     transform: translateY(-1px);
     box-shadow: 0 0 8px rgba(212, 194, 145, 0.5) !important;
+    }
 }
 
 /* --- 第一部：健全・ネイビー×ゴールド --- */
