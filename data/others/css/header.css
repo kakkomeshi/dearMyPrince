@@ -96,6 +96,11 @@
     cursor: pointer;
 }
 
+/* ボタンの中にある子要素（spanなど）の当たり判定を完全に消す */
+#header_menu_btn * {
+    pointer-events: none !important;
+}
+
 /* --- MENUボタン ホバー・アクティブ演出 --- */
 /* 💻 PCなどのマウス操作ができるデバイスだけホバー効果を適用する */
 @media (hover: hover) {
