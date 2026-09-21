@@ -17,5 +17,6 @@
 [loadjs storage="js/header.js" ]
 [loadjs storage="data/chapter_data.js"]
 [loadjs storage="js/waring_modal.js"]
+[loadjs storage="js/menu.js"]
 
 [return]
