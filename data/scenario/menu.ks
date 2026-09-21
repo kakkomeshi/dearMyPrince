@@ -36,7 +36,7 @@
     ">MENU</p>
 
     <div class='menu_item'>
-        <a href="javascript:void(0)" onclick="closeMenuScreen();">
+        <a href="javascript:void(0)" onclick="closeMenuScreen()">
             <img class="menu_close" src='data/image/close_icon.png' style="width: 50px; height: 50px; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1.0)'">
         </a>
     </div>
@@ -145,26 +145,16 @@ window.menuAction = function(actionType) {
           TYRANO.kag.ftag.startTag("jump", { storage: "config.ks" });
       }
     } else if (actionType === 'title') {
-       var result = confirm("タイトル画面に戻ります。よろしいですか？\n（保存していないデータは消去されます）");
-      if (result === true) {
-        $('#menu_screen_wrapper').remove();
+      // 1. ダイアログ用のテキストと、「はい」を選んだ時のジャンプ先を指定
+      TYRANO.kag.stat.f.dialog_text = "タイトル画面に戻ります。よろしいですか？\n（保存していないデータは消去されます）";
+      TYRANO.kag.stat.f.dialog_target_storage = "title_screen.ks";
+      TYRANO.kag.stat.f.dialog_target_label = "*title";
 
-        TYRANO.kag.ftag.startTag('freeimage', {layer:"1"});
-        TYRANO.kag.ftag.startTag('cm', {});
-        TYRANO.kag.ftag.startTag('layopt', {layer:"message1", visible:"false"});
-        TYRANO.kag.ftag.startTag('clearfix', {});
-        TYRANO.kag.ftag.startTag('breakgame', {});
-
-        // 4. タイトル画面へジャンプする
-        TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks", target: "*title" });
-      }
+      // 2. sleepgame で自作ダイアログを呼び出す
+      TYRANO.kag.ftag.startTag("jump", { storage: 'dialog.ks' });
     }
 };
 
-window.closeMenuScreen = function() {
-    $('#menu_screen_wrapper').remove();
-    TYRANO.kag.ftag.startTag('awakegame', {});
-};
 [endscript]
 
 [s]

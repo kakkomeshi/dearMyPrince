@@ -4,6 +4,7 @@
 [bg  time="1000"  method="crossfade"  storage="market_night.png"  ]
 
 [tb_show_message_window  ]
+[set_chapter id="part3_escape_01"]
 
 ; ★暗転（mask）をここで解除してタイトル画面をフェードイン表示させる
 

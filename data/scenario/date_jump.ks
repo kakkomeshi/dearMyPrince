@@ -124,7 +124,7 @@ $('#date_jump_wrapper').remove();
         </button>
         <div id="acc_10m" class="acc_body" style="display: none;">
           <div class="acc_grid">
-            <button class="debug_jump_btn" onclick="debugJump(event, '*jump_part2_oct_1');">10月：プロローグ：秘密の通話</button>
+            <button class="debug_jump_btn" onclick="debugJump(event, '*jump_part2_oct_1');">10月：秘密の通話</button>
             <button class="debug_jump_btn" onclick="debugJump(event, '*jump_part2_oct_day2');">10月：エリオットの見せる隙</button>
             <button class="debug_jump_btn" onclick="debugJump(event, '*jump_part2_oct_day3');">10月：ごほうび</button>
           </div>

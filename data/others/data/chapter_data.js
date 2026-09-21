@@ -48,6 +48,89 @@ window.CHAPTER_DATA = {
     "part1_filanl": {
         saveTitle: "第一部：FINAL",
         headerDay: "DAY FINAL",
-        subTitle: "最後のごあいさつ"
+        subTitle: "最後の挨拶"
     },
+    "part2_oct_day1": {
+        saveTitle: "第二部：10月上旬",
+        headerDay: "Oct DAY1",
+        subTitle: "秘密の通話"
+    },
+    "part2_oct_day2": {
+        saveTitle: "第二部：10月中旬",
+        headerDay: "Oct DAY2",
+        subTitle: "コーチの見せる隙"
+    },
+    "part2_oct_day3": {
+        saveTitle: "第二部：10月下旬",
+        headerDay: "Oct DAY3",
+        subTitle: "ごほうび"
+    },
+    "part2_nov_day1": {
+        saveTitle: "第二部：11月上旬",
+        headerDay: "Nov DAY1",
+        subTitle: "リョーマのスランプ"
+    },
+    "part2_nov_day2": {
+        saveTitle: "第二部：11月中旬",
+        headerDay: "Nov DAY2",
+        subTitle: "ジュニア大会出場"
+    },
+    "part2_nov_day3": {
+        saveTitle: "第二部：11月下旬",
+        headerDay: "Nov DAY3",
+        subTitle: "エリオットの誕生日"
+    },
+    "part2_dec_day1": {
+        saveTitle: "第二部：12月上旬",
+        headerDay: "Dec DAY1",
+        subTitle: "クリスマスマーケット"
+    },
+    "part2_dec_day2": {
+        saveTitle: "第二部：12月中旬",
+        headerDay: "Dec DAY2",
+        subTitle: "南次郎の警告"
+    },
+    "part2_dec_day3": {
+        saveTitle: "第二部：12月下旬",
+        headerDay: "Dec DAY3",
+        subTitle: "リョーマの誕生日"
+    },
+    "part2_jan_day1": {
+        saveTitle: "第二部：1月上旬",
+        headerDay: "Jan DAY1",
+        subTitle: "リョーマのスランプ"
+    },
+    "part2_jan_day2": {
+        saveTitle: "第二部：1月下旬",
+        headerDay: "Jan DAY2",
+        subTitle: "ジュニア大会出場"
+    },
+    "part2_feb_day1": {
+        saveTitle: "第二部：2月中旬",
+        headerDay: "Feb DAY1",
+        subTitle: "バレンタイン"
+    },
+    "part2_mar_day1": {
+        saveTitle: "第二部：３月上旬",
+        headerDay: "Mar DAY1",
+        subTitle: "もう引き返せない"
+    },
+    "art2_mar_day2": {
+        saveTitle: "第二部：3月下旬",
+        headerDay: "Mar DAY2",
+        subTitle: "運命の分岐"
+    },
+    "part3_escape_01": {
+        saveTitle: "第三部：",
+        headerDay: "DAY1",
+        subTitle: "逃亡生活"
+    },
+    "part3_escape_02": {
+        saveTitle: "第三部；",
+        headerDay: "Nov DAY2",
+        subTitle: "モーテルにて"
+    },
+
+
+
 };

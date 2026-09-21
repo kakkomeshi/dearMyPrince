@@ -3,11 +3,7 @@
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Paper_Maps_at_Midnight.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="university_cafeteria.png"  ]
 
-; 好感度表示
-
-
-
-
+[set_chapter id="part2_jan_day2"]
 [tb_show_message_window  ]
 [mask_off  time="1000"  ]
 [tb_start_text mode=4 ]

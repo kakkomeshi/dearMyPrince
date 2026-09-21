@@ -3,11 +3,7 @@
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_sunset.png"  ]
 
-; 好感度表示
-
-
-
-
+[set_chapter id="part2_nov_day2"]
 [tb_show_message_window  ]
 [mask_off  time="1000"  ]
 [tb_start_text mode=4 ]

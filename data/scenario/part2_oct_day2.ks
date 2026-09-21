@@ -3,11 +3,7 @@
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Sunny_Afternoon_Driveway.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_sunset.png"  ]
 
-; 好感度表示
-
-
-
-
+[set_chapter id="part2_oct_day2"]
 [tb_show_message_window  ]
 [mask_off  time="1000"  ]
 [tb_start_text mode=4 ]

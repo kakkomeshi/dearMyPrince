@@ -1,7 +1,7 @@
 [_tb_system_call storage=system/_part1_final.ks]
 
 *top
-[eval exp="f.chapterTitle = '第一部：DAY FINAL'"]
+[set_chapter id="part1_final"]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="home_twilight.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
