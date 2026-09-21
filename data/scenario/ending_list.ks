@@ -105,7 +105,7 @@ var edData = [
 
 // ページ管理用の設定
 var itemsPerPage = 6; // 1ページあたり6件表示
-var currentPage = 1;
+var currentPage = currentPage || 1;
 var totalPages = Math.ceil(edData.length / itemsPerPage);
 
 // 現在ページのリストを描画する関数
@@ -164,22 +164,20 @@ window.renderEdPage = function(page) {
     $('#ed_list_container').html(htmlContent);
     
     // ページ番号の更新 (例: 1 / 3)
-    $('#ed_page_num').text(page + ' / ' + totalPages);
+    $('.pager_num_display').text(currentPage + ' / ' + totalPages);
 
-    // 端のページでの矢印ボタンの有効化/無効化制御
-    $('.page_nav_btn').eq(0).prop('disabled', page === 1);
-    $('.page_nav_btn').eq(1).prop('disabled', page === totalPages);
 };
 
 // ページ切り替え関数
 window.changeEdPage = function(dir) {
-    if (dir === -1 && currentPage > 1) {
-        currentPage--;
-        renderEdPage(currentPage);
-    } else if (dir === 1 && currentPage < totalPages) {
-        currentPage++;
-        renderEdPage(currentPage);
+if (dir === 1) {
+        // 次のページへ（最後のページなら 1 ページ目へループ）
+        currentPage = (currentPage >= totalPages) ? 1 : currentPage + 1;
+    } else if (dir === -1) {
+        // 前のページへ（1 ページ目なら最後のページへループ）
+        currentPage = (currentPage <= 1) ? totalPages : currentPage - 1;
     }
+    renderEdPage(currentPage);
 };
 
 // 初回レンダリング実行
