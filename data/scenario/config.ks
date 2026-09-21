@@ -350,6 +350,15 @@ if (tf.config_bgm_muted) {
     $('#btn_mute_bgm').text('🔊 ON');
 }
 
+// SEミュート状態を復元
+if (tf.config_se_muted) {
+    $('.slider_se').val(0);
+    $('#val_se').text(0);
+    $('#btn_mute_se').text('🔇 OFF');
+} else {
+    $('#btn_mute_se').text('🔊 ON');
+}
+
 // 2. スライダーやボタンが操作されたときにシステム変数へ保存する処理
 
 //ミュートボタンの処理
@@ -373,7 +382,8 @@ window.toggleAudioMute = function(type) {
             $('#val_bgm').text(0);
             $('#btn_mute_bgm').text('🔇 OFF').addClass('muted');
         }
-
+        TYRANO.kag.ftag.startTag("bgmopt", { volume: tf.current_bgm_vol });
+        TYRANO.kag.saveSystemVariable();
     } else if (type === 'se') {
         // 現在ミュート中なら元の音量へ戻す
         if (tf.config_se_muted) {
@@ -393,8 +403,10 @@ window.toggleAudioMute = function(type) {
             $('#val_se').text(0);
             $('#btn_mute_se').text('🔇 OFF').addClass('muted');
         }
-    }
+        TYRANO.kag.ftag.startTag("seopt", { volume: tf.current_se_vol });
         TYRANO.kag.saveSystemVariable();
+    }
+
 };
 
 // BGM音量スライダー
