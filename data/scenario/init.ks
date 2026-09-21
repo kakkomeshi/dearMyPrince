@@ -10,6 +10,7 @@
 [loadcss file="./data/others/css/dialog.css"]
 [loadcss file="./data/others/css/header.css"]
 [loadcss file="./data/others/css/warning_modal.css"]
+[loadcss file="./data/others/css/date_jump.css"]
 
 ; jsファイルの読み込み
 [loadjs storage="js/dialog.js" ]

@@ -100,31 +100,9 @@ img {
     user-select: none;
 }
 
-/* ページ送り矢印ボタン */
-.page_nav_btn {
-    background: transparent;
-    border: none;
-    color: #D4C291;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 2px 8px;
-    transition: all 0.2s ease;
-    outline: none;
-}
-
-.page_nav_btn:hover {
-    color: #ffffff;
-    transform: scale(1.25);
-}
-
-.page_nav_btn:disabled {
-    color: #444444;
-    cursor: default;
-    transform: none;
-}
-
 /* 左向きのシャープな三角形（CSS作成） */
 .arrow_left {
+    cursor: pointer;
     display: inline-block;
     width: 0;
     height: 0;
@@ -138,6 +116,7 @@ img {
 
 /* 右向きのシャープな三角形（CSS作成） */
 .arrow_right {
+    cursor: pointer;
     display: inline-block;
     width: 0;
     height: 0;
@@ -147,6 +126,19 @@ img {
     /* 左側のボーダー色＝矢印の色（#D4C291など） */
     border-color: transparent transparent transparent #D4C291;
     vertical-align: middle;
+}
+
+.arrow_left:hover,
+.arrow_right:hover {
+    color: #ffffff;
+    transform: scale(1.25);
+}
+
+.arrow_left:disabled,
+.arrow_right:disabled {
+    color: #444444;
+    cursor: default;
+    transform: none;
 }
 
 /* 戻るボタン共通CSS */
