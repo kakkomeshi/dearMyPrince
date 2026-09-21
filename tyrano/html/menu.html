@@ -20,50 +20,8 @@
 		<button class="menu_load menu_action_btn">LOAD</button>
 		<button class="my_menu_config menu_action_btn">CONFIG</button>
 		<button class="my_menu_back_title menu_action_btn">タイトルに戻る</button>
-		<button class="menu_window_close menu_action_btn back_game">ゲームに戻る</button>
+		<button class="my_menu_window_close menu_action_btn back_game">ゲームに戻る</button>
 
 	</div>
 
 </div>
-
-
-<script>
-	$(function () {
-		// ① コンフィグボタンを押した時
-		$(".my_menu_config").off("click").on("click", function (e) {
-			e.stopPropagation(); // 既存のイベントキャンセル
-
-			var isSmartphone = /iPhone|Android.+Mobile|iPad|Android/i.test(navigator.userAgent);
-			// 2. 画面の横幅（例: 768px以下）で判定する方法（タブレットやウィンドウサイズ変更にも対応）
-			var isMobileWidth = window.innerWidth <= 768;
-
-			// ▼【追加】メニュー画面（層）を消去・非表示にする処理
-			let menul = $(".layer.layer_menu");
-			$(".display_menu.menu").removeClass("menu");
-			$(menul).empty().hide();
-			// ヘッダーがコンフィグより前に来ちゃうのでヘッダーは消しちゃう
-			hideTopHeader();
-			TYRANO.kag.variable.sf.from_title_config = false;
-			if (isSmartphone || isMobileWidth) {
-				TYRANO.kag.ftag.startTag("sleepgame", { storage: "config_mobile.ks", next: false });
-			} else {
-				TYRANO.kag.ftag.startTag("sleepgame", { storage: "config.ks", next: false });
-			}
-		});
-
-		// ② タイトルへ戻るボタンを押した時
-		$(".my_menu_back_title").off("click").on("click", function (e) {
-			e.stopPropagation();
-
-			openConfirm("タイトル画面に戻ります。よろしいですか？\n（保存していないデータは消去されます）",
-				function () {
-					// メニュー画面の要素を片付ける
-					$(".layer_menu").empty().hide();
-					$(".display_menu").removeClass("menu");
-
-					// タイトル画面へジャンプ
-					TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks" });
-				});
-		});
-	});
-</script>

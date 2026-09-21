@@ -1,32 +1,68 @@
-var menuObj = {
-    config:function(){
-       $(".menubd").addClass("close");
-       let menul=$(".layer.layer_menu");
-       $(menul).fadeOut(300, (()=>{
-         $(".display_menu.menu").removeClass("menu");
-         $(menul).empty();
-       }));
-    },
-    backtitle: function(){
-        if (tyrano.plugin.kag.tmp.sleep_game != null) {
-            return false;
+$(function() {
+
+    // ① コンフィグボタンを押した時
+    $(document).off('click.myConfig', '.my_menu_config')
+               .on('click.myConfig', '.my_menu_config', function (e) {
+        e.stopPropagation();
+
+        var isSmartphone = /iPhone|Android.+Mobile|iPad|Android/i.test(navigator.userAgent);
+        var isMobileWidth = window.innerWidth <= 768;
+
+        let menul = $(".layer.layer_menu");
+        $(".display_menu.menu").removeClass("menu");
+        $(menul).empty().hide();
+
+        if (typeof hideTopHeader === 'function') {
+            hideTopHeader();
+        } else if ($('#top_header_bar').length > 0) {
+            $('#top_header_bar').hide();
         }
-        tyrano.plugin.kag.ftag.startTag("sleepgame",{storage:"config.ks",next:false});
-        tyrano.plugin.kag.ftag.startTag("playse",{storage:"selb_resbtn22.ogg"});
-       let menul=$(".layer.layer_menu");
-       $(menul).fadeOut(200, (()=>{
-         $(".display_menu.menu").removeClass("menu");
-         $(menul).empty();
-       }));
-     }
-};
 
+        $(document).off('awakegame.restoreHeader').on('awakegame.restoreHeader', function() {
+            setTimeout(function() {
+                if (typeof showTopHeader === 'function') {
+                    showTopHeader();
+                } else if ($('#top_header_bar').length > 0) {
+                    $('#top_header_bar').show();
+                }
+                $(document).off('awakegame.restoreHeader');
+            }, 50);
+        });
 
-$("#menu_screen_wrapper .menu_action_btn").each((i, elm) => {
-    const j_elm = $(elm);
-    j_elm.click(function(e){
-      $(this).hasClass("my_menu_config")==true?lldmyobj.config():"";
-      $(this).hasClass("my_menu_back_title")==true?lldmyobj.backtitle():"";
-      e.stopPropagation();
-    }).focusable();
-  });
+        TYRANO.kag.variable.sf.from_title_config = false;
+
+        if (isSmartphone || isMobileWidth) {
+            TYRANO.kag.ftag.startTag("sleepgame", { storage: "config_mobile.ks", next: false });
+        } else {
+            TYRANO.kag.ftag.startTag("sleepgame", { storage: "config.ks", next: false });
+        }
+    });
+
+    // ② タイトルへ戻るボタンを押した時
+    $(document).off('click.myTitle', '.my_menu_back_title')
+               .on('click.myTitle', '.my_menu_back_title', function (e) {
+        e.stopPropagation();
+
+        openConfirm("タイトル画面に戻ります。よろしいですか？\n（保存していないデータは消去されます）",
+            function () {
+                $(".layer_menu").empty().hide();
+                $(".display_menu").removeClass("menu");
+                TYRANO.kag.ftag.startTag("jump", { storage: "title_screen.ks" });
+            });
+    });
+
+    // ③ ゲームへ戻る（CLOSE）ボタンを押した時
+    $(document).off('click.myClose', '.my_menu_window_close')
+               .on('click.myClose', '.my_menu_window_close', function (e) {
+        e.stopPropagation();
+
+        let menul = $(".layer.layer_menu");
+        $(".display_menu.menu").removeClass("menu");
+        $(menul).empty().hide();
+
+        TYRANO.kag.ftag.startTag("awakegame", {}, function() {
+            TYRANO.kag.tmp.cut_nextorder = null;
+        });
+    });
+
+});
