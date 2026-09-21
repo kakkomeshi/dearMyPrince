@@ -16,7 +16,6 @@ if (window.hideTopHeader) {
 [stopbgm]
 [stopse]
 
-[debug_hide]
 [hidemenubutton]
 [tb_clear_images]
 [tb_keyconfig flag="0"]
