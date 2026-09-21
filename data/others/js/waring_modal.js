@@ -1,5 +1,6 @@
 // ① 注意書き画面を生成し、ローディングスピナーを消す関数
 window.showWarningModal = function () {
+    TYRANO.kag.ftag.startTag("hidemenubutton", {}); // 標準メニューボタン非表示
     // 外部HTML（注意書き）を読み込んで注入
     $.get('./data/html/warning_modal.html', function (data) {
         $('#tyrano_base').append(data);
