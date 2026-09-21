@@ -1,5 +1,8 @@
 [_tb_system_call storage=system/_date_jump.ks]
 
+; 外部CSSの読み込み
+[loadcss file="./data/others/css/date_jump.css"]
+
 ; ============================================================
 ; 1. デバッグパラメータ適用用共通マクロ
 ; ============================================================
@@ -47,85 +50,53 @@ $('#date_jump_wrapper').remove();
 
 
 ; ============================================================
-; 2. 全UIを一括構築するHTML / CSS（タブ切り替え対応版）
+; 2. 全UIを一括構築するHTML
 ; ============================================================
 
 [html]
 
-<div id="date_jump_wrapper" style="
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 960px;
-  height: 640px;
-  background-color: rgba(15, 18, 25, 0.85);
-  font-family: sans-serif;
-  box-sizing: border-box;
-  padding: 15px 30px;
-  z-index: 9999;
-  user-select: none;
-">
+<div id="date_jump_wrapper" class="dj_wrapper">
 
   <!-- 画面タイトル -->
-  <div style="text-align: center; color: #ffffff; font-size: 24px; font-weight: bold; margin-bottom: 10px; letter-spacing: 1px;">
+  <div class="dj_title">
     日付＆パラメータ設定ジャンプ
   </div>
 
 
   <!-- 上部：手動パラメータ入力用 パネル -->
-  <div style="
-    width: 900px;
-    margin: 0 auto 10px auto;
-    background-color: rgba(31, 35, 45, 0.90);
-    border: 1.5px solid #D4C291;
-    border-radius: 8px;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  ">
-
+  <div class="dj_param_panel">
     <!-- 数値入力 -->
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; color: #ffffff; font-size: 15px;">
-      <div style="display: flex; align-items: center; gap: 8px; flex: 1; justify-content: center;">
+    <div class="dj_param_row">
+      <div class="dj_input_group">
         <label for="tf_love_input">好感度(love):</label>
-        <input type="number" id="tf_love_input" value="0" min="-999" max="999" style="width: 65px; height: 26px; font-size: 15px; text-align: center; border-radius: 4px; border: 1px solid #ccc; outline: none;">
+        <input type="number" id="tf_love_input" class="dj_input_num width_love" value="0" min="-999" max="999">
       </div>
-      <div style="display: flex; align-items: center; gap: 8px; flex: 1; justify-content: center;">
+      <div class="dj_input_group">
         <label for="tf_trust_input">信頼度(trust):</label>
-        <input type="number" id="tf_trust_input" value="0" min="-999" max="999" style="width: 65px; height: 26px; font-size: 15px; text-align: center; border-radius: 4px; border: 1px solid #ccc; outline: none;">
+        <input type="number" id="tf_trust_input" class="dj_input_num width_trust" value="0" min="-999" max="999">
       </div>
-      <div style="display: flex; align-items: center; gap: 8px; flex: 1; justify-content: center;">
+      <div class="dj_input_group">
         <label for="tf_minus_input">拒絶数(minus):</label>
-        <input type="number" id="tf_minus_input" value="0" min="0" max="99" style="width: 55px; height: 26px; font-size: 15px; text-align: center; border-radius: 4px; border: 1px solid #ccc; outline: none;">
+        <input type="number" id="tf_minus_input" class="dj_input_num width_minus" value="0" min="0" max="99">
       </div>
-    </div>
-
-    <!-- 2行目：チェックボックス（2等分配置） -->
-    <div style="display: flex; justify-content: space-around; align-items: center; color: #ffffff; font-size: 14px; border-top: 1px solid rgba(212, 194, 145, 0.2); padding-top: 8px;">
-      <label style="cursor: pointer; display: flex; align-items: center; gap: 6px;">
-        <input type="checkbox" id="trust_taboo_check" style="cursor: pointer; transform: scale(1.1);"> 信頼度禁忌 (f.trust_taboo_flag)
-      </label>
-      <label style="cursor: pointer; display: flex; align-items: center; gap: 6px;">
-        <input type="checkbox" id="love_taboo_check" style="cursor: pointer; transform: scale(1.1);"> 好感度禁忌 (f.love_taboo_flag)
-      </label>
     </div>
   </div>
 
 
   <!-- タブボタンエリア -->
-  <div style="width: 900px; margin: 0 auto 10px auto; display: flex; gap: 10px;">
-    <button class="debug_tab_btn active" onclick="switchPartTab(event, 'part1');">第一部</button>
-    <button class="debug_tab_btn" onclick="switchPartTab(event, 'part2');">第二部</button>
-    <button class="debug_tab_btn" onclick="switchPartTab(event, 'part3');">第三部</button>
+  <div class="dj_tab_area">
+    <button class="debug_tab_btn active" data-part="part1">第一部</button>
+    <button class="debug_tab_btn" data-part="part2">第二部</button>
+    <button class="debug_tab_btn" data-part="part3">第三部</button>
   </div>
 
 
   <!-- タブコンテンツ領域 -->
-  <div style="width: 900px; height: 320px; margin: 0 auto; box-sizing: border-box;">
+  <div class="dj_content_container">
 
     <!-- 第一部 コンテンツ -->
     <div id="tab_part1" class="tab_content" style="display: block;">
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 30px; margin-bottom: 12px;">
+      <div class="dj_part1_grid">
         <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day1');">DAY 1</button>
         <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day5');">DAY 5</button>
 
@@ -139,15 +110,15 @@ $('#date_jump_wrapper').remove();
         <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day8');">DAY 8</button>
       </div>
 
-      <div style="text-align: center;">
-        <button class="debug_jump_btn" style="width: 435px; background: linear-gradient(135deg, #2C3E50, #4CA1AF); border-color: #64B5F6;" onclick="debugJump(event, '*jump_final')">
+      <div class="dj_center_box">
+        <button class="debug_jump_btn btn_final_part1" onclick="debugJump(event, '*jump_final')">
           PART 1 FINAL
         </button>
       </div>
     </div>
 
     <!-- 第二部 コンテンツ -->
-    <div id="tab_part2" class="tab_content" style="display: none; height: 100%; overflow-y: auto; padding-right: 5px;">
+    <div id="tab_part2" class="tab_content" style="display: none;">
       
       <!-- 10月 -->
       <div class="acc_group">
@@ -211,7 +182,6 @@ $('#date_jump_wrapper').remove();
         </button>
         <div id="acc_2m" class="acc_body" style="display: none;">
           <div class="acc_grid">
-            <!-- <button class="debug_jump_btn" onclick="debugJump(event, '*jump_part2_oct_11');">2月：ジェシカの疑惑</button> -->
             <button class="debug_jump_btn" onclick="debugJump(event, '*jump_part2_feb_day1');">2月：バレンタイン</button>
           </div>
         </div>
@@ -219,13 +189,13 @@ $('#date_jump_wrapper').remove();
 
       <!-- 3月 -->
       <div class="acc_group">
-        <button class="acc_header" onclick="toggleAccordion(event, 'acc_3m');" style="border-color: #E57373; color: #E57373;">
+        <button class="acc_header header_danger" onclick="toggleAccordion(event, 'acc_3m');">
           3月シナリオ（運命の分岐） <span class="acc_icon">▼</span>
         </button>
         <div id="acc_3m" class="acc_body" style="display: none;">
           <div class="acc_grid">
-        <button class="debug_jump_btn" onclick="debugJump(event, '*jump_part2_mar_day1');">3月：もう引き返せない</button>
-            <button class="debug_jump_btn" style="border-color: #E57373; grid-column: span 2;" onclick="debugJump(event, '*jump_part2_mar_day2');">3月：運命の分岐</button>
+            <button class="debug_jump_btn" onclick="debugJump(event, '*jump_part2_mar_day1');">3月：もう引き返せない</button>
+            <button class="debug_jump_btn btn_danger_branch" onclick="debugJump(event, '*jump_part2_mar_day2');">3月：運命の分岐</button>
           </div>
         </div>
       </div>
@@ -234,10 +204,10 @@ $('#date_jump_wrapper').remove();
 
     <!-- 第三部 コンテンツ -->
     <div id="tab_part3" class="tab_content" style="display: none;">
-      <div style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 12px; width: 600px; margin: 0 auto;">
+      <div class="dj_part3_grid">
         <button class="debug_jump_btn" onclick="debugJump(event, '*jump_part3_1');">第三部：果てなき逃避行</button>
         <button class="debug_jump_btn" onclick="debugJump(event, '*jump_part3_2');">モーテルにて</button>
-        <button class="debug_jump_btn" style="border-color: #E57373; color: #E57373;" onclick="debugJump(event, '*jump_part3_final');">第3部 最後の選択</button>
+        <button class="debug_jump_btn btn_danger_branch" onclick="debugJump(event, '*jump_part3_final');">第3部 最後の選択</button>
       </div>
     </div>
 
@@ -245,163 +215,19 @@ $('#date_jump_wrapper').remove();
 
 
   <!-- 戻るボタン -->
-  <div style="text-align: center;">
+  <div class="dj_footer_area">
     <button class="debug_back_btn" onclick="debugJump(event, '*back')">
       BACK
     </button>
 
-   <!-- 仮置き -->
-    <div style="text-align: center; margin-top: 15px;">
+    <div class="dj_sub_action_box">
       <button class="debug_clear_storage_btn" onclick="clearStorageDebug();">
         🗑️ ストレージ全削除 (ローカル初期化)
       </button>
     </div>
-</div>
+  </div>
 
 </div>
-
-
-<style>
-
-/* タブボタン装飾 */
-.debug_tab_btn {
-  flex: 1;
-  background: rgba(45, 52, 68, 0.7);
-  border: 1px solid #7C8694;
-  color: #a0a0a0;
-  padding: 8px 0;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px 5px 0 0;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  letter-spacing: 1px;
-}
-
-.debug_tab_btn.active {
-  background: #D4C291;
-  color: #1F232D;
-  border-color: #D4C291;
-}
-
-.debug_jump_btn {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid #D4C291;
-  color: #ffffff;
-  padding: 10px 0;
-  font-size: 17px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  letter-spacing: 1px;
-}
-
-.debug_jump_btn:hover {
-  background: rgba(212, 194, 145, 0.3);
-  border-color: #ffffff;
-  transform: translateY(-2px);
-}
-
-.debug_back_btn {
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid #D4C291;
-  color: #ffffff;
-  padding: 6px 45px;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  letter-spacing: 1px;
-}
-
-.debug_back_btn:hover {
-  background: rgba(212, 194, 145, 0.3);
-  border-color: #ffffff;
-  transform: translateY(-2px);
-}
-
-/* アコーディオン全体 */
-.acc_group {
-  margin-bottom: 8px;
-}
-
-/* アコーディオンヘッダー */
-.acc_header {
-  width: 100%;
-  background: rgba(31, 35, 45, 0.85);
-  border: 1px solid #D4C291;
-  color: #D4C291;
-  padding: 8px 15px;
-  font-size: 15px;
-  font-weight: bold;
-  text-align: left;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.2s ease;
-}
-
-.acc_header:hover {
-  background: rgba(212, 194, 145, 0.2);
-}
-
-.acc_header.active {
-  background: rgba(212, 194, 145, 0.3);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-/* アコーディオン内部コンテンツ */
-.acc_body {
-  background: rgba(15, 18, 25, 0.5);
-  border: 1px solid rgba(212, 194, 145, 0.4);
-  border-top: none;
-  padding: 10px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.acc_grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px 15px;
-}
-
-/* アコーディオン内のジャンプボタンサイズ微調整 */
-.acc_grid .debug_jump_btn {
-  font-size: 14px;
-  padding: 8px 10px;
-  text-align: left;
-  padding-left: 12px;
-}
-
-/* ストレージ削除ボタン専用スタイル */
-.debug_clear_storage_btn {
-  width: 435px;
-  background: linear-gradient(135deg, #7B1FA2, #E53935); /* 警告感のある赤パープルグラデーション */
-  border: 1px solid #FF8A80;
-  color: #ffffff;
-  padding: 10px 0;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  letter-spacing: 1px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-.debug_clear_storage_btn:hover {
-  background: linear-gradient(135deg, #8E24AA, #FF5252);
-  border-color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 82, 82, 0.4);
-}
-</style>
 
 [endhtml]
 
@@ -440,12 +266,6 @@ setTimeout(function(){
             e.stopPropagation();
         });
 
-    $('#trust_taboo_check, #love_taboo_check')
-        .off('click.debugCheckbox')
-        .on('click.debugCheckbox', function(e) {
-            e.stopPropagation();
-        });
-
 }, 100);
 
 
@@ -465,35 +285,47 @@ $(document).off("input.debug_val_m").on("input.debug_val_m", '#tf_minus_input', 
     tf.temp_minus_count = Number($(this).val()) || 0;
 });
 
-; ------------------------------------------------------------
-; チェックボックスのリアルタイム同期
-; ------------------------------------------------------------
-
-$(document).off("change.debug_check_t").on("change.debug_check_t", '#trust_taboo_check', function() {
-    tf.temp_trust_taboo = $(this).is(':checked');
-});
-
-$(document).off("change.debug_check_l").on("change.debug_check_l", '#love_taboo_check', function() {
-    tf.temp_love_taboo = $(this).is(':checked');
-});
-
 
 ; ------------------------------------------------------------
 ; タブ切り替え処理
 ; ------------------------------------------------------------
 
 window.switchPartTab = function(e, partId) {
-    if (e) e.stopPropagation();
-    
+
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
     $('.tab_content').hide();
     $('.debug_tab_btn').removeClass('active');
-    
+
     $('#tab_' + partId).show();
+
     if (e && e.currentTarget) {
         $(e.currentTarget).addClass('active');
     }
 };
 
+$('.debug_tab_btn')
+    .off('.dateJump')
+    .on('touchend.dateJump', function(e) {
+
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+
+        switchPartTab(e.originalEvent, $(this).data('part'));
+
+    })
+    .on('click.dateJump', function(e) {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        switchPartTab(e, $(this).data('part'));
+
+    });
 ; ------------------------------------------------------------
 ; アコーディオン開閉処理
 ; ------------------------------------------------------------
@@ -505,15 +337,17 @@ window.toggleAccordion = function(e, accId) {
     var $header = $(e.currentTarget);
     var $icon = $header.find('.acc_icon');
 
-    // トグル動作（開く / 閉じる）
-    $body.slideToggle(200);
-    $header.toggleClass('active');
-
-    // 矢印アイコンの回転表示切り替え
     if ($header.hasClass('active')) {
-        $icon.text('▲');
-    } else {
+        $body.slideUp(200);
+        $header.removeClass('active');
         $icon.text('▼');
+    } else {
+        $('.acc_body').not($body).slideUp(200);
+        $('.acc_header').not($header).removeClass('active').find('.acc_icon').text('▼');
+
+        $body.slideDown(200);
+        $header.addClass('active');
+        $icon.text('▲');
     }
 };
 
@@ -541,11 +375,9 @@ window.debugJump = function(e, target) {
 // ストレージ全削除処理（スマホ・PC両対応）
 window.clearStorageDebug = function() {
     openConfirm("スマホ/ブラウザに保存されているセーブデータやシステム変数をすべて削除して初期化しますか？",
-				function () {
-        // 1. ローカルストレージを完全消去
+        function () {
         window.localStorage.clear();
         
-        // 2. メモリ上の sf (システム変数) や f (ゲーム変数) をクリア
         if (typeof sf !== 'undefined') {
             for (var key in sf) { delete sf[key]; }
         }
@@ -553,17 +385,33 @@ window.clearStorageDebug = function() {
             for (var key in f) { delete f[key]; }
         }
 
-        // 3. ティラノ側のシステム変数を保存更新[cite: 1]
         if (typeof TG !== 'undefined' && TG.saveSystemVariable) {
             TG.saveSystemVariable();
         }
 
         openAlert("ストレージを完全に削除しました。ページを再読み込みします。",
-				function () {
+        function () {
           location.reload();
           });
-				});
+        });
 };
+
+var djScrollArea = document.querySelector('.dj_content_container');
+
+if (djScrollArea) {
+
+    djScrollArea.addEventListener('touchstart', function(e) {
+        e.stopPropagation();
+    }, { passive: true });
+
+    djScrollArea.addEventListener('touchmove', function(e) {
+        e.stopPropagation();
+    }, { passive: true });
+
+    djScrollArea.addEventListener('touchend', function(e) {
+        e.stopPropagation();
+    }, { passive: true });
+}
 
 [endscript]
 
@@ -679,12 +527,6 @@ window.clearStorageDebug = function() {
 *jump_part2_mar_day1
 [apply_debug_params]
 [jump storage="part2_mar_day1.ks" ]
-
-; *jump_part2_jan_day1
-; [apply_debug_params]
-; [jump storage="part2_feb_day2.ks" ]
-
-
 
 *jump_part2_mar_day2
 [apply_debug_params]

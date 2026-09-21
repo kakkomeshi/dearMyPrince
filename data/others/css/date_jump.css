@@ -1,0 +1,309 @@
+/* ============================================================
+   日付＆パラメータ設定ジャンプ専用スタイル (date_jump.css)
+   ============================================================ */
+
+/* 1. 画面全体のラッパー・基本レイアウト */
+.dj_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 960px;
+  height: 640px;
+  background-color: rgba(15, 18, 25, 0.85);
+  font-family: sans-serif;
+  box-sizing: border-box;
+  padding: 15px 30px;
+  z-index: 9999;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: auto !important;
+}
+
+.dj_title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* 2. 手動パラメータ入力パネル */
+.dj_param_panel {
+  width: 900px;
+  margin: 0 auto 10px auto;
+  background-color: rgba(31, 35, 45, 0.90);
+  border: 1.5px solid #D4C291;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.dj_param_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.dj_input_group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+}
+
+.dj_input_num {
+  height: 26px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.dj_input_num.width_love,
+.dj_input_num.width_trust {
+  width: 65px;
+}
+
+.dj_input_num.width_minus {
+  width: 55px;
+}
+
+/* 3. タブエリア・コンテンツコンテナ */
+.dj_tab_area {
+  width: 900px;
+  margin: 0 auto 10px auto;
+  display: flex;
+  gap: 10px;
+}
+
+.dj_content_container {
+  width: 900px;
+  max-width: 100%;
+  height: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  overscroll-behavior: contain;
+}
+
+/* 4. タブボタン・各種ボタン */
+.debug_tab_btn {
+  flex: 1;
+  background: rgba(45, 52, 68, 0.7);
+  border: 1px solid #7C8694;
+  color: #a0a0a0;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+
+  /* スマホのタップを確実にボタンへ */
+  touch-action: manipulation;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.debug_tab_btn.active {
+  background: #D4C291;
+  color: #1F232D;
+  border-color: #D4C291;
+}
+
+.debug_jump_btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #D4C291;
+  color: #ffffff;
+  padding: 10px 0;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+  touch-action: pan-y !important;
+}
+
+.debug_jump_btn:hover {
+  background: rgba(212, 194, 145, 0.3);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.debug_jump_btn.btn_final_part1 {
+  width: 435px;
+  background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+  border-color: #64B5F6;
+}
+
+.debug_jump_btn.btn_danger_branch {
+  border-color: #E57373;
+  /* grid-column: span 2; */
+}
+
+.debug_back_btn {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #D4C291;
+  color: #ffffff;
+  padding: 6px 45px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+}
+
+.debug_back_btn:hover {
+  background: rgba(212, 194, 145, 0.3);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.debug_clear_storage_btn {
+  width: 435px;
+  background: linear-gradient(135deg, #7B1FA2, #E53935);
+  border: 1px solid #FF8A80;
+  color: #ffffff;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.debug_clear_storage_btn:hover {
+  background: linear-gradient(135deg, #8E24AA, #FF5252);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 82, 82, 0.4);
+}
+
+/* 5. タブ内グリッドレイアウト */
+.tab_content {
+  height: auto;
+  min-height: 320px;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.dj_part1_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 30px;
+  margin-bottom: 12px;
+}
+
+.dj_part3_grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12px;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.dj_center_box {
+  text-align: center;
+}
+
+
+
+/* 6. アコーディオン */
+.acc_group {
+  margin-bottom: 8px;
+}
+
+.acc_header {
+  width: 100%;
+  background: rgba(31, 35, 45, 0.85);
+  border: 1px solid #D4C291;
+  color: #D4C291;
+  padding: 8px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  touch-action: pan-y !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.acc_header:hover {
+  background: rgba(212, 194, 145, 0.2);
+}
+
+.acc_header.active {
+  background: rgba(212, 194, 145, 0.3);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.acc_header.header_danger {
+  border-color: #E57373;
+  color: #E57373;
+}
+
+.acc_body {
+  background: rgba(15, 18, 25, 0.5);
+  border: 1px solid rgba(212, 194, 145, 0.4);
+  border-top: none;
+  padding: 10px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  touch-action: pan-y !important;
+}
+
+.acc_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 15px;
+  touch-action: pan-y !important;
+}
+
+.acc_grid .debug_jump_btn {
+  font-size: 14px;
+  padding: 8px 10px;
+  text-align: left;
+  padding-left: 12px;
+}
+
+/* 7. 下部アクションエリア */
+.dj_footer_area {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.dj_sub_action_box {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* 8. スクロール・タッチ最適化共通 */
+#date_jump_wrapper button,
+#date_jump_wrapper input {
+  touch-action: pan-y !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
