@@ -28,6 +28,8 @@
 ;タイトルの設定
 [title name="DearMyPrince"]
 
-;タイトル画面表示
-[jump storage="title_screen.ks"]
+; 注意書き画面を呼出してタイトル画面へ
+[iscript]
+  window.showWarningModal();
+[endscript]
 

@@ -142,14 +142,6 @@ if (window.hideTopHeader) {
 </style>
 [endhtml]
 
-; HTMLのDOM登録が終わったらローディングスピナーを消す処理
-[iscript]
-requestAnimationFrame(function(){
-    $('#loading_spinner').fadeOut(300, function(){
-        $(this).remove();
-    });
-});
-[endscript]
 
 ;==============================
 ; 制御用JavaScript

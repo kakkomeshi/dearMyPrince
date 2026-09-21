@@ -9,10 +9,12 @@
 [loadcss file="./data/others/css/menu.css"]
 [loadcss file="./data/others/css/dialog.css"]
 [loadcss file="./data/others/css/header.css"]
+[loadcss file="./data/others/css/warning_modal.css"]
 
 ; jsファイルの読み込み
 [loadjs storage="js/dialog.js" ]
 [loadjs storage="js/header.js" ]
-[loadjs storage="chapter_data.js"]
+[loadjs storage="data/chapter_data.js"]
+[loadjs storage="js/waring_modal.js"]
 
 [return]

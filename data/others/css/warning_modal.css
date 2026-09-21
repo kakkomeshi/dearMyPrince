@@ -1,0 +1,137 @@
+/* モーダル全体（画面全域をカバー） */
+.first_audio_modal {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(15, 18, 25, 0.92);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 999999 !important;
+  box-sizing: border-box !important;
+  padding: 20px !important;
+  user-select: none;
+}
+
+/* メインのダイアログ枠（座布団） */
+.warning_content_box {
+  width: 90%;
+  max-width: 680px;
+  background-color: rgba(31, 35, 45, 0.95);
+  border: 1.5px solid #D4C291;
+  border-radius: 8px;
+  padding: 25px 30px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 注意書き本文エリア */
+.attention_area {
+  color: #e0e0e0;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: left; /* 長文の可読性を高めるため左寄せ */
+}
+
+.attention_title {
+  text-align: center;
+  color: #F4E2C1;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.attention_list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.attention_list li {
+  position: relative;
+  padding-left: 1.4em;
+  margin-bottom: 10px;
+  color: #dcdcdc;
+}
+
+.attention_list li::before {
+  content: "※";
+  position: absolute;
+  left: 0;
+  color: #D4C291;
+}
+
+.attention_footer {
+  text-align: center;
+  color: #D4C291;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 10px;
+  border-top: 1px dashed rgba(212, 194, 145, 0.3);
+  padding-top: 12px;
+}
+
+/* ボタンエリア */
+.button_area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.modal_btn {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* サウンド有効ボタン */
+.init_game_btn {
+  background: rgba(212, 194, 145, 0.2);
+  border: 1.5px solid #D4C291;
+  color: #ffffff;
+}
+
+.init_game_btn:hover {
+  background: rgba(212, 194, 145, 0.4);
+  border-color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 0 10px rgba(212, 194, 145, 0.4);
+}
+
+/* サウンド無効ボタン */
+.mute_game_btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 194, 145, 0.4);
+  color: #cccccc;
+}
+
+.mute_game_btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #D4C291;
+  color: #ffffff;
+}
+
+.btn_sub_text {
+  font-size: 11px;
+  font-weight: normal;
+  opacity: 0.8;
+}

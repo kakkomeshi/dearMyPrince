@@ -61,33 +61,33 @@ updateTopHeader();
 ; =========================
 
 
-[macro name="debug_init"]
+; [macro name="debug_init"]
 
-[iscript]
-if (typeof TYRANO.kag.stat.f.love === "undefined") {
-TYRANO.kag.stat.f.love = 0;
-}
-if ($("#debug_love").length === 0) {
-$("#tyrano_base").append(
-'<div id="debug_love" style="' +
-'position:absolute;' +
-'top:20px;' +
-'left:820px;' +
-'z-index:999999;' +
-'background:rgba(0,0,0,0.7);' +
-'color:white;' +
-'padding:6px 10px;' +
-'font-size:18px;' +
-'pointer-events:none;' +
-'">好感度：' + TYRANO.kag.stat.f.love + '</div>'
-);
-}
-$("#debug_love").text(
-"好感度：" + TYRANO.kag.stat.f.love
-);
-[endscript]
+; [iscript]
+; if (typeof TYRANO.kag.stat.f.love === "undefined") {
+; TYRANO.kag.stat.f.love = 0;
+; }
+; if ($("#debug_love").length === 0) {
+; $("#tyrano_base").append(
+; '<div id="debug_love" style="' +
+; 'position:absolute;' +
+; 'top:20px;' +
+; 'left:820px;' +
+; 'z-index:999999;' +
+; 'background:rgba(0,0,0,0.7);' +
+; 'color:white;' +
+; 'padding:6px 10px;' +
+; 'font-size:18px;' +
+; 'pointer-events:none;' +
+; '">好感度：' + TYRANO.kag.stat.f.love + '</div>'
+; );
+; }
+; $("#debug_love").text(
+; "好感度：" + TYRANO.kag.stat.f.love
+; );
+; [endscript]
 
-[endmacro]
+; [endmacro]
 
 
 ; =========================
@@ -95,13 +95,13 @@ $("#debug_love").text(
 ; =========================
 
 
-[macro name="debug_hide"]
+; [macro name="debug_hide"]
 
-[iscript]
-$("#debug_love").remove();
-[endscript]
+; [iscript]
+; $("#debug_love").remove();
+; [endscript]
 
-[endmacro]
+; [endmacro]
 
 
 ; =========================
