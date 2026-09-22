@@ -46,15 +46,16 @@
     vertical-align: middle;
 }
 
-#header_status_text{
+#header_status_text {
     align-items: center;
     gap: 12px;
-    font-weight: normal ;
+    font-weight: normal;
     align-items: center;
     font-size: 16px;
 
 
 }
+
 .header_merter_wrap {
     width: 160px;
     height: 28px;
@@ -157,31 +158,71 @@
 
 /* --- 上昇時：ドカンと大きく光って跳ねる (UP) --- */
 @keyframes meter_pop_up {
-  0% { transform: scale(1); filter: drop-shadow(0 0 0px transparent); }
-  25% { 
-    transform: scale(1.35); /* より大きく膨らませる */
-    filter: drop-shadow(0 0 15px #FFE57F) brightness(2.0); /* 強烈なゴールド発光 */
-  }
-  50% { transform: scale(0.95); } /* 反動で少し縮む */
-  75% { transform: scale(1.05); }
-  100% { transform: scale(1); filter: drop-shadow(0 0 0px transparent); }
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px transparent);
+    }
+
+    25% {
+        transform: scale(1.35);
+        /* より大きく膨らませる */
+        filter: drop-shadow(0 0 15px #FFE57F) brightness(2.0);
+        /* 強烈なゴールド発光 */
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    /* 反動で少し縮む */
+    75% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px transparent);
+    }
 }
 
 .meter_anim_up {
-  animation: meter_pop_up 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: meter_pop_up 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* --- 下降時：赤く激しくフラッシュしてシェイク (DOWN) --- */
 @keyframes meter_shake_down {
-  0% { transform: translateX(0); }
-  15% { transform: translateX(-8px) scale(1.1); filter: drop-shadow(0 0 12px #FF4D4D) brightness(1.2) hue-rotate(-50deg); } /* 赤くフラッシュ */
-  30% { transform: translateX(8px); }
-  45% { transform: translateX(-6px); }
-  60% { transform: translateX(6px); }
-  75% { transform: translateX(-3px); }
-  100% { transform: translateX(0); filter: none; }
+    0% {
+        transform: translateX(0);
+    }
+
+    15% {
+        transform: translateX(-8px) scale(1.1);
+        filter: drop-shadow(0 0 12px #FF4D4D) brightness(1.2) hue-rotate(-50deg);
+    }
+
+    /* 赤くフラッシュ */
+    30% {
+        transform: translateX(8px);
+    }
+
+    45% {
+        transform: translateX(-6px);
+    }
+
+    60% {
+        transform: translateX(6px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+    }
+
+    100% {
+        transform: translateX(0);
+        filter: none;
+    }
 }
 
 .meter_anim_down {
-  animation: meter_shake_down 2.5s ease-in-out;
+    animation: meter_shake_down 2.5s ease-in-out;
 }

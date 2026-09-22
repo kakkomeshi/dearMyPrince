@@ -9,7 +9,7 @@
 
 
 
-; ; ヘッダーを表示
+; ヘッダーを表示
 [iscript]
 // タイトルからコンフィグを表示した場合はタイトルに戻ったときにヘッダーを表示しないようにする
 if (TYRANO.kag.variable.sf.from_title_config) {

@@ -3,10 +3,7 @@
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Sunlight_on_the_Market_Road.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="car_illumination_road.png"  ]
 
-; 好感度表示
-
-
-
+[set_chapter id="part2_dec_day1"]
 [tb_show_message_window  ]
 [mask_off  time="1000"  ]
 [tb_start_text mode=4 ]

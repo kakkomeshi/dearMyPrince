@@ -15,24 +15,24 @@ window.updateTopHeader = function () {
     if (typeof TYRANO === "undefined" || !TYRANO.kag || !TYRANO.kag.stat) return;
 
     var f = TYRANO.kag.stat.f || {};
-    var sn = TYRANO.kag.stat.current_scenario || "";
 
-    // 1. 日付テキストの更新（f.headerDay があればそれを使い、なければフォールバック）
+    // 1. 日付
     var dateText = f.headerDay || "DAY 0";
     $("#header_date_text").text(dateText);
 
-    // 2. 状況（天気・場所）の更新
+    // 2. 状況
     var statusText = f.headerSubTitle || "プロローグ";
     $("#header_status_text").text(statusText);
 
-    // 3. 部に応じたヘッダーデザイン（CSSクラス）の更新（ファイル名自動判定）
-    if (typeof window.updateHeaderStyle === "function") {
-        window.updateHeaderStyle(sn);
+    // 3. 章に応じたデザイン
+    if (f.currentChapterId &&
+        typeof window.updateHeaderStyle === "function") {
+
+        window.updateHeaderStyle(f.currentChapterId);
     }
 
-    // 4. 好感度メーターの更新
+    // 4. 好感度メーター
     headerUiTimer();
-
 };
 
 //ヘッダーを隠す
@@ -74,42 +74,27 @@ window.headerUiTimer = function () {
     fill.css("width", percent + "%");
 }
 
-var originalNextOrderWithLabel =
-    TYRANO.kag.ftag.nextOrderWithLabel;
-
-TYRANO.kag.ftag.nextOrderWithLabel = function (label_name, scenario_file) {
-
-    if (scenario_file &&
-        scenario_file !== TYRANO.kag.stat.current_scenario) {
-
-        updateHeaderStyle(scenario_file);
-    }
-
-    return originalNextOrderWithLabel.apply(this, arguments);
-};
-
 //　ヘッダーのデザインを部ごとに変更する
-window.updateHeaderStyle = function (scenario_file) {
+window.updateHeaderStyle = function (chapterId) {
     var header = $("#top_header_bar");
-
     if (header.length === 0) {
         return;
     }
-    if (scenario_file.indexOf("part2") === 0) {
+    if (chapterId.indexOf("part2") === 0) {
         // --- 第二部デザイン（デフォルト） ---
         $('#top_header_bar').removeClass('part1_header part3_header').addClass('part2_header');
         // メーターのアイコンやラベル表記を「依存度」などに差し替え
-        $('#header_meter_label').html('依存度').css('color', '#D39097');
+        $('#header_meter_label').html('🌟').css('color', '#D39097');
 
-    } else if (scenario_file.indexOf("part3") === 0) {
+    } else if (chapterId.indexOf("part3") === 0) {
         // --- 第三部デザイン（デフォルト） ---
         $('#top_header_bar').removeClass('part1_header part2_header').addClass('part3_header');
         // メーターのアイコンやラベル表記を「執着・逃走」などに差し替え
-        $('#header_meter_label').html('執着度').css('color', '#FF4D4D');
+        $('#header_meter_label').html('⛓️').css('color', '#FF4D4D');
     }
     else {
         // --- 第一部デザイン（デフォルト） ---
         $('#top_header_bar').removeClass('part2_header part3_header').addClass('part1_header');
-        $('#header_meter_label').html('好感度').css('color', '#D4C291');
+        $('#header_meter_label').html('🎾').css('color', '#D4C291');
     }
 };
