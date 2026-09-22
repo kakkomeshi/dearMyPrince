@@ -203,6 +203,7 @@
   min-height: 320px;
   overflow: visible;
   box-sizing: border-box;
+  margin: 5px 0 30px 0;
 }
 
 .dj_part1_grid {

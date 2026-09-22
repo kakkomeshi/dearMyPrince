@@ -13,7 +13,7 @@ window.CHAPTER_DATA = {
     "part1_day2": {
         saveTitle: "第一部：DAY2",
         headerDay: "DAY 2",
-        subTitle: "好きなもの"
+        subTitle: "リョーマの好きなもの"
     },
     "part1_day3": {
         saveTitle: "第一部：DAY5",
@@ -45,7 +45,7 @@ window.CHAPTER_DATA = {
         headerDay: "DAY 8",
         subTitle: "最終レッスン"
     },
-    "part1_filanl": {
+    "part1_final": {
         saveTitle: "第一部：FINAL",
         headerDay: "DAY FINAL",
         subTitle: "最後の挨拶"
@@ -98,12 +98,12 @@ window.CHAPTER_DATA = {
     "part2_jan_day1": {
         saveTitle: "第二部：1月上旬",
         headerDay: "Jan DAY1",
-        subTitle: "リョーマのスランプ"
+        subTitle: "冬の轍"
     },
     "part2_jan_day2": {
         saveTitle: "第二部：1月下旬",
         headerDay: "Jan DAY2",
-        subTitle: "ジュニア大会出場"
+        subTitle: "ジェシカの疑惑"
     },
     "part2_feb_day1": {
         saveTitle: "第二部：2月中旬",
@@ -115,7 +115,7 @@ window.CHAPTER_DATA = {
         headerDay: "Mar DAY1",
         subTitle: "もう引き返せない"
     },
-    "art2_mar_day2": {
+    "part2_mar_day2": {
         saveTitle: "第二部：3月下旬",
         headerDay: "Mar DAY2",
         subTitle: "運命の分岐"
@@ -127,7 +127,7 @@ window.CHAPTER_DATA = {
     },
     "part3_escape_02": {
         saveTitle: "第三部；",
-        headerDay: "Nov DAY2",
+        headerDay: "DAY2",
         subTitle: "モーテルにて"
     },
 
