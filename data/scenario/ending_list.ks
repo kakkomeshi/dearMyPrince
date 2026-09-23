@@ -6,42 +6,26 @@
 ; 1. 全画面HTML/CSSコンテナの一括構築（ページ送りUI内包）
 ; ============================================================
 [html]
-<div id="ed_list_wrapper" style="
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1280px;
-  height: 720px;
-  background-color: rgba(15, 18, 25, 0.88);
-  font-family: sans-serif;
-  box-sizing: border-box;
-  padding: 25px 80px;
-  z-index: 9999;
-  user-select: none;
-">
+<div class="my_content_wrap">
   <!-- 画面タイトル -->
-  <div style="
-    text-align: center;
-    color: #ffffff;
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-  ">
-    ENDING LIST
+  
+  <div class="my_content_title_header">
+    <div class="my_content_title">
+      ENDING LIST
+    </div>
   </div>
 
   <!-- リスト用パネル（座布団） -->
   <div id="ed_list_container" style="
     width: 800px;
-    height: 380px;
+    min-height: 460px;
     background-color: rgba(31, 35, 45, 0.90);
     border: 1.5px solid #D4C291;
     border-radius: 8px;
-    padding: 15px 20px;
+    padding: 30px 20px;
     box-sizing: border-box;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
   ">
     <!-- JS(iscript) でここに現在のページのエンディング一覧が挿入されます -->
   </div>
@@ -129,18 +113,18 @@ window.renderEdPage = function(page) {
                 border-bottom: 1px solid rgba(212, 194, 145, 0.15);
                 padding: 8px 15px;
                 border-radius: 4px;
-                font-size: 15px;
-                height: 48px;
+                font-size: 20px;
+                height: 60px;
                 box-sizing: border-box;
             ">
                 <div style="display: flex; align-items: center; gap: 20px;">
-                    <span style="color: ${numColor}; font-weight: bold; font-family: monospace; font-size: 17px;">${ed.id}</span>
+                    <span style="color: ${numColor}; font-weight: bold; font-family: monospace; font-size: 20px;">${ed.id}</span>
                     <span style="color: ${titleColor}; letter-spacing: 1px;">${displayTitle}</span>
                 </div>
                 <span style="
                     color: ${statusColor};
                     font-weight: bold;
-                    font-size: 13px;
+                    font-size: 20px;
                     padding: 3px 12px;
                     background-color: rgba(0, 0, 0, 0.4);
                     border-radius: 3px;
