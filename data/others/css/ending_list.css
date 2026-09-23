@@ -1,0 +1,70 @@
+/* data/others/css/ending_list.css */
+
+/* EDリスト用パネル */
+#ed_list_container {
+  width: 800px;
+  height: 400px;
+  background-color: rgba(31, 35, 45, 0.90);
+  border: 1.5px solid #D4C291;
+  border-radius: 8px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+}
+
+/* EDアイテムを囲むフレックスコンテナ */
+.ed_item_list_box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 各ED行のスタイル */
+.ed_item_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(212, 194, 145, 0.15);
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 20px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.ed_item_left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ed_item_id {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.ed_item_title {
+  letter-spacing: 1px;
+}
+
+.ed_item_status {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 3px 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  min-width: 65px;
+  text-align: center;
+}
+
+/* 解放・未解放のカラー制御クラス */
+.ed_item_row.unlocked .ed_item_id { color: #D4C291; }
+.ed_item_row.unlocked .ed_item_title { color: #FFFFFF; }
+.ed_item_row.unlocked .ed_item_status { color: #81C784; }
+
+.ed_item_row.locked .ed_item_id { color: #666666; }
+.ed_item_row.locked .ed_item_title { color: #888888; }
+.ed_item_row.locked .ed_item_status { color: #555555; }

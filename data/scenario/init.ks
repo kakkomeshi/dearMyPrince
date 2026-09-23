@@ -12,6 +12,7 @@
 [loadcss file="./data/others/css/warning_modal.css"]
 [loadcss file="./data/others/css/date_jump.css"]
 [loadcss file="./data/others/css/config.css"]
+[loadcss file="./data/others/css/ending_list.css"]
 
 ; jsファイルの読み込み
 [loadjs storage="js/dialog.js" ]
@@ -20,5 +21,7 @@
 [loadjs storage="js/waring_modal.js"]
 [loadjs storage="js/menu.js"]
 [loadjs storage="js/system_buttons.js"]
+[loadjs storage="data/ending_data.js"]
+[loadjs storage="js/ending_list.js"]
 
 [return]

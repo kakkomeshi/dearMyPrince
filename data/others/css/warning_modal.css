@@ -18,7 +18,7 @@
 /* メインのダイアログ枠（座布団） */
 .warning_content_box {
   width: 90%;
-  max-width: 680px;
+  max-width: 1000px;
   background-color: rgba(31, 35, 45, 0.95);
   border: 1.5px solid #D4C291;
   border-radius: 8px;
@@ -33,7 +33,7 @@
 /* 注意書き本文エリア */
 .attention_area {
   color: #e0e0e0;
-  font-size: 13px;
+  font-size: 22px;
   line-height: 1.7;
   text-align: left; /* 長文の可読性を高めるため左寄せ */
 }
@@ -41,7 +41,7 @@
 .attention_title {
   text-align: center;
   color: #F4E2C1;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 15px;
@@ -71,7 +71,7 @@
 .attention_footer {
   text-align: center;
   color: #D4C291;
-  font-size: 13px;
+  font-size: 22px;
   font-weight: bold;
   margin-top: 10px;
   border-top: 1px dashed rgba(212, 194, 145, 0.3);
@@ -81,15 +81,15 @@
 /* ボタンエリア */
 .button_area {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: row;
+  gap: 15px;
   width: 100%;
 }
 
 .modal_btn {
   width: 100%;
   padding: 12px 16px;
-  font-size: 14px;
+  font-size: 22px;
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;

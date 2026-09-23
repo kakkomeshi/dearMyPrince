@@ -1,0 +1,31 @@
+<!-- data/others/html/ending_list.html -->
+<div class="my_content_wrap" id="ed_list_wrapper">
+  <!-- 画面タイトル -->
+  <div class="my_content_title_header">
+    <div class="my_content_title">
+      ENDING LIST
+    </div>
+  </div>
+
+  <!-- リスト用パネル（座布団） -->
+  <div id="ed_list_container">
+    <!-- JS (ending_list.js) によりここに現在のページのエンディング一覧が動的に挿入されます -->
+  </div>
+
+  <!-- 下部操作エリア（ページ送り ＆ BACKボタン） -->
+  <div class="pager_wrapper">
+    <!-- ページ送りコントロール (◀ 1/3 ▶) -->
+    <div class="pager_area">
+      <span class="arrow_left" onclick="changeEdPage(-1)"></span>
+      <span class="pager_num_display">1 / 3</span>
+      <span class="arrow_right" onclick="changeEdPage(1)"></span>
+    </div>
+  </div>
+
+  <!-- BACKボタン -->
+  <div class="back_wrapper">
+    <button class="back_btn" type="button" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*back'});">
+      BACK
+    </button>
+  </div>
+</div>
