@@ -9,13 +9,13 @@
 ; CONFIG画面全体のHTML / CSS 構築（スマホ最適化・ボタン式）
 ; ============================================================
 [html]
-<div id="config_screen_wrapper">
+<div class="my_content_wrap">
   
-  <div style="clear: both;"></div>
-
   <!-- メインタイトル -->
-  <div class="mobile_config_main_title">
-    CONFIG
+  <div class="my_content_title_header">
+    <div class="my_content_title">
+        CONFIG
+    </div>
   </div>
 
   <!-- コンフィグ全体を囲むメインパネル（座布団） -->

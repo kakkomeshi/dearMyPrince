@@ -9,14 +9,14 @@
 ; CONFIG画面全体のHTML / CSS 構築（全機能・確認欄完備）
 ; ============================================================
 [html]
-<div id="config_screen_wrapper">
+<div class="my_content_wrap">
   
-  <div style="clear: both;"></div>
-
   <!-- メインタイトル -->
-  <div class="config_main_title">
-    CONFIG
-  </div>
+    <div class="my_content_title_header">
+        <div class="my_content_title">
+            CONFIG
+        </div>
+    </div>
 
   <!-- コンフィグ全体を囲むメインパネル（座布団） -->
   <div class="area_config_box">

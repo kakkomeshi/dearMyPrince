@@ -12,25 +12,6 @@
      user-select: none;
  }
 
- .config_main_title {
-     text-align: center;
-     color: #ffffff;
-     font-size: 26px;
-     font-weight: bold;
-     letter-spacing: 2px;
-     margin-bottom: 12px;
-     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
- }
-
- .mobile_config_main_title {
-     text-align: center;
-     color: #ffffff;
-     font-size: 30px;
-     font-weight: bold;
-     letter-spacing: 2px;
-     margin-bottom: 12px;
-     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
- }
 
  #config_preview_text {
      background: rgba(0, 0, 0, 0.4);
@@ -116,7 +97,7 @@
 
  .mobile_config_label {
      color: #ffffff;
-     font-size: 24px;
+     font-size: 22px;
      font-weight: bold;
      letter-spacing: 1px;
      width: 200px;
@@ -195,7 +176,7 @@
      border: 1px solid #D4C291;
      color: #ffffff;
      padding: 4px 12px;
-     font-size: 24px;
+     font-size: 22px;
      font-weight: bold;
      border-radius: 4px;
      cursor: pointer;
@@ -229,7 +210,7 @@
      border: 1px solid rgba(212, 194, 145, 0.4);
      color: #cccccc;
      padding: 5px 18px;
-     font-size: 24px;
+     font-size: 22px;
      font-weight: bold;
      border-radius: 4px;
      cursor: pointer;
@@ -262,7 +243,7 @@
      border: 1px solid rgba(212, 194, 145, 0.3);
      color: #cccccc;
      padding: 6px 14px;
-     font-size: 24px;
+     font-size: 22px;
      font-weight: bold;
      border-radius: 4px;
      cursor: pointer;

@@ -48,8 +48,10 @@
 ; ============================================================
 
 [html]
-  <div id="date_jump_wrapper" class="dj_wrapper">
-    <div class="dj_title">日付＆パラメータ設定ジャンプ</div>
+  <div id="date_jump_wrapper" class="my_content_wrap">
+    <div class="my_content_title_header">
+        <div class="my_content_title">日付＆パラメータ設定ジャンプ</div>
+    </div>
 
     <!-- ======================================================
          パラメータ
@@ -95,6 +97,10 @@
       ===================================================== -->
 
       <div id="tab_part1" class="tab_content" style="display: block">
+
+        <div class="dj_center_box">
+          <button class="debug_jump_btn btn_final_part1" onclick="debugJump(event, '*jump_day0_part1');" data-chapter="part1_day0"></button>
+        </div>
 
         <div class="dj_part1_grid">
           <button class="debug_jump_btn" onclick="debugJump(event, '*jump_day1_part1');" data-chapter="part1_day1"></button>
@@ -222,7 +228,13 @@
     <!-- フッター -->
 
     <div class="dj_footer_area">
-      <button class="debug_back_btn" onclick="debugJump(event, '*back')">BACK</button>
+
+      <div class="back_wrapper">
+        <button class="back_btn" onclick="debugJump(event, '*back')">
+          BACK
+        </button>
+      </div>
+
 
       <div class="dj_sub_action_box">
         <button class="debug_clear_storage_btn" onclick="clearStorageDebug();">🗑️ ストレージ全削除 (ローカル初期化)</button>
@@ -509,6 +521,10 @@
 ; ============================================================
 
 ; 第一部
+*jump_day0_part1
+[apply_debug_params]
+[jump storage="part1_day0.ks"]
+
 *jump_day1_part1
 [apply_debug_params]
 [jump storage="part1_day1.ks"]
