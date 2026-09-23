@@ -56,9 +56,9 @@
 よく見ているらしい。[p]
 [_tb_end_text]
 
-[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="ちゃんと覚えてたんだな"  target="*choice1_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="勝手に先に行くなよ"  target="*choice1_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="賢いな"  target="*choice1_3"  width="350"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="ちゃんと覚えてたんだな"  target="*choice1_1" width="max"  autopos="true" ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="勝手に先に行くなよ"  target="*choice1_2"  width="max"  autopos="true" ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="賢いな"  target="*choice1_3" width="max"  autopos="true" ]
 [s  ]
 *choice1_1
 
@@ -187,9 +187,9 @@
 
 [_tb_end_text]
 
-[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="じゃあ少しだけ本気でいく"  target="*choice1_2_1"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="まずフォームを直そう"  target="*choice1_2_2"  autopos="true"  x="0"  y="0"  width="350"  height=""  _clickable_img=""  ]
-[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="九歳相手に本気は出せない"  target="*choice1_2_3"  width="350"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="じゃあ少しだけ本気でいく"  target="*choice1_2_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="まずフォームを直そう"  target="*choice1_2_2"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="九歳相手に本気は出せない"  target="*choice1_2_3" width="max"  autopos="true" ]
 [s  ]
 *choice1_2_1
 
@@ -353,9 +353,9 @@
 
 [_tb_end_text]
 
-[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="テニス、好きなんだな"  target="*choice1_3_1"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  autopos="true"  ]
-[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="なにか目標はある？"  target="*choice1_3_2"  autopos="true"  x="0"  y="0"  width="max"  height=""  _clickable_img=""  ]
-[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="今日は疲れただろ。寝ててもいいよ"  target="*choice1_3_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="テニス、好きなんだな"  target="*choice1_3_1" width="max"  autopos="true" ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="なにか目標はある？"  target="*choice1_3_2" width="max"  autopos="true" ]
+[glink  color="customized_button"  storage="part1_day1.ks"  size="20"  text="今日は疲れただろ。寝ててもいいよ"  target="*choice1_3_3" width="max"  autopos="true"  ]
 [s  ]
 *choice1_3_1
 

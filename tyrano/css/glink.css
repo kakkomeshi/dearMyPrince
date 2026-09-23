@@ -9,7 +9,7 @@
 .glink_button {
 	display: inline-block;
 	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
-	*display: inline;
+	display: inline;
 	vertical-align: baseline;
 	margin: 0 2px;
 	outline: none;
@@ -11241,14 +11241,21 @@
   margin: 10px 0px !important;
 }
 
-.customized_button:hover {
-	color: #121d3c;
-	background-color: #f4e2c1;
-	/* border: none; */
-	text-decoration: none;
-  text-shadow: none !important;
+@media screen and (max-width: 768px) {
+  .customized_button {
+    font-size: 24px !important;
+  }
 }
 
+@media (hover: hover) and (pointer: fine) {
+.customized_button:hover {
+    color: #121d3c;
+    background-color: #f4e2c1;
+    /* border: none; */
+    text-decoration: none;
+    text-shadow: none !important;
+  }
+}
 .customized_button:hover::after {
 	content: "";
 	position: absolute;
