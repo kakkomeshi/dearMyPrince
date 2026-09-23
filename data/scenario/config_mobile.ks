@@ -21,68 +21,68 @@
   <!-- コンフィグ全体を囲むメインパネル（座布団） -->
   <div class="mobile_area_config_box">
 
-    <!-- 1. BGM音量 ＆ ミュート -->
-    <div class="mobile_config_item_row">
-      <span class="mobile_config_label">BGM 音量</span>
-      <div class="mobile_config_control_area">
-        <div class="step_btn_group">
-          <button class="config_step_btn btn_bgm_vol" data-vol="0" onclick="setBgmVolume(0)">0%</button>
-          <button class="config_step_btn btn_bgm_vol" data-vol="25" onclick="setBgmVolume(25)">25%</button>
-          <button class="config_step_btn btn_bgm_vol" data-vol="50" onclick="setBgmVolume(50)">50%</button>
-          <button class="config_step_btn btn_bgm_vol" data-vol="75" onclick="setBgmVolume(75)">75%</button>
-          <button class="config_step_btn btn_bgm_vol" data-vol="100" onclick="setBgmVolume(100)">100%</button>
-        </div>
-        <button class="mobile_config_mute_btn" id="btn_mute_bgm" onclick="toggleAudioMute('bgm')">🔊 ON</button>
+   <!-- 1. BGM音量 ＆ ミュート -->
+  <div class="mobile_config_item_row">
+    <span class="mobile_config_label">BGM 音量</span>
+    <div class="mobile_config_control_area">
+      <div class="step_btn_group">
+        <button class="config_step_btn btn_bgm_vol" data-vol="0">0%</button>
+        <button class="config_step_btn btn_bgm_vol" data-vol="25">25%</button>
+        <button class="config_step_btn btn_bgm_vol" data-vol="50">50%</button>
+        <button class="config_step_btn btn_bgm_vol" data-vol="75">75%</button>
+        <button class="config_step_btn btn_bgm_vol" data-vol="100">100%</button>
       </div>
+      <button class="mobile_config_mute_btn" id="btn_mute_bgm">🔊 ON</button>
     </div>
+  </div>
 
-    <!-- 2. SE音量 ＆ ミュート -->
-    <div class="mobile_config_item_row">
-      <span class="mobile_config_label">効果音 (SE) 音量</span>
-      <div class="mobile_config_control_area">
-        <div class="step_btn_group">
-          <button class="config_step_btn btn_se_vol" data-vol="0" onclick="setSeVolume(0)">0%</button>
-          <button class="config_step_btn btn_se_vol" data-vol="25" onclick="setSeVolume(25)">25%</button>
-          <button class="config_step_btn btn_se_vol" data-vol="50" onclick="setSeVolume(50)">50%</button>
-          <button class="config_step_btn btn_se_vol" data-vol="75" onclick="setSeVolume(75)">75%</button>
-          <button class="config_step_btn btn_se_vol" data-vol="100" onclick="setSeVolume(100)">100%</button>
-        </div>
-        <button class="mobile_config_mute_btn" id="btn_mute_se" onclick="toggleAudioMute('se')">🔊 ON</button>
+  <!-- 2. SE音量 ＆ ミュート -->
+  <div class="mobile_config_item_row">
+    <span class="mobile_config_label">効果音 (SE) 音量</span>
+    <div class="mobile_config_control_area">
+      <div class="step_btn_group">
+        <button class="config_step_btn btn_se_vol" data-vol="0">0%</button>
+        <button class="config_step_btn btn_se_vol" data-vol="25">25%</button>
+        <button class="config_step_btn btn_se_vol" data-vol="50">50%</button>
+        <button class="config_step_btn btn_se_vol" data-vol="75">75%</button>
+        <button class="config_step_btn btn_se_vol" data-vol="100">100%</button>
       </div>
+      <button class="mobile_config_mute_btn" id="btn_mute_se">🔊 ON</button>
     </div>
+  </div>
 
-    <!-- 3. テキスト表示速度 -->
-    <div class="mobile_config_item_row">
-      <span class="mobile_config_label">テキスト表示速度</span>
-      <div class="mobile_config_control_area">
-        <div class="step_btn_group">
-          <button class="config_step_btn btn_ch_speed" data-speed="1" onclick="setChSpeed(1)">遅い</button>
-          <button class="config_step_btn btn_ch_speed" data-speed="2" onclick="setChSpeed(2)">普通</button>
-          <button class="config_step_btn btn_ch_speed" data-speed="3" onclick="setChSpeed(3)">早い</button>
-        </div>
+  <!-- 3. テキスト表示速度 -->
+  <div class="mobile_config_item_row">
+    <span class="mobile_config_label">テキスト表示速度</span>
+    <div class="mobile_config_control_area">
+      <div class="step_btn_group">
+        <button class="config_step_btn btn_ch_speed" data-speed="1">遅い</button>
+        <button class="config_step_btn btn_ch_speed" data-speed="2">普通</button>
+        <button class="config_step_btn btn_ch_speed" data-speed="3">早い</button>
       </div>
     </div>
+  </div>
 
-    <!-- 4. オートモードテキスト表示速度 -->
-    <div class="mobile_config_item_row">
-      <span class="mobile_config_label">オートモード速度</span>
-      <div class="mobile_config_control_area">
-        <div class="step_btn_group">
-          <button class="config_step_btn btn_auto_speed" data-speed="1" onclick="setAutoSpeed(1)">遅い</button>
-          <button class="config_step_btn btn_auto_speed" data-speed="2" onclick="setAutoSpeed(2)">普通</button>
-          <button class="config_step_btn btn_auto_speed" data-speed="3" onclick="setAutoSpeed(3)">早い</button>
-        </div>
+  <!-- 4. オートモードテキスト表示速度 -->
+  <div class="mobile_config_item_row">
+    <span class="mobile_config_label">オートモード速度</span>
+    <div class="mobile_config_control_area">
+      <div class="step_btn_group">
+        <button class="config_step_btn btn_auto_speed" data-speed="1">遅い</button>
+        <button class="config_step_btn btn_auto_speed" data-speed="2">普通</button>
+        <button class="config_step_btn btn_auto_speed" data-speed="3">早い</button>
       </div>
     </div>
+  </div>
 
-    <!-- 5. スキップ設定 -->
-    <div class="mobile_config_item_row">
-      <span class="mobile_config_label">スキップ設定</span>
-      <div class="mobile_config_control_area" style="gap: 15px; justify-content: flex-start;">
-        <button class="mobile_config_choice_btn button_skip_read active" data-skip="reads" onclick="setSkipMode('reads')">既読のみ</button>
-        <button class="mobile_config_choice_btn button_skip_all" data-skip="all" onclick="setSkipMode('all')">すべて</button>
-      </div>
+  <!-- 5. スキップ設定 -->
+  <div class="mobile_config_item_row">
+    <span class="mobile_config_label">スキップ設定</span>
+    <div class="mobile_config_control_area" style="gap: 15px; justify-content: flex-start;">
+      <button class="mobile_config_choice_btn button_skip_read active" data-skip="reads">既読のみ</button>
+      <button class="mobile_config_choice_btn button_skip_all" data-skip="all">すべて</button>
     </div>
+  </div>
 
     <!-- 6. テキスト表示速度確認欄 -->
     <div style="padding-top: 10px; display: flex; flex-direction: column; gap: 4px;">
@@ -94,7 +94,7 @@
 
   <!-- BACKボタン -->
   <div class="back_wrapper">
-    <button class="back_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*backtitle'});">
+    <button class="back_btn" id="btn_config_back">
       BACK
     </button>
   </div>
@@ -107,10 +107,105 @@
 ; ============================================================
 [iscript]
 
+// ----------------------------------------------------
+// ボタンイベント登録
+// ----------------------------------------------------
+
+function addConfigButtonEvents() {
+
+    // BGM音量
+    document.querySelectorAll('.btn_bgm_vol').forEach(function(button) {
+        button.addEventListener('pointerup', function(e) {
+            e.preventDefault();
+
+            var vol = parseInt(this.dataset.vol);
+            setBgmVolume(vol);
+        });
+    });
+
+    // SE音量
+    document.querySelectorAll('.btn_se_vol').forEach(function(button) {
+        button.addEventListener('pointerup', function(e) {
+            e.preventDefault();
+
+            var vol = parseInt(this.dataset.vol);
+            setSeVolume(vol);
+        });
+    });
+
+    // BGMミュート
+    var bgmMuteButton = document.getElementById('btn_mute_bgm');
+
+    if (bgmMuteButton) {
+        bgmMuteButton.addEventListener('pointerup', function(e) {
+            e.preventDefault();
+
+            toggleAudioMute('bgm');
+        });
+    }
+
+    // SEミュート
+    var seMuteButton = document.getElementById('btn_mute_se');
+
+    if (seMuteButton) {
+        seMuteButton.addEventListener('pointerup', function(e) {
+            e.preventDefault();
+
+            toggleAudioMute('se');
+        });
+    }
+
+    // テキスト速度
+    document.querySelectorAll('.btn_ch_speed').forEach(function(button) {
+        button.addEventListener('pointerup', function(e) {
+            e.preventDefault();
+
+            var speed = parseInt(this.dataset.speed);
+            setChSpeed(speed);
+        });
+    });
+
+    // オート速度
+    document.querySelectorAll('.btn_auto_speed').forEach(function(button) {
+        button.addEventListener('pointerup', function(e) {
+            e.preventDefault();
+
+            var speed = parseInt(this.dataset.speed);
+            setAutoSpeed(speed);
+        });
+    });
+
+    // スキップ設定
+    document.querySelectorAll('.mobile_config_choice_btn').forEach(function(button) {
+        button.addEventListener('pointerup', function(e) {
+            e.preventDefault();
+
+            var mode = this.dataset.skip;
+            setSkipMode(mode);
+        });
+    });
+
+    // BACK
+    var backButton = document.getElementById('btn_config_back');
+
+    if (backButton) {
+        backButton.addEventListener('pointerup', function(e) {
+            e.preventDefault();
+
+            TYRANO.kag.ftag.startTag('jump', {
+                target: '*backtitle'
+            });
+        });
+    }
+}
+
+// HTML生成後にイベント登録
+addConfigButtonEvents();
+
 // プレビュータイピング
 function runConfigPreview(speed) {
     var text = "ボタンを押すとテキストの表示スピードを確認できます。";
-    var $preview = $('#config_preview_text');
+    var $preview = $('#mobile_config_preview_text');
     $preview.text("");
     var i = 0;
     if (window.configPreviewTimer) clearInterval(window.configPreviewTimer);
