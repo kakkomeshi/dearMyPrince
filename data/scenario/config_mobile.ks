@@ -9,55 +9,22 @@
 ; CONFIG画面全体のHTML / CSS 構築（スマホ最適化・ボタン式）
 ; ============================================================
 [html]
-<div id="config_screen_wrapper" style="
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 960px;
-  height: 640px;
-  background-color: rgba(15, 18, 25, 0.88);
-  font-family: sans-serif;
-  box-sizing: border-box;
-  padding: 15px 40px;
-  z-index: 9999;
-  user-select: none;
-">
+<div id="config_screen_wrapper">
   
   <div style="clear: both;"></div>
 
   <!-- メインタイトル -->
-  <div style="
-    text-align: center;
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-  ">
+  <div class="mobile_config_main_title">
     CONFIG
   </div>
 
   <!-- コンフィグ全体を囲むメインパネル（座布団） -->
-  <div class="area_config_box" style="
-    width: 880px;
-    height: 510px;
-    margin: 0 auto;
-    background-color: rgba(31, 35, 45, 0.90);
-    border: 1.5px solid #D4C291;
-    border-radius: 8px;
-    padding: 15px 25px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  ">
-  
+  <div class="mobile_area_config_box">
+
     <!-- 1. BGM音量 ＆ ミュート -->
-    <div class="config_item_row">
-      <span class="config_label">BGM 音量</span>
-      <div class="config_control_area">
+    <div class="mobile_config_item_row">
+      <span class="mobile_config_label">BGM 音量</span>
+      <div class="mobile_config_control_area">
         <div class="step_btn_group">
           <button class="config_step_btn btn_bgm_vol" data-vol="0" onclick="setBgmVolume(0)">0%</button>
           <button class="config_step_btn btn_bgm_vol" data-vol="25" onclick="setBgmVolume(25)">25%</button>
@@ -65,14 +32,14 @@
           <button class="config_step_btn btn_bgm_vol" data-vol="75" onclick="setBgmVolume(75)">75%</button>
           <button class="config_step_btn btn_bgm_vol" data-vol="100" onclick="setBgmVolume(100)">100%</button>
         </div>
-        <button class="config_mute_btn" id="btn_mute_bgm" onclick="toggleAudioMute('bgm')">🔊 ON</button>
+        <button class="mobile_config_mute_btn" id="btn_mute_bgm" onclick="toggleAudioMute('bgm')">🔊 ON</button>
       </div>
     </div>
 
     <!-- 2. SE音量 ＆ ミュート -->
-    <div class="config_item_row">
-      <span class="config_label">効果音 (SE) 音量</span>
-      <div class="config_control_area">
+    <div class="mobile_config_item_row">
+      <span class="mobile_config_label">効果音 (SE) 音量</span>
+      <div class="mobile_config_control_area">
         <div class="step_btn_group">
           <button class="config_step_btn btn_se_vol" data-vol="0" onclick="setSeVolume(0)">0%</button>
           <button class="config_step_btn btn_se_vol" data-vol="25" onclick="setSeVolume(25)">25%</button>
@@ -80,14 +47,14 @@
           <button class="config_step_btn btn_se_vol" data-vol="75" onclick="setSeVolume(75)">75%</button>
           <button class="config_step_btn btn_se_vol" data-vol="100" onclick="setSeVolume(100)">100%</button>
         </div>
-        <button class="config_mute_btn" id="btn_mute_se" onclick="toggleAudioMute('se')">🔊 ON</button>
+        <button class="mobile_config_mute_btn" id="btn_mute_se" onclick="toggleAudioMute('se')">🔊 ON</button>
       </div>
     </div>
 
     <!-- 3. テキスト表示速度 -->
-    <div class="config_item_row">
-      <span class="config_label">テキスト表示速度</span>
-      <div class="config_control_area">
+    <div class="mobile_config_item_row">
+      <span class="mobile_config_label">テキスト表示速度</span>
+      <div class="mobile_config_control_area">
         <div class="step_btn_group">
           <button class="config_step_btn btn_ch_speed" data-speed="1" onclick="setChSpeed(1)">遅い</button>
           <button class="config_step_btn btn_ch_speed" data-speed="2" onclick="setChSpeed(2)">普通</button>
@@ -97,9 +64,9 @@
     </div>
 
     <!-- 4. オートモードテキスト表示速度 -->
-    <div class="config_item_row">
-      <span class="config_label">オートモード速度</span>
-      <div class="config_control_area">
+    <div class="mobile_config_item_row">
+      <span class="mobile_config_label">オートモード速度</span>
+      <div class="mobile_config_control_area">
         <div class="step_btn_group">
           <button class="config_step_btn btn_auto_speed" data-speed="1" onclick="setAutoSpeed(1)">遅い</button>
           <button class="config_step_btn btn_auto_speed" data-speed="2" onclick="setAutoSpeed(2)">普通</button>
@@ -109,165 +76,30 @@
     </div>
 
     <!-- 5. スキップ設定 -->
-    <div class="config_item_row">
-      <span class="config_label">スキップ設定</span>
-      <div class="config_control_area" style="gap: 15px; justify-content: flex-start;">
-        <button class="config_choice_btn button_skip_read active" data-skip="reads" onclick="setSkipMode('reads')">既読のみ</button>
-        <button class="config_choice_btn button_skip_all" data-skip="all" onclick="setSkipMode('all')">すべて</button>
+    <div class="mobile_config_item_row">
+      <span class="mobile_config_label">スキップ設定</span>
+      <div class="mobile_config_control_area" style="gap: 15px; justify-content: flex-start;">
+        <button class="mobile_config_choice_btn button_skip_read active" data-skip="reads" onclick="setSkipMode('reads')">既読のみ</button>
+        <button class="mobile_config_choice_btn button_skip_all" data-skip="all" onclick="setSkipMode('all')">すべて</button>
       </div>
     </div>
 
     <!-- 6. テキスト表示速度確認欄 -->
     <div style="padding-top: 10px; display: flex; flex-direction: column; gap: 4px;">
-      <span style="color: #D4C291; font-size: 12px; font-weight: bold;">【テキスト表示速度確認欄】</span>
-      <div id="config_preview_text" style="
-        background: rgba(0, 0, 0, 0.4);
-        border: 1px solid rgba(212, 194, 145, 0.3);
-        border-radius: 4px;
-        padding: 6px 12px;
-        color: #ffffff;
-        font-size: 14px;
-        height: 28px;
-        line-height: 28px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      ">ボタンを押すとテキストの表示スピードを確認できます。</div>
+      <span style="color: #D4C291; font-size: 22px; font-weight: bold;">【テキスト表示速度確認欄】</span>
+      <div id="mobile_config_preview_text">ボタンを押すとテキストの表示スピードを確認できます。</div>
     </div>
 
   </div>
 
   <!-- BACKボタン -->
-  <div style="padding-top: 12px; text-align: center;">
-    <button class="ed_back_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*backtitle'});">
+  <div class="back_wrapper">
+    <button class="back_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*backtitle'});">
       BACK
     </button>
   </div>
 </div>
 
-<!-- スタイル＆テーマカラー調整 -->
-<style>
-  .config_item_row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(212, 194, 145, 0.15);
-    padding: 10px 0;
-  }
-
-  .config_label {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    width: 160px;
-  }
-
-  .config_control_area {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex: 1;
-    justify-content: flex-start;
-  }
-
-  .step_btn_group {
-    display: flex;
-    gap: 8px;
-  }
-
-  /* スマホ向け5段階・3段階の押しやすいボタン */
-  .config_step_btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(212, 194, 145, 0.3);
-    color: #cccccc;
-    padding: 6px 14px;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .config_step_btn:hover {
-    border-color: #D4C291;
-    color: #ffffff;
-    background: rgba(212, 194, 145, 0.15);
-  }
-
-  .config_step_btn.active {
-    background: rgba(212, 194, 145, 0.35);
-    border-color: #D4C291;
-    color: #ffffff;
-    box-shadow: 0 0 8px rgba(212, 194, 145, 0.3);
-  }
-
-  /* ミュート切り替えボタン */
-  .config_mute_btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid #D4C291;
-    color: #ffffff;
-    padding: 6px 14px;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    min-width: 75px;
-    margin-left: auto;
-  }
-
-  .config_mute_btn.muted {
-    background: rgba(229, 115, 115, 0.3);
-    border-color: #E57373;
-    color: #ffcccc;
-  }
-
-  /* スキップ切替ボタン共通 */
-  .config_choice_btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(212, 194, 145, 0.4);
-    color: #cccccc;
-    padding: 6px 20px;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .config_choice_btn:hover {
-    border-color: #D4C291;
-    color: #ffffff;
-    background: rgba(212, 194, 145, 0.15);
-  }
-
-  .config_choice_btn.active {
-    background: rgba(212, 194, 145, 0.35);
-    border-color: #D4C291;
-    color: #ffffff;
-    box-shadow: 0 0 8px rgba(212, 194, 145, 0.3);
-  }
-
-  /* 戻るボタン */
-  .ed_back_btn {
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid #D4C291;
-    color: #ffffff;
-    padding: 6px 35px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    letter-spacing: 1px;
-  }
-
-  .ed_back_btn:hover {
-    background: rgba(212, 194, 145, 0.3);
-    border-color: #ffffff;
-  }
-</style>
 [endhtml]
 
 ; ============================================================
@@ -367,7 +199,7 @@ $('.btn_auto_speed').removeClass('active');
 $('.btn_auto_speed[data-speed="' + tf.current_auto_speed + '"]').addClass('active');
 
 // スキップボタン復元
-$('.config_choice_btn').removeClass('active');
+$('.mobile_config_choice_btn').removeClass('active');
 if (tf.text_skip === 'reads') {
     $('.button_skip_read').addClass('active');
     if (TYRANO && TYRANO.kag) TYRANO.kag.stat.skip_mode = "reads";
@@ -470,7 +302,7 @@ window.setAutoSpeed = function(val) {
 
 // スキップモード
 window.setSkipMode = function(mode) {
-    $('.config_choice_btn').removeClass('active');
+    $('.mobile_config_choice_btn').removeClass('active');
     if (mode === 'reads') {
         $('.button_skip_read').addClass('active');
         TYRANO.kag.ftag.startTag("skipstart", { type: "reads" });

@@ -10,8 +10,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 960px;
-  height: 640px;
+  width: 1280px;
+  height: 720px;
   background-color: rgba(15, 18, 25, 0.88);
   font-family: sans-serif;
   box-sizing: border-box;
@@ -47,14 +47,7 @@
   </div>
 
   <!-- 下部操作エリア（ページ送り ＆ BACKボタン） -->
-  <div style="
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 800px;
-    margin: 15px auto 0 auto;
-    flex-direction: column;
-  ">
+  <div class="pager_wrapper">
 
     <!-- ページ送りコントロール (◀  1/3  ▶) -->
     <div class="pager_area">
@@ -65,7 +58,7 @@
 
   </div>
   <!-- BACKボタン -->
-  <div style="padding-top:20px; text-align: center;">
+  <div class="back_wrapper">
     <button class="back_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*back'});">
       BACK
     </button>

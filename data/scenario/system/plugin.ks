@@ -28,8 +28,8 @@ tf.saveload = {
     "area_y": 70,                 // 全体パネルの上位置
 
     // --- 各スロットカードのサイズと余白（CSS再現） ---
-    "slot_width": 390,            // スロットカードの幅
-    "slot_height": 105,           // スロットカードの高さ
+    "slot_width": 530,            // スロットカードの幅
+    "slot_height": 135,           // スロットカードの高さ
     "slot_marginx": 0,           // カード同士の横余白
     "slot_marginy": 0,           // カード同士の縦余白
 
@@ -63,8 +63,8 @@ tf.saveload = {
     "dialog_delete": true,
 
     // --- 戻るボタンの位置（前作CLOSEボタン付近） ---
-    "back_x": 0,
-    "back_y": 0,
+    // "back_x": 0,
+    // "back_y": 0,
 
 };
 [endscript]

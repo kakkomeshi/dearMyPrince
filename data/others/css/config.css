@@ -1,0 +1,282 @@
+ #config_screen_wrapper {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 1280px;
+     height: 720px;
+     background-color: rgba(15, 18, 25, 0.88);
+     font-family: sans-serif;
+     box-sizing: border-box;
+     padding: 25px 50px;
+     z-index: 9999;
+     user-select: none;
+ }
+
+ .config_main_title {
+     text-align: center;
+     color: #ffffff;
+     font-size: 26px;
+     font-weight: bold;
+     letter-spacing: 2px;
+     margin-bottom: 12px;
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+ }
+
+ .mobile_config_main_title {
+     text-align: center;
+     color: #ffffff;
+     font-size: 30px;
+     font-weight: bold;
+     letter-spacing: 2px;
+     margin-bottom: 12px;
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+ }
+
+ #config_preview_text {
+     background: rgba(0, 0, 0, 0.4);
+     border: 1px solid rgba(212, 194, 145, 0.3);
+     border-radius: 4px;
+     padding: 6px 12px;
+     color: #ffffff;
+     font-size: 14px;
+     height: 28px;
+     line-height: 28px;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+ }
+
+ #mobile_config_preview_text {
+     background: rgba(0, 0, 0, 0.4);
+     border: 1px solid rgba(212, 194, 145, 0.3);
+     border-radius: 4px;
+     padding: 10px 14px;
+     color: #ffffff;
+     font-size: 22px;
+     height: 28px;
+     line-height: 28px;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+ }
+
+ .area_config_box {
+     width: 860px;
+     height: 500px;
+     margin: 0 auto;
+     background-color: rgba(31, 35, 45, 0.90);
+     border: 1.5px solid #D4C291;
+     border-radius: 8px;
+     padding: 20px 30px;
+     box-sizing: border-box;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+
+ .mobile_area_config_box {
+     width: 880px;
+     /* height: 510px; */
+     margin: 0 auto;
+     background-color: rgba(31, 35, 45, 0.90);
+     border: 1.5px solid #D4C291;
+     border-radius: 8px;
+     padding: 10px 25px;
+     box-sizing: border-box;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+
+ .config_item_row {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     border-bottom: 1px solid rgba(212, 194, 145, 0.15);
+     padding: 20px 0 20px 0;
+ }
+
+  .mobile_config_item_row {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     border-bottom: 1px solid rgba(212, 194, 145, 0.15);
+     padding: 18px 0 20px 0;
+ }
+
+ .config_label {
+     color: #ffffff;
+     font-size: 14px;
+     font-weight: bold;
+     letter-spacing: 1px;
+     width: 160px;
+ }
+
+ .mobile_config_label {
+     color: #ffffff;
+     font-size: 24px;
+     font-weight: bold;
+     letter-spacing: 1px;
+     width: 200px;
+     padding-right: 15px;
+ }
+
+ .config_control_area {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     flex: 1;
+     justify-content: flex-start;
+ }
+
+ .mobile_config_control_area {
+     display: flex;
+     align-items: center;
+     gap: 27px;
+     flex: 1;
+     justify-content: flex-start;
+ }
+
+ .config_value_text {
+     color: #D4C291;
+     font-size: 15px;
+     font-family: monospace;
+     min-width: 35px;
+     text-align: left;
+ }
+
+ /* ゴールド仕様のスライダー */
+ input.my_slider {
+     -webkit-appearance: none !important;
+     width: 500px !important;
+     height: 6px !important;
+     background: rgba(255, 255, 255, 0.15) !important;
+     border-radius: 3px !important;
+     outline: none !important;
+     position: static !important;
+ }
+
+ input.my_slider::-webkit-slider-thumb {
+     -webkit-appearance: none !important;
+     width: 15px !important;
+     height: 15px !important;
+     background: #D4C291 !important;
+     border-radius: 50% !important;
+     cursor: pointer !important;
+     transition: trantform 0.1s ease, background-color 0.1s ease !important;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) !important;
+ }
+
+ input.my_slider::-webkit-slider-thumb:hover {
+     background: #ffffff !important;
+     trantform: scale(1.2) !important;
+ }
+
+ /* ミュート切り替えボタン */
+ .config_mute_btn {
+     background: rgba(255, 255, 255, 0.05);
+     border: 1px solid #D4C291;
+     color: #ffffff;
+     padding: 4px 12px;
+     font-size: 12px;
+     font-weight: bold;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: all 0.2s ease;
+     min-width: 75px;
+     margin-left: auto;
+ }
+
+ .mobile_config_mute_btn {
+     background: rgba(255, 255, 255, 0.05);
+     border: 1px solid #D4C291;
+     color: #ffffff;
+     padding: 4px 12px;
+     font-size: 24px;
+     font-weight: bold;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: all 0.2s ease;
+     min-width: 75px;
+     margin-left: auto;
+ }
+
+ .config_mute_btn.muted,
+ .mobile_config_mute_btn.muted {
+     background: rgba(229, 115, 115, 0.3);
+     border-color: #E57373;
+     color: #ffcccc;
+ }
+
+ /* スキップ切替ボタン等共通選択ボタン */
+ .config_choice_btn {
+     background: rgba(255, 255, 255, 0.05);
+     border: 1px solid rgba(212, 194, 145, 0.4);
+     color: #cccccc;
+     padding: 5px 18px;
+     font-size: 13px;
+     font-weight: bold;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: all 0.2s ease;
+ }
+
+ .mobile_config_choice_btn {
+     background: rgba(255, 255, 255, 0.05);
+     border: 1px solid rgba(212, 194, 145, 0.4);
+     color: #cccccc;
+     padding: 5px 18px;
+     font-size: 24px;
+     font-weight: bold;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: all 0.2s ease;
+ }
+
+ .config_choice_btn:hover,
+ .mobile_config_choice_btn:hover {
+     border-color: #D4C291;
+     color: #ffffff;
+     background: rgba(212, 194, 145, 0.15);
+ }
+
+ .config_choice_btn.active,
+ .mobile_config_choice_btn.active {
+     background: rgba(212, 194, 145, 0.3);
+     border-color: #D4C291;
+     color: #ffffff;
+     box-shadow: 0 0 8px rgba(212, 194, 145, 0.3);
+ }
+
+ .step_btn_group {
+     display: flex;
+     gap: 15px;
+ }
+
+ /* スマホ向け5段階・3段階の押しやすいボタン */
+ .config_step_btn {
+     background: rgba(255, 255, 255, 0.05);
+     border: 1px solid rgba(212, 194, 145, 0.3);
+     color: #cccccc;
+     padding: 6px 14px;
+     font-size: 24px;
+     font-weight: bold;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: all 0.2s ease;
+ }
+
+ /* .config_step_btn:hover {
+     border-color: #D4C291;
+     color: #ffffff;
+     background: rgba(212, 194, 145, 0.15);
+ } */
+
+ .config_step_btn.active {
+     background: rgba(212, 194, 145, 0.35);
+     border-color: #D4C291;
+     color: #ffffff;
+     box-shadow: 0 0 8px rgba(212, 194, 145, 0.3);
+ }

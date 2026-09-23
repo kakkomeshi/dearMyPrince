@@ -36,8 +36,8 @@ if (window.hideTopHeader) {
   position: absolute;
   top: 0;
   left: 0;
-  width: 960px;
-  height: 640px;
+  width: 1280px;
+  height: 720px;
   background-color: rgba(15, 18, 25, 0.45); /* 背景画像を活かす薄めの暗転座布団 */
   font-family: sans-serif;
   box-sizing: border-box;
@@ -49,8 +49,8 @@ if (window.hideTopHeader) {
   position: absolute;
   top: 0;
   left: 0;
-  width: 960px;
-  height: 640px;
+  width: 1280px;
+  height: 720px;
   /* 右（0%）から中央・左（70%）まで暗い範囲を広げたグラデーション */
   background: linear-gradient(to left, rgba(15, 18, 25, 1) 40%, rgba(15, 18, 25, 0.85) 60%, rgba(15, 18, 25, 0.2) 90%, rgba(15, 18, 25, 0) 100%);
   font-family: sans-serif;

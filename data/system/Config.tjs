@@ -9,8 +9,8 @@
 ;useCamera=true
 ;use3D=false
 ;KeepSpaceInParameterValue=2
-;scWidth=960
-;scHeight=640
+;scWidth=1280
+;scHeight=720
 ;vchat=false
 ;vchatMenuVisible=false
 ;chSpeed=30
@@ -64,8 +64,8 @@
 ;marginB=8
 ;ml=16
 ;mt=16
-;mw=960-32
-;mh=640-32
+;mw=1280-32
+;mh=720-32
 ;debugMenu.visible=true
 ;frameColor=0x000000
 ;frameOpacity=128

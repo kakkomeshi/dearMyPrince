@@ -9,50 +9,17 @@
 ; CONFIG画面全体のHTML / CSS 構築（全機能・確認欄完備）
 ; ============================================================
 [html]
-<div id="config_screen_wrapper" style="
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 960px;
-  height: 640px;
-  background-color: rgba(15, 18, 25, 0.88);
-  font-family: sans-serif;
-  box-sizing: border-box;
-  padding: 25px 50px;
-  z-index: 9999;
-  user-select: none;
-">
+<div id="config_screen_wrapper">
   
   <div style="clear: both;"></div>
 
   <!-- メインタイトル -->
-  <div style="
-    text-align: center;
-    color: #ffffff;
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-  ">
+  <div class="config_main_title">
     CONFIG
   </div>
 
   <!-- コンフィグ全体を囲むメインパネル（座布団） -->
-  <div class="area_config_box" style="
-    width: 860px;
-    height: 500px;
-    margin: 0 auto;
-    background-color: rgba(31, 35, 45, 0.90);
-    border: 1.5px solid #D4C291;
-    border-radius: 8px;
-    padding: 20px 30px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  ">
+  <div class="area_config_box">
   
     <!-- 1. BGM音量 ＆ ミュート -->
     <div class="config_item_row">
@@ -105,157 +72,19 @@
     <!-- 6. テキスト表示速度確認欄 -->
     <div style="padding-top: 20px; display: flex; flex-direction: column; gap: 5px;">
       <span style="color: #D4C291; font-size: 12px; font-weight: bold;">【テキスト表示速度確認欄】</span>
-      <div id="config_preview_text" style="
-        background: rgba(0, 0, 0, 0.4);
-        border: 1px solid rgba(212, 194, 145, 0.3);
-        border-radius: 4px;
-        padding: 6px 12px;
-        color: #ffffff;
-        font-size: 14px;
-        height: 28px;
-        line-height: 28px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      ">スライダーを動かすとテキストの表示スピードを確認できます。</div>
+      <div id="config_preview_text">スライダーを動かすとテキストの表示スピードを確認できます。</div>
     </div>
 
   </div>
 
     <!-- BACKボタン -->
-    <div style="padding-top:20px; text-align: center;">
-      <button class="ed_back_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*backtitle'});">
+    <div class="back_wrapper">
+      <button class="back_btn" onclick="TYRANO.kag.ftag.startTag('jump', {target: '*backtitle'});">
         BACK
       </button>
     </div>
 </div>
 
-<!-- スタイル＆テーマカラー調整 -->
-<style>
-  .config_item_row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(212, 194, 145, 0.15);
-	padding: 20px 0 20px 0;
-  }
-
-  .config_label {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    width: 160px;
-  }
-
-  .config_control_area {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex: 1;
-    justify-content: flex-start;
-  }
-
-  .config_value_text {
-    color: #D4C291;
-    font-size: 15px;
-    font-family: monospace;
-    min-width: 35px;
-    text-align: left;
-  }
-
-  /* ゴールド仕様のスライダー */
-  input.my_slider {
-    -webkit-appearance: none;
-    width: 500px;
-    height: 6px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 3px;
-    outline: none;
-	position: static;
-  }
-
-  input.my_slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
-    background: #D4C291;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: trantform 0.1s ease, background-color 0.1s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-  }
-
-  input.my_slider::-webkit-slider-thumb:hover {
-    background: #ffffff;
-    trantform: scale(1.2);
-  }
-
-  /* ミュート切り替えボタン */
-  .config_mute_btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid #D4C291;
-    color: #ffffff;
-    padding: 4px 12px;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    min-width: 75px;
-	margin-left: auto;
-  }
-  .config_mute_btn.muted {
-    background: rgba(229, 115, 115, 0.3);
-    border-color: #E57373;
-    color: #ffcccc;
-  }
-
-  /* スキップ切替ボタン等共通選択ボタン */
-  .config_choice_btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(212, 194, 145, 0.4);
-    color: #cccccc;
-    padding: 5px 18px;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .config_choice_btn:hover {
-    border-color: #D4C291;
-    color: #ffffff;
-    background: rgba(212, 194, 145, 0.15);
-  }
-
-  .config_choice_btn.active {
-    background: rgba(212, 194, 145, 0.3);
-    border-color: #D4C291;
-    color: #ffffff;
-    box-shadow: 0 0 8px rgba(212, 194, 145, 0.3);
-  }
-
-  /* 戻るボタン専用スタイル */
-.ed_back_btn {
-background: rgba(0, 0, 0, 0.5);
-border: 1px solid #D4C291;
-color: #ffffff;
-padding: 6px 30px;
-font-size: 15px;
-font-weight: bold;
-border-radius: 4px;
-cursor: pointer;
-transition: all 0.2s ease;
-letter-spacing: 1px;
-}
-.ed_back_btn:hover {
-background: rgba(212, 194, 145, 0.3);
-border-color: #ffffff;
-trantform: translateY(-2px);
-}
-</style>
 [endhtml]
 
 ; ============================================================

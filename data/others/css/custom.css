@@ -43,7 +43,7 @@ img {
 }
 
 /* ========================================
-   セーブ・ロード画面 960×640用補正
+   セーブ・ロード画面 960×720用補正
 ======================================== */
 
 /* .area_save_list {
@@ -76,6 +76,16 @@ img {
 /* ========================================
    ページ送り共通CSS
 ======================================== */
+/* ページャー部分のラッパー */
+.pager_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin: 15px auto 0 auto;
+    flex-direction: column;
+}
+
 /* ページャーエリア */
 .pager_area {
     display: flex;
@@ -83,7 +93,7 @@ img {
     gap: 15px;
     background: rgba(31, 35, 45, 0.85);
     border: 1px solid #D4C291;
-    padding: 4px 18px;
+    padding: 10px 18px;
     border-radius: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
@@ -141,6 +151,11 @@ img {
     transform: none;
 }
 
+.back_wrapper {
+    padding-top: 15px;
+    text-align: center;
+}
+
 /* 戻るボタン共通CSS */
 .back_btn {
     background: rgba(0, 0, 0, 0.5);
@@ -159,4 +174,41 @@ img {
     background: rgba(212, 194, 145, 0.3);
     border-color: #ffffff;
     transform: translateY(-2px);
+}
+
+/* スマホでのページャー・戻るボタンの大きさ */
+@media screen and (max-width: 768px) {
+    .pager_area {
+        gap: 45px;
+        padding: 15px 25px;
+        border-radius: 45px;
+    }
+
+    .pager_num_display {
+        font-size: 20px;
+    }
+
+    .arrow_left {
+        border-width: 21px 36px 21px 0;
+    }
+
+    .arrow_right {
+        border-width: 21px 0 21px 36px;
+    }
+
+    .arrow_left:hover,
+    .arrow_right:hover {
+        transform: scale(1.15);
+    }
+
+    .back_btn {
+        font-size: 24px;
+        padding: 15px 50px;
+    }
+
+    .back_btn:hover {
+        background: auto;
+        border: auto;
+        transform: auto;
+    }
 }

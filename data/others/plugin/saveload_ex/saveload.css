@@ -236,7 +236,7 @@
 .save .save_list_item_delete, .load .save_list_item_delete, .auto_list_item_delete, .quick_list_item_delete{
 	position: absolute;
 	top: 5px;
-	left: 640px;
+	left: 720px;
 	display: block;
 	/*flex-basis: 36px;*/
 	width: 36px;
