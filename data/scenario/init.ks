@@ -19,5 +19,6 @@
 [loadjs storage="data/chapter_data.js"]
 [loadjs storage="js/waring_modal.js"]
 [loadjs storage="js/menu.js"]
+[loadjs storage="js/system_buttons.js"]
 
 [return]

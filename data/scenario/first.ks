@@ -28,6 +28,7 @@
 ;タイトルの設定
 [title name="DearMyPrince"]
 
+[tb_hide_message_window]
 ; 注意書き画面を呼出してタイトル画面へ
 [iscript]
   window.showWarningModal();

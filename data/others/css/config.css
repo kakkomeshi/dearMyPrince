@@ -171,7 +171,8 @@
 
  input.my_slider::-webkit-slider-thumb:hover {
      background: #ffffff !important;
-     trantform: scale(1.2) !important;
+     transform: scale(1.2) !important;
+     
  }
 
  /* ミュート切り替えボタン */

@@ -1,3 +1,127 @@
+/* 1280x720 向け メッセージウィンドウのCSS指定 */
+.message_outer {
+    /* サイズと配置 */
+    width: 1060px !important;
+    height: 200px !important;
+    left: 110px !important;
+    top: 490px !important;
+
+    opacity: 1 !important;
+
+    /* 背景色：ダークネイビー（透過率 85%） */
+    background-color: rgba(31, 35, 45, 0.85) !important;
+
+    /* 枠線：アクセントゴールド 1.5px */
+    border: 1.5px solid #D4C291 !important;
+
+    /* 角丸 */
+    border-radius: 8px !important;
+
+    /* 上品なドロップシャドウ（影） */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    box-sizing: border-box !important;
+}
+
+/* ネーム欄（ネームBOX）のCSS */
+.chara_name_area {
+    /* 位置とサイズ */
+    position: absolute !important;
+    left: 110px !important;
+    /* ウィンドウの左端と揃える */
+    top: 442px !important;
+    /* ウィンドウの上端（490px）の上に少し被せる */
+    padding: 6px 20px !important;
+    min-width: 120px !important;
+    text-align: center !important;
+
+    /* デザイン：ネイビー背景 ＋ ゴールド枠 */
+    background-color: rgba(31, 35, 45, 0.95) !important;
+    border: 1.5px solid #D4C291 !important;
+    border-radius: 6px !important;
+
+    /* フォントとテキスト */
+    color: #F4E2C1 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+    z-index: 999 !important;
+}
+
+/* ★名前が空（未設定・# のみ）の時は要素ごと完全に非表示にする */
+.chara_name_area:empty,
+.chara_name_area[style*="display: none"] {
+  display: none !important;
+}
+
+/* 1. ボタン群の親コンテナ（メッセージウィンドウの右上付近に配置） */
+#system_buttons {
+    position: absolute !important;
+    top: 450px !important;
+    /* メッセージ枠（top:490px）の直上 */
+    right: 110px !important;
+    /* メッセージ枠の右端と揃える */
+    display: flex;
+    gap: 10px !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
+
+/* 2. ボタン単体の共通デザイン（ネイビー×ゴールド枠） */
+#system_buttons .sys_btn {
+    /* サイズ */
+    min-width: 75px !important;
+    height: 30px !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+
+    /* 背景色・ゴールド枠線・角丸 */
+    background-color: rgba(31, 35, 45, 0.90) !important;
+    border: 1.5px solid #D4C291 !important;
+    border-radius: 4px !important;
+
+    /* フォント指定 */
+    color: #F4E2C1 !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    text-align: center !important;
+    line-height: 27px !important;
+    /* 上下中央揃え */
+
+    /* カーソル・インタラクション */
+    cursor: pointer !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.2s ease !important;
+
+    /* スマホ・タッチ・選択防止最適化 */
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* 3. ホバー（マウスオーバー）時の発光・浮き上がり演出 */
+#system_buttons .sys_btn:hover {
+    background-color: rgba(212, 194, 145, 0.30) !important;
+    border-color: #FFFFFF !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(212, 194, 145, 0.4) !important;
+}
+
+/* 4. クリック時（押し込んだとき） */
+#system_buttons .sys_btn:active {
+    transform: translateY(0px) !important;
+}
+
+/* クリック待ちグリフの位置調整 */
+.img_next {
+    vertical-align: bottom;
+    padding-left: 10px !important;
+}
+
+
 /* ボタンやクリック可能な要素にだけピンポイントで指定 */
 span,
 img,
