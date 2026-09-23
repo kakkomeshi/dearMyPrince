@@ -23,7 +23,9 @@ window.loadSystemButtons = function () {
 $(document)
     .off("click.systemButtons", "#system_buttons .sys_log")
     .on("click.systemButtons", "#system_buttons .sys_log", function () {
-        TYRANO.kag.ftag.startTag("showlog", {});
+        TYRANO.kag.ftag.startTag("showlog", {}, function () {
+            TYRANO.kag.tmp.cut_nextorder = null;
+        });
     });
 
 $(document)

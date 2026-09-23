@@ -1,5 +1,5 @@
 /* 前作全画面コンテナの再現 */
-#save_screen_wrapper {
+/* #save_screen_wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -11,10 +11,10 @@
     padding: 25px 80px;
     z-index: 9999;
     user-select: none;
-}
+} */
 
 /* 画面タイトル */
-.save_title_header {
+/* .save_title_header {
     text-align: center;
     color: #ffffff;
     font-size: 26px;
@@ -22,7 +22,7 @@
     letter-spacing: 2px;
     margin-bottom: 15px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
+} */
 
 /* ゴールド枠コンテナ（※スクロールバーを排除してページ切り替えに集中） */
 #save_slot_container {
@@ -79,7 +79,6 @@
     height: 100% !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
     margin: 0 !important;
     padding: 0 !important;
 }
@@ -113,15 +112,16 @@
 }
 
 .slot_body {
+    padding-top: 10px;
     display: flex;
     align-items: flex-start;
-    /* ★ center（中央）から flex-start（上揃え）に変更 */
     gap: 15px;
+    overflow: hidden !important;
 }
 
 .save_list_item_data {
     color: #ffffff;
-    font-size: 13px;
+    font-size: 13px !important;
     line-height: 1.4;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -162,26 +162,6 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* 閉じるボタン */
-.save_back_btn {
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid #D4C291;
-    color: #ffffff;
-    padding: 6px 30px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    letter-spacing: 1px;
-}
-
-.save_back_btn:hover {
-    background: rgba(212, 194, 145, 0.3);
-    border-color: #ffffff;
-    transform: translateY(-2px);
-}
-
 .save_list {
     width: 0 !important;
     height: 0 !important;
@@ -207,7 +187,7 @@
     flex-direction: row !important;
     /* 横並び */
     align-items: center !important;
-    gap: 5px !important;
+    gap: 3px !important;
     /* ボタン同士の間隔 */
     z-index: 10 !important;
 }
@@ -218,10 +198,11 @@
     position: static !important;
     top: auto !important;
     left: auto !important;
-    width: 18px !important;
-    height: 18px !important;
+    width: 35px !important;
+    height: auto !important;
     cursor: pointer !important;
     transition: transform 0.1s ease;
+    filter: drop-shadow(5px 5px 10px rgb(0, 0, 0, 0.5));
 }
 
 .save_list_item_lock:hover,
@@ -234,9 +215,9 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 120px !important;
+    width: 125px !important;
     /* お好みの横幅 */
-    height: 56px !important;
+    height: auro !important;
     /* お好みの縦幅 */
     flex-shrink: 0 !important;
     /* flexで押し潰されるのを防ぐ */
@@ -265,7 +246,7 @@
     margin-top: 5px;
     flex-grow: 1;
     /* 余った横幅をいっぱいに使う */
-    font-size: 11px;
+    font-size: 14px;
     line-height: 1.5;
     color: #ffffff;
 
@@ -281,4 +262,43 @@
 /* プラグイン側のCSSを打ち消しとく */
 .area_save_list {
     margin: 0;
+}
+
+/* スマホ用にフォント調整 */
+@media screen and (max-width: 768px) {
+
+    .save_list_item_num {
+        font-size: 20px !important;
+    }
+
+    .save_list_item_date {
+        font-size: 18px !important;
+    }
+
+    .save_list_item_data {
+        font-size: 22px !important;
+    }
+
+    .save_empty_text {
+        font-size: 22px !important;
+    }
+
+    .save_list_item_text_original {
+        font-size: 17px !important;
+    }
+
+    .save_list_item_thumb {
+        width: 120px !important;
+    }
+
+    /* 右下横並びボタンエリア */
+    .slot_action_area {
+        bottom: -16px !important;
+        right: -20px !important;
+    }
+
+    .save_list_item_lock,
+    .save_list_item_delete {
+        width: 60px !important;
+    }
 }

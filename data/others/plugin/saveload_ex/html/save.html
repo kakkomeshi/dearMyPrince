@@ -1,13 +1,12 @@
-<div class="save" id="save_screen_wrapper">
+<div class="save my_content_wrap">
   <!-- 画面タイトル -->
-  <div class="save_title_header">SAVE DATA</div>
+  <div class="my_content_title">SAVE DATA</div>
 
   <!-- セーブスロット表示パネル（ゴールド枠容器） -->
   <div id="save_slot_container" class="area_save_list">
     <ul class="save_list">
       {{for array_save}}
-      <li class="save_display_area save_list_item save_slot_card" id="list_{{:num}}" data-num="{{:num}}"
-        data-page="{{:page}}" data-umu="{{:save_date}}">
+      <li class="save_display_area save_list_item save_slot_card" id="list_{{:num}}" data-num="{{:num}}" data-page="{{:page}}" data-umu="{{:save_date}}">
         <div class="slot_inner_content">
           <!-- ヘッダー（SLOT番号 、章タイトル、 日付） -->
           <div class="slot_header">
@@ -37,10 +36,10 @@
         <div class="slot_action_area">
           {{if save_date != ""}}
           {{if lock == true}}
-          <img class="save_list_item_lock" src="" data-src="" data-src-u="" data-num="{{:num}}" data-lock="true" />
+          <!-- <img class="save_list_item_lock" src="" data-src="" data-src-u="" data-num="{{:num}}" data-lock="true" /> -->
           <img class="save_list_item_delete" src="" data-src="" data-src-u="" data-num="{{:num}}" data-delete="false" />
           {{else}}
-          <img class="save_list_item_lock" src="" data-num="{{:num}}" data-lock="false" />
+          <!-- <img class="save_list_item_lock" src="" data-num="{{:num}}" data-lock="false" /> -->
           <img class="save_list_item_delete" src="" data-num="{{:num}}" data-delete="true" />
           {{/if}}
           {{/if}}
