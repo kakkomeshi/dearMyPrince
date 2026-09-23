@@ -9,25 +9,17 @@
 
 
 
-; ヘッダーを表示
+; ヘッダー、システムボタンを表示
 [iscript]
-  // タイトルからコンフィグを表示した場合はタイトルに戻ったときにヘッダーを表示しないようにする
+  // タイトルからコンフィグを表示した場合はタイトルに戻ったときにヘッダーとシステムボタンを表示しないようにする
   if (TYRANO.kag.variable.sf.from_title_config) {
     TYRANO.kag.variable.sf.from_title_config = false;
   } else {
     if (window.showTopHeader) {
       window.showTopHeader();
+      loadSystemButtons();
     }
   }
-[endscript]
-
-; ----------------------------------------------------
-; ロード直後にシステムボタンを復活させる
-; ----------------------------------------------------
-[iscript]
-
-loadSystemButtons();
-
 [endscript]
 
 [return]
