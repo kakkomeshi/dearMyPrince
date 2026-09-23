@@ -13,8 +13,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 960px;
-      height: 640px;
+      width: 1280px;
+      height: 720px;
       background-color: rgba(15, 18, 25, 0.88);
       font-family: sans-serif;
       box-sizing: border-box;
