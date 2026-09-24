@@ -27,7 +27,10 @@
       <div class="config_control_area">
         <input type="range" class="slider_bgm my_slider" min="0" max="100" value="100">
         <span class="config_value_text" id="val_bgm">100</span>
-        <button class="config_mute_btn" id="btn_mute_bgm" onclick="toggleAudioMute('bgm')">🔊 ON</button>
+        <button class="config_mute_btn" id="btn_mute_bgm" onclick="toggleAudioMute('bgm')">
+            <img src="data/image/volume_on.png" class="config_sound_icon">
+                ON
+        </button>
       </div>
     </div>
 
@@ -37,7 +40,10 @@
       <div class="config_control_area">
         <input type="range" class="slider_se my_slider" min="0" max="100" value="100">
         <span class="config_value_text" id="val_se">100</span>
-        <button class="config_mute_btn" id="btn_mute_se" onclick="toggleAudioMute('se')">🔊 ON</button>
+        <button class="config_mute_btn" id="btn_mute_se" onclick="toggleAudioMute('se')">
+            <img src="data/image/volume_on.png" class="config_sound_icon">
+                ON
+        </button>
       </div>
     </div>
 
@@ -174,18 +180,22 @@ if (tf.text_skip === 'reads') {
 if (tf.config_bgm_muted) {
     $('.slider_bgm').val(0);
     $('#val_bgm').text(0);
-    $('#btn_mute_bgm').text('🔇 OFF');
+    $('#btn_mute_bgm')
+    .html('<img src="data/image/volume_off.png" class="config_sound_icon">OFF')
 } else {
-    $('#btn_mute_bgm').text('🔊 ON');
+    $('#btn_mute_bgm')
+        .html('<img src="data/image/volume_on.png" class="config_sound_icon">ON')
 }
 
 // SEミュート状態を復元
 if (tf.config_se_muted) {
     $('.slider_se').val(0);
     $('#val_se').text(0);
-    $('#btn_mute_se').text('🔇 OFF');
+    $('#btn_mute_se')
+    .html('<img src="data/image/volume_off.png" class="config_sound_icon">OFF')
 } else {
-    $('#btn_mute_se').text('🔊 ON');
+    $('#btn_mute_se')
+        .html('<img src="data/image/volume_on.png" class="config_sound_icon">ON')
 }
 
 // 2. スライダーやボタンが操作されたときにシステム変数へ保存する処理
@@ -200,7 +210,9 @@ window.toggleAudioMute = function(type) {
 
             $('.slider_bgm').val(tf.current_bgm_vol);
             $('#val_bgm').text(tf.current_bgm_vol);
-            $('#btn_mute_bgm').text('🔊 ON').removeClass('muted');
+            $('#btn_mute_bgm')
+                .html('<img src="data/image/volume_on.png" class="config_sound_icon">ON')
+                .removeClass('muted');
         } else {
             // ミュート前の音量を保存して0にする
             tf.config_bgm_before_mute = tf.current_bgm_vol;
@@ -209,7 +221,9 @@ window.toggleAudioMute = function(type) {
 
             $('.slider_bgm').val(0);
             $('#val_bgm').text(0);
-            $('#btn_mute_bgm').text('🔇 OFF').addClass('muted');
+            $('#btn_mute_bgm')
+                .html('<img src="data/image/volume_off.png" class="config_sound_icon">OFF')
+                .addClass('muted');
         }
         TYRANO.kag.ftag.startTag("bgmopt", { volume: tf.current_bgm_vol });
         TYRANO.kag.saveSystemVariable();
@@ -221,7 +235,9 @@ window.toggleAudioMute = function(type) {
 
             $('.slider_se').val(tf.current_se_vol);
             $('#val_se').text(tf.current_se_vol);
-            $('#btn_mute_se').text('🔊 ON').removeClass('muted');
+            $('#btn_mute_se')
+                .html('<img src="data/image/volume_on.png" class="config_sound_icon">ON')
+                .removeClass('muted');
         } else {
             // ミュート前の音量を保存して0にする
             tf.config_se_before_mute = tf.current_se_vol;
@@ -230,12 +246,13 @@ window.toggleAudioMute = function(type) {
 
             $('.slider_se').val(0);
             $('#val_se').text(0);
-            $('#btn_mute_se').text('🔇 OFF').addClass('muted');
+            $('#btn_mute_se')
+                .html('<img src="data/image/volume_off.png" class="config_sound_icon">OFF')
+                .addClass('muted');
         }
         TYRANO.kag.ftag.startTag("seopt", { volume: tf.current_se_vol });
         TYRANO.kag.saveSystemVariable();
     }
-
 };
 
 // BGM音量スライダー

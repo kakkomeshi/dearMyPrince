@@ -32,7 +32,10 @@
         <button class="config_step_btn btn_bgm_vol" data-vol="75">75%</button>
         <button class="config_step_btn btn_bgm_vol" data-vol="100">100%</button>
       </div>
-      <button class="mobile_config_mute_btn" id="btn_mute_bgm">🔊 ON</button>
+        <button class="mobile_config_mute_btn" id="btn_mute_bgm">
+            <img src="data/image/volume_on.png" class="config_sound_icon">
+                ON
+        </button>
     </div>
   </div>
 
@@ -47,7 +50,10 @@
         <button class="config_step_btn btn_se_vol" data-vol="75">75%</button>
         <button class="config_step_btn btn_se_vol" data-vol="100">100%</button>
       </div>
-      <button class="mobile_config_mute_btn" id="btn_mute_se">🔊 ON</button>
+        <button class="mobile_config_mute_btn" id="btn_mute_se">
+            <img src="data/image/volume_on.png" class="config_sound_icon">
+                ON
+        </button>
     </div>
   </div>
 
@@ -245,9 +251,13 @@ function updateBgmUI(vol) {
     $('.btn_bgm_vol[data-vol="' + closest + '"]').addClass('active');
 
     if (tf.config_bgm_muted) {
-        $('#btn_mute_bgm').text('🔇 OFF').addClass('muted');
+        $('#btn_mute_bgm')
+        .html('<img src="data/image/volume_off.png" class="config_sound_icon">OFF')
+        .addClass('muted');
     } else {
-        $('#btn_mute_bgm').text('🔊 ON').removeClass('muted');
+        $('#btn_mute_bgm')
+        .html('<img src="data/image/volume_on.png" class="config_sound_icon">ON')
+        .removeClass('muted');
     }
 }
 
@@ -259,9 +269,13 @@ function updateSeUI(vol) {
     $('.btn_se_vol[data-vol="' + closest + '"]').addClass('active');
 
     if (tf.config_se_muted) {
-        $('#btn_mute_se').text('🔇 OFF').addClass('muted');
+        $('#btn_mute_se')
+        .html('<img src="data/image/volume_off.png" class="config_sound_icon">OFF')
+        .addClass('muted');
     } else {
-        $('#btn_mute_se').text('🔊 ON').removeClass('muted');
+        $('#btn_mute_se')
+        .html('<img src="data/image/volume_on.png" class="config_sound_icon">ON')
+        .removeClass('muted');
     }
 }
 

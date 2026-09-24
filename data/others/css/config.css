@@ -79,7 +79,7 @@
      padding: 20px 0 20px 0;
  }
 
-  .mobile_config_item_row {
+ .mobile_config_item_row {
      display: flex;
      align-items: center;
      justify-content: space-between;
@@ -153,7 +153,7 @@
  input.my_slider::-webkit-slider-thumb:hover {
      background: #ffffff !important;
      transform: scale(1.2) !important;
-     
+
  }
 
  /* ミュート切り替えボタン */
@@ -169,20 +169,28 @@
      transition: all 0.2s ease;
      min-width: 75px;
      margin-left: auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     max-width: 60px;
  }
 
  .mobile_config_mute_btn {
      background: rgba(255, 255, 255, 0.05);
      border: 1px solid #D4C291;
      color: #ffffff;
-     padding: 4px 12px;
-     font-size: 22px;
+     padding: 7px 12px;
+     font-size: 20px;
      font-weight: bold;
      border-radius: 4px;
      cursor: pointer;
      transition: all 0.2s ease;
      min-width: 75px;
      margin-left: auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     max-width: 90px;
  }
 
  .config_mute_btn.muted,
@@ -261,4 +269,10 @@
      border-color: #D4C291;
      color: #ffffff;
      box-shadow: 0 0 8px rgba(212, 194, 145, 0.3);
+ }
+
+ .config_sound_icon {
+     width: 22px;
+     height: auto;
+     margin-right: 5px;
  }

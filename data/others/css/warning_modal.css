@@ -35,7 +35,8 @@
   color: #e0e0e0;
   font-size: 22px;
   line-height: 1.7;
-  text-align: left; /* 長文の可読性を高めるため左寄せ */
+  text-align: left;
+  /* 長文の可読性を高めるため左寄せ */
 }
 
 .attention_title {
@@ -45,7 +46,7 @@
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 15px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .attention_list {
@@ -122,6 +123,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(212, 194, 145, 0.4);
   color: #cccccc;
+  position:relative;
 }
 
 .mute_game_btn:hover {
@@ -134,4 +136,12 @@
   font-size: 11px;
   font-weight: normal;
   opacity: 0.8;
+  position: absolute;
+  top: 60px;
+}
+
+.waring_sound_icon {
+  width: 56px;
+  height: auto;
+  margin-right: 5px;
 }
