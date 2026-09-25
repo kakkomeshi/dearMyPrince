@@ -265,7 +265,7 @@
 }
 
 /* スマホ用にフォント調整 */
-@media screen and (max-width: 768px) {
+#tyrano_base.is-sp {
 
     .save_list_item_num {
         font-size: 20px !important;

@@ -98,11 +98,11 @@ window.menuAction = function(actionType) {
         setTimeout(function() {
             TYRANO.kag.ftag.startTag("showload", {}) }, 50);
     } else if (actionType === 'config') {
-      var isSmartphone = /iPhone|Android.+Mobile|iPad|Android/i.test(navigator.userAgent);
-      // 2. 画面の横幅（例: 768px以下）で判定する方法（タブレットやウィンドウサイズ変更にも対応）
-      var isMobileWidth = window.innerWidth <= 768;
+      // var isSmartphone = /iPhone|Android.+Mobile|iPad|Android/i.test(navigator.userAgent);
+      // // 2. 画面の横幅（例: 768px以下）で判定する方法（タブレットやウィンドウサイズ変更にも対応）
+      // var isMobileWidth = window.innerWidth <= 768;
 
-      if (isSmartphone || isMobileWidth) {
+      if (TYRANO.kag.stat.sf.is_mobile) {
         // スマホ・タブレットの場合の処理
           TYRANO.kag.ftag.startTag("jump", { storage: "config_mobile.ks" });
       } else {

@@ -294,7 +294,7 @@ img {
 }
 
 /* スマホでのページャー・戻るボタンの大きさ */
-@media screen and (max-width: 768px) {
+#tyrano_base.is-sp {
     .pager_area {
         gap: 45px;
         padding: 15px 25px;
@@ -366,7 +366,7 @@ img {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 768px) {
+#tyrano_base.is-sp {
     .my_content_title {
         font-size: 35px;
     }
@@ -407,4 +407,3 @@ img {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     margin-top: 0px !important;
 }
-

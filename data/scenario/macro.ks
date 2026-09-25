@@ -142,6 +142,27 @@
 [endmacro]
 
 ; =========================
+; 主人公責任度の計算
+; =========================
+[macro name="f.elliott_resp"]
+  [eval exp="f.elliott_resp = Number(f.elliott_resp) + Number(mp.value)"]
+[endmacro]
+
+; =========================
+; 主人公執着度の計算
+; =========================
+[macro name="f.elliott_obs"]
+  [eval exp="f.elliott_obs = Number(f.elliott_obs) + Number(mp.value)"]
+[endmacro]
+
+; =========================
+; リョーマ自己決定度の計算
+; =========================
+[macro name="f.ryoma_dec"]
+  [eval exp="f.ryoma_dec = Number(f.ryoma_dec) + Number(mp.value)"]
+[endmacro]
+
+; =========================
 ; マイナス選択肢のカウント
 ; =========================
 [macro name="minus_count"]

@@ -11241,7 +11241,7 @@
   margin: 10px 0px !important;
 }
 
-@media screen and (max-width: 768px) {
+#tyrano_base.is-sp {
   .customized_button {
     font-size: 24px !important;
   }

@@ -1,7 +1,26 @@
+[iscript]
+(function(){
+    // 1. スマホ・タブレット判定（UA または 画面幅768px以下）
+    var isSmartphone = /iPhone|Android.+Mobile|iPad|Android/i.test(navigator.userAgent);
+    var isMobileWidth = window.innerWidth <= 768;
+    var isMobile = isSmartphone || isMobileWidth;
 
+    // 2. #tyrano_base にCSS用クラスを付与
+    if (isMobile) {
+        $('#tyrano_base').addClass('is-sp').removeClass('is-pc');
+    } else {
+        $('#tyrano_base').addClass('is-pc').removeClass('is-sp');
+    }
 
-;メニューボタン非表示
-; [hidemenubutton]
+    // 3. TG.stat.sf または sf の初期化
+    if (typeof TYRANO !== 'undefined' && TYRANO.kag && TYRANO.kag.stat) {
+        TYRANO.kag.stat.sf = TYRANO.kag.stat.sf || {};
+        TYRANO.kag.stat.sf.is_mobile = isMobile;
+    } else if (typeof sf !== 'undefined') {
+        sf.is_mobile = isMobile;
+    }
+})();
+[endscript]
 
 ;初期化処理
 [call storage="init.ks"]
@@ -33,4 +52,3 @@
 [iscript]
   window.showWarningModal();
 [endscript]
-

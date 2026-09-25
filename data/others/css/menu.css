@@ -54,7 +54,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+#tyrano_base.is-sp {
     .area_menu_box {
         gap: 30px;
     }

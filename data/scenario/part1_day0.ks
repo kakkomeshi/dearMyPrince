@@ -26,9 +26,7 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 画面に表示された名前は──[p]
 #
 『NANJIRO ECHIZEN』[p]
-[_tb_end_text]
 
-[tb_start_text mode=4 ]
 #エリオット
 ……南次郎さん？[p]
 
@@ -79,20 +77,16 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 それくらいなら──。[p]
 
 
-[_tb_end_text]
 
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="crossfade"  storage="home_day.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
-[tb_start_text mode=4 ]
 ──数日後。[p]
 
 #南次郎
 リョーマ。こいつが明日からお前の練習見てくれるコーチ[p]
-[_tb_end_text]
 
-[chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao.png"  width="1026"  height="auto"  left="192"  top="-104"  reflect="false"  ]
-[tb_start_text mode=4 ]
+[chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
 #リョーマ
 …………[p]
 
@@ -108,10 +102,8 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 少年はその目で、俺を値踏みするようにじっと見上げている。[r]上目遣いのせいもあって、ほとんど睨まれているようだった。[p]
 #
 ──ずいぶん意志の強そうな子だ。[p]
-[_tb_end_text]
 
 [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome.png"  ]
-[tb_start_text mode=4 ]
 #リョーマ
 ……俺、コーチなんていらないんだけど[p]
 
@@ -130,12 +122,11 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 #南次郎
 へーへーそーですかっと[p]
 
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
+
 #リョーマ
 ……[p]
-[_tb_end_text]
 
-[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
-[tb_start_text mode=4 ]
 #
 リョーマの眉間に皺が寄る。[r]どうやら子供扱いされるのが、相当気に入らないらしい。[p]
 
@@ -187,6 +178,7 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 ……[p]
 
 [wait  time="1500"  ]
+#
 琥珀色の目が、わずかに見開かれる。[p]
 
 [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tokuige.png"  ]
@@ -204,10 +196,8 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 #
 そう言って、リョーマはさっさと家の中に入っていった。[p]
 
-[_tb_end_text]
-
 [chara_hide  name="リョーマ"  time="1000"  wait="true"  pos_mode="true"  ]
-[tb_start_text mode=4 ]
+
 週に二回のレッスンを四週間。[r]
 つまり、八日間。[p]
 その間だけ、あの子のテニスを見る。[p]
