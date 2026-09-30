@@ -90,9 +90,13 @@
 
 *prologue_choice_1
 ; 【1. 線引き・誠実ルート】
-[eval exp="f.love += 1"]
-[eval exp="f.trust += 1"]
-[eval exp="f.elliott_resp += 1"]
+; [eval exp="f.love += 1"]
+; [eval exp="f.trust += 1"]
+; [eval exp="f.elliott_resp += 1"]
+[love value="1" ]
+[ryoma_dep value="-1"]
+[trust value="1" ]
+
 
 #エリオット
 気持ちは嬉しいけど、夜遅いから短くね。[r]

@@ -12,15 +12,19 @@
 #
 約束の時間より少し早く学校の前に着いた。[r]校門から出てくる子供たちを眺めながら、昨日会ったばかりの少年を探す。[p]
 しばらくして、人の波の中に見覚えのある顔を見つけた。[p]
+
+[chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
 #エリオット
 リョーマ[p]
 #リョーマ
 ……[p]
 
+
 #
 俺に気づいたリョーマは、一瞬だけ足を止めた。[r]昨日と同じ琥珀色の目が、じっとこちらを見る。[p]
 #エリオット
 迎えに来たよ[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome.png"  ]
 #リョーマ
 見ればわかる[p]
 #エリオット
@@ -74,6 +78,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 ちゃんと覚えてたんだな[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tokuige.png"  ]
 #リョーマ
 それくらい覚えてるよ[p]
 
@@ -97,6 +102,8 @@
 [tb_start_text mode=4 ]
 #エリオット
 勝手に先に行くなよ[p]
+
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
 #リョーマ
 ……子供じゃないんだから[p]
 
@@ -124,6 +131,7 @@
 ……[p]
 #エリオット
 ？[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
 #リョーマ
 そういう言い方、子供みたいだからやめて[p]
 
@@ -136,6 +144,7 @@
 *base
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  fadein="true"  ]
+[chara_hide  name="リョーマ"  time="600" ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
 [tb_start_text mode=4 ]
 #
@@ -155,6 +164,7 @@
 #エリオット
 ……[p]
 
+[chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao_cap.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
 #
 
 ボールが深い。[r]それだけじゃない。[p]
@@ -166,6 +176,7 @@
 #
 
 身体は小さい。[r]それなのに、ラケットを握っている間だけは昨日よりずっと大きく見えた。[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen_cap.png"  ]
 #リョーマ
 ねえ[p]
 #エリオット
@@ -183,7 +194,7 @@
 
 #
 
-──なるほど。[r]南次郎がわざわざ練習相手を用意するわけだ。[p]
+──なるほど。[r]南次郎さんがわざわざ練習相手を用意するわけだ。[p]
 
 [_tb_end_text]
 
@@ -205,10 +216,12 @@
 [tb_start_text mode=4 ]
 #エリオット
 じゃあ、少しだけ本気でいく[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome_cap.png"  ]
 #リョーマ
 少しだけ？[p]
 #エリオット
 返せたらもう少し上げるよ[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_magao_cap.png"  ]
 #リョーマ
 ……言ったね[p]
 
@@ -220,6 +233,7 @@
 リョーマは一歩踏み込み──きれいに打ち返した。[p]
 #エリオット
 ……！[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_doya_cap.png"  ]
 #リョーマ
 まだまだだね[p]
 
@@ -246,6 +260,7 @@
 フォーム？[p]
 #エリオット
 打点が近い。もう半歩早く入ったほうがいい[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome_cap.png"  ]
 #リョーマ
 ……[p]
 
@@ -260,6 +275,7 @@
 
 #
 今度はさっきより鋭い球が返ってくる。[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_odoroki_cap.png"  ]
 #リョーマ
 ……ほんとだ[p]
 
@@ -294,6 +310,7 @@
 もういい[p]
 #エリオット
 リョーマ？[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen_cap.png"  ]
 #リョーマ
 親父と一緒じゃん[p]
 
@@ -320,12 +337,14 @@
 ;------------------------------
 
 
-[playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"]
+[chara_hide  name="リョーマ"  time="600" ]
 [bg  time="1000"  method="crossfade"  storage="car_twilight.png"  ]
 [tb_start_text mode=4 ]
 #
 ──帰りの車内。[p]
 
+[chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
 #
 
 リョーマを助手席に乗せ、越前家へ向かう。[p]
@@ -334,6 +353,7 @@
 
 行きよりもずっと静かだった。[p]
 疲れているのかと思ったが、窓の外を眺めながら指先で何度もスイングの形を確認している。[p]
+
 #エリオット
 さっき教えたやつ？[p]
 #リョーマ
@@ -371,6 +391,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 テニス、好きなんだな[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome.png"  ]
 #リョーマ
 ……別に、普通[p]
 
@@ -385,6 +406,7 @@
 ……なに笑ってんの[p]
 #エリオット
 いや、そうか、と思って[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
 #リョーマ
 ……[p]
 
@@ -423,6 +445,7 @@
 #エリオット
 へえ、倒したい奴？[p]
 
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome.png"  ]
 #リョーマ
 ……親父[p]
 
@@ -449,6 +472,7 @@
 #
 返ってきた真摯な言葉に面食らったのか、リョーマはハッとしてバックミラー越しに俺と視線を交わした。[p]
 
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tere.png"  ]
 #リョーマ
 ……別に[p]
 
@@ -481,6 +505,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 今日は疲れただろ[r]家に着くまで寝ててもいいよ[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
 #リョーマ
 ……[p]
 #エリオット
@@ -510,6 +535,7 @@
 車を越前家の前に停める。[p]
 #エリオット
 着いたよ[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_magao.png"  ]
 #リョーマ
 うん[p]
 
@@ -542,23 +568,21 @@
 #
 
 ほんの一瞬だけ迷ってから。[p]
+[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tokuige.png"  ]
 #リョーマ
 またね[p]
 
+[chara_hide  name="リョーマ"  time="600" ]
 #
-
 小さな背中が家の中へ消えていった。[p]
 
 #
-
 ──１日目、終了。[p]
 
 #
-
 まだ、俺はあの子のことをほとんど知らない。[p]
 
 #
-
 ただひとつ分かったのは──[r]
 あの小さな身体の中には、俺が思っていた以上に大きな負けん気が詰まっているらしい、ということだった。[p]
 

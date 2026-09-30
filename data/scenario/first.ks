@@ -20,7 +20,34 @@
         sf.is_mobile = isMobile;
     }
 })();
+
+// 1. スキップボタン押下時に、画面に残っている暗転膜（.tyrano_mask）を物理削除する
+$(document).off('click.skip_guard').on('click.skip_guard', '.menu_skip, .skip_button', function() {
+    if (TYRANO && TYRANO.kag) {
+        $('.tyrano_mask').remove();
+        TYRANO.kag.stat.is_mask = false;
+    }
+});
+
+// 2. タグ進行時の安全フック（スキップ中に暗転幕が取り残されたら自動消去）
+(function(){
+    if (window.is_skip_mask_hook_installed) return;
+    window.is_skip_mask_hook_installed = true;
+
+    var orig_nextOrder = TYRANO.kag.ftag.nextOrder;
+    TYRANO.kag.ftag.nextOrder = function() {
+        if (TYRANO && TYRANO.kag && TYRANO.kag.stat && TYRANO.kag.stat.is_skip === true) {
+            if ($('.tyrano_mask').length > 0) {
+                $('.tyrano_mask').remove();
+                TYRANO.kag.stat.is_mask = false;
+            }
+        }
+        // 退避しておいた元の関数（orig_nextOrder）を正しく実行
+        orig_nextOrder.apply(this, arguments);
+    };
+})();
 [endscript]
+
 
 ;初期化処理
 [call storage="init.ks"]

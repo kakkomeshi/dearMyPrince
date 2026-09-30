@@ -117,8 +117,8 @@
 
 ; 【選択肢発生】
 [glink color="customized_button" text="そうだね、車で温まろうかと優しく手を引く" target="*scene6_choice_1" width="max"  autopos="true" ]
-; [glink color="customized_button" text="もう少し光を見ていこうよと引き止める" target="*scene6_choice_2" width="max"  autopos="true" ]
-; [glink color="customized_button" text="外では名前で呼ぶなと言っただろと注意する" target="*scene6_choice_3" width="max"  autopos="true" ]
+[glink color="customized_button" text="もう少し光を見ていこうよと引き止める" target="*scene6_choice_2" width="max"  autopos="true" ]
+[glink color="customized_button" text="外では名前で呼ぶなと言っただろと注意する" target="*scene6_choice_3" width="max"  autopos="true" ]
 [s]
 
 *scene6_choice_1
