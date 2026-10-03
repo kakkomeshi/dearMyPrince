@@ -970,7 +970,6 @@ img#remodal-cancel {
     transform-origin: center center;
     animation: mode_effect 800ms linear forwards;
     z-index: 9999999999;
-     display: none !important;
 }
 
 .mode_effect_default {
