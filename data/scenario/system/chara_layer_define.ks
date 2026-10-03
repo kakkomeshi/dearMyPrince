@@ -1,4 +1,4 @@
-[chara_new name="Ryoma" storage="_chara/Ryoma/transparent.png" ]
+[chara_new name="Ryoma" storage="_chara/Ryoma/transparent.png" width="690"  height="auto" ]
 
 ;base
 [chara_layer  name="Ryoma"  part="base"  id="ryoma_base1"  storage="_chara/Ryoma/base/ryoma_base1.png"  zindex="1"  ]
