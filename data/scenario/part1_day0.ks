@@ -78,15 +78,18 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 
 
 
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
-[bg  time="1000"  method="crossfade"  storage="home_day.png"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
+[mask time="1000" effect="fadeIn" color="0x000000"]
+[bg time="1000" method="crossfade" storage="home_day.png"]
+[mask_off time="0"]
+
+#
 ──数日後。[p]
 
 #南次郎
 リョーマ。こいつが明日からお前の練習見てくれるコーチ[p]
 
-[chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+; [chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
 #リョーマ
 …………[p]
 
@@ -103,7 +106,9 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 #
 ──ずいぶん意志の強そうな子だ。[p]
 
-[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome.png"  ]
+; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome.png"  ]
+; [chara_part  name="Ryoma"  base="ryoma_base1"  cheek="none"  mouse="ryoma_mouse_mu"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_ira"  maegami="ryoma_maegami_default"  cap="none"  ]
+[chara_part time="600"  name="Ryoma"  base="ryoma_base1"  cheek="none"  maegami="ryoma_maegami_default"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_ira"  mouse="ryoma_mouse_mu"  ]
 #リョーマ
 ……俺、コーチなんていらないんだけど[p]
 
@@ -122,8 +127,8 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 #南次郎
 へーへーそーですかっと[p]
 
-[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
-
+; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
+[chara_part time="600"  name="Ryoma"  base="ryoma_base1"  cheek="none"  mouse="ryoma_mouse_ira"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_gekioko"  maegami="ryoma_maegami_default"  cap="none"  ]
 #リョーマ
 ……[p]
 
@@ -173,7 +178,8 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 #エリオット
 じゃあ、明日確かめてみるかい？[p]
 
-[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_odoroki.png"  ]
+; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_odoroki.png"  ]
+[chara_part time="600"  name="Ryoma"  base="ryoma_base1"  cheek="none"  maegami="ryoma_maegami_default"  eye="ryoma_eye_odoroki"  mayuge="ryoma_mayuge_ue"  mouse="ryoma_mouse_ira"  ]
 #リョーマ
 ……[p]
 
@@ -181,7 +187,8 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 #
 琥珀色の目が、わずかに見開かれる。[p]
 
-[chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tokuige.png"  ]
+; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tokuige.png"  ]
+[chara_part time="600"  name="Ryoma"  base="ryoma_base1"  cheek="none"  mouse="ryoma_mouse_niyari"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_kiri"  maegami="ryoma_maegami_default"  cap="none"  ]
 #
 それから、ほんの少しだけ口元が上がった。[p]
 

@@ -19,6 +19,9 @@
 #
 車を駐車場に止めて、校門前で待つ。[r]
 しばらくすると、見覚えのある白い帽子が校門から出てきた。[p]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
+; [chara_part  name="リョーマ"  リョーマベース="ryoma_base1"  頬="none"  口="ryoma_mouse_mu"  目="ryoma_eye_default2"  眉毛="ryoma_mayuge_default"  前髪="ryoma_maegami_default"  キャップ="none"  ]
+
 #エリオット
 リョーマ！[p]
 #
