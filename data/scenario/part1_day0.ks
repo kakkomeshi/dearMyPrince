@@ -203,7 +203,7 @@ UCLAのロースクールに通うかたわら、学費と生活費の足しに�
 #
 そう言って、リョーマはさっさと家の中に入っていった。[p]
 
-[chara_hide  name="リョーマ"  time="1000"  wait="true"  pos_mode="true"  ]
+[chara_hide  name="Ryoma"  time="1000"  wait="true"  pos_mode="true"  ]
 
 週に二回のレッスンを四週間。[r]
 つまり、八日間。[p]

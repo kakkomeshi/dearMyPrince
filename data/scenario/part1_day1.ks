@@ -13,6 +13,7 @@
 約束の時間より少し早く学校の前に着いた。[r]校門から出てくる子供たちを眺めながら、昨日会ったばかりの少年を探す。[p]
 しばらくして、人の波の中に見覚えのある顔を見つけた。[p]
 
+[chara_part_reset name="Ryoma"]
 [chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
 #エリオット
 リョーマ[p]
