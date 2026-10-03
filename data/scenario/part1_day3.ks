@@ -57,7 +57,7 @@
 [_tb_end_text]
 
 [glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="それは腹が立つな"  target="*choice1_1"  width="max"  autopos="true" ]
-[glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="九歳なら仕方ないよ"  target="*choice1_2" width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="9歳なら仕方ないよ"  target="*choice1_2" width="max"  autopos="true"  ]
 [glink  color="customized_button"  storage="part1_day3.ks"  size="20"  text="帰ってきたらもう一度聞いてみたら？"  target="*choice1_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice1_1
@@ -98,14 +98,14 @@
 [jump  storage="part1_day3.ks"  target="*base"  ]
 *choice1_2
 ;------------------------------
-;「九歳なら仕方ないよ」
+;「9歳なら仕方ないよ」
 ;好感度-2
 ;------------------------------
 [love value="-2"]
 [minus_count]
 [tb_start_text mode=4 ]
 #エリオット
-まあ、九歳なら仕方ないんじゃない？[p]
+まあ、9歳なら仕方ないんじゃない？[p]
 #リョーマ
 ……[p]
 
@@ -269,7 +269,7 @@
 あまりにも当然のように言うものだから、一瞬言葉が出なかった。[p]
 
 #
-九歳の子供が口にするには、途方もない場所だ。[p]
+9歳の子供が口にするには、途方もない場所だ。[p]
 
 #
 けれど。[p]
@@ -523,7 +523,7 @@
 ドアを閉めて、リョーマが家へ向かっていく。[r]
 玄関を開けて中に入るまでを見届ける。[p]
 
-九歳。[r]
+9歳。[r]
 本人がどれだけ嫌がったところで、まだ子供なのは間違いない。[p]
 
 #

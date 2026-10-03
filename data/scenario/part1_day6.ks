@@ -584,7 +584,7 @@
 そう言いながら、リョーマはこちらを見ずに返事を待っている。
 [_tb_end_text]
 
-[glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="九歳とは思えないくらい強くて、負けず嫌いな子だって"  target="*choice3_1"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="9歳とは思えないくらい強くて、負けず嫌いな子だって"  target="*choice3_1"  width="max"  autopos="true"  ]
 [glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="憧れの南次郎さんの息子を教えてるって"  target="*choice3_2"  width="max"  autopos="true"  ]
 [glink  color="customized_button"  storage="part1_day6.ks"  size="20"  text="今まで教えた中で、一番特別な教え子だって"  target="*choice3_3"  width="max"  autopos="true"  ]
 [s  ]
@@ -592,12 +592,12 @@
 
 [tb_start_text mode=4 ]
 ;------------------------------
-;「九歳とは思えないくらい強くて、負けず嫌いな子だって」
+;「9歳とは思えないくらい強くて、負けず嫌いな子だって」
 ;好感度＋1
 ;------------------------------
 [love value="1"]
 #エリオット
-九歳とは思えないくらい強くて、負けず嫌いな子だって話したよ[p]
+9歳とは思えないくらい強くて、負けず嫌いな子だって話したよ[p]
 
 #リョーマ
 それだけ？[p]
