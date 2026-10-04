@@ -14,7 +14,6 @@
 しばらくして、人の波の中に見覚えのある顔を見つけた。[p]
 
 [chara_part_reset name="Ryoma"]
-; [chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
 [chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #エリオット
 リョーマ[p]
@@ -26,9 +25,7 @@
 俺に気づいたリョーマは、一瞬だけ足を止めた。[r]昨日と同じ琥珀色の目が、じっとこちらを見る。[p]
 #エリオット
 迎えに来たよ[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome.png"  ]
-; [chara_mod name="Ryoma" face="jitogao" time="600"]
-[face_jito ]
+[face_jito mayuge="ryoma_mayuge_default"]
 #リョーマ
 見ればわかる[p]
 #エリオット
@@ -82,9 +79,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 ちゃんと覚えてたんだな[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tokuige.png"  ]
-; [chara_mod name="Ryoma" face="jitogao" time="600"]
-[face_doya ]
+[face_tokui ]
 #リョーマ
 それくらい覚えてるよ[p]
 
@@ -109,8 +104,6 @@
 #エリオット
 勝手に先に行くなよ[p]
 
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
-; [chara_mod name="Ryoma" face="ira" time="600"]
 [face_ira]
 #リョーマ
 ……子供じゃないんだから[p]
@@ -140,8 +133,6 @@
 #エリオット
 ？[p]
 
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
-; [chara_mod name="Ryoma" face="ira" time="600"]
 [face_ira]
 #リョーマ
 そういう言い方、子供みたいだからやめて[p]
@@ -175,13 +166,8 @@
 #エリオット
 ……[p]
 
-; [chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao_cap.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
-; --- 帽子を被せる ＋ デフォ顔にする ---
-[chara_part  name="Ryoma"  base="ryoma_base_cap"  cheek="none"  maegami="ryoma_maegami_cap"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_kiri"  mouse="ryoma_mouse_mu"  cap="ryoma_cap"  ]
+[face_default_cap]
 [chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
-; [chara_part_reset name="Ryoma"]
-; [chara_part name="Ryoma" cap="ryoma_cap"]
-; [chara_mod name="Ryoma" face="ira" time="600"]
 #
 
 ボールが深い。[r]それだけじゃない。[p]
@@ -193,8 +179,6 @@
 #
 
 身体は小さい。[r]それなのに、ラケットを握っている間だけは昨日よりずっと大きく見えた。[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen_cap.png"  ]
-; [chara_mod name="Ryoma" face="ira_cap" time="600"]
 [face_ira_cap]
 
 #リョーマ
@@ -236,18 +220,12 @@
 [tb_start_text mode=4 ]
 #エリオット
 じゃあ、少しだけ本気でいく[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome_cap.png"  ]
-; [chara_mod name="Ryoma" face="jito_cap" time="600"]
 [face_jito_cap ]
 #リョーマ
 少しだけ？[p]
 #エリオット
 返せたらもう少し上げるよ[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_magao_cap.png"  ]
-; [chara_mod name="Ryoma" face="doya" time="600"]
-; [face_doya_cap]
-; [chara_part name="Ryoma" mayuge="ryoma_mayuge_bottom"]
-[chara_part name="Ryoma" base="ryoma_base_cap"  cheek="none"  maegami="ryoma_maegami_cap"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_bottom"  mouse="ryoma_mouse_niyari"  cap="ryoma_cap" time="%time|200"]
+[face_tokui_cap]
 #リョーマ
 ……言ったね[p]
 
@@ -259,8 +237,6 @@
 リョーマは一歩踏み込み──きれいに打ち返した。[p]
 #エリオット
 ……！[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_doya_cap.png"  ]
-; [chara_mod name="Ryoma" face="doya" time="600"]
 [face_doya_cap]
 #リョーマ
 まだまだだね[p]
@@ -288,8 +264,6 @@
 フォーム？[p]
 #エリオット
 打点が近い。もう半歩早く入ったほうがいい[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome_cap.png"  ]
-; [chara_mod name="Ryoma" face="jito_cap" time="600"]
 [face_jito_cap ]
 #リョーマ
 ……[p]
@@ -305,9 +279,7 @@
 
 #
 今度はさっきより鋭い球が返ってくる。[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_odoroki_cap.png"  ]
-; [chara_mod name="Ryoma" face="doya" time="600"]
-[face_doya_cap ]
+[face_odorki_cap ]
 #リョーマ
 ……ほんとだ[p]
 
@@ -332,6 +304,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 9歳相手に本気は出せないよ[p]
+[face_ikari_cap ]
 #リョーマ
 ……[p]
 
@@ -342,9 +315,7 @@
 もういい[p]
 #エリオット
 リョーマ？[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen_cap.png"  ]
-; [chara_mod name="Ryoma" face="ikari_cap" time="600"]
-[face_ikari_cap ]
+
 #リョーマ
 親父と一緒じゃん[p]
 
@@ -357,20 +328,9 @@
 [_tb_end_text]
 
 [jump  storage="part1_day1.ks"  target="*base2"  ]
+
+
 *base2
-
-
-; 送りのアイコン-----------------
-
-
-; [free name="action_img" layer="fix"]
-
-; [image storage="default/dropoff_icon.png" layer="fix" page="fore" x="46" y="120" name="action_img" width="100"]
-
-
-;------------------------------
-
-
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"]
 [chara_hide  name="Ryoma"  time="600" ]
 [bg  time="1000"  method="crossfade"  storage="car_twilight.png"  ]
@@ -378,7 +338,8 @@
 #
 ──帰りの車内。[p]
 
-; [chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
+
+[chara_part_reset name="Ryoma"]
 [chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #
 
@@ -426,10 +387,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 テニス、好きなんだな[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome.png"  ]
-; [chara_mod name="Ryoma" face="jito" time="600"]
-[face_jito]
-[chara_part  name="Ryoma" eye="ryoma_eye_jitome_yoko"  ]
+[face_jito eye="ryoma_eye_jitome_yoko"]
 
 #リョーマ
 ……別に、普通[p]
@@ -445,9 +403,7 @@
 ……なに笑ってんの[p]
 #エリオット
 いや、そうか、と思って[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
-; [chara_mod name="Ryoma" face="ira" time="600"]
-[face_ira]
+[face_ira mayuge="ryoma_mayuge_bottom"] 
 #リョーマ
 ……[p]
 
@@ -486,9 +442,7 @@
 #エリオット
 へえ、倒したい奴？[p]
 
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_jitome.png"  ]
-; [chara_mod name="Ryoma" face="jito" time="600"]
-[face_jito]
+[face_jito mayuge="ryoma_mayuge_kiri"]
 #リョーマ
 ……親父[p]
 
@@ -512,11 +466,14 @@
 #
 大げさに持ち上げることも、子供の夢だと笑い飛ばすこともせず、俺は一人のプレイヤーの覚悟として静かにその言葉を受け止めた。[p]
 
+; 驚いた後に
+[chara_part  name="Ryoma" eye="ryoma_eye_odoroki"   time="600" ]
+
 #
 返ってきた真摯な言葉に面食らったのか、リョーマはハッとしてバックミラー越しに俺と視線を交わした。[p]
 
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tere.png"  ]
-[chara_part  name="Ryoma" eye="ryoma_eye_jitome_yoko"  cheek="ryoma_hohosome"  time="600" ]
+; 目だけ横に
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome_yoko"   time="600" ]
 
 #リョーマ
 ……別に[p]
@@ -550,8 +507,6 @@
 [tb_start_text mode=4 ]
 #エリオット
 今日は疲れただろ[r]家に着くまで寝ててもいいよ[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_fukigen.png"  ]
-; [chara_mod name="Ryoma" face="ira" time="600"]
 [face_ira]
 #リョーマ
 ……[p]
@@ -582,7 +537,7 @@
 車を越前家の前に停める。[p]
 #エリオット
 着いたよ[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_magao.png"  ]
+[chara_part_reset name="Ryoma"]
 [chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #リョーマ
 うん[p]
@@ -616,9 +571,7 @@
 #
 
 ほんの一瞬だけ迷ってから。[p]
-; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_tokuige.png"  ]
-; [chara_mod name="Ryoma" face="doya" time="600"]
-[face_doya ]
+[face_bishou ]
 #リョーマ
 またね[p]
 

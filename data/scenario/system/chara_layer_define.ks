@@ -4,6 +4,7 @@
 [chara_layer  name="Ryoma"  part="base"  id="ryoma_base1"  storage="_chara/Ryoma/base/ryoma_base1.png"  zindex="1"  ]
 [chara_layer  name="Ryoma"  part="base"  id="ryoma_base_cap"  storage="_chara/Ryoma/base/ryoma_base_cap.png"  zindex="1"  ]
 [chara_layer  name="Ryoma"  part="base"  id="ryoma_base_mabuka"  storage="_chara/Ryoma/base/ryoma_base_mabuka.png"  zindex="1"  ]
+[chara_layer  name="Ryoma"  part="base"  id="ryoma_base_mabuka_tere"  storage="_chara/Ryoma/base/ryoma_base_mabuka_tere.png"  zindex="1"  ]
 [chara_layer  name="Ryoma"  part="base"  id="none"  storage="none"  zindex="1"  ]
 
 ;cheek
@@ -20,6 +21,7 @@
 [chara_layer  name="Ryoma"  part="mouse"  id="ryoma_mouse_nika"  storage="_chara/Ryoma/mouse/ryoma_mouse_nika.png"  zindex="3"  ]
 [chara_layer  name="Ryoma"  part="mouse"  id="ryoma_mouse_niyari"  storage="_chara/Ryoma/mouse/ryoma_mouse_niyari.png"  zindex="3"  ]
 [chara_layer  name="Ryoma"  part="mouse"  id="ryoma_mouse_nyan"  storage="_chara/Ryoma/mouse/ryoma_mouse_nyan.png"  zindex="3"  ]
+[chara_layer  name="Ryoma"  part="mouse"  id="ryoma_mouse_okuchi"  storage="_chara/Ryoma/mouse/ryoma_mouse_okuchi.png"  zindex="3"  ]
 [chara_layer  name="Ryoma"  part="mouse"  id="none"  storage="none"  zindex="3"  ]
 
 ;eye
@@ -62,42 +64,83 @@
 ; ============================================================
 ; 表情・着せ替え切り替えマクロ定義
 ; ============================================================
+; --- デフォルト顔キャップあり ---
+[macro name="face_default_cap"]
+  [chara_part  name="Ryoma"  base="ryoma_base_cap"  cheek="none"  maegami="ryoma_maegami_cap"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_kiri"  mouse="ryoma_mouse_mu"  cap="ryoma_cap"  ]
+[endmacro]
+
 
 ; --- ジト顔 ---
 [macro name="face_jito"]
-  [chara_part name="Ryoma" base="ryoma_base1" cheek="none" maegami="ryoma_maegami_default" eye="ryoma_eye_jitome" mayuge="ryoma_mayuge_ira" mouse="ryoma_mouse_mu" cap="none" time="%time|200"]
+  [chara_part name="Ryoma" base="ryoma_base1" cheek="none" maegami="ryoma_maegami_default" eye="%eye|ryoma_eye_jitome" mayuge="%mayuge|ryoma_mayuge_ira" mouse="ryoma_mouse_mu" cap="none" time="%time|600"]
 [endmacro]
 
 [macro name="face_jito_cap"]
-  [chara_part name="Ryoma" base="ryoma_base_cap" cheek="none" maegami="ryoma_maegami_default" eye="ryoma_eye_jitome" mayuge="ryoma_mayuge_ira" mouse="ryoma_maegami_cap" cap="ryoma_cap" time="%time|200"]
+  [chara_part name="Ryoma" base="ryoma_base_cap" cheek="none" maegami="ryoma_maegami_default" eye="ryoma_eye_jitome" mayuge="ryoma_mayuge_ira" mouse="ryoma_maegami_cap" cap="ryoma_cap" time="%time|600"]
 [endmacro]
 
 
 ; --- イラッとした顔 ---
 [macro name="face_ira"]
-  [chara_part name="Ryoma" base="ryoma_base1" cheek="none" mouse="ryoma_mouse_ira" eye="ryoma_eye_jitome" mayuge="ryoma_mayuge_gekioko" maegami="ryoma_maegami_default" cap="none" time="%time|200"]
+  [chara_part name="Ryoma" base="ryoma_base1" cheek="none" mouse="ryoma_mouse_ira" eye="ryoma_eye_jitome" mayuge="%mayuge|ryoma_mayuge_gekioko" maegami="ryoma_maegami_default" cap="none" time="%time|600"]
 [endmacro]
 
 [macro name="face_ira_cap"]
-  [chara_part name="Ryoma" base="ryoma_base_cap" cheek="none" mouse="ryoma_mouse_ira" eye="ryoma_eye_jitome" mayuge="ryoma_mayuge_gekioko" maegami="ryoma_maegami_cap" cap="ryoma_cap" time="%time|200"]
+  [chara_part name="Ryoma" base="ryoma_base_cap" cheek="none" mouse="ryoma_mouse_ira" eye="ryoma_eye_jitome" mayuge="ryoma_mayuge_gekioko" maegami="ryoma_maegami_cap" cap="ryoma_cap" time="%time|600"]
 [endmacro]
 
 
 ; --- 怒り顔 ---
 [macro name="face_ikari"]
-  [chara_part name="Ryoma" base="ryoma_base1" cheek="none" mouse="ryoma_mouse_ira" eye="ryoma_eye_ikari" mayuge="ryoma_mayuge_gekioko" maegami="ryoma_maegami_default" cap="none" time="%time|200"]
+  [chara_part name="Ryoma" base="ryoma_base1" cheek="none" mouse="ryoma_mouse_ira" eye="ryoma_eye_ikari" mayuge="ryoma_mayuge_gekioko" maegami="ryoma_maegami_default" cap="none" time="%time|600"]
 [endmacro]
 
 [macro name="face_ikari_cap"]
-  [chara_part name="Ryoma" base="ryoma_base_cap" cheek="none" mouse="ryoma_mouse_ira" eye="ryoma_eye_ikari" mayuge="ryoma_mayuge_gekioko" maegami="ryoma_maegami_cap" cap="ryoma_cap" time="%time|200"]
+  [chara_part name="Ryoma" base="ryoma_base_cap" cheek="none" mouse="ryoma_mouse_ira" eye="ryoma_eye_ikari" mayuge="ryoma_mayuge_gekioko" maegami="ryoma_maegami_cap" cap="ryoma_cap" time="%time|600"]
 [endmacro]
 
 
 ; --- ドヤ顔 ---
 [macro name="face_doya"]
-  [chara_part name="Ryoma"  base="ryoma_base1"  cheek="none"  mouse="ryoma_mouse_niyari"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_ira"  maegami="ryoma_maegami_default"  cap="none"  time="%time|200"]
+  [chara_part name="Ryoma"  base="ryoma_base1"  cheek="none"  mouse="ryoma_mouse_niyari"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_ira"  maegami="ryoma_maegami_default"  cap="none"  time="%time|600"]
 [endmacro]
 
 [macro name="face_doya_cap"]
-  [chara_part name="Ryoma" base="ryoma_base_cap"  cheek="none"  maegami="ryoma_maegami_cap"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_ira"  mouse="ryoma_mouse_niyari"  cap="ryoma_cap" time="%time|200"]
+  [chara_part name="Ryoma" base="ryoma_base_cap"  cheek="none"  maegami="ryoma_maegami_cap"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_ira"  mouse="ryoma_mouse_niyari"  cap="ryoma_cap" time="%time|600"]
+[endmacro]
+
+; --- ニヤリ顔 ---
+[macro name="face_doya"]
+  [chara_part name="Ryoma"  base="ryoma_base1"  cheek="none"  mouse="ryoma_mouse_niyari"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_ira"  maegami="ryoma_maegami_default"  cap="none"  time="%time|600"]
+[endmacro]
+
+[macro name="face_doya_cap"]
+  [chara_part name="Ryoma" base="ryoma_base_cap"  cheek="none"  maegami="ryoma_maegami_cap"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_ira"  mouse="ryoma_mouse_niyari"  cap="ryoma_cap" time="%time|600"]
+[endmacro]
+
+; --- 驚き顔 ---
+[macro name="face_odoroki"]
+  [chara_part name="Ryoma"  mayuge="ryoma_mayuge_ue"  mouse="ryoma_mouse_ira"  eye="ryoma_eye_odoroki"  cap="none"  maegami="ryoma_maegami_default"  base="ryoma_base1"  eye_etc="none"  time="%time|600"]
+[endmacro]
+
+[macro name="face_odorki_cap"]
+  [chara_part name="Ryoma"  base="ryoma_base_cap"  cheek="none"  mouse="ryoma_mouse_ira"  eye="ryoma_eye_odoroki"  eye_etc="none"  mayuge="ryoma_mayuge_default"  maegami="ryoma_maegami_cap"  cap="ryoma_cap" time="%time|600"]
+[endmacro]
+
+; --- 得意顔 ---
+[macro name="face_tokui"]
+  [chara_part  name="Ryoma"  base="ryoma_base1"  cheek="none"  mouse="ryoma_mouse_niyari"  eye="ryoma_eye_default2"  eye_etc="none"  mayuge="ryoma_mayuge_kiri"  maegami="ryoma_maegami_default"  cap="none"  time="%time|600"]
+[endmacro]
+
+[macro name="face_tokui_cap"]
+  [chara_part  name="Ryoma"  base="ryoma_base_cap"  cheek="none"  mouse="ryoma_mouse_niyari"  eye="ryoma_eye_default2"  eye_etc="none"  mayuge="ryoma_mayuge_kiri"  maegami="ryoma_maegami_cap"  cap="ryoma_cap"  time="%time|600"]
+[endmacro]
+
+; --- 微笑み顔 ---
+[macro name="face_bishou"]
+  [chara_part  name="Ryoma"  base="ryoma_base1"  cheek="none"  mouse="ryoma_mouse_nyan"  eye="ryoma_eye_default2"  eye_etc="none"  mayuge="ryoma_mayuge_default"  maegami="ryoma_maegami_default"  cap="none"  time="%time|600"]
+[endmacro]
+
+[macro name="face_bishou_cap"]
+[chara_part  name="Ryoma"  base="ryoma_base_cap"  cheek="none"  mouse="ryoma_mouse_nyan"  eye="ryoma_eye_default2"  eye_etc="none"  mayuge="ryoma_mayuge_bottom"  maegami="ryoma_maegami_cap"  cap="ryoma_cap" time="%time|600"]
 [endmacro]
