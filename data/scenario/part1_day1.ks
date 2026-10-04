@@ -16,7 +16,7 @@
 [chara_part_reset name="Ryoma"]
 ; [chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
 [chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
-エリオット
+#エリオット
 リョーマ[p]
 #リョーマ
 ……[p]
@@ -177,8 +177,8 @@
 
 ; [chara_show  name="リョーマ"  time="1000"  wait="false"  storage="chara/1/ryoma_magao_cap.png"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
 ; --- 帽子を被せる ＋ デフォ顔にする ---
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
-[chara_part  name="Ryoma"  base="ryoma_base_cap"  cheek="none"  maegami="ryoma_maegami_cap"  eye="ryoma_eye_default2"  mayuge="ryoma_mayuge_kiri"  mouse="ryoma_mouse_mu"  cap="ryoma_cap"  ]
+[chara_part  name="Ryoma"  base="ryoma_base_cap"  cheek="none"  maegami="ryoma_maegami_cap"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_kiri"  mouse="ryoma_mouse_mu"  cap="ryoma_cap"  ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 ; [chara_part_reset name="Ryoma"]
 ; [chara_part name="Ryoma" cap="ryoma_cap"]
 ; [chara_mod name="Ryoma" face="ira" time="600"]
@@ -245,7 +245,9 @@
 返せたらもう少し上げるよ[p]
 ; [chara_mod  name="リョーマ"  time="600"  cross="true"  storage="chara/1/ryoma_magao_cap.png"  ]
 ; [chara_mod name="Ryoma" face="doya" time="600"]
-[face_doya_cap]
+; [face_doya_cap]
+; [chara_part name="Ryoma" mayuge="ryoma_mayuge_bottom"]
+[chara_part name="Ryoma" base="ryoma_base_cap"  cheek="none"  maegami="ryoma_maegami_cap"  eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_bottom"  mouse="ryoma_mouse_niyari"  cap="ryoma_cap" time="%time|200"]
 #リョーマ
 ……言ったね[p]
 
