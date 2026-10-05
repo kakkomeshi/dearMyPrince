@@ -20,32 +20,66 @@
         sf.is_mobile = isMobile;
     }
 })();
+(function () {
+    if (window._mask_debug_installed) return;
+    window._mask_debug_installed = true;
 
-// 1. スキップボタン押下時に、画面に残っている暗転膜（.tyrano_mask）を物理削除する
-$(document).off('click.skip_guard').on('click.skip_guard', '.menu_skip, .skip_button', function() {
-    if (TYRANO && TYRANO.kag) {
-        $('.tyrano_mask').remove();
-        TYRANO.kag.stat.is_mask = false;
-    }
-});
+    var originalMask = TYRANO.kag.ftag.master_tag.mask.start;
 
-// 2. タグ進行時の安全フック（スキップ中に暗転幕が取り残されたら自動消去）
-(function(){
-    if (window.is_skip_mask_hook_installed) return;
-    window.is_skip_mask_hook_installed = true;
+    TYRANO.kag.ftag.master_tag.mask.start = function (pm) {
+        console.log(
+            "MASK実行",
+            "skip:", TYRANO.kag.stat.is_skip,
+            "scenario:", TYRANO.kag.stat.current_scenario,
+            "stack:", new Error().stack
+        );
 
-    var orig_nextOrder = TYRANO.kag.ftag.nextOrder;
-    TYRANO.kag.ftag.nextOrder = function() {
-        if (TYRANO && TYRANO.kag && TYRANO.kag.stat && TYRANO.kag.stat.is_skip === true) {
-            if ($('.tyrano_mask').length > 0) {
-                $('.tyrano_mask').remove();
-                TYRANO.kag.stat.is_mask = false;
-            }
-        }
-        // 退避しておいた元の関数（orig_nextOrder）を正しく実行
-        orig_nextOrder.apply(this, arguments);
+        return originalMask.apply(this, arguments);
     };
 })();
+
+(function () {
+    if (window._maskoff_debug_installed) return;
+    window._maskoff_debug_installed = true;
+
+    var originalMaskOff = TYRANO.kag.ftag.master_tag.mask_off.start;
+
+    TYRANO.kag.ftag.master_tag.mask_off.start = function (pm) {
+        console.log(
+            "MASK_OFF実行",
+            "skip:", TYRANO.kag.stat.is_skip,
+            "scenario:", TYRANO.kag.stat.current_scenario,
+            "pm:", pm
+        );
+
+        return originalMaskOff.apply(this, arguments);
+    };
+})();
+// // 1. スキップボタン押下時に、画面に残っている暗転膜（.tyrano_mask）を物理削除する
+// $(document).off('click.skip_guard').on('click.skip_guard', '.menu_skip, .skip_button', function() {
+//     if (TYRANO && TYRANO.kag) {
+//         $('.tyrano_mask').remove();
+//         TYRANO.kag.stat.is_mask = false;
+//     }
+// });
+
+// // 2. タグ進行時の安全フック（スキップ中に暗転幕が取り残されたら自動消去）
+// (function(){
+//     if (window.is_skip_mask_hook_installed) return;
+//     window.is_skip_mask_hook_installed = true;
+
+//     var orig_nextOrder = TYRANO.kag.ftag.nextOrder;
+//     TYRANO.kag.ftag.nextOrder = function() {
+//         if (TYRANO && TYRANO.kag && TYRANO.kag.stat && TYRANO.kag.stat.is_skip === true) {
+//             if ($('.tyrano_mask').length > 0) {
+//                 $('.tyrano_mask').remove();
+//                 TYRANO.kag.stat.is_mask = false;
+//             }
+//         }
+//         // 退避しておいた元の関数（orig_nextOrder）を正しく実行
+//         orig_nextOrder.apply(this, arguments);
+//     };
+// })();
 [endscript]
 
 

@@ -11,6 +11,9 @@
 ──三日目。[p]
 いつもの場所に車を停めて待っていると、校門から白い帽子が見えた。[r]
 リョーマもすぐにこちらを見つける。[p]
+
+[chara_part_reset name="Ryoma"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #リョーマ
 コーチ[p]
 #エリオット
@@ -21,8 +24,9 @@
 #
 勉強道具の詰まったバックパックを後部座席へ放り込み、助手席へ乗り込む。[r]
 最初の日にはなかったやり取りだ。[p]
-
+[bg  time="1000"  method="crossfade"  storage="car_day.png"  ]
 車を出してしばらくすると、リョーマが窓の外を見ながら口を開いた。[p]
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome_yoko"  mouse="ryoma_mouse_hanbiraki" time="600"]
 #リョーマ
 親父、スペイン着いたって[p]
 #エリオット
@@ -31,6 +35,8 @@
 一昨日[p]
 #エリオット
 何しに行ってるんだっけ[p]
+
+[chara_part  name="Ryoma" mouse="ryoma_mouse_mu" time="600"]
 #リョーマ
 知らない[p]
 #エリオット
@@ -48,6 +54,7 @@
 いっつもそれ[p]
 #エリオット
 なるほど[p]
+[chara_part  name="Ryoma" mayuge="ryoma_mayuge_ira" eye="ryoma_eye_ira_yoko" mouse="ryoma_mouse_ira" time="600"]
 #リョーマ
 すぐ俺を子ども扱いする[p]
 #
@@ -69,6 +76,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 それは腹が立つな[p]
+[face_jito]
 #リョーマ
 ……でしょ？[p]
 #リョーマ
@@ -87,6 +95,8 @@
 最後の一言だけ、少し不満そうに響いた。[p]
 #エリオット
 そりゃ、気になるよな[p]
+
+[chara_part  name="Ryoma" eye="ryoma_eye_default_yoko" mouse="ryoma_mouse_mu" time="600"]
 #リョーマ
 ……うん[p]
 #
@@ -106,6 +116,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 まあ、9歳なら仕方ないんじゃない？[p]
+[face_ikari ]
 #リョーマ
 ……[p]
 
@@ -118,6 +129,8 @@
 いや、そういう意味じゃ[p]
 #リョーマ
 もういい[p]
+[chara_part  name="Ryoma" eye="ryoma_eye_ikari_yoko" time="600"]
+
 #
 窓の外を向いてしまった。[p]
 
@@ -150,7 +163,7 @@
 
 [jump  storage="part1_day3.ks"  target="*base"  ]
 *base
-
+[chara_hide  name="Ryoma"  time="600" ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
 [tb_start_text mode=4 ]
@@ -160,6 +173,8 @@
 #
 今日のメニューを一通り終えて、最後にラリーを続ける。[p]
 
+[face_default_cap time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #
 リョーマは相変わらず、何球打ってもボールを追うのをやめない。[p]
 
@@ -172,6 +187,8 @@
 なにが？[p]
 #エリオット
 どんなボールでも追いかけるところ[p]
+
+[chara_part  name="Ryoma" mayuge="ryoma_mayuge_default" eye="ryoma_eye_default_yoko" time="600"]
 #リョーマ
 ……そうかも[p]
 
@@ -195,6 +212,9 @@
 
 #
 ぽん、ぽん、とボールが地面を跳ねる。[p]
+
+[face_bishou_cap]
+; [chara_part  name="Ryoma" mouse="ryoma_mouse_mu" time="600"]
 #リョーマ
 俺、全然勝てなかったし[r]
 兄ちゃんが打ったボール、取れないこともいっぱいあったけど……[p]
@@ -222,10 +242,12 @@
 でもさ[p]
 #エリオット
 ？[p]
+[chara_part  name="Ryoma" mouse="ryoma_mouse_ira" time="600"]
 #リョーマ
 兄ちゃん、俺とはシンケンショーブしてくれなかったんだよね[p]
 #エリオット
 そうなの？[p]
+
 #リョーマ
 いっつも途中でやめちゃうの[p]
 
@@ -241,6 +263,8 @@
 
 #
 それから、何でもないことのように言った。[p]
+
+[face_bishou_cap]
 #リョーマ
 だから、もっと強くなる[p]
 #エリオット
@@ -248,6 +272,7 @@
 #リョーマ
 それもあるけど[p]
 
+[chara_part  name="Ryoma" eye="ryoma_eye_default" mouse="ryoma_mouse_mu" time="600"]
 #
 顔を上げる。[p]
 
@@ -262,6 +287,8 @@
 そしたら今度こそ、ちゃんと試合する[p]
 #エリオット
 どこで？[p]
+
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 世界の頂点[p]
 
@@ -296,6 +323,7 @@
 ……[p]
 #エリオット
 そこまで行けば、お兄さんだって君を無視できないだろ[p]
+[face_niyari_cap ]
 #リョーマ
 でしょ？[p]
 
@@ -309,6 +337,7 @@
 はいは一回！[p]
 #エリオット
 ……誰に教わったんだ、それ[p]
+[face_nika_cap]
 #リョーマ
 へへっ 親父が母さんにいつも言われてるんだ[p]
 
@@ -335,12 +364,14 @@
 ラケットを構える。[p]
 #エリオット
 そこまで行くつもりなら、今のままじゃ全然足りないな[p]
+[face_ikari_cap ]
 #リョーマ
 ……[p]
 
 #
 一瞬むっとしたあと。[p]
 
+[face_tokui_cap ]
 #
 にやりと笑った。[p]
 #リョーマ
@@ -359,6 +390,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 お兄さんも、どこかで待ってるかもな[p]
+[chara_part name="Ryoma" mayuge="ryoma_mayuge_bottom" eye="ryoma_eye_jitome_yoko"  mouse="ryoma_mouse_mu" time="600"]
 #リョーマ
 ……どうかな[p]
 
@@ -368,6 +400,7 @@
 兄ちゃん、どこにいるかも知らないし[p]
 #エリオット
 ……[p]
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome"  mouse="ryoma_mouse_niko" time="600"]
 #リョーマ
 だから俺が行くんだよ[p]
 
@@ -387,7 +420,7 @@
 
 [jump  storage="part1_day3.ks"  target="*base2"  ]
 *base2
-
+[chara_hide  name="Ryoma"  time="600" ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="car_twilight.png"  ]
 [tb_start_text mode=4 ]
@@ -397,6 +430,9 @@
 南次郎さんのこと。[r]
 そして、今はここにいない兄のこと。[p]
 助手席を見る。[p]
+[chara_part_reset name="Ryoma"]
+[chara_part  name="Ryoma" eye="ryoma_eye_default_yoko" time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 リョーマは窓の外を眺めている。[p]
 #リョーマ
 コーチ[p]
@@ -433,6 +469,7 @@
 ほんと？[p]
 #エリオット
 少なくとも、君に関係することならね[p]
+[chara_part  name="Ryoma" eye="ryoma_eye_default" time="600"]
 #
 リョーマがこちらを見る。[p]
 #エリオット
@@ -443,6 +480,7 @@
 子供だから分からないって決めつけるのは、好きじゃない[p]
 #
 しばらく返事はなかった。[p]
+[chara_part  name="Ryoma"  eye="ryoma_eye_default_yoko" mouse="ryoma_mouse_niko" time="600"]
 #リョーマ
 ……そっか[p]
 #
@@ -470,6 +508,8 @@
 ……[p]
 #エリオット
 でも、何も説明しなくていいとは思わないよ[p]
+
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome_yoko" time="600"]
 #リョーマ
 ふーん[p]
 
@@ -495,6 +535,7 @@
 ……[p]
 #エリオット
 そのうち分かる[p]
+[face_ikari eye="ryoma_eye_ikari_yoko"]
 #リョーマ
 ……それ[p]
 #エリオット
@@ -510,11 +551,13 @@
 
 [jump  storage="part1_day3.ks"  target="*base3"  ]
 *base3
-
+[chara_hide  name="Ryoma"  time="600" ]
 [bg  time="1000"  method="crossfade"  storage="home_night.png"  ]
 [tb_start_text mode=4 ]
 #
 車が越前家の前に着く。[p]
+[chara_part_reset name="Ryoma"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #リョーマ
 じゃあ、またね[p]
 #エリオット
@@ -522,6 +565,7 @@
 
 ドアを閉めて、リョーマが家へ向かっていく。[r]
 玄関を開けて中に入るまでを見届ける。[p]
+[chara_hide  name="Ryoma"  time="600" ]
 
 9歳。[r]
 本人がどれだけ嫌がったところで、まだ子供なのは間違いない。[p]

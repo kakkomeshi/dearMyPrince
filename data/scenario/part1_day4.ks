@@ -11,6 +11,9 @@
 ──四日目。[p]
 #
 待ち合わせ場所へ着くと、リョーマはもうそこにいた。[r]
+[chara_part_reset name="Ryoma"]
+; [face_default_cap time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 いつものように、約束の十五分前だ。[p]
 #
 けれど今日は、ベンチにも座らず、ラケットバッグを背負ったまま立っている。[p]
@@ -25,6 +28,7 @@
 
 #
 そう答えながら助手席に乗り込む。[r]
+[bg  time="1000"  method="crossfade"  storage="car_day.png"  ]
 たぶん、嘘だ。[p]
 #
 助手席に乗り込んでシートベルトを締めたリョーマは、ラケットバッグを膝の上に抱えたまま、こちらを見た。[p]
@@ -32,6 +36,7 @@
 #エリオット
 今日はずいぶんやる気だね[p]
 
+[face_jito]
 #リョーマ
 いつもやる気あるけど[p]
 
@@ -63,6 +68,7 @@
 #エリオット
 試合なら、いつも練習の最後にしてるだろ[p]
 
+[chara_part  name="Ryoma" mayuge="ryoma_mayuge_ikari" time="600"]
 #リョーマ
 あんなの試合じゃない[p]
 
@@ -146,6 +152,8 @@
 #エリオット
 分かった。本気でやろう[p]
 
+[chara_part  name="Ryoma" mayuge="ryoma_mayuge_ue" eye="ryoma_eye_odoroki" time="600"]
+
 #
 そう答えた途端、リョーマの目がわずかに見開かれた。[p]
 
@@ -162,6 +170,7 @@
 #エリオット
 そこまで言われて、引き下がるわけにはいかないな[p]
 
+[face_bishou eye="ryoma_eye_default_yoko"]
 #リョーマ
 ふーん[p]
 
@@ -221,6 +230,7 @@
 #
 そこで言葉を切り、リョーマはこちらを振り返った。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 俺が今、どのくらい強いのか知りたい[p]
 
@@ -234,12 +244,14 @@
 #エリオット
 分かった。今日は試合をしよう[p]
 
+[chara_part  name="Ryoma" mayuge="ryoma_mayuge_ue" eye="ryoma_eye_odoroki" time="600"]
 #リョーマ
 本気で？[p]
 
 #エリオット
 本気で[p]
 
+[face_bishou]
 #リョーマ
 ならいいけど[p]
 
@@ -266,6 +278,7 @@
 #エリオット
 9歳の子に本気は出せない[p]
 
+[face_ikari mayuge="ryoma_mayuge_default" eye="ryoma_eye_ikari_yoko"]
 #
 リョーマの表情から、すっと熱が消えた。[p]
 
@@ -279,6 +292,7 @@
 体格も経験も違う。[r]
 同じ条件の試合にはならないだろ[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 だから、負けても仕方ないって？[p]
 
@@ -288,6 +302,7 @@
 #リョーマ
 同じじゃん[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_mu" time="600"]
 #
 それきり、リョーマは黙り込んだ。[r]
 車内に、エンジンの低い音だけが残る。[p]
@@ -317,6 +332,7 @@
 #エリオット
 ……分かった。今日は本気でやる[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 今さら変えなくていいけど[p]
 
@@ -335,13 +351,15 @@
 
 [jump  storage="part1_day4.ks"  target="*base"  ]
 *base
-
+[chara_hide  name="Ryoma"  time="600" ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
 [tb_start_text mode=4 ]
 #
 ──テニスクラブ。[p]
 
+[face_default_cap time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #
 コートに着いてからも、リョーマは落ち着かなかった。[p]
 #
@@ -351,6 +369,7 @@
 #エリオット
 力が入りすぎてる[p]
 
+[face_ira_cap ]
 #リョーマ
 入ってない[p]
 
@@ -382,6 +401,7 @@
 #エリオット
 先に試合をする？[p]
 
+[face_odorki_cap]
 #
 リョーマが振り返る。[p]
 
@@ -391,6 +411,7 @@
 #エリオット
 このままじゃ、練習にならないからね[p]
 
+[face_bishou_cap]
 #リョーマ
 俺はどっちでもいいけど[p]
 
@@ -407,6 +428,7 @@
 #エリオット
 今日は時間が限られてるからね[p]
 
+[face_tokui_cap]
 #リョーマ
 いいよ。[r]
 絶対、決着つけるから[p]
@@ -414,6 +436,7 @@
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Gallop_at_the_Limit.mp3"  ]
 [tb_start_text mode=4 ]
+[face_default_cap]
 #
 トスに勝ったリョーマが、迷わずサーブを選ぶ。[r]
 ベースラインに立った瞬間、その表情から子どもらしさが消えた。[p]
@@ -433,12 +456,14 @@
 踏み込み、まだ上がりきる前のボールを叩く。[r]
 リターンがリョーマの横を抜け、コートの隅へ突き刺さった。[p]
 
+[chara_part  name="Ryoma" eye="ryoma_eye_odoroki" time="600"]
 #リョーマ
 ……っ[p]
 
 #エリオット
 [ruby text="ラブ・フィフティーン" x="35px"]０−１５[p]
 
+[face_ira_cap ]
 #
 リョーマが無言で次のボールを取り出す。[p]
 #
@@ -473,6 +498,7 @@
 コートチェンジはない。[r]
 リョーマはその場でラケットを握り直し、こちらを睨んだ。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 まだ最初のゲームじゃん[p]
 
@@ -481,6 +507,7 @@
 
 #
 次は俺のサービスゲーム。[r]
+[chara_part  name="Ryoma" mouse="ryoma_mouse_mu" time="600"]
 リョーマはベースラインよりも後ろに下がった。[p]
 #
 彼なら、俺が練習のときとは違うサーブを打ってくることに気づいている。[r]
@@ -499,6 +526,7 @@
 
 #
 乾いた音が、コートに響いた。[p]
+[chara_part  name="Ryoma" eye="ryoma_eye_odoroki" time="600"]
 #
 リョーマが反応したときには、ボールはすでにサービスラインの内側で跳ねていた。[r]
 伸ばされたラケットの先を抜け、そのままフェンスへ突き刺さる。[p]
@@ -509,6 +537,7 @@
 #
 リョーマはフェンスに転がったボールを一度だけ振り返り、すぐに構え直した。[p]
 
+[face_ira_cap ]
 #リョーマ
 もう一本[p]
 
@@ -544,6 +573,7 @@
 #
 それでもリョーマの目から、闘志は消えていなかった。[r]
 むしろ球を受けるたびに、こちらを見る目が鋭くなっていく。[p]
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 次は当てる[p]
 #
@@ -554,6 +584,7 @@
 9歳とは思えないほど冷静な判断だった。[p]
 #
 俺が放ったサーブは、サービスコートの中央へ深く突き刺さった。[r]
+[face_ikari_cap eye="ryoma_eye_odoroki"]
 リョーマは正しい方向へ踏み込み、ラケットを振る。[p]
 #
 今度は、ラケットの先がボールをかすめた。[r]
@@ -568,81 +599,18 @@
 #
 やがて身体を起こすと、悔しそうに奥歯を噛み、ラケットを握り直した。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 ……次は返すから[p]
 
 #
 このゲームで一度も返せなかったことより、次にどう返すかを考えている。[r]
 その目はもう、次の俺のサービスゲームを見ていた。[p]
-; #[p]
-; 四ポイント目。[r]
-; 俺がトスを上げると同時に、リョーマが動いた。[p]
-; #[p]
-; コースを読まれている。[r]
-; リョーマは両手でラケットを握り、身体ごとボールの正面へ入った。[p]
-; #[p]
-; 両手のバックハンドで振り始めたラケットとボールが、真正面からぶつかる。[p]
-
-; #[p]
-; 鋭い音が響いた。[r]
-; 次の瞬間、リョーマのラケットが手を離れた。[p]
-; #[p]
-; ラケットは地面滑り、後方へと飛んでいく。[r]
-; リョーマは何が起きたのか分からないように、空になった両手を見つめていた。[p]
-
-; #エリオット[p]
-; リョーマ！[p]
-
-; #[p]
-; 慌ててネットへ近づく。[r]
-; けれど、リョーマはそれを制するように左手を上げた。[p]
-
-; #リョーマ[p]
-; 来なくていい[p]
-
-; #[p]
-; 右手を握っては開き、痺れを確かめる。[r]
-; それから自分でラケットを拾い上げた。[p]
-
-; #エリオット[p]
-; 手を見せて[p]
-
-; #リョーマ[p]
-; 平気[p]
-
-; #エリオット[p]
-; でも──[p]
-
-; #リョーマ[p]
-; 今の、ちゃんと当たったでしょ[p]
-
-; #[p]
-; 振り返ったリョーマの目には、痛みよりも強い闘志が宿っていた。[p]
-
-; #リョーマ[p]
-; 次は、絶対返す[p]
-
-; #[p]
-; ラケットを握り直し、もう一度ベースラインへ戻ろうとする。[p]
-
-; #エリオット[p]
-; その前にゲームだ。[r]
-; ツー・ラブ[p]
-
-; #[p]
-; リョーマの足が止まる。[r]
-; ラケットに当てても、返球がコートへ入らなければポイントにはならない。[p]
-
-; #リョーマ[p]
-; ……分かってる[p]
-
-; #[p]
-; 悔しそうに呟くと、リョーマは痺れの残る両手を握り直した。[r]
-; ラケットを拾い上げ、何事もなかったように次のゲームへ向かう。[p]
 
 #
 三ゲーム目。[r]
 リョーマのサーブを、深く返す。[p]
+[face_ikari_cap]
 #
 長いラリーになった。[r]
 右へ、左へ。[r]
@@ -657,12 +625,15 @@
 リョーマが踏み込む。[r]
 鋭い左手のフォアハンドが、俺の足元へ突き刺さった。[p]
 
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome"  mayuge="ryoma_mayuge_kiri" mouse="ryoma_mouse_wa" time="600"]
 #リョーマ
 よし……！[p]
 
 #
 初めて奪ったポイント。[r]
 リョーマは拳を握り、俺を見た。[p]
+
+[face_ikari_cap]
 #
 その顔には、もう負けかけている選手の色はなかった。[r]
 たった一点からでも、ここから逆転するつもりでいる。[p]
@@ -737,12 +708,14 @@
 少しずつ、確実に近づいている。[r]
 それでも、まだ一本もネットを越えてはいない。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 次は返す[p]
 
 #
 マッチポイント。[p]
 俺がトスを上げた瞬間、リョーマが動いた。[p]
+[face_ikari_cap]
 #
 これまでの三球で、コースもタイミングも読まれている。[r]
 リョーマは両手でラケットを握り、身体ごとボールの正面へ入った。[p]
@@ -751,6 +724,7 @@
 
 #
 鋭い音が響いた。[r]
+[face_odorki_cap]
 次の瞬間、リョーマのラケットが手を離れた。[p]
 #
 ラケットは地面を跳ね、数メートル先へ転がっていく。[r]
@@ -772,6 +746,7 @@
 #エリオット
 リョーマ、手を見せて[p]
 
+[face_jito_cap]
 #リョーマ
 平気[p]
 
@@ -797,11 +772,14 @@
 #エリオット
 試合は終わったよ[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 もう一回──[p]
 
 #エリオット
 まずは冷やそう[p]
+
+[face_jito_cap]
 
 #
 リョーマが何か言い返すより先に、ベンチへ連れていく。[r]
@@ -813,6 +791,7 @@
 #
 リョーマは不満そうな顔をしながらも、両手で保冷剤を受け取った。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 ……今の、ちゃんと当たってた[p]
 
@@ -825,6 +804,7 @@
 #エリオット
 そうかもしれないね[p]
 
+[face_mabuka_cap]
 #リョーマ
 かもしれないじゃない。[r]
 絶対返す[p]
@@ -832,6 +812,7 @@
 #
 そう言って顔を伏せる。[r]
 タオルに包まれた保冷剤を、両手で強く握りしめていた。[p]
+[chara_part  name="Ryoma" eye_etc="ryoma_tears" time="600"]
 #
 しばらくして、帽子のつばから雫が落ちた。[r]
 汗ではなかった。[p]
@@ -840,99 +821,6 @@
 
 #リョーマ
 ……見ないで[p]
-
-; #[p]
-; あと一ゲーム。[r]
-; 俺のサーブから始まる。[p]
-; #[p]
-; リョーマは腰を落とし、ラケットを構えた。[r]
-; 汗で濡れた前髪の奥から、こちらを見据えている。[p]
-
-; #リョーマ[p]
-; まだ終わってない[p]
-
-; #エリオット[p]
-; うん[p]
-
-; #[p]
-; 最後まで本気で打つ。[r]
-; それが今、俺にできる唯一の敬意だった。[p]
-
-; #[p]
-; リョーマは一球目に追いついた。[r]
-; 二球目も返した。[r]
-; 三球目には届かなかった。[p]
-; #[p]
-; それでも次のポイントでは、また走った。[r]
-; 何度抜かれても、足を止めなかった。[p]
-; #[p]
-; そして、最後のボールがライン際に落ちた。[p]
-
-; #エリオット[p]
-; ゲームセット。[r]
-; フォー・ラブ[p]
-
-; #[p]
-; リョーマは動かなかった。[p]
-; #[p]
-; ボールがフェンスまで転がっていく。[r]
-; その音が消えても、ベースラインに立ったままだった。[p]
-
-; #エリオット[p]
-; リョーマ[p]
-
-; #リョーマ[p]
-; ……もう一ゲーム[p]
-
-; #エリオット[p]
-; 今日はここまでだ[p]
-
-; #リョーマ[p]
-; まだできる[p]
-
-; #エリオット[p]
-; 約束は一試合だよ[p]
-
-; #リョーマ[p]
-; 次は勝てるから[p]
-
-; #[p]
-; ラケットを握る手が震えている。[r]
-; 俺はネットをくぐり、リョーマのいるコートへ向かった。[p]
-
-; #エリオット[p]
-; 今日は俺の勝ちだ[p]
-
-; #リョーマ[p]
-; 分かってる[p]
-
-; #エリオット[p]
-; なら、まずは負けたことを受け入れないと[p]
-
-; #リョーマ[p]
-; 分かってるって言ってるじゃん！[p]
-
-; #[p]
-; リョーマは顔を背けた。[r]
-; 乱暴に帽子を深くかぶり直す。[p]
-
-; #リョーマ[p]
-; ボール拾ってくる[p]
-
-; #[p]
-; そのまま、コートの奥へ歩いていく。[r]
-; けれど、落ちているボールを拾おうとはしなかった。[p]
-; #[p]
-; フェンス際でこちらに背を向け、帽子のつばを片手で押さえている。。[r]
-; 小さな肩が、かすかに震えていた。[p]
-; #[p]
-; 近づくと、リョーマはさらに顔を伏せた。[p]
-
-; #リョーマ[p]
-; 来ないで[p]
-
-; #[p]
-; その声は、明らかに涙で詰まっていた。[p]
 
 [_tb_end_text]
 
@@ -956,6 +844,7 @@
 隣から、小さく鼻をすする音が聞こえる。[r]
 それにも気づかないふりをした。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 ……ほんとに見てない？[p]
 
@@ -971,6 +860,7 @@
 #
 しばらくして、隣でリョーマが動く気配がした。[p]
 
+[face_jito_cap cheek="ryoma_hohosome" mouse="ryoma_mouse_mu"  eye_etc="none"]
 #リョーマ
 もう大丈夫[p]
 
@@ -978,6 +868,7 @@
 振り返ると、涙は止まっていた。[r]
 目元はまだ赤いが、リョーマはまっすぐコートを見ている。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 次は絶対返すから[p]
 
@@ -1003,6 +894,7 @@
 #
 リョーマの隣に腰を下ろし、正面のコートを見た。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 ……悔しくない[p]
 
@@ -1024,16 +916,17 @@
 #エリオット
 でも、ひとりにしてほしいとは言わなかっただろ[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_mu" time="600"]
 #
 リョーマは何も答えなかった。[r]
 保冷剤を包んだタオルを、両手で握りしめている。[p]
 
+[face_jito_cap cheek="ryoma_hohosome"]
+#リョーマ
+次は負けないから[p]
 #
 ぶっきらぼうに答えながら、リョーマがようやくこちらを振り返る。[r]
 目元はまだ赤かったが、涙は止まっていた。[p]
-
-#リョーマ
-次は負けないから[p]
 
 #エリオット
 うん。待ってるよ[p]
@@ -1057,6 +950,7 @@
 #エリオット
 負けることも、練習のうちだよ[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #
 リョーマは帽子のつばを押さえ、顔を背けた。[p]
 
@@ -1071,12 +965,14 @@
 #エリオット
 今日できなかったことを、次の練習で──[p]
 
+[face_ikari_cap eye_etc="ryoma_shitamabuta_tears" mouse="ryoma_mouse_kuchiake" cheek="ryoma_hohosome"]
 #リョーマ
 分かってるって言ってるじゃん！[p]
 
 #
 顔を上げたリョーマの頬には、まだ涙の跡が残っていた。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_mu" time="600"]
 #リョーマ
 負けたのが初めてだと思ってるの？[p]
 
@@ -1098,6 +994,7 @@
 #
 リョーマは袖で乱暴に目元を拭った。[p]
 
+[face_ikari_cap eye="ryoma_eye_ikari_yoko"]
 #リョーマ
 もういい[p]
 
@@ -1115,7 +1012,7 @@
 
 [jump  storage="part1_day4.ks"  target="*base2"  ]
 *base2
-
+[chara_hide  name="Ryoma"  time="600" ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="car_twilight.png"  ]
 [tb_start_text mode=4 ]
@@ -1123,6 +1020,9 @@
 #
 ──帰りの車内。[p]
 車内は、いつもより静かだった。[p]
+
+[face_default_cap eye="ryoma_eye_jitome_yoko" time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #
 リョーマは助手席で帽子を深くかぶり、窓の外を見ている。[r]
 膝の上には、保冷剤を包んだタオルが置かれていた。[p]
@@ -1150,6 +1050,7 @@
 普段なら、レッスンで打てるようになった球や、次に試したいことを話す時間だ。[r]
 けれど今日は、エンジンの低い音だけが車内を満たしている。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 ……コーチはさ[p]
 
@@ -1179,6 +1080,7 @@
 #エリオット
 なれるほど強くなかったからね[p]
 
+[chara_part  name="Ryoma" eye="ryoma_eye_default" mouse="ryoma_mouse_okuchi" time="600"]
 #
 リョーマがようやくこちらを向いた。[p]
 
@@ -1188,12 +1090,14 @@
 #エリオット
 俺より強い選手なんて、いくらでもいたよ[p]
 
+[face_default_cap eye="ryoma_eye_jitome_yoko" ]
 #
-リョーマは黙り込み、再び前を向いた。[p]
+リョーマは黙り込み、再び窓の外を向いた。[p]
 #
 世界の広さを知って、怖くなっただろうか。[r]
 そう思ったけれど、その目から闘志は消えていなかった。[p]
 
+[chara_part  name="Ryoma"  mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 ……じゃあ、次は勝つから[p]
 
@@ -1206,6 +1110,7 @@
 #エリオット
 え、また試合をするつもり？[p]
 
+[face_jito_cap]
 #リョーマ
 当たり前じゃん。[r]
 一回負けたくらいで終わるわけないでしょ[p]
@@ -1213,12 +1118,14 @@
 #
 その言葉に、思わず笑ってしまった。[p]
 
+[face_ira_cap]
 #リョーマ
 なにがおもしろいの？[p]
 
 #エリオット
 いや。安心しただけ[p]
 
+[chara_part  name="Ryoma" mayuge="ryoma_mayuge_default" eye="ryoma_eye_ikari_yoko" time="600"]
 #リョーマ
 意味分かんない[p]
 
@@ -1229,6 +1136,7 @@
 越前家へ続く住宅街に入る。[r]
 あと数分で到着するというところで、リョーマが小さく口を開いた。[p]
 
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 今日のこと……[p]
 
@@ -1244,6 +1152,7 @@
 #リョーマ
 違う[p]
 
+[face_mabuka_cap]
 #
 リョーマは帽子のつばをさらに下げた。[p]
 
@@ -1271,6 +1180,7 @@
 #エリオット
 もちろん。[r]
 二人だけの秘密だ[p]
+[face_default_cap]
 #
 リョーマがゆっくり顔を上げた。[p]
 #リョーマ
@@ -1283,6 +1193,7 @@
 誰にも言わない[p]
 #
 リョーマは念を押すように、しばらくこちらを見つめた。[p]
+[face_bishou_cap]
 やがて安心したように、表情を緩めると、座席へ背中を預ける。[p]
 #リョーマ
 ……ならいいけど[p]
@@ -1301,12 +1212,14 @@
 #エリオット
 泣くのは悪いことじゃないよ[p]
 
+[face_ira_cap]
 #リョーマ
 そういうことじゃない[p]
 
 #エリオット
 悔しかったんだろ[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 ……だから、言わないでって言ってる[p]
 
@@ -1320,6 +1233,7 @@
 #エリオット
 誰にも[p]
 
+[face_ira_cap]
 #
 リョーマはまだ少し不満そうだったが、帽子のつばから手を離した。[p]
 
@@ -1343,6 +1257,7 @@
 どうしようかな。[r]
 コーチとして、南次郎さんには今日のことも報告しないといけないし[p]
 
+[chara_part  name="Ryoma"  base="ryoma_base_cap"  cheek="none"  mouse="ryoma_mouse_kuchiake"  eye="ryoma_eye_odoroki"  eye_etc="none"  mayuge="ryoma_mayuge_gekioko"  maegami="ryoma_maegami_cap"  cap="ryoma_cap" time="600"]
 #
 リョーマが勢いよくこちらを振り返った。[p]
 
@@ -1353,6 +1268,7 @@
 今日のレッスンで起きたことは、きちんと伝えないとな。[r]
 本気で試合をして、[ruby text="フォー・ラブ" x="20px"]４−０で負けて、それから──[p]
 
+[chara_part  name="Ryoma" cheek="ryoma_hohosome" time="600"]
 #リョーマ
 やだ！言わないでよ！[p]
 
@@ -1363,16 +1279,19 @@
 #エリオット
 でも、保護者への報告はコーチの大事な仕事だから[p]
 
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome" mouse="ryoma_mouse_okuchi"  time="600"]
 #リョーマ
 絶対、楽しんでるでしょ[p]
 
 #エリオット
 そんなことないよ[p]
 
+[chara_part  name="Ryoma"  base="ryoma_base_cap"  cheek="none"  mouse="ryoma_mouse_kuchiake"  eye="ryoma_eye_odoroki"  eye_etc="none"  mayuge="ryoma_mayuge_gekioko"  maegami="ryoma_maegami_cap"  cap="ryoma_cap" time="600"]
 #リョーマ
 じゃあ笑うな！[p]
 #
 どうやら、口元に出ていたらしい。[p]
+
 
 #リョーマ
 言ったら、もうあんたの車乗らないから！[p]
@@ -1393,6 +1312,7 @@
 冗談だよ。[r]
 誰にも言わない[p]
 
+[face_jito_cap]
 #リョーマ
 ……ほんとに？[p]
 
@@ -1402,7 +1322,7 @@
 
 #
 リョーマは疑うようにこちらを見ていたが、やがてむっとした顔で窓の外を向いた。[p]
-
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome_yoko"]
 #リョーマ
 性格悪い[p]
 
@@ -1415,6 +1335,7 @@
 #エリオット
 反省してるよ[p]
 
+[chara_part  name="Ryoma" eye="ryoma_eye_ikari_yoko"]
 #リョーマ
 ……最低[p]
 
@@ -1422,12 +1343,14 @@
 
 [jump  storage="part1_day4.ks"  target="*base3"  ]
 *base3
-
+[chara_hide  name="Ryoma"  time="600" ]
 [bg  time="1000"  method="crossfade"  storage="home_night.png"  ]
 [tb_start_text mode=4 ]
 ;------------------------------
 ;共通ルート
 ;------------------------------
+[face_default_cap eye="ryoma_eye_default" time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #
 越前家の前に車を止める。[r]
 リョーマは保冷剤をシートに置き、シートベルトを外した。[p]
@@ -1447,6 +1370,7 @@
 #エリオット
 今日はよく頑張ったね[p]
 
+[face_ira_cap]
 #リョーマ
 子ども扱いしないで[p]
 
@@ -1460,10 +1384,12 @@
 いい試合だった。[r]
 次も本気で相手をするよ[p]
 
+[face_odorki_cap cheek="ryoma_hohosome" ]
 #
 リョーマはこちらを見た。[r]
 泣いたあとの目が、まだわずかに赤い。[p]
 
+[face_ira_cap cheek="ryoma_hohosome" ]
 #リョーマ
 次は勝つから[p]
 
@@ -1473,13 +1399,14 @@
 #
 リョーマは車を降りる。[r]
 ドアを閉めかけてから、一度だけ振り返る。[p]
-
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi"]
 #リョーマ
 ……約束、忘れないでよ[p]
 
 #エリオット
 忘れないよ[p]
 
+[chara_hide  name="Ryoma"  time="600" ]
 #
 それを聞くと、リョーマは今度こそドアを閉めて、玄関へ走っていった。[p]
 #

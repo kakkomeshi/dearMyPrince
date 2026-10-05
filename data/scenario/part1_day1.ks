@@ -166,7 +166,7 @@
 #エリオット
 ……[p]
 
-[face_default_cap]
+[face_default_cap time="0"]
 [chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #
 
@@ -387,7 +387,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 テニス、好きなんだな[p]
-[face_jito eye="ryoma_eye_jitome_yoko"]
+[face_jito eye="ryoma_eye_jitome_yoko" mayuge="ryoma_mayuge_default"]
 
 #リョーマ
 ……別に、普通[p]
@@ -399,11 +399,11 @@
 説得力がない。[p]
 #エリオット
 そっか[p]
+[face_ira mayuge="ryoma_mayuge_ira"] 
 #リョーマ
 ……なに笑ってんの[p]
 #エリオット
 いや、そうか、と思って[p]
-[face_ira mayuge="ryoma_mayuge_bottom"] 
 #リョーマ
 ……[p]
 

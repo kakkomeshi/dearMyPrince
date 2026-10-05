@@ -8,20 +8,19 @@
 [tb_show_message_window  ]
 [tb_start_text mode=4 ]
 #
-──二日目。[p]
+──2日目。[p]
 
 #
 二度目のレッスンの日。[r]
-いつものように、約束の十五分前には学校へ着いた。[p]
+いつものように、約束の15分前には学校へ着いた。[p]
 #
 人を待たせるのが好きじゃない。[r]
 それに、9歳の子供を校門の前で一人待たせるわけにもいかない。[p]
 #
 車を駐車場に止めて、校門前で待つ。[r]
 しばらくすると、見覚えのある白い帽子が校門から出てきた。[p]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  width="690"  height="auto"  left="326"  top="-54"  reflect="false"  ]
-; [chara_part  name="リョーマ"  リョーマベース="ryoma_base1"  頬="none"  口="ryoma_mouse_mu"  目="ryoma_eye_default2"  眉毛="ryoma_mayuge_default"  前髪="ryoma_maegami_default"  キャップ="none"  ]
-
+[chara_part_reset name="Ryoma"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #エリオット
 リョーマ！[p]
 #
@@ -37,6 +36,8 @@
 それだけ言うと、リョーマはもう俺には構わず、駐車場へ向かって歩き出した。[p]
 #
 昨日一度乗っただけなのに、俺の車の場所もしっかり覚えているらしい。[p]
+
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 早く行こ[p]
 
@@ -47,6 +48,7 @@
 視線の先には、自動販売機がある。[p]
 #エリオット
 喉乾いた？[p]
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome" time="600"]
 #リョーマ
 別に[p]
 #エリオット
@@ -80,6 +82,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 何が飲みたかった？[p]
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome_yoko" time="600"]
 #リョーマ
 ……ファンタ[p]
 #エリオット
@@ -109,6 +112,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 炭酸は身体に悪いぞ[p]
+[face_ira ]
 #リョーマ
 ……[p]
 #エリオット
@@ -136,6 +140,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 じゃあ行こうか[p]
+[chara_part  name="Ryoma" mouse="ryoma_mouse_mu" time="600"]
 #リョーマ
 うん[p]
 
@@ -150,7 +155,7 @@
 
 [jump  storage="part1_day2.ks"  target="*base"  ]
 *base
-
+[chara_hide  name="Ryoma"  time="600" ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
 [tb_start_text mode=4 ]
@@ -161,6 +166,10 @@
 今日は前回指摘したところを確認することから始めた。[p]
 #エリオット
 まずはバックから見せて[p]
+
+[chara_part_reset name="Ryoma" ]
+[face_default_cap time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #リョーマ
 うん[p]
 
@@ -178,6 +187,7 @@
 前回より打点が前になっている。[p]
 #エリオット
 直してきた？[p]
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #リョーマ
 言われたから[p]
 #エリオット
@@ -201,6 +211,8 @@
 コートの反対側を指す。[p]
 #エリオット
 俺を動かしてみて[p]
+
+[face_doya_cap mayuge="ryoma_mayuge_bottom" mouse="ryoma_mouse_nyan"]
 #リョーマ
 ……[p]
 
@@ -227,9 +239,9 @@
 予想していた方向とは逆へ、ボールが飛んだ。[p]
 #エリオット
 ……！[p]
+[chara_part  name="Ryoma" eye="ryoma_eye_nikkori" time="600"]
 #リョーマ
 へへ[p]
-
 #
 初めて見る顔だった。[p]
 
@@ -251,6 +263,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 今のは上手かった[p]
+[face_doya_cap ]
 #リョーマ
 でしょ[p]
 
@@ -281,6 +294,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 今の、もう一回やってみて[p]
+[face_doya_cap ]
 #リョーマ
 言われなくても[p]
 
@@ -295,6 +309,8 @@
 どう？[p]
 #エリオット
 悪くない[p]
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
+
 #リョーマ
 悪くない、ね[p]
 
@@ -314,6 +330,7 @@
 [tb_start_text mode=4 ]
 #エリオット
 でも、まだ読めるな[p]
+[face_ira_cap ]
 #リョーマ
 ……[p]
 #エリオット
@@ -332,7 +349,7 @@
 
 [jump  storage="part1_day2.ks"  target="*base2"  ]
 *base2
-
+[chara_hide  name="Ryoma"  time="600" ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="car_twilight.png"  ]
 [tb_start_text mode=4 ]
@@ -349,6 +366,8 @@
 車へ戻る途中、自動販売機の前で足を止める。[p]
 #エリオット
 リョーマ[p]
+[face_default_cap eye="ryoma_eye_default" time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #リョーマ
 なに[p]
 #エリオット
@@ -357,7 +376,6 @@
 ……じゃあ、お願い[p]
 
 #
-
 さて──。[p]
 
 [_tb_end_text]
@@ -382,6 +400,7 @@
 車に戻り、助手席のリョーマへ差し出した。[p]
 #エリオット
 はい[p]
+[face_odorki_cap ]
 #リョーマ
 ……ファンタ[p]
 #エリオット
@@ -392,6 +411,7 @@
 #
 
 リョーマは缶と俺の顔を交互に見る。[p]
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome_yoko" time="600"]
 #リョーマ
 覚えてたんだ[p]
 #エリオット
@@ -404,11 +424,9 @@
 興味なさそうに答えながら、さっそくプルタブを開けている。[p]
 
 #
-
-一口飲んで。[p]
-
+一口飲んで。[r]
+[chara_part  name="Ryoma" eye="ryoma_eye_default" mouse="ryoma_mouse_nyan" time="600"]
 #
-
 ほんの少し、口元が緩んだ。[p]
 #リョーマ
 ありがと[p]
@@ -460,6 +478,7 @@
 #エリオット
 はい[p]
 
+[face_jito_cap]
 #リョーマ
 ……コーヒー[p]
 #エリオット
@@ -470,8 +489,8 @@
 #
 そう言って受け取る。[p]
 
+[chara_part  name="Ryoma" mayuge="ryoma_mayuge_gekioko" time="600"]
 #
-
 一口だけ啜ると、しぶい顔になっている。[r]
 子ども扱いは嫌いでも、どうやらコーヒーは苦手なようだ。[p]
 
@@ -480,17 +499,18 @@
 
 [jump  storage="part1_day2.ks"  target="*base3"  ]
 *base3
-
+[chara_hide  name="Ryoma"  time="600" ]
 [bg  time="1000"  method="crossfade"  storage="home_night.png"  ]
 [tb_start_text mode=4 ]
 #
 
 ──帰りの車内。[p]
 
+[chara_part_reset name="Ryoma" ]
+[chara_part  name="Ryoma" eye="ryoma_eye_default_yoko" time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
 #
-
 助手席で飲み物を飲みながら、リョーマは窓の外を眺めている。[p]
-
 #
 
 前回より、車の中の沈黙が気にならなくなった。[p]
@@ -508,6 +528,7 @@
 #
 
 少し考えてから、こちらを見る。[p]
+[chara_part  name="Ryoma" eye="ryoma_eye_default"]
 #リョーマ
 やる[p]
 #エリオット
@@ -526,7 +547,7 @@
 それでも昨日よりほんの少しだけ、この子との距離が縮まったような気がした。[p]
 
 [_tb_end_text]
-
+[chara_hide  name="Ryoma"  time="600" ]
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [stopse  time="1000"  buf="0"  fadeout="true"  ]
 [jump  storage="part1_day3.ks"  target=""  ]
