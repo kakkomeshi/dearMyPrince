@@ -20,7 +20,7 @@
 車を駐車場に止めて、校門前で待つ。[r]
 しばらくすると、見覚えのある白い帽子が校門から出てきた。[p]
 [chara_part_reset name="Ryoma"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #エリオット
 リョーマ！[p]
 #
@@ -118,7 +118,7 @@
 #エリオット
 スポーツするなら水かスポーツドリンクのほうが──[p]
 #リョーマ
-飲むなんて言ってないじゃん[p]
+飲みたいなんて言ってないじゃん[p]
 #エリオット
 それはそうだけど[p]
 #リョーマ
@@ -169,7 +169,7 @@
 
 [chara_part_reset name="Ryoma" ]
 [face_default_cap time="0"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #リョーマ
 うん[p]
 
@@ -230,7 +230,7 @@
 また右。[p]
 
 #
-昨日より明らかに、俺の位置を見ている。[p]
+前回より明らかに、俺の位置を見ている。[p]
 
 #
 そして数球目。[p]
@@ -250,25 +250,25 @@
 
 [_tb_end_text]
 
-[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="今のは上手かった"  target="*choice2_1"  width="max"  autopos="true" ]
+[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="今のは上手かったな"  target="*choice2_1"  width="max"  autopos="true" ]
 [glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="もう一回やってみて"  target="*choice2_2" width="max"  autopos="true"  ]
-[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="でもまだ読めるな"  target="*choice2_3"  width="max"  autopos="true"  ]
+[glink  color="customized_button"  storage="part1_day2.ks"  size="20"  text="でもまだ動きが読めるな"  target="*choice2_3"  width="max"  autopos="true"  ]
 [s  ]
 *choice2_1
 ;------------------------------
-;「今のは上手かった」
+;「今のは上手かったな」
 ;好感度+1
 ;------------------------------
 [love value="1"]
 [tb_start_text mode=4 ]
 #エリオット
-今のは上手かった[p]
+今のは上手かったな[p]
+#
+俺は素直に感心した。[p]
 [face_doya_cap ]
 #リョーマ
 でしょ[p]
 
-#
-素直に感心した。[p]
 #エリオット
 でも次は取るよ[p]
 #リョーマ
@@ -280,7 +280,6 @@
 #
 褒められることより、次の一本のほうが大事らしい。[p]
 
-#
 [_tb_end_text]
 
 
@@ -323,13 +322,13 @@
 [jump  storage="part1_day2.ks"  target="*base2"  ]
 *choice2_3
 ;------------------------------
-;「でもまだ読めるな」
+;「でもまだ動き読めるな」
 ;好感度
 ;------------------------------
 [love value="0"ｓ]
 [tb_start_text mode=4 ]
 #エリオット
-でも、まだ読めるな[p]
+でも、まだ動きが読めるな[p]
 [face_ira_cap ]
 #リョーマ
 ……[p]
@@ -367,7 +366,7 @@
 #エリオット
 リョーマ[p]
 [face_default_cap eye="ryoma_eye_default" time="0"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #リョーマ
 なに[p]
 #エリオット
@@ -508,7 +507,7 @@
 
 [chara_part_reset name="Ryoma" ]
 [chara_part  name="Ryoma" eye="ryoma_eye_default_yoko" time="0"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #
 助手席で飲み物を飲みながら、リョーマは窓の外を眺めている。[p]
 #

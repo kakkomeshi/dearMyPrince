@@ -13,7 +13,7 @@
 リョーマもすぐにこちらを見つける。[p]
 
 [chara_part_reset name="Ryoma"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #リョーマ
 コーチ[p]
 #エリオット
@@ -32,7 +32,7 @@
 #エリオット
 連絡あった？[p]
 #リョーマ
-一昨日[p]
+おとといね[p]
 #エリオット
 何しに行ってるんだっけ[p]
 
@@ -174,7 +174,7 @@
 今日のメニューを一通り終えて、最後にラリーを続ける。[p]
 
 [face_default_cap time="0"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #
 リョーマは相変わらず、何球打ってもボールを追うのをやめない。[p]
 
@@ -432,7 +432,7 @@
 助手席を見る。[p]
 [chara_part_reset name="Ryoma"]
 [chara_part  name="Ryoma" eye="ryoma_eye_default_yoko" time="0"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 リョーマは窓の外を眺めている。[p]
 #リョーマ
 コーチ[p]
@@ -557,7 +557,7 @@
 #
 車が越前家の前に着く。[p]
 [chara_part_reset name="Ryoma"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #リョーマ
 じゃあ、またね[p]
 #エリオット

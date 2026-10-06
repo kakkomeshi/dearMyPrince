@@ -12,8 +12,7 @@
 #
 待ち合わせ場所へ着くと、リョーマはもうそこにいた。[r]
 [chara_part_reset name="Ryoma"]
-; [face_default_cap time="0"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 いつものように、約束の十五分前だ。[p]
 #
 けれど今日は、ベンチにも座らず、ラケットバッグを背負ったまま立っている。[p]
@@ -100,7 +99,7 @@
 #
 その目は、挑発しているというよりも、何かを確かめようとしているように見えた。[p]
 #
-昨日話した、兄のこと。[r]
+前回話した、兄のこと。[r]
 強くなれば、いつか世界の頂点で会えると信じている相手。[p]
 #
 もしかするとリョーマは、自分が今どこにいるのかを知りたがっているのかもしれない。[p]
@@ -235,7 +234,7 @@
 俺が今、どのくらい強いのか知りたい[p]
 
 #
-昨日、リョーマが話してくれた兄のことを思い出す。[r]
+前回、リョーマが話してくれた兄のことを思い出す。[r]
 強くなれば、いつか世界の頂点で会えると信じている相手。[p]
 #
 ただ勝ちたいだけではないのだろう。[r]
@@ -359,7 +358,7 @@
 ──テニスクラブ。[p]
 
 [face_default_cap time="0"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #
 コートに着いてからも、リョーマは落ち着かなかった。[p]
 #
@@ -436,7 +435,7 @@
 
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Gallop_at_the_Limit.mp3"  ]
 [tb_start_text mode=4 ]
-[face_default_cap]
+[face_default_cap mayuge="ryoma_mayuge_kiri"]
 #
 トスに勝ったリョーマが、迷わずサーブを選ぶ。[r]
 ベースラインに立った瞬間、その表情から子どもらしさが消えた。[p]
@@ -856,7 +855,7 @@
 
 #エリオット
 絶対[p]
-
+[chara_part  name="Ryoma" mouse="ryoma_mouse_mu" time="600"]
 #
 しばらくして、隣でリョーマが動く気配がした。[p]
 
@@ -950,10 +949,10 @@
 #エリオット
 負けることも、練習のうちだよ[p]
 
-[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi" time="600"]
 #
 リョーマは帽子のつばを押さえ、顔を背けた。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_hanbiraki" time="600"]
 #リョーマ
 見ないでって言ったじゃん[p]
 #エリオット
@@ -994,7 +993,7 @@
 #
 リョーマは袖で乱暴に目元を拭った。[p]
 
-[face_ikari_cap eye="ryoma_eye_ikari_yoko"]
+[face_ikari_cap eye="ryoma_eye_ikari_yoko" cheek="ryoma_hohosome"]
 #リョーマ
 もういい[p]
 
@@ -1021,8 +1020,8 @@
 ──帰りの車内。[p]
 車内は、いつもより静かだった。[p]
 
-[face_default_cap eye="ryoma_eye_jitome_yoko" time="0"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[face_default_cap mayuge="ryoma_mayuge_default" eye="ryoma_eye_jitome_yoko" time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #
 リョーマは助手席で帽子を深くかぶり、窓の外を見ている。[r]
 膝の上には、保冷剤を包んだタオルが置かれていた。[p]
@@ -1257,7 +1256,7 @@
 どうしようかな。[r]
 コーチとして、南次郎さんには今日のことも報告しないといけないし[p]
 
-[chara_part  name="Ryoma"  base="ryoma_base_cap"  cheek="none"  mouse="ryoma_mouse_kuchiake"  eye="ryoma_eye_odoroki"  eye_etc="none"  mayuge="ryoma_mayuge_gekioko"  maegami="ryoma_maegami_cap"  cap="ryoma_cap" time="600"]
+[face_aseri_cap]
 #
 リョーマが勢いよくこちらを振り返った。[p]
 
@@ -1286,7 +1285,7 @@
 #エリオット
 そんなことないよ[p]
 
-[chara_part  name="Ryoma"  base="ryoma_base_cap"  cheek="none"  mouse="ryoma_mouse_kuchiake"  eye="ryoma_eye_odoroki"  eye_etc="none"  mayuge="ryoma_mayuge_gekioko"  maegami="ryoma_maegami_cap"  cap="ryoma_cap" time="600"]
+[face_aseri_cap]
 #リョーマ
 じゃあ笑うな！[p]
 #
@@ -1350,7 +1349,7 @@
 ;共通ルート
 ;------------------------------
 [face_default_cap eye="ryoma_eye_default" time="0"]
-[chara_show  name="Ryoma"  time="1000"  wait="false"  left="326"  top="-54" ]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #
 越前家の前に車を止める。[r]
 リョーマは保冷剤をシートに置き、シートベルトを外した。[p]

@@ -12,18 +12,18 @@
 ;------------------------------
 
 #
-──五日目。[p]
+──5日目。[p]
 #
 休日の朝。[r]
 今日は学校ではなく、越前家までリョーマを迎えに来た。[p]
 #
-約束の十五分前に到着し、家の前へ車を止める。[r]
+約束の15分前に到着し、家の前へ車を止める。[r]
 家の前には、まだ誰もいなかった。[p]
 #
 早く着きすぎたのだから当然だ。[r]
 エンジンを切り、車内で待つことにした。[p]
 #
-十分が過ぎ、約束の時間になる。[r]
+10分が過ぎ、約束の時間になる。[r]
 それでも、玄関が開く気配はない。[p]
 #
 もう少しだけ待っていると、家の中から慌ただしい足音が聞こえてきた。[p]
@@ -37,6 +37,8 @@
 
 #
 少し遅れて、玄関のドアが開いた。[p]
+[face_default_cap eye="ryoma_eye_jitome" time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 #
 ラケットバッグを肩にかけたリョーマが、眠そうな顔で出てくる。[r]
 帽子の下から覗く髪は、いつもより少し跳ねていた。[p]
@@ -47,12 +49,15 @@
 ごめんなさい、エリオット。[r]
 この子、休日になると全然起きなくて[p]
 
+[face_aseri_cap cheek="ryoma_hohosome"]
+
 #リョーマ
 母さん、余計なこと言わないで！[p]
 
 #エリオット
 おはよう、リョーマ[p]
 
+[face_jito_cap mouse="ryoma_mouse_okuchi"]
 #リョーマ
 ……おはよ[p]
 
@@ -62,6 +67,7 @@
 #倫子
 忘れ物ない？タオルは？ドリンクは？[p]
 
+[face_jito_cap mouse="ryoma_mouse_kuchiake"]
 #リョーマ
 大丈夫だってば！[p]
 
@@ -71,6 +77,7 @@
 #エリオット
 ずいぶん眠そうだね[p]
 
+[face_jito_cap]
 #リョーマ
 今日は早すぎただけ[p]
 
@@ -84,6 +91,7 @@
 #エリオット
 手はどう？[p]
 
+[chara_part  name="Ryoma" mayuge="ryoma_mayuge_default"]
 #リョーマ
 もう何ともない[p]
 
@@ -103,6 +111,7 @@
 #エリオット
 今日、クラブで小さな大会があるんだ[p]
 
+[face_default_cap eye="ryoma_eye_odoroki"]
 #リョーマ
 大会？[p]
 
@@ -110,19 +119,21 @@
 ジュニアクラスの、クラブ内トーナメント。[r]
 ひとり欠員が出て、参加枠が空いてる[p]
 
+[face_default_cap]
 #リョーマ
 何歳の子が出るの[p]
 
 #エリオット
-9歳から十二歳くらい。[r]
+9歳から12歳くらい。[r]
 年齢じゃなくて、試合のできる選手を集めてる[p]
 
 #リョーマ
-十二歳の子もいるんだ[p]
+12歳の子もいるんだ[p]
 
 #エリオット
 君より身体の大きい選手もいるよ[p]
 
+[face_jito_cap eye="ryoma_eye_ikari"]
 #リョーマ
 ふーん[p]
 
@@ -136,8 +147,8 @@
 何人？[p]
 
 #エリオット
-君が入れば八人。[r]
-優勝するなら三試合[p]
+君が入れば8人。[r]
+優勝するなら3試合[p]
 
 #リョーマ
 出る[p]
@@ -145,13 +156,14 @@
 #エリオット
 即答だね[p]
 
+[face_niyari_cap]
 #リョーマ
 試合できるのに、出ない理由ないでしょ[p]
 
 #
 ラケットバッグを抱え直し、当然のように言う。[p]
 #
-先日、俺から一ゲームも取れずに負けたことを引きずっているかもしれない。[r]
+先日、俺から1ゲームも取れずに負けたことを引きずっているかもしれない。[r]
 そんな心配は、全然必要なかったらしい。[p]
 
 [_tb_end_text]
@@ -172,18 +184,21 @@
 #エリオット
 負けても、また泣かないでくれよ[p]
 
+[face_odorki_cap mouse="ryoma_mouse_mu"]
 #
 リョーマの表情が固まった。[p]
 
 #
 さっきまで抱きしめるように持っていたラケットバッグから、ゆっくり力が抜ける。[p]
 
+[chara_part  name="Ryoma" eye="ryoma_eye_jitome"]
 #リョーマ
 ……それ、言わないって約束したでしょ[p]
 
 #エリオット
 誰かに言ったわけじゃないよ[p]
 
+[face_mabuka_cap]
 #リョーマ
 そういうことじゃない[p]
 
@@ -203,12 +218,14 @@
 #
 謝ったところで、一度口にした言葉は戻らない。[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi"]
 #リョーマ
 ……負けないから[p]
 
 #エリオット
 うん[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_mu"]
 #
 こちらを見ないまま、リョーマは言い切った。[r]
 その声に、今朝までの眠気はもう残っていなかった。[p]
@@ -226,12 +243,14 @@
 #エリオット
 どこまで勝ち上がれるか、楽しみだ[p]
 
+[face_ira_cap mouse="ryoma_mouse_ira"]
 #リョーマ
 どこまでって、優勝するに決まってるでしょ[p]
 
 #エリオット
 そこまで言うなら、期待してるよ[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_okuchi"]
 #リョーマ
 してればいいじゃん[p]
 
@@ -256,6 +275,7 @@
 #エリオット
 優勝を狙ってみる？[p]
 
+[face_ira_cap mayuge="ryoma_mayuge_kiri"]
 #
 リョーマが、こちらを見る。[p]
 
@@ -275,6 +295,7 @@
 #
 そう答えると、リョーマは満足そうに笑って、前を向いた。[p]
 
+[face_niyari_cap]
 #リョーマ
 じゃあ、俺のこと見ててよね[p]
 
@@ -283,7 +304,7 @@
 
 [jump  storage="part1_day5.ks"  target="*base"  ]
 *base
-
+[chara_hide  name="Ryoma"  time="600" ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_parking_day.png"  ]
 [tb_start_text mode=4 ]
@@ -293,15 +314,17 @@
 #
 駐車場へ車を止める。[r]
 大会の日らしく、コートの周りにはいつもより多くの子どもたちが集まっていた。[p]
+[face_default_cap time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="620"  top="-54" ]
 #
 リョーマが助手席を降りると、クラブハウスのほうからひとりの少年が駆けてきた。[p]
 
-
+[chara_show storage="chara/5/daniel_nipa.png" name="Daniel"  time="1000"  wait="true"  left="-8"  top="-54" ]
 #ダニエル
 エリオットコーチ！[p]
 
 #
-十二歳のダニエル。[r]
+12歳のダニエル。[r]
 俺が週に一度担当している、ジュニアグループレッスンに通う生徒だ。[p]
 #
 ほかの曜日にもクラブで練習していて、年齢のわりに試合経験も多い。[r]
@@ -317,12 +340,14 @@
 もちろん。[r]
 優勝候補なんだから、期待してるよ[p]
 
+[chara_mod name="Daniel" storage="chara/5/daniel_nika.png"  time="600"  ]
 #ダニエル
 任せて！[p]
 
 #
 少年は笑顔で答え、それから俺の後ろに立つリョーマに気づいた。[p]
 
+[chara_mod name="Daniel" storage="chara/5/daniel_odoroki.png"  time="600"  ]
 #ダニエル
 その子は？[p]
 
@@ -332,12 +357,14 @@
 #ダニエル
 コーチの新しい生徒？[p]
 
+[face_jito_cap mouse="ryoma_mouse_ira"]
 #リョーマ
 ……そうだけど、なに[p]
 
 #
 なぜかリョーマが、不機嫌そうに答えた。[p]
 
+[chara_mod name="Daniel" storage="chara/5/daniel_default.png"  time="600"  ]
 #ダニエル
 どのクラス？[r]
 見たことないけど[p]
@@ -345,16 +372,19 @@
 #エリオット
 クラスじゃなくて、普段はマンツーマンで教えてる[p]
 
+[chara_mod name="Daniel" storage="chara/5/daniel_nipa.png"  time="600"  ]
 #ダニエル
 マンツーマン？[r]
 いいな〜！　俺たちのクラスは五人もいるのに[p]
 
+[chara_part  name="Ryoma" eye="ryoma_eye_default_yoko"]
 #リョーマ
 別に……[p]
 
 #
 リョーマが、初めてダニエルのほうを見た。[p]
 
+[chara_mod name="Daniel" storage="chara/5/daniel_default.png"  time="600"  ]
 #ダニエル
 きみ、何歳？[p]
 
@@ -371,6 +401,7 @@
 悪くないけど。[r]
 俺と当たるなら、決勝だよ[p]
 
+[face_niyari_cap]
 #リョーマ
 じゃあ、決勝でね[p]
 
@@ -379,6 +410,7 @@
 #
 その指先が一瞬、俺の手のそばで止まる。[r]
 けれど、触れる代わりにジャージの袖口をつまみ、軽く引いた。[p]
+[face_default_cap mouse="ryoma_mouse_okuchi"]
 #リョーマ
 早く受付行こう[p]
 
@@ -388,19 +420,21 @@
 #リョーマ
 いいから[p]
 
+[face_default_cap mouse="ryoma_mouse_mu"]
 #
 袖はすぐに離された。[r]
 それでも、リョーマのほうから俺へ触れようとしたのは、これが初めてだった。[p]
 
 #
 急かされるまま、クラブハウスへ向かう。[r]
+[chara_hide  name="Daniel"  time="600" ]
 振り返ると、ダニエルが不思議そうな顔でこちらを見ていた。[p]
 [_tb_end_text]
 [bg  time="1000"  method="crossfade"  storage="clubHouse.png"  ]
 [tb_start_text mode=4 ]
 #
 出場選手は、リョーマを含めて八人。[r]
-参加できるのは9歳から十二歳までだが、リョーマ以外は全員十歳から十二歳だった。[p]
+参加できるのは9歳から12歳までだが、リョーマ以外は全員10歳から12歳だった。[p]
 #
 組み合わせ表の前に並ぶと、体格差は一目瞭然だった。[r]
 リョーマは最年少で、出場選手の中で最も小さい。[p]
@@ -414,9 +448,11 @@
 [playbgm  volume="100"  time="1500"  loop="true"  storage="Gallop_at_the_Limit.mp3"  fadein="true"  ]
 [bg  time="1000"  method="crossfade"  storage="tennis_school_day.png"  ]
 [tb_start_text mode=4 ]
+
+[face_jito_cap mayuge="ryoma_mayuge_kiri"]
 #
 一回戦。[r]
-相手は、リョーマより頭ひとつ以上大きな十二歳の選手だった。[p]
+相手は、リョーマより頭ひとつ以上大きな12歳の選手だった。[p]
 #
 力強いサーブが、サービスコートへ突き刺さる。[r]
 リョーマは迷わず踏み込み、上がり際を叩いた。[p]
@@ -452,21 +488,25 @@
 コートを出たリョーマへ、いくつもの視線が集まる。[r]
 その先で、次の試合を控えたダニエルが待っていた。[p]
 
+[chara_move  name="Ryoma"  time="600"  wait="false"  left="620"  top="-54" ]
+[chara_show  name="Daniel"  storage="chara/5/daniel_odoroki.png"  time="600"  wait="true"  left="-8"  top="-54" ]
 #ダニエル
 ……本当に決勝まで来た[p]
 
+[face_niyari_cap]
 #リョーマ
 言ったでしょ[p]
 
+[chara_mod name="Daniel" storage="chara/5/daniel_kiri.png"  time="600"  ]
 #ダニエル
 うん。[r]
 でも、ここからは俺が勝つよ[p]
 
+[face_ira_cap mouse="ryoma_mouse_nyan"]
 #リョーマ
 ふーん[p]
-[_tb_end_text]
 
-[tb_start_text mode=4 ]
+[chara_part  name="Ryoma" mouse="ryoma_mouse_mu" time="600"]
 #
 決勝戦。[r]
 #
@@ -496,7 +536,7 @@
 同じコースを二度見せてから逆を突き、前へ出れば頭上を抜いた。[p]
 #
 気づけば、スコアは[ruby text="ファイブ・ツー" x="20px"]５−２。[r]
-リョーマは五ゲームを連取し、優勝まであと一ゲームに迫っていた。[p]
+リョーマは五ゲームを連取し、優勝まであと1ゲームに迫っていた。[p]
 #
 ダニエルも意地を見せ、次のゲームを守る。[r]
 [ruby text="ファイブ・スリー" x="20px"]５−３。[p]
@@ -520,6 +560,7 @@
 #
 次の瞬間、ボールがダニエルの顔へ向かって鋭く跳ね上がった。[p]
 
+[chara_mod name="Daniel" storage="chara/5/daniel_aseri.png"  time="600"  ]
 #ダニエル
 うわっ！[p]
 
@@ -532,6 +573,8 @@
 ウォンバイ・リョーマ！[r]
 [ruby text="シックス・スリー" x="20px"]６−３[p]
 [_tb_end_text]
+
+[chara_hide_all  time="1000"  wait="true"  ]
 
 [stopbgm  time="1500"  fadeout="true"  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Courtside_Afternoon.mp3"  ]
@@ -553,12 +596,19 @@
 
 ; #
 ; 思わず、声が漏れた。[p]
+
+[face_odorki_cap time="0"]
+[chara_show  name="Ryoma"  time="600"  wait="false"  left="620"  top="-54" ]
+[chara_show  name="Daniel"  storage="chara/5/daniel_odoroki.png"  time="600"  wait="true"  left="-8"  top="-54" ]
 #
 ネットの向こうで、ダニエルが呆然としている。[r]
 打ったリョーマ自身も、自分のラケットを見つめていた。[p]
+
+[face_default_cap]
 #
 だが、すぐに帽子のつばを下げ、何事もなかったようにネットへ向かう。[p]
 
+[chara_mod name="Daniel" storage="chara/5/daniel_default.png"  time="600"  ]
 #
 二人はネットへ歩み寄った。[r]
 先に手を差し出したのは、ダニエルだった。[p]
@@ -570,13 +620,16 @@
 #
 リョーマはその手を握り返した。[p]
 
+[face_jito_cap mouse="ryoma_mouse_okuchi"]
 #リョーマ
 年齢なんて関係ないでしょ[p]
 
+[chara_mod name="Daniel" storage="chara/5/daniel_nika.png"  time="600"  ]
 #ダニエル
 それもそうか。[r]
 次は負けないから[p]
 
+[face_niyari_cap]
 #リョーマ
 まだまだだね[p]
 
@@ -602,8 +655,11 @@
 #エリオット
 優勝するって信じてたよ[p]
 
+[face_odorki_cap]
 #
 リョーマの目が、わずかに見開かれた。[p]
+
+[face_mabuka_cap mouse="ryoma_mouse_huhu"]
 
 #リョーマ
 ……当然でしょ[p]
@@ -615,6 +671,7 @@
 #エリオット
 よく頑張ったな[p]
 
+[chara_part  name="Ryoma" base="ryoma_base_mabuka_tere" time="600"]
 #
 帽子の上から、リョーマの頭をそっと撫でる。[p]
 #
@@ -644,6 +701,7 @@
 #エリオット
 いい試合だった[p]
 
+[face_jito_cap]
 #リョーマ
 それだけ？[p]
 
@@ -651,6 +709,7 @@
 まさか。[r]
 第三ゲームから、ダニエルを左右に動かすように組み立てを変えただろ[p]
 
+[face_odorki_cap]
 #
 リョーマが、少しだけ顔を上げる。[p]
 
@@ -658,6 +717,7 @@
 バックハンドも、前に教えたとおり踏み込めてた。[r]
 深い球で相手を下げてから、空いたコースを狙ったのもよかったよ[p]
 
+[face_jito_cap mayuge="ryoma_mayuge_bottom"]
 #リョーマ
 ……ちゃんと見てたんだ[p]
 
@@ -665,6 +725,7 @@
 もちろん。[r]
 君の試合だからね[p]
 
+[chara_part  name="Ryoma" mouse="ryoma_mouse_nyan" time="600"]
 #
 リョーマの口元が、わずかに緩んだ。[p]
 
@@ -699,9 +760,11 @@
 #エリオット
 ダニエルも惜しかったな[p]
 
+[face_odorki_cap mouse="ryoma_mouse_mu"]
 #
 リョーマの表情から、わずかに力が抜けた。[p]
 
+[face_jito_cap]
 #リョーマ
 ……俺が勝ったんだけど[p]
 
@@ -709,12 +772,17 @@
 分かってるよ。[r]
 ちょっと待ってて[p]
 
+; --- キャラクター要素に乗算オーバーレイを重ねる ---
+[iscript]
+$('.tyrano_chara[class*="Ryoma"]').addClass('chara_gray');
+[endscript]
 #
 それだけ告げて、ダニエルのもとへ向かう。[p]
 
 #エリオット
 ダニエル、いい試合だった[p]
 
+[chara_mod name="Daniel" storage="chara/5/daniel_default.png"  time="600"  ]
 #ダニエル
 でも、負けちゃったよ[p]
 
@@ -734,6 +802,10 @@
 #エリオット
 リョーマ[p]
 
+; --- 乗算オーバーレイを解除 ---
+[iscript]
+$('.tyrano_chara[class*="Ryoma"]').removeClass('chara_gray');
+[endscript]
 #
 呼び止めると、足だけが止まる。[p]
 
@@ -743,6 +815,7 @@
 #
 少し遅れて伝えた言葉に、リョーマは振り返らなかった。[p]
 
+[face_ikari_cap eye="ryoma_eye_ikari_yoko"]
 #リョーマ
 ……[p]
 
@@ -756,13 +829,16 @@
 
 [jump  storage="part1_day5.ks"  target="*base2"  ]
 *base2
-
+[chara_hide_all  time="1000"  wait="true"  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="Amber_Light_on_the_Dashboard.mp3"  ]
 [bg  time="1000"  method="crossfade"  storage="car_twilight.png"  ]
 [tb_start_text mode=4 ]
 
 #
 ──帰りの車内。[r]
+[chara_part_reset name="Ryoma"]
+[chara_part  name="Ryoma" eye="ryoma_eye_default_yoko" time="0"]
+[chara_show  name="Ryoma"  time="1000"  wait="true"  left="326"  top="-54" ]
 リョーマは助手席で、優勝トロフィーを膝に抱えていた。[p]
 #
 窓の外を見ていたかと思えば、トロフィーの台座を指でなぞる。[r]

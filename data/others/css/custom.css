@@ -407,3 +407,31 @@ img {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     margin-top: 0px !important;
 }
+
+/* キャラクターの親要素に対してオーバーレイ乗算を効かせる設定 */
+.chara_multiply_container {
+    position: relative !important;
+}
+
+/* 立ち絵の上に重ねるグレーの乗算レイヤー */
+.chara_multiply_container::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #808080 !important;
+    /* 乗算したいグレーの色（例: #808080 や #555566） */
+    mix-blend-mode: multiply !important;
+    /* ★乗算指定 */
+    pointer-events: none !important;
+    z-index: 10 !important;
+}
+
+/* キャラクター画像（透過PNG）の本体部分だけをグレー調にする */
+.chara_gray {
+    filter: grayscale(50%) brightness(0.5) contrast(1.2) !important;
+    transition: filter 0.3s ease !important;
+    /* なめらかに変化させたい場合 */
+}
